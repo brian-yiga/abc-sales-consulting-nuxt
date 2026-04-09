@@ -1,0 +1,35 @@
+@import "tailwindcss";
+@import "@northgreenug/musizi-ui-kit/theme.css";
+@import "@northgreenug/musizi-ui-kit/styles.css";
+@import "@northgreenug/musizi-ui-kit/fonts.css";
+@import "@northgreenug/musizi-ui-kit/typography.css";
+
+@source "../../node_modules/@northgreenug/musizi-ui-kit/dist/**/*.js";
+@source "../../components/**/*.vue";
+
+@theme {
+  /* ABC Sales Brand Colors */
+  --color-abc-navy: #050038;
+  --color-abc-green: #7cbc56;
+  --color-abc-orange: #db8f3d;
+
+  /* THE GREEN REBRAND:
+     Mapping the kit's primary 'maroon' key to ABC Green 
+     and the 'teal' key to ABC Navy for contrast. */
+  --color-maroon: #050038; 
+  --color-teal: #050038;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.animate-scroll {
+  display: flex;
+  width: max-content;
+  animation: scroll 40s linear infinite;
+}

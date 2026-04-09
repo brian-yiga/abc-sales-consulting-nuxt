@@ -1,0 +1,693 @@
+<template>
+  <div
+    class="bg-maroon pt-4 pb-5 bg-cover bg-center bg-[url('/assets/img/bg-blue.png')]"
+  >
+    <MuiPageContainer wide>
+      <header
+        class="flex items-center justify-between px-6 py-4 md:px-8 bg-white/20 backdrop-blur-[10px] border border-white/10 relative"
+      >
+        <div class="flex items-center">
+          <span class="block md:hidden">
+            <img
+              src="/assets/img/abcGlobe-no-bg.png"
+              alt="ABC Sales Icon"
+              class="h-10 w-auto object-contain"
+            />
+          </span>
+
+          <span class="hidden md:block">
+            <img
+              src="/assets/img/abcLogo1-no-bg.png"
+              alt="ABC Sales Consulting"
+              class="h-16 w-auto object-contain"
+            />
+          </span>
+        </div>
+
+        <nav class="hidden lg:flex items-center gap-8">
+          <NuxtLink
+            to="/"
+            class="text-white font-bold uppercase text-sm hover:opacity-80 cursor-pointer"
+          >
+            About
+          </NuxtLink>
+
+          <button
+            @click="toggleAcademics"
+            class="text-white font-bold uppercase text-sm cursor-pointer hover:opacity-80 focus:outline-none"
+          >
+            Academics
+          </button>
+
+          <NuxtLink
+            to="/under-construction"
+            class="text-white font-bold uppercase text-sm hover:opacity-80 cursor-pointer"
+          >
+            Student Life
+          </NuxtLink>
+          <NuxtLink
+            to="/coming-soon"
+            class="text-white font-bold uppercase text-sm hover:opacity-80 cursor-pointer"
+          >
+            Admissions
+          </NuxtLink>
+          <NuxtLink
+            to="https://musizifoundation.org/"
+            class="text-white font-bold uppercase text-sm hover:opacity-80 cursor-pointer"
+          >
+            News/Stories
+          </NuxtLink>
+        </nav>
+
+        <div class="flex items-center gap-3">
+          <MuiButton
+            label="Get in touch"
+            href="#contacts"
+            variant="all-white"
+            size="medium-small"
+            class="hidden md:flex"
+          />
+
+          <button
+            class="lg:hidden p-2 text-white cursor-pointer"
+            @click="toggleMenu"
+          >
+            <div v-if="!isMobileMenuOpen" class="space-y-1.5">
+              <span class="block w-6 h-0.5 bg-white" />
+              <span class="block w-6 h-0.5 bg-white" />
+              <span class="block w-6 h-0.5 bg-white" />
+            </div>
+            <div v-else class="text-2xl font-bold">✕</div>
+          </button>
+        </div>
+      </header>
+
+      <Transition
+        enter-active-class="transition duration-300 ease-out"
+        enter-from-class="translate-x-full"
+        enter-to-class="translate-x-0"
+        leave-active-class="transition duration-200 ease-in"
+        leave-from-class="translate-x-0"
+        leave-to-class="translate-x-full"
+      >
+        <div
+          v-if="isMobileMenuOpen"
+          class="fixed inset-0 z-[200] lg:hidden bg-maroon text-white flex flex-col p-8"
+        >
+          <div class="flex justify-end mb-8">
+            <button
+              @click="isMobileMenuOpen = false"
+              class="text-4xl font-light p-2 cursor-pointer hover:opacity-70"
+            >
+              ✕
+            </button>
+          </div>
+
+          <div class="flex flex-col space-y-6">
+            <NuxtLink
+              to="/"
+              @click="isMobileMenuOpen = false"
+              class="text-2xl font-bold uppercase border-b border-white/10 pb-4"
+              >About</NuxtLink
+            >
+
+            <div class="space-y-4">
+              <p class="text-xl uppercase tracking-widest font-bold">
+                Academics
+              </p>
+              <div class="flex flex-col gap-4 pl-4 border-l border-white/20">
+                <NuxtLink
+                  to="/academics/entrepreneurship"
+                  @click="isMobileMenuOpen = false"
+                  class="text-xl"
+                  >Entrepreneurship</NuxtLink
+                >
+                <NuxtLink
+                  to="/academics/software-engineering"
+                  @click="isMobileMenuOpen = false"
+                  class="text-xl"
+                  >Software Engineering</NuxtLink
+                >
+                <NuxtLink
+                  to="/academics/general-education"
+                  @click="isMobileMenuOpen = false"
+                  class="text-xl"
+                  >General Education</NuxtLink
+                >
+                <a
+                  href="https://business.musizi.ac.ug/"
+                  @click="isMobileMenuOpen = false"
+                  class="text-xl"
+                  >Research - MSBI</a
+                >
+              </div>
+            </div>
+
+            <NuxtLink
+              to="/under-construction"
+              @click="isMobileMenuOpen = false"
+              class="text-2xl font-bold uppercase border-b border-white/10 pb-4 pt-4"
+              >Student Life</NuxtLink
+            >
+            <NuxtLink
+              to="/coming-soon"
+              @click="isMobileMenuOpen = false"
+              class="text-2xl font-bold uppercase border-b border-white/10 pb-4"
+              >Admissions</NuxtLink
+            >
+            <NuxtLink
+              to="https://musizifoundation.org/"
+              @click="isMobileMenuOpen = false"
+              class="text-2xl font-bold uppercase"
+              >News/Stories</NuxtLink
+            >
+          </div>
+
+          <div class="mt-auto">
+            <MuiButton
+              label="Get in touch"
+              href="#contacts"
+              variant="all-white"
+              class="w-full justify-center !rounded-full"
+              @click="isMobileMenuOpen = false"
+            />
+          </div>
+        </div>
+      </Transition>
+
+      <div
+        v-if="showAcademics"
+        class="hidden lg:flex bg-white border-t border-gray-100 shadow-xl w-full z-[100] relative"
+      >
+        <MuiPageContainer wide class="flex items-center">
+          <NuxtLink
+            to="/academics/entrepreneurship"
+            class="text-maroon px-8 py-4 uppercase font-bold text-xs hover:bg-maroon hover:text-white transition-all cursor-pointer"
+          >
+            Entrepreneurship
+          </NuxtLink>
+
+          <NuxtLink
+            to="/academics/software-engineering"
+            class="text-maroon px-8 py-4 uppercase font-bold text-xs border-l border-gray-100 hover:bg-maroon hover:text-white transition-all cursor-pointer"
+          >
+            Software Engineering
+          </NuxtLink>
+
+          <NuxtLink
+            to="/academics/general-education"
+            class="text-maroon px-8 py-4 uppercase font-bold text-xs border-l border-gray-100 hover:bg-maroon hover:text-white transition-all cursor-pointer"
+          >
+            General Education
+          </NuxtLink>
+
+          <a
+            href="https://business.musizi.ac.ug/"
+            class="text-maroon px-8 py-4 uppercase font-bold text-xs border-l border-gray-100 hover:bg-maroon hover:text-white transition-all cursor-pointer"
+          >
+            Research - MSBI
+          </a>
+        </MuiPageContainer>
+      </div>
+    </MuiPageContainer>
+
+    <MuiPageContainer
+      class="text-center text-white pt-20 pb-16 lg:pt-25 lg:pb-20 xl:pt-[120px] xl:pb-25 relative bg-cover bg-center"
+    >
+      <div class="absolute inset-0 pointer-events-none"></div>
+
+      <div class="max-w-3xl mx-auto relative z-10">
+        <div
+          class="inline-block border border-abc-green/50 bg-abc-green/10 text-abc-green px-6 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-[0.3em] mb-8"
+        >
+          Sales Strategy & Excellence
+        </div>
+
+        <h2
+          class="mui-text--display-1 uppercase font-black tracking-tighter leading-tight"
+        >
+          Transform Your Sales <br />
+          Into a Revenue Engine
+        </h2>
+
+        <p
+          class="max-w-xl mt-6 mb-10 mx-auto text-white/90 leading-relaxed text-sm tracking-wide"
+        >
+          ABC Sales Consulting provides world-class training and strategic
+          interventions to help African businesses scale faster, close bigger
+          deals, and build sustainable, predictable growth.
+        </p>
+
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+          <MuiButton
+            variant="red-fill"
+            label="BOOK A DISCOVERY CALL"
+            class="!rounded-none px-10 py-4 font-bold text-[10px] tracking-widest shadow-xl"
+            href="#contact"
+          />
+          <MuiButton
+            variant="white-stroke"
+            label="OUR SERVICES"
+            class="!rounded-none px-10 py-4 font-bold text-[10px] tracking-widest hover:bg-white hover:text-abc-navy transition-all"
+            href="#services"
+          />
+        </div>
+      </div>
+    </MuiPageContainer>
+
+    <MuiPageContainer wide class="grid grid-cols-2 gap-2 max-w-7xl">
+      <div
+        class="h-[165px] md:h-[250px] lg:h-[316px] xl:h-[342px] overflow-hidden"
+      >
+        <NuxtImg
+          src="/img/home/freeDiscovery.jpg"
+          alt="ABC Sales Consulting free discovery session with professional sales team"
+          class="w-full object-cover object-center block rounded-md h-[166px] md:h-[251px] lg:h-[317px] xl:h-[343px]"
+          fit="cover"
+          sizes="200px md:400px lg:500px xl:540px"
+        />
+      </div>
+
+      <div
+        class="h-[165px] md:h-[250px] lg:h-[316px] xl:h-[342px] overflow-hidden"
+      >
+        <NuxtImg
+          src="/img/home/boardmeeting.jpg"
+          alt="Strategic sales planning and board meeting at ABC Sales Consulting"
+          class="w-full object-cover block rounded-md h-[166px] md:h-[251px] lg:h-[317px] xl:h-[343px]"
+          fit="cover"
+          sizes="200px md:400px lg:500px xl:540px"
+        />
+      </div>
+
+      <div
+        class="h-[165px] md:h-[250px] lg:h-[316px] xl:h-[342px] overflow-hidden"
+      >
+        <NuxtImg
+          src="/img/home/consultation.jpg"
+          alt="One-on-one professional sales coaching and consultation session"
+          class="w-full object-cover block rounded-md h-[166px] md:h-[251px] lg:h-[317px] xl:h-[343px]"
+          fit="cover"
+          sizes="200px md:400px lg:500px xl:540px"
+        />
+      </div>
+
+      <div
+        class="h-[165px] md:h-[250px] lg:h-[316px] xl:h-[342px] overflow-hidden"
+      >
+        <NuxtImg
+          src="/img/whoWeAre/groupPhoto.jpg"
+          alt="ABC Sales Consulting team and corporate clients after successful workshop"
+          class="w-full object-cover block rounded-md h-[166px] md:h-[251px] lg:h-[317px] xl:h-[343px]"
+          fit="cover"
+          sizes="200px md:400px lg:500px xl:540px"
+        />
+      </div>
+    </MuiPageContainer>
+  </div>
+
+  <MuiPageContainer class="mt-16 md:mt-20 lg:mt-25">
+    <MuiTextWithImage
+      :img="{
+        small: '/img/carousel/training.jpeg',
+        large: '/img/carousel/training.jpeg',
+      }"
+      img-alt="ABC Sales Consulting high-impact sales training workshop in Uganda"
+      class="mb-6 lg:mb-0"
+    >
+      <template #title> High-Impact Sales Training </template>
+
+      <p>
+        We transform sales teams by mastering the full sales lifecycle—from lead
+        generation and psychological prospecting to advanced closing techniques.
+        Our project-based coaching ensures your team doesn't just learn theory,
+        but builds the actual muscle needed to hit aggressive revenue targets in
+        the African market.
+      </p>
+    </MuiTextWithImage>
+
+    <MuiTextWithImage
+      :img="{
+        small: '/img/heroCarousel/alelaHeroPage.jpg',
+        large: '/img/heroCarousel/alelaHeroPage.jpg',
+      }"
+      :image-is-right-position="true"
+      img-alt="Strategic sales consulting and revenue growth planning"
+      class="mb-6 lg:mb-0"
+    >
+      <template #title> Strategic Sales Consulting </template>
+
+      <p>
+        Go beyond the spreadsheet. We partner with leadership to design tailored
+        sales processes that align with your unique business goals. Through
+        in-depth industry analysis and hands-on consulting, we help you identify
+        leaks in your sales funnel and implement predictable systems for
+        sustainable growth.
+      </p>
+    </MuiTextWithImage>
+
+    <MuiTextWithImage
+      :img="{
+        small: '/img/heroCarousel/dahlinHeroPage.jpg',
+        large: '/img/heroCarousel/dahlinHeroPage.jpg',
+      }"
+      img-alt="Comprehensive sales performance audit and data analysis"
+    >
+      <template #title> Comprehensive Sales Audits </template>
+
+      <p>
+        Optimize your performance with data-driven insights. Our Sales Audits
+        provide a 360-degree view of your sales force effectiveness, identifying
+        skills gaps and process bottlenecks. We provide actionable roadmaps that
+        transform raw performance data into a strategic advantage for your
+        organization.
+      </p>
+    </MuiTextWithImage>
+  </MuiPageContainer>
+
+  <MuiPageContainer class="mt-16 md:mt-20 lg:mt-25">
+    <h2 class="mui-text--display-2 uppercase mb-10 text-center">
+      Why ABC Sales?
+    </h2>
+
+    <div class="grid gap-4 lg:grid-cols-2">
+      <MuiTextWithImage
+        :img="{
+          small: '/img/carousel/board1.jpg',
+          large: '/img/carousel/board1.jpg',
+        }"
+        img-alt="World-class sales methodology adapted for the African market"
+        class="lg:col-span-2"
+        default-title-style="light"
+        caption-background-colour="maroon"
+      >
+        <template #title>
+          Global Sales Standards Grounded in African Realities
+        </template>
+
+        <p>
+          ABC’s methodologies are built on international best practices but
+          refined for the unique nuances of the African business landscape. We
+          seamlessly integrate psychological prospecting, relationship-based
+          selling, and modern CRM data to ensure your team is equipped for an
+          ever-evolving market.
+        </p>
+      </MuiTextWithImage>
+
+      <MuiTextWithImage
+        :img="{
+          small: '/img/carousel/directors.jpg',
+          large: '/img/carousel/directors.jpg',
+        }"
+        img-alt="Measurable ROI and sales growth with ABC Sales Consulting"
+        default-title-style="light"
+        caption-background-colour="maroon"
+        only-has-vertical-layout
+      >
+        <template #title> Measurable Revenue Growth </template>
+
+        <p>
+          We don't just "train"—we deliver results. Through our partnerships
+          with top-tier local firms, we help businesses identify hidden revenue
+          gaps and implement closing strategies that result in immediate,
+          measurable increases in sales performance.
+        </p>
+      </MuiTextWithImage>
+
+      <MuiTextWithImage
+        :img="{
+          small: '/img/carousel/board2.jpg',
+          large: '/img/carousel/board2.jpg',
+        }"
+        img-alt="Practical sales coaching and field-work experience"
+        default-title-style="light"
+        caption-background-colour="maroon"
+        only-has-vertical-layout
+      >
+        <template #title> Field-Tested Sales Coaching </template>
+
+        <p>
+          Our consulting is directly aligned with real-world market needs. We
+          move beyond theory with hands-on coaching, ensuring your sales force
+          has the practical, high-demand skills to handle objections, negotiate
+          effectively, and build long-term client loyalty.
+        </p>
+      </MuiTextWithImage>
+    </div>
+  </MuiPageContainer>
+
+  <MuiPageContainer class="mt-16 md:mt-20 lg:mt-25">
+    <h2 class="mui-text--display-2 uppercase mb-10 text-center">
+      Trusted by Industry Leaders
+    </h2>
+
+    <div class="grid gap-2 md:grid-cols-2 lg:grid-cols-4 mb-12 justify-center">
+      <MuiLogoButtonCard
+        :button="{ text: 'View Impact', href: '/testimonies', external: false }"
+        class="bg-abc-navy bg-[url('/assets/img/bg-client-1.jpg')] bg-blend-overlay"
+      >
+        <template #Image>
+          <img src="/img/logos/client-3.png" class="h-12 w-auto" />
+        </template>
+        <template #Text>
+          <div class="mui-text--headline-2 uppercase text-white">
+            <span class="font-light text-abc-green">80% Growth.</span> <br />
+            Scaling Operations.
+          </div>
+        </template>
+      </MuiLogoButtonCard>
+
+      <MuiLogoButtonCard
+        :button="{ text: 'View Impact', href: '/testimonies', external: false }"
+        class="bg-abc-orange bg-[url('/assets/img/bg-client-3.jpg')] bg-blend-overlay"
+      >
+        <template #Image>
+          <img src="/img/logos/client-4.png" class="h-12 w-auto" />
+        </template>
+        <template #Text>
+          <div class="mui-text--headline-2 uppercase text-white">
+            <span class="font-light text-abc-green">High-Performance.</span>
+            <br />
+            Team Transformation.
+          </div>
+        </template>
+      </MuiLogoButtonCard>
+
+      <MuiLogoButtonCard
+        :button="{ text: 'View Impact', href: '/testimonies', external: false }"
+        class="bg-abc-green bg-[url('/assets/img/bg-client-2.jpg')] bg-blend-overlay"
+      >
+        <template #Image>
+          <img src="/img/logos/client-2.png" class="h-12 w-auto" />
+        </template>
+        <template #Text>
+          <div class="mui-text--headline-2 uppercase text-white">
+            <span class="font-light text-abc-green">Optimized Funnels.</span>
+            <br />
+            Predictable Revenue.
+          </div>
+        </template>
+      </MuiLogoButtonCard>
+
+      <MuiLogoButtonCard
+        :button="{ text: 'View Impact', href: '/testimonies', external: false }"
+        class="bg-abc-navy bg-[url('/assets/img/bg-client-4.jpg')] bg-blend-overlay"
+      >
+        <template #Image>
+          <img src="/img/logos/client-5.png" class="h-12 w-auto" />
+        </template>
+        <template #Text>
+          <div class="mui-text--headline-2 uppercase text-white">
+            <span class="font-light text-abc-green">Closing Mastery.</span>
+            <br />
+            Market Dominance.
+          </div>
+        </template>
+      </MuiLogoButtonCard>
+    </div>
+
+    <div
+      class="relative overflow-hidden py-12 border-y border-gray-100 bg-white"
+    >
+      <div class="animate-scroll flex items-center gap-16">
+        <div
+          v-for="n in 26"
+          :key="'logo-' + n"
+          class="flex-shrink-0 hover:opacity-100 transition-all duration-900"
+        >
+          <img
+            :src="`/img/logos/client-${n}.png`"
+            :alt="'ABC Sales Client ' + n"
+            class="h-10 md:h-20 w-auto object-contain mx-4"
+          />
+        </div>
+
+        <div
+          v-for="n in 26"
+          :key="'dup-' + n"
+          class="flex-shrink-0 transition-all duration-900"
+        >
+          <img
+            :src="`/img/logos/client-${n}.png`"
+            :alt="'ABC Sales Client ' + n"
+            class="h-10 md:h-20 w-auto object-contain mx-4"
+          />
+        </div>
+      </div>
+    </div>
+  </MuiPageContainer>
+
+  <footer
+    class="bg-abc-navy bg-cover bg-center bg-[url('/assets/img/footer-bg.jpg')] text-white"
+    id="contacts"
+  >
+    <MuiPageContainer class="py-16 border-b border-white/10">
+      <div class="text-center mb-10">
+        <h2
+          class="text-2xl md:text-4xl font-black uppercase mb-2 tracking-tighter"
+        >
+          Scale Your Revenue Today
+        </h2>
+        <p class="text-white/80 font-light tracking-wide">
+          Subscribe to get exclusive sales strategies and market insights from
+          ABC Sales Consulting.
+        </p>
+      </div>
+
+      <form
+        @submit.prevent
+        class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-0 border border-white/20 rounded-none overflow-hidden shadow-2xl"
+      >
+        <input
+          type="text"
+          placeholder="Full Name"
+          class="bg-white text-abc-navy px-6 py-5 outline-none border-b md:border-b-0 md:border-r border-gray-200 placeholder:text-gray-400"
+        />
+        <input
+          type="email"
+          placeholder="Business Email"
+          class="bg-white text-abc-navy px-6 py-5 outline-none border-b md:border-b-0 md:border-r border-gray-200 placeholder:text-gray-400"
+        />
+        <div
+          class="bg-white flex items-center px-6 py-5 border-b md:border-b-0 md:border-r border-gray-200"
+        >
+          <div
+            class="flex items-center gap-3 text-gray-400 text-xs uppercase tracking-widest font-bold"
+          >
+            <input type="checkbox" class="w-4 h-4 accent-abc-green" />
+            I'm not a robot
+          </div>
+        </div>
+        <button
+          type="submit"
+          class="bg-abc-green hover:bg-abc-green/90 text-abc-navy font-black uppercase transition-all py-5 px-8 cursor-pointer tracking-widest text-xs"
+        >
+          Join the List
+        </button>
+      </form>
+
+      <div class="mt-12 flex flex-col items-center">
+        <p
+          class="text-[10px] tracking-[0.3em] uppercase opacity-50 mb-6 font-bold"
+        >
+          Connect with our experts
+        </p>
+        <div class="flex items-center gap-6">
+          <NuxtLink
+            to="https://linkedin.com/company/abc-sales-consulting"
+            target="_blank"
+            class="group flex items-center justify-center w-12 h-12 rounded-full border border-white/10 hover:border-abc-green transition-all duration-300"
+          >
+            <Icon
+              name="uil:linkedin"
+              class="text-xl group-hover:text-abc-green transition-colors"
+            />
+          </NuxtLink>
+
+          <NuxtLink
+            to="https://instagram.com/abcsales"
+            target="_blank"
+            class="group flex items-center justify-center w-12 h-12 rounded-full border border-white/10 hover:border-abc-green transition-all duration-300"
+          >
+            <Icon
+              name="uil:instagram"
+              class="text-xl group-hover:text-abc-green transition-colors"
+            />
+          </NuxtLink>
+
+          <NuxtLink
+            to="https://facebook.com/abcsales"
+            target="_blank"
+            class="group flex items-center justify-center w-12 h-12 rounded-full border border-white/10 hover:border-abc-green transition-all duration-300"
+          >
+            <Icon
+              name="uil:facebook-f"
+              class="text-xl group-hover:text-abc-green transition-colors"
+            />
+          </NuxtLink>
+
+          <NuxtLink
+            to="https://tiktok.com/@abcsales"
+            target="_blank"
+            class="group flex items-center justify-center w-12 h-12 rounded-full border border-white/10 hover:border-abc-green transition-all duration-300"
+          >
+            <Icon
+              name="ic:baseline-tiktok"
+              class="text-xl group-hover:text-abc-green transition-colors"
+            />
+          </NuxtLink>
+        </div>
+      </div>
+    </MuiPageContainer>
+
+    <MuiPageContainer
+      class="py-8 flex flex-col md:flex-row justify-between items-center text-[10px] tracking-[0.2em] uppercase opacity-60"
+    >
+      <p>
+        &copy; {{ new Date().getFullYear() }} ABC Sales Consulting. All Rights
+        Reserved.
+      </p>
+      <div class="flex gap-8 mt-4 md:mt-0">
+        <NuxtLink to="/privacy" class="hover:text-abc-green"
+          >Privacy Policy</NuxtLink
+        >
+        <NuxtLink to="/terms" class="hover:text-abc-green"
+          >Terms of Service</NuxtLink
+        >
+      </div>
+    </MuiPageContainer>
+  </footer>
+</template>
+
+<script setup>
+import { ref } from "vue"; // You need this to make variables "reactive"
+import {
+  MuiButton,
+  MuiFooterContacts,
+  MuiFooterCredits,
+  MuiLogoBusiness,
+  MuiLogoButtonCard,
+  MuiLogoFoundation,
+  MuiLogoHealth,
+  MuiLogoMu,
+  MuiLogoUniversity,
+  MuiLogoWings,
+  MuiNewsletterButtonLink,
+  MuiPageContainer,
+  MuiPattern,
+  MuiTextWithImage,
+} from "@northgreenug/musizi-ui-kit";
+
+// 1. Create the variables to track if the menus are open
+const isMobileMenuOpen = ref(false);
+const showAcademics = ref(false);
+
+// 2. Create the functions that run when you click the buttons
+const toggleMenu = () => {
+  isMobileMenuOpen.value = !isMobileMenuOpen.value;
+};
+
+const toggleAcademics = () => {
+  showAcademics.value = !showAcademics.value;
+};
+</script>

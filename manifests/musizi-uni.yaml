@@ -1,0 +1,72 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: musizi-uni
+  namespace: apps-musizi
+  labels:
+    app: musizi-uni
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: musizi-uni
+  template:
+    metadata:
+      labels:
+        app: musizi-uni
+    spec:
+      imagePullSecrets:
+        - name: ghcr-secret
+      containers:
+        - name: app
+          image: ghcr.io/northgreenug/musizi-uni:latest
+          ports:
+            - containerPort: 3000
+          resources:
+            requests:
+              memory: "64Mi"
+              cpu: "50m"
+            limits:
+              memory: "256Mi"
+              cpu: "300m"
+          livenessProbe:
+            httpGet:
+              path: /
+              port: 3000
+            initialDelaySeconds: 10
+            periodSeconds: 30
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 3000
+            initialDelaySeconds: 5
+            periodSeconds: 10
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: musizi-uni-svc
+  namespace: apps-musizi
+spec:
+  selector:
+    app: musizi-uni
+  ports:
+    - port: 80
+      targetPort: 3000
+---
+apiVersion: traefik.io/v1alpha1
+kind: IngressRoute
+metadata:
+  name: musizi-uni-ingress
+  namespace: apps-musizi
+spec:
+  entryPoints:
+    - websecure
+  routes:
+    - match: Host(`musizi.ac.ug`) || Host(`www.musizi.ac.ug`)
+      kind: Rule
+      services:
+        - name: musizi-uni-svc
+          port: 80
+  tls:
+    secretName: musizi-tls-secret
