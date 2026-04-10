@@ -2,61 +2,46 @@
   <div
     class="bg-maroon pt-4 pb-5 bg-cover bg-center bg-[url('/assets/img/bg-blue.png')]"
   >
-    <MuiPageContainer wide>
+    <MuiPageContainer wide class="relative">
       <header
-        class="flex items-center justify-between px-6 py-4 md:px-8 bg-white/20 backdrop-blur-[10px] border border-white/10 relative"
+        class="flex items-center justify-between px-6 py-4 md:px-8 bg-white/20 backdrop-blur-[10px] border border-white/10 relative z-[210]"
       >
-        <div class="flex items-center">
-          <span class="block md:hidden">
-            <img
-              src="/assets/img/abcGlobe-no-bg.png"
-              alt="ABC Sales Icon"
-              class="h-10 w-auto object-contain"
-            />
-          </span>
-
-          <span class="hidden md:block">
-            <img
-              src="/assets/img/abcLogo1-no-bg.png"
-              alt="ABC Sales Consulting"
-              class="h-16 w-auto object-contain"
-            />
-          </span>
-        </div>
+        <NuxtLink to="/" class="flex items-center">
+          <img
+            src="/assets/img/abcGlobe-no-bg.png"
+            alt="ABC Icon"
+            class="h-10 md:hidden object-contain"
+          />
+          <img
+            src="/assets/img/abcLogo1-no-bg.png"
+            alt="ABC Sales Consulting"
+            class="h-16 hidden md:block object-contain"
+          />
+        </NuxtLink>
 
         <nav class="hidden lg:flex items-center gap-8">
-          <NuxtLink
-            to="/"
-            class="text-white font-bold uppercase text-sm hover:opacity-80 cursor-pointer"
-          >
-            About
-          </NuxtLink>
+          <template v-for="link in navLinks" :key="link.name">
+            <button
+              v-if="link.subLinks"
+              @click="toggleSubMenu(link.name)"
+              class="text-white font-bold uppercase text-sm hover:opacity-80 transition flex items-center gap-1 cursor-pointer"
+            >
+              {{ link.name }}
+              <span
+                :class="{ 'rotate-180': activeSubMenu === link.name }"
+                class="transition-transform text-[10px]"
+                >▼</span
+              >
+            </button>
 
-          <button
-            @click="toggleAcademics"
-            class="text-white font-bold uppercase text-sm cursor-pointer hover:opacity-80 focus:outline-none"
-          >
-            Academics
-          </button>
-
-          <NuxtLink
-            to="/under-construction"
-            class="text-white font-bold uppercase text-sm hover:opacity-80 cursor-pointer"
-          >
-            Student Life
-          </NuxtLink>
-          <NuxtLink
-            to="/coming-soon"
-            class="text-white font-bold uppercase text-sm hover:opacity-80 cursor-pointer"
-          >
-            Admissions
-          </NuxtLink>
-          <NuxtLink
-            to="https://musizifoundation.org/"
-            class="text-white font-bold uppercase text-sm hover:opacity-80 cursor-pointer"
-          >
-            News/Stories
-          </NuxtLink>
+            <NuxtLink
+              v-else
+              :to="link.to"
+              class="text-white font-bold uppercase text-sm hover:opacity-80 cursor-pointer"
+            >
+              {{ link.name }}
+            </NuxtLink>
+          </template>
         </nav>
 
         <div class="flex items-center gap-3">
@@ -67,7 +52,6 @@
             size="medium-small"
             class="hidden md:flex"
           />
-
           <button
             class="lg:hidden p-2 text-white cursor-pointer"
             @click="toggleMenu"
@@ -83,6 +67,33 @@
       </header>
 
       <Transition
+        enter-active-class="transition duration-200 ease-out"
+        enter-from-class="opacity-0 -translate-y-2"
+        enter-to-class="opacity-100 translate-y-0"
+      >
+        <div
+          v-if="activeSubMenu"
+          class="hidden lg:flex bg-white border-t border-gray-100 shadow-xl w-full z-[200] relative"
+        >
+          <MuiPageContainer wide class="flex items-center">
+            <template
+              v-for="sub in navLinks.find((l) => l.name === activeSubMenu)
+                ?.subLinks"
+              :key="sub.name"
+            >
+              <NuxtLink
+                :to="sub.to"
+                @click="activeSubMenu = null"
+                class="text-maroon px-8 py-4 uppercase font-bold text-xs border-l first:border-l-0 border-gray-100 hover:bg-maroon hover:text-white transition-all cursor-pointer"
+              >
+                {{ sub.name }}
+              </NuxtLink>
+            </template>
+          </MuiPageContainer>
+        </div>
+      </Transition>
+
+      <Transition
         enter-active-class="transition duration-300 ease-out"
         enter-from-class="translate-x-full"
         enter-to-class="translate-x-0"
@@ -92,75 +103,50 @@
       >
         <div
           v-if="isMobileMenuOpen"
-          class="fixed inset-0 z-[200] lg:hidden bg-maroon text-white flex flex-col p-8"
+          class="fixed inset-0 z-[300] lg:hidden bg-maroon text-white flex flex-col p-8"
         >
           <div class="flex justify-end mb-8">
             <button
               @click="isMobileMenuOpen = false"
-              class="text-4xl font-light p-2 cursor-pointer hover:opacity-70"
+              class="text-4xl font-light p-2 cursor-pointer"
             >
               ✕
             </button>
           </div>
 
-          <div class="flex flex-col space-y-6">
-            <NuxtLink
-              to="/"
-              @click="isMobileMenuOpen = false"
-              class="text-2xl font-bold uppercase border-b border-white/10 pb-4"
-              >About</NuxtLink
+          <div class="flex flex-col space-y-6 overflow-y-auto">
+            <div
+              v-for="link in navLinks"
+              :key="link.name"
+              class="border-b border-white/10 pb-4"
             >
-
-            <div class="space-y-4">
-              <p class="text-xl uppercase tracking-widest font-bold">
-                Academics
-              </p>
-              <div class="flex flex-col gap-4 pl-4 border-l border-white/20">
-                <NuxtLink
-                  to="/academics/entrepreneurship"
-                  @click="isMobileMenuOpen = false"
-                  class="text-xl"
-                  >Entrepreneurship</NuxtLink
+              <template v-if="link.subLinks">
+                <p
+                  class="text-xs uppercase text-white/60 font-bold mb-4 tracking-widest"
                 >
-                <NuxtLink
-                  to="/academics/software-engineering"
-                  @click="isMobileMenuOpen = false"
-                  class="text-xl"
-                  >Software Engineering</NuxtLink
-                >
-                <NuxtLink
-                  to="/academics/general-education"
-                  @click="isMobileMenuOpen = false"
-                  class="text-xl"
-                  >General Education</NuxtLink
-                >
-                <a
-                  href="https://business.musizi.ac.ug/"
-                  @click="isMobileMenuOpen = false"
-                  class="text-xl"
-                  >Research - MSBI</a
-                >
-              </div>
+                  {{ link.name }}
+                </p>
+                <div class="flex flex-col gap-5 pl-4 border-l border-white/20">
+                  <NuxtLink
+                    v-for="sub in link.subLinks"
+                    :key="sub.name"
+                    :to="sub.to"
+                    @click="isMobileMenuOpen = false"
+                    class="text-xl font-medium"
+                  >
+                    {{ sub.name }}
+                  </NuxtLink>
+                </div>
+              </template>
+              <NuxtLink
+                v-else
+                :to="link.to"
+                @click="isMobileMenuOpen = false"
+                class="text-3xl font-bold uppercase"
+              >
+                {{ link.name }}
+              </NuxtLink>
             </div>
-
-            <NuxtLink
-              to="/under-construction"
-              @click="isMobileMenuOpen = false"
-              class="text-2xl font-bold uppercase border-b border-white/10 pb-4 pt-4"
-              >Student Life</NuxtLink
-            >
-            <NuxtLink
-              to="/coming-soon"
-              @click="isMobileMenuOpen = false"
-              class="text-2xl font-bold uppercase border-b border-white/10 pb-4"
-              >Admissions</NuxtLink
-            >
-            <NuxtLink
-              to="https://musizifoundation.org/"
-              @click="isMobileMenuOpen = false"
-              class="text-2xl font-bold uppercase"
-              >News/Stories</NuxtLink
-            >
           </div>
 
           <div class="mt-auto">
@@ -174,41 +160,6 @@
           </div>
         </div>
       </Transition>
-
-      <div
-        v-if="showAcademics"
-        class="hidden lg:flex bg-white border-t border-gray-100 shadow-xl w-full z-[100] relative"
-      >
-        <MuiPageContainer wide class="flex items-center">
-          <NuxtLink
-            to="/academics/entrepreneurship"
-            class="text-maroon px-8 py-4 uppercase font-bold text-xs hover:bg-maroon hover:text-white transition-all cursor-pointer"
-          >
-            Entrepreneurship
-          </NuxtLink>
-
-          <NuxtLink
-            to="/academics/software-engineering"
-            class="text-maroon px-8 py-4 uppercase font-bold text-xs border-l border-gray-100 hover:bg-maroon hover:text-white transition-all cursor-pointer"
-          >
-            Software Engineering
-          </NuxtLink>
-
-          <NuxtLink
-            to="/academics/general-education"
-            class="text-maroon px-8 py-4 uppercase font-bold text-xs border-l border-gray-100 hover:bg-maroon hover:text-white transition-all cursor-pointer"
-          >
-            General Education
-          </NuxtLink>
-
-          <a
-            href="https://business.musizi.ac.ug/"
-            class="text-maroon px-8 py-4 uppercase font-bold text-xs border-l border-gray-100 hover:bg-maroon hover:text-white transition-all cursor-pointer"
-          >
-            Research - MSBI
-          </a>
-        </MuiPageContainer>
-      </div>
     </MuiPageContainer>
 
     <MuiPageContainer
@@ -660,34 +611,41 @@
 </template>
 
 <script setup>
-import { ref } from "vue"; // You need this to make variables "reactive"
-import {
-  MuiButton,
-  MuiFooterContacts,
-  MuiFooterCredits,
-  MuiLogoBusiness,
-  MuiLogoButtonCard,
-  MuiLogoFoundation,
-  MuiLogoHealth,
-  MuiLogoMu,
-  MuiLogoUniversity,
-  MuiLogoWings,
-  MuiNewsletterButtonLink,
-  MuiPageContainer,
-  MuiPattern,
-  MuiTextWithImage,
-} from "@northgreenug/musizi-ui-kit";
+import { ref } from "vue";
+import { MuiButton, MuiPageContainer } from "@northgreenug/musizi-ui-kit";
 
-// 1. Create the variables to track if the menus are open
 const isMobileMenuOpen = ref(false);
-const showAcademics = ref(false);
+const activeSubMenu = ref(null);
 
-// 2. Create the functions that run when you click the buttons
 const toggleMenu = () => {
   isMobileMenuOpen.value = !isMobileMenuOpen.value;
 };
 
-const toggleAcademics = () => {
-  showAcademics.value = !showAcademics.value;
+const toggleSubMenu = (menuName) => {
+  activeSubMenu.value = activeSubMenu.value === menuName ? null : menuName;
 };
+
+// ABC SALES NAVIGATION STRUCTURE
+const navLinks = [
+  { name: "About", to: "/" },
+  { name: "Services", to: "/services" },
+  {
+    name: "Resources",
+    to: "/resources",
+    subLinks: [
+      { name: "Sales Blog", to: "/resources" },
+      { name: "Whitepapers", to: "/resources" },
+    ],
+  },
+  { name: "Case Studies", to: "/case-studies" },
+  {
+    name: "Why ABC?",
+    to: "/why-abc",
+    subLinks: [
+      { name: "Methodology", to: "/why-abc" },
+      { name: "Our Team", to: "/why-abc" },
+    ],
+  },
+  { name: "Gallery", to: "/gallery" },
+];
 </script>
