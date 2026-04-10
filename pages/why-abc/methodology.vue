@@ -1,6 +1,6 @@
 <template>
   <div
-    class="bg-maroon pt-4 pb-5 bg-cover bg-center bg-[url('/assets/img/bg-green.jpg')]"
+    class="bg-maroon pt-4 pb-5 bg-cover bg-center bg-[url('/assets/img/bg-orange.png')]"
   >
     <MuiPageContainer wide class="relative">
       <header
@@ -157,178 +157,274 @@
       </Transition>
     </MuiPageContainer>
 
-    <MuiPageContainer class="py-20 lg:py-32 overflow-hidden relative">
-      <div class="grid lg:grid-cols-2 gap-12 items-center relative z-10">
+    <MuiPageContainer
+      class="text-white pt-20 pb-16 lg:pt-32 lg:pb-32 bg-cover bg-center relative overflow-hidden"
+    >
+      <div
+        class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10"
+      >
         <div class="text-left max-w-xl">
-          <MuiButton
-            variant="all-white"
-            label="Proven Results & Impact"
-            class="!rounded-full px-8 !font-medium mb-4 pointer-events-none"
-          />
-          <h2 class="mui-text--display-1 uppercase leading-tight text-white">
-            Real Stories. <br />
-            <span class="text-abc-green">Measurable Success.</span>
-          </h2>
-          <p class="mt-6 mb-8 text-white/80 text-lg leading-relaxed">
-            Explore how ABC Sales Consulting has transformed sales departments
-            across the continent. We turn potential into performance with
-            data-backed strategies and direct market insights.
-          </p>
-          <div class="flex gap-4">
+          <div>
             <MuiButton
-              label="View Testimonials"
-              href="#whatsapp-wall"
               variant="all-white"
+              label="THE ABC FRAMEWORK"
+              class="!rounded-full px-8 !font-medium mb-6 pointer-events-none tracking-widest text-[10px]"
+            />
+          </div>
+
+          <h2
+            class="mui-text--display-1 uppercase leading-tight font-black tracking-tighter"
+          >
+            A Data-Driven <br />
+            <span class="text-abc-green">Approach to Growth.</span>
+          </h2>
+
+          <p class="mt-6 mb-10 text-white/90 leading-relaxed text-lg">
+            We don't believe in "one-size-fits-all" sales. Our proprietary
+            methodology combines deep market discovery with intensive behavioral
+            coaching to build sales engines that outlast the competition.
+          </p>
+
+          <div class="flex flex-row gap-4 max-w-sm">
+            <MuiButton
+              label="EXPLORE OUR STEPS"
+              href="#process-flow"
+              variant="all-white"
+              class="!rounded-full px-8"
             />
           </div>
         </div>
 
-        <div class="relative">
+        <div class="relative hidden lg:block">
           <img
-            src="/img/WhatsAppImages/whatsappMarch-23.jpg"
-            alt="Case Studies"
-            class="rounded-2xl shadow-2xl w-full object-cover object-top aspect-[4/3] lg:h-[500px] border border-white/10"
+            src="/img/whatsappimages/whatsappMarch-11.jpg"
+            alt="Methodology in Action"
+            class="rounded-2xl shadow-2xl w-full object-cover aspect-[4/3] border border-white/10"
           />
           <div
-            class="absolute -bottom-6 -left-6 h-24 w-24 bg-abc-green rounded-full blur-3xl opacity-30"
+            class="absolute -bottom-6 -right-6 h-32 w-32 bg-abc-green rounded-full blur-3xl opacity-20"
           ></div>
         </div>
       </div>
     </MuiPageContainer>
   </div>
 
-  <MuiPageContainer class="py-16">
-    <div class="max-w-5xl mx-auto">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-10">
-        <div
-          class="bg-maroon text-white p-8 rounded-sm text-center flex flex-col justify-center items-center min-h-[180px]"
-        >
-          <span class="text-5xl font-bold mb-2 uppercase italic text-abc-green"
-            >95%</span
-          >
-          <span class="uppercase tracking-widest text-sm font-semibold"
-            >REVENUE GROWTH</span
-          >
-        </div>
-        <div
-          class="bg-maroon text-white p-8 rounded-sm text-center flex flex-col justify-center items-center min-h-[180px]"
-        >
-          <span class="text-5xl font-bold mb-2 uppercase italic">100+</span>
-          <span class="uppercase tracking-widest text-sm font-semibold"
-            >TEAMS TRAINED</span
-          >
-        </div>
-        <div
-          class="bg-maroon text-white p-8 rounded-sm text-center flex flex-col justify-center items-center min-h-[180px]"
-        >
-          <span class="text-5xl font-bold mb-2 uppercase italic text-abc-orange"
-            >20+</span
-          >
-          <span class="uppercase tracking-widest text-sm font-semibold"
-            >YEARS EXPERIENCE</span
-          >
-        </div>
-      </div>
+  <MuiPageContainer id="process-flow" class="py-24 bg-white">
+    <div class="text-center mb-20">
       <div
-        class="text-center italic text-gray-600 max-w-2xl mx-auto leading-relaxed text-[20px]"
+        class="inline-block bg-gray-100 text-maroon px-4 py-1 rounded-full text-[12px] font-bold uppercase mb-4 tracking-widest"
       >
-        <p>
-          "We don't just teach sales; we engineer high-performance cultures that
-          deliver predictable, scalable results."
-        </p>
+        Our Roadmap
       </div>
-    </div>
-  </MuiPageContainer>
-
-  <div class="bg-maroon py-10 overflow-hidden border-y border-white/5">
-    <div class="animate-scroll whitespace-nowrap flex items-center">
-      <span v-for="n in 2" :key="n" class="flex items-center">
-        <span class="text-abc-orange text-5xl font-black uppercase mx-12"
-          >"Revenue up by 40%"</span
-        >
-        <span class="text-abc-green text-5xl font-black uppercase mx-12"
-          >"Best team building ever"</span
-        >
-        <span class="text-white text-5xl font-black uppercase mx-12"
-          >"Sales culture transformed"</span
-        >
-        <span class="text-abc-orange text-5xl font-black uppercase mx-12"
-          >"Closing rates doubled"</span
-        >
-      </span>
-    </div>
-  </div>
-
-  <MuiPageContainer class="py-20 bg-gray-50" id="case-grid">
-    <div class="text-center mb-16">
-      <div
-        class="inline-block bg-gray-200 text-gray-600 px-4 py-1 rounded-full text-[14px] font-bold uppercase mb-4 tracking-widest"
-      >
-        Client Success
-      </div>
-      <h2 class="mui-text--display-1 text-maroon uppercase mb-4">
-        The Video Vault
+      <h2 class="mui-text--display-1 text-maroon uppercase">
+        How We Engineer Success
       </h2>
-      <p class="max-w-3xl mx-auto text-gray-600">
-        Watch our latest training highlights and executive workshops in action
-        across East Africa.
-      </p>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-      <div
-        v-for="n in 2"
-        :key="n"
-        class="bg-white group shadow-sm hover:shadow-xl transition-all overflow-hidden rounded-xl"
-      >
-        <div class="relative h-72">
-          <img
-            :src="`/img/video-thumbs/thumb-${n}.png`"
-            class="w-full h-full object-cover object-top"
-          />
-          <div
-            class="absolute inset-0 bg-maroon/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
-          >
-            <div
-              class="w-16 h-16 border-2 border-white rounded-full flex items-center justify-center text-white"
-            >
-              ▶
-            </div>
-          </div>
-        </div>
-        <div class="p-6">
-          <h3 class="text-maroon font-extrabold uppercase text-xl mb-2">
-            High-Performance Training Session 0{{ n }}
+    <div
+      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-16 gap-x-12 relative"
+    >
+      <div class="relative group">
+        <span
+          class="text-6xl font-black text-gray-100 absolute -top-8 -left-4 group-hover:text-abc-green/20 transition-colors"
+          >01</span
+        >
+        <div class="relative z-10">
+          <h3 class="text-maroon font-extrabold uppercase text-xl mb-4">
+            Discovery & Needs Analysis
           </h3>
-          <p class="text-gray-600 text-sm">
-            A deep dive into the ABC framework implemented with top-tier
-            corporate sales leads.
+          <p class="text-gray-600 text-sm leading-relaxed">
+            We begin with a deep dive into your current ecosystem. We identify
+            bottlenecks, market gaps, and untapped potential within your
+            existing sales structure.
+          </p>
+        </div>
+      </div>
+
+      <div class="relative group">
+        <span
+          class="text-6xl font-black text-gray-100 absolute -top-8 -left-4 group-hover:text-abc-green/20 transition-colors"
+          >02</span
+        >
+        <div class="relative z-10">
+          <h3 class="text-maroon font-extrabold uppercase text-xl mb-4">
+            Tailored Solution Design
+          </h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            No templates. We architect a bespoke sales framework designed
+            specifically for your product, your territory, and your revenue
+            targets.
+          </p>
+        </div>
+      </div>
+
+      <div class="relative group">
+        <span
+          class="text-6xl font-black text-gray-100 absolute -top-8 -left-4 group-hover:text-abc-green/20 transition-colors"
+          >03</span
+        >
+        <div class="relative z-10">
+          <h3 class="text-maroon font-extrabold uppercase text-xl mb-4">
+            Timetable & KPI Setup
+          </h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            We establish a rigorous implementation schedule with clear
+            milestones and measurable KPIs so progress is visible from week one.
+          </p>
+        </div>
+      </div>
+
+      <div class="relative group">
+        <span
+          class="text-6xl font-black text-gray-100 absolute -top-8 -left-4 group-hover:text-abc-green/20 transition-colors"
+          >04</span
+        >
+        <div class="relative z-10">
+          <h3 class="text-maroon font-extrabold uppercase text-xl mb-4">
+            Strategic Recruitment
+          </h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            If gaps exist, we leverage our network to source and vet top-tier
+            sales talent that fits your culture and possesses the "hunter"
+            mindset.
+          </p>
+        </div>
+      </div>
+
+      <div class="relative group">
+        <span
+          class="text-6xl font-black text-gray-100 absolute -top-8 -left-4 group-hover:text-abc-green/20 transition-colors"
+          >05</span
+        >
+        <div class="relative z-10">
+          <h3 class="text-maroon font-extrabold uppercase text-xl mb-4">
+            Immersive Sales Training
+          </h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            The core of our impact. We deliver intensive training focused on
+            advanced closing techniques, objection handling, and CRM mastery.
+          </p>
+        </div>
+      </div>
+
+      <div class="relative group">
+        <span
+          class="text-6xl font-black text-gray-100 absolute -top-8 -left-4 group-hover:text-abc-green/20 transition-colors"
+          >06</span
+        >
+        <div class="relative z-10">
+          <h3 class="text-maroon font-extrabold uppercase text-xl mb-4">
+            Engagement & Follow-up
+          </h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            We don't just walk away. We provide ongoing mentorship and audits of
+            each salesperson to ensure long-term behavioral change and sustained
+            growth.
           </p>
         </div>
       </div>
     </div>
   </MuiPageContainer>
 
-  <MuiPageContainer id="whatsapp-wall" class="py-24 bg-white">
-    <div class="text-center mb-16">
-      <h2 class="mui-text--display-1 text-maroon uppercase mb-4">
-        The Wall of Love
-      </h2>
-      <p class="text-gray-500">
-        Unfiltered feedback from the field. Real results from real sales
-        professionals.
-      </p>
-    </div>
-    <div class="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
-      <div
-        v-for="i in 9"
-        :key="i"
-        class="break-inside-avoid bg-white p-2 rounded-lg shadow-sm border border-gray-100"
-      >
-        <img
-          :src="`/img/testimonies/whatsappTestimonies/whatsappTestimony-${i}.jpg`"
-          class="w-full rounded-md"
+  <MuiPageContainer class="py-24 bg-maroon relative overflow-hidden">
+    <div class="relative z-10 max-w-5xl mx-auto">
+      <div class="text-center mb-12">
+        <MuiButton
+          variant="white-stroke"
+          label="PHASE 1: DISCOVERY PREP"
+          class="!rounded-full px-8 mb-4 pointer-events-none !bg-white/10 !border-white/20 text-white"
         />
+        <h2 class="mui-text--display-2 text-white uppercase font-black">
+          Ready for Discovery?
+        </h2>
+        <p class="text-white/70 mt-4">
+          To ensure a productive first session, we recommend having the
+          following ready:
+        </p>
+      </div>
+
+      <div
+        class="grid md:grid-cols-2 bg-white rounded-t-3xl overflow-hidden shadow-2xl"
+      >
+        <div class="p-10 lg:p-16 border-r border-gray-100">
+          <div class="flex items-center gap-4 mb-8">
+            <div class="bg-abc-green/10 p-3 rounded-lg">
+              <span class="text-2xl">📊</span>
+            </div>
+            <h3 class="text-maroon font-black uppercase text-xl tracking-tight">
+              Sales Performance Data
+            </h3>
+          </div>
+
+          <ul class="space-y-4 text-gray-600 text-sm">
+            <li class="flex items-start gap-3">
+              <span class="text-abc-green font-bold">•</span>
+              Last 12 months of revenue performance
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-abc-green font-bold">•</span>
+              Current sales team structure & headcount
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-abc-green font-bold">•</span>
+              Average lead-to-close conversion rates
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-abc-green font-bold">•</span>
+              Existing CRM tools or tracking methods
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-abc-green font-bold">•</span>
+              Primary competitor list & market challenges
+            </li>
+          </ul>
+        </div>
+
+        <div class="p-10 lg:p-16">
+          <div class="flex items-center gap-4 mb-8">
+            <div class="bg-abc-green/10 p-3 rounded-lg">
+              <span class="text-2xl">🎯</span>
+            </div>
+            <h3 class="text-maroon font-black uppercase text-xl tracking-tight">
+              Growth Objectives
+            </h3>
+          </div>
+
+          <ul class="space-y-4 text-gray-600 text-sm">
+            <li class="flex items-start gap-3">
+              <span class="text-abc-green font-bold">•</span>
+              Short-term (3 month) revenue targets
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-abc-green font-bold">•</span>
+              Targeted industry verticals or niches
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-abc-green font-bold">•</span>
+              Current pain points in the sales cycle
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-abc-green font-bold">•</span>
+              Budget allocation for team development
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-abc-green font-bold">•</span>
+              Long-term scaling goals for 2026
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div
+        class="bg-black/20 backdrop-blur-md border border-white/10 rounded-b-3xl p-8 flex flex-col md:flex-row items-center gap-6"
+      >
+        <div class="text-4xl">💡</div>
+        <p class="text-white/80 text-sm leading-relaxed italic">
+          <strong>Note:</strong> We sign a Non-Disclosure Agreement (NDA) with
+          every client before the discovery session starts. Your data, strategy,
+          and internal sales figures are strictly confidential and protected by
+          ABC's privacy policy.
+        </p>
       </div>
     </div>
   </MuiPageContainer>
@@ -468,13 +564,13 @@ const navLinks = [
   },
   { name: "Case Studies", to: "/case-studies" },
   {
-  name: "Why ABC?",
-  to: "/why-abc/methodology", // This acts as a fallback if they click the header
-  subLinks: [
-    { name: "Methodology", to: "/why-abc/methodology" }, // Points to pages/why-abc/methodology.vue
-    { name: "Our Team", to: "/why-abc/team" },           // Points to pages/why-abc/team.vue
-  ],
-},
+    name: "Why ABC?",
+    to: "/why-abc/methodology", // This acts as a fallback if they click the header
+    subLinks: [
+      { name: "Methodology", to: "/why-abc/methodology" }, // Points to pages/why-abc/methodology.vue
+      { name: "Our Team", to: "/why-abc/team" }, // Points to pages/why-abc/team.vue
+    ],
+  },
   { name: "Gallery", to: "/gallery" },
 ];
 </script>
