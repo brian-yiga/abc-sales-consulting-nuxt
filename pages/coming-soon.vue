@@ -6,8 +6,8 @@
         COMING SOON
       </h1>
       <p class="text-gray-600 max-w-md mx-auto">
-        We are currently building the <strong>Musizi University</strong> digital experience. 
-        Check back shortly for updates on Admissions.
+        We are currently building the <strong>ABC Sales Consulting</strong> digital experience. 
+        Check back shortly for any updates.
       </p>
       <NuxtLink 
         to="/" 

@@ -444,7 +444,7 @@ const closeLightbox = () => {
         <div class="mb-8 flex justify-center">
           <a
             href="/"
-            class="flex items-center gap-2 text-[10px] font-bold tracking-[0.2em] uppercase text-white/60 hover:text-white transition-colors duration-300 mt-20"
+            class="flex items-center gap-2 text-[10px] font-bold tracking-[0.2em] uppercase text-white/60 hover:text-white transition-colors duration-300 mt-10"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"

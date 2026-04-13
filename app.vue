@@ -1,13 +1,27 @@
 <template>
   <div>
     <NuxtPage />
+    <!-- Global Discovery Form -->
+    <DiscoveryForm ref="formRef" />
   </div>
 </template>
 
 <script setup>
+import { ref, watchEffect } from "vue";
+import DiscoveryForm from "~/components/DiscoveryForm.vue";
+
 // If you are not using @nuxt/content, you can remove the useContent() line.
 // For now, I've kept a fallback to 'ABC Sales Consulting'.
 const { page } = useContent();
+const { setFormRef } = useDiscoveryForm();
+const formRef = ref(null);
+
+// Set the form ref when component mounts
+watchEffect(() => {
+  if (formRef.value) {
+    setFormRef(formRef.value);
+  }
+});
 
 useHead({
   titleTemplate: '%s - ABC Sales Consulting',

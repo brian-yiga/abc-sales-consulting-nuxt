@@ -367,8 +367,8 @@
         <MuiButton
           variant="all-white"
           label="Book a Discovery Session"
-          href="#contacts"
-          class="!rounded-full px-12 py-4"
+          @click="openForm"
+          class="!rounded-full px-12 py-4 cursor-pointer"
         />
       </div>
     </MuiPageContainer>
@@ -462,6 +462,7 @@ import {
   MuiPattern,
 } from "@northgreenug/musizi-ui-kit";
 
+const { openForm } = useDiscoveryForm();
 const isMobileMenuOpen = ref(false);
 const activeSubMenu = ref(null);
 

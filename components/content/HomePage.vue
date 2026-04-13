@@ -193,8 +193,8 @@
           <MuiButton
             variant="red-fill"
             label="BOOK A DISCOVERY CALL"
-            class="!rounded-none px-10 py-4 font-bold text-[10px] tracking-widest shadow-xl"
-            href="#contact"
+            class="!rounded-none px-10 py-4 font-bold text-[10px] tracking-widest shadow-xl cursor-pointer"
+            @click="discoveryFormRef?.open()"
           />
           <MuiButton
             variant="white-stroke"
@@ -608,14 +608,19 @@
       </div>
     </MuiPageContainer>
   </footer>
+
+  <!-- Discovery Form Modal -->
+  <DiscoveryForm ref="discoveryFormRef" />
 </template>
 
 <script setup>
 import { ref } from "vue";
 import { MuiButton, MuiPageContainer } from "@northgreenug/musizi-ui-kit";
+import DiscoveryForm from "~/components/DiscoveryForm.vue";
 
 const isMobileMenuOpen = ref(false);
 const activeSubMenu = ref(null);
+const discoveryFormRef = ref(null);
 
 const toggleMenu = () => {
   isMobileMenuOpen.value = !isMobileMenuOpen.value;
