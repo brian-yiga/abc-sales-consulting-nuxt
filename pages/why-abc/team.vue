@@ -420,14 +420,43 @@
       <div class="mt-12 flex flex-col items-center">
         <div class="flex items-center gap-6">
           <NuxtLink
-            v-for="social in ['linkedin', 'instagram', 'facebook-f', 'tiktok']"
-            :key="social"
-            to="#"
+            to="https://linkedin.com/company/abc-sales-consulting"
+            target="_blank"
+            class="group flex items-center justify-center w-12 h-12 rounded-full border border-white/10 hover:border-abc-green transition-all duration-300"
+          >
+            <Icon
+              name="uil:linkedin"
+              class="text-xl group-hover:text-abc-green transition-colors"
+            />
+          </NuxtLink>
+          <NuxtLink
+            to="https://instagram.com/abcsales"
+            target="_blank"
+            class="group flex items-center justify-center w-12 h-12 rounded-full border border-white/10 hover:border-abc-green transition-all duration-300"
+          >
+            <Icon
+              name="uil:instagram"
+              class="text-xl group-hover:text-abc-green transition-colors"
+            />
+          </NuxtLink>
+          <NuxtLink
+            to="https://facebook.com/abcsales"
+            target="_blank"
+            class="group flex items-center justify-center w-12 h-12 rounded-full border border-white/10 hover:border-abc-green transition-all duration-300"
+          >
+            <Icon
+              name="uil:facebook-f"
+              class="text-xl group-hover:text-abc-green transition-colors"
+            />
+          </NuxtLink>
+          <NuxtLink
+            to="https://tiktok.com/@abcsales"
+            target="_blank"
             class="group flex items-center justify-center w-12 h-12 rounded-full border border-white/10 hover:border-abc-green transition-all duration-300"
           >
             <Icon
               :name="
-                social === 'tiktok' ? 'ic:baseline-tiktok' : `uil:${social}`
+                'ic:baseline-tiktok'
               "
               class="text-xl group-hover:text-abc-green transition-colors"
             />
