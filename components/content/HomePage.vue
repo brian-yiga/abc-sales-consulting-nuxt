@@ -1,6 +1,6 @@
 <template>
   <div
-    class="bg-maroon pt-4 pb-5 bg-cover bg-center bg-[url('/assets/img/bg-blue.png')]"
+    class="bg-maroon pt-4 pb-5 bg-cover bg-center bg-[url('/bg-images/bg-blue.png')]"
   >
     <MuiPageContainer wide class="relative">
       <header
@@ -8,12 +8,12 @@
       >
         <NuxtLink to="/" class="flex items-center">
           <img
-            src="/assets/img/abcGlobe-no-bg.png"
+            src="/bg-images/abcGlobe-no-bg.png"
             alt="ABC Icon"
             class="h-10 md:hidden object-contain"
           />
           <img
-            src="/assets/img/abcLogo1-no-bg.png"
+            src="/bg-images/abcLogo1-no-bg.png"
             alt="ABC Sales Consulting"
             class="h-16 hidden md:block object-contain"
           />
@@ -395,7 +395,7 @@
     <div class="grid gap-2 md:grid-cols-2 lg:grid-cols-4 mb-12 justify-center">
       <MuiLogoButtonCard
         :button="{ text: 'View Impact', href: '/testimonies', external: false }"
-        class="bg-abc-navy bg-[url('/assets/img/bg-client-1.jpg')] bg-blend-overlay"
+        class="bg-abc-navy bg-[url('/bg-images/bg-client-1.jpg')] bg-blend-overlay"
       >
         <template #Image>
           <img src="/img/logos/client-3.png" class="h-12 w-auto" />
@@ -410,7 +410,7 @@
 
       <MuiLogoButtonCard
         :button="{ text: 'View Impact', href: '/testimonies', external: false }"
-        class="bg-abc-orange bg-[url('/assets/img/bg-client-3.jpg')] bg-blend-overlay"
+        class="bg-abc-orange bg-[url('/bg-images/bg-client-3.jpg')] bg-blend-overlay"
       >
         <template #Image>
           <img src="/img/logos/client-4.png" class="h-12 w-auto" />
@@ -426,7 +426,7 @@
 
       <MuiLogoButtonCard
         :button="{ text: 'View Impact', href: '/testimonies', external: false }"
-        class="bg-abc-green bg-[url('/assets/img/bg-client-2.jpg')] bg-blend-overlay"
+        class="bg-abc-green bg-[url('/bg-images/bg-client-2.jpg')] bg-blend-overlay"
       >
         <template #Image>
           <img src="/img/logos/client-2.png" class="h-12 w-auto" />
@@ -442,7 +442,7 @@
 
       <MuiLogoButtonCard
         :button="{ text: 'View Impact', href: '/testimonies', external: false }"
-        class="bg-abc-navy bg-[url('/assets/img/bg-client-4.jpg')] bg-blend-overlay"
+        class="bg-abc-navy bg-[url('/bg-images/bg-client-4.jpg')] bg-blend-overlay"
       >
         <template #Image>
           <img src="/img/logos/client-5.png" class="h-12 w-auto" />
@@ -489,7 +489,7 @@
   </MuiPageContainer>
 
   <footer
-    class="bg-abc-navy bg-cover bg-center bg-[url('/assets/img/footer-bg.jpg')] text-white"
+    class="bg-abc-navy text-white"
     id="contacts"
   >
     <MuiPageContainer class="py-16 border-b border-white/10">
@@ -640,10 +640,10 @@ const navLinks = [
   { name: "Case Studies", to: "/case-studies" },
   {
     name: "Why ABC?",
-    to: "/why-abc",
+    to: "/why-abc/methodology", // This acts as a fallback if they click the header
     subLinks: [
-      { name: "Methodology", to: "/why-abc" },
-      { name: "Our Team", to: "/why-abc" },
+      { name: "Methodology", to: "/why-abc/methodology" }, // Points to pages/why-abc/methodology.vue
+      { name: "Our Team", to: "/why-abc/team" }, // Points to pages/why-abc/team.vue
     ],
   },
   { name: "Gallery", to: "/gallery" },

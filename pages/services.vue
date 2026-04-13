@@ -1,6 +1,6 @@
 <template>
   <div
-    class="bg-maroon pt-4 pb-5 bg-cover bg-center bg-[url('/assets/img/bg-purple.jpg')]"
+    class="bg-maroon pt-4 pb-5 bg-cover bg-center bg-[url('/bg-images/bg-purple.jpg')]"
   >
     <MuiPageContainer wide class="relative">
       <header
@@ -8,12 +8,12 @@
       >
         <NuxtLink to="/" class="flex items-center">
           <img
-            src="/assets/img/abcGlobe-no-bg.png"
+            src="/bg-images/abcGlobe-no-bg.png"
             alt="ABC Icon"
             class="h-10 md:hidden object-contain"
           />
           <img
-            src="/assets/img/abcLogo1-no-bg.png"
+            src="/bg-images/abcLogo1-no-bg.png"
             alt="ABC Sales Consulting"
             class="h-16 hidden md:block object-contain"
           />
@@ -184,7 +184,7 @@
             From tailored sales training to high-level executive coaching, ABC
             Sales Consulting provides the strategic framework necessary to
             dominate your market. We transform your sales teams into
-            high-performance assets that drive sustainable growth across East
+            high-performance bg-images  drive sustainable growth across East
             Africa.
           </p>
 
@@ -383,9 +383,6 @@
   </MuiPageContainer>
 
   <div class="relative bg-black py-20 text-center overflow-hidden">
-    <div
-      class="absolute inset-0 z-0 bg-cover bg-center opacity-30 bg-[url('/assets/img/abc-cta-bg.jpg')]"
-    ></div>
     <MuiPageContainer class="relative z-10">
       <div class="max-w-3xl mx-auto flex flex-col items-center">
         <h2
@@ -408,7 +405,7 @@
   </div>
 
   <footer
-    class="bg-abc-navy bg-cover bg-center bg-[url('/assets/img/footer-bg.jpg')] text-white"
+    class="bg-abc-navy text-white"
     id="contacts"
   >
     <MuiPageContainer class="py-16 border-b border-white/10">
@@ -557,12 +554,12 @@ const navLinks = [
     ],
   },
   { name: "Case Studies", to: "/case-studies" },
-  {
+ {
     name: "Why ABC?",
-    to: "/why-abc",
+    to: "/why-abc/methodology", // This acts as a fallback if they click the header
     subLinks: [
-      { name: "Methodology", to: "/why-abc" },
-      { name: "Our Team", to: "/why-abc" },
+      { name: "Methodology", to: "/why-abc/methodology" }, // Points to pages/why-abc/methodology.vue
+      { name: "Our Team", to: "/why-abc/team" }, // Points to pages/why-abc/team.vue
     ],
   },
   { name: "Gallery", to: "/gallery" },
