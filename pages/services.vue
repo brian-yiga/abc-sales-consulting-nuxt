@@ -404,131 +404,97 @@
     </MuiPageContainer>
   </div>
 
-  <footer
-    class="bg-abc-navy text-white"
-    id="contacts"
-  >
-    <MuiPageContainer class="py-16 border-b border-white/10">
-      <div class="text-center mb-10">
-        <h2
-          class="text-2xl md:text-4xl font-black uppercase mb-2 tracking-tighter"
-        >
-          Scale Your Revenue Today
-        </h2>
-        <p class="text-white/80 font-light tracking-wide">
-          Subscribe to get exclusive sales strategies and market insights from
-          ABC Sales Consulting.
-        </p>
-      </div>
-
-      <form
-        @submit.prevent
-        class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-0 border border-white/20 rounded-none overflow-hidden shadow-2xl"
-      >
-        <input
-          type="text"
-          placeholder="Full Name"
-          class="bg-white text-abc-navy px-6 py-5 outline-none border-b md:border-b-0 md:border-r border-gray-200 placeholder:text-gray-400"
-        />
-        <input
-          type="email"
-          placeholder="Business Email"
-          class="bg-white text-abc-navy px-6 py-5 outline-none border-b md:border-b-0 md:border-r border-gray-200 placeholder:text-gray-400"
-        />
-        <div
-          class="bg-white flex items-center px-6 py-5 border-b md:border-b-0 md:border-r border-gray-200"
-        >
-          <div
-            class="flex items-center gap-3 text-gray-400 text-xs uppercase tracking-widest font-bold"
-          >
-            <input type="checkbox" class="w-4 h-4 accent-abc-green" />
-            I'm not a robot
-          </div>
-        </div>
-        <button
-          type="submit"
-          class="bg-abc-green hover:bg-abc-green/90 text-abc-navy font-black uppercase transition-all py-5 px-8 cursor-pointer tracking-widest text-xs"
-        >
-          Join the List
-        </button>
-      </form>
-
-      <div class="mt-12 flex flex-col items-center">
-        <p
-          class="text-[10px] tracking-[0.3em] uppercase opacity-50 mb-6 font-bold"
-        >
-          Connect with our experts
-        </p>
-        <div class="flex items-center gap-6">
-          <NuxtLink
-            to="https://linkedin.com/company/abc-sales-consulting"
-            target="_blank"
-            class="group flex items-center justify-center w-12 h-12 rounded-full border border-white/10 hover:border-abc-green transition-all duration-300"
-          >
-            <Icon
-              name="uil:linkedin"
-              class="text-xl group-hover:text-abc-green transition-colors"
-            />
-          </NuxtLink>
-
-          <NuxtLink
-            to="https://instagram.com/abcsales"
-            target="_blank"
-            class="group flex items-center justify-center w-12 h-12 rounded-full border border-white/10 hover:border-abc-green transition-all duration-300"
-          >
-            <Icon
-              name="uil:instagram"
-              class="text-xl group-hover:text-abc-green transition-colors"
-            />
-          </NuxtLink>
-
-          <NuxtLink
-            to="https://facebook.com/abcsales"
-            target="_blank"
-            class="group flex items-center justify-center w-12 h-12 rounded-full border border-white/10 hover:border-abc-green transition-all duration-300"
-          >
-            <Icon
-              name="uil:facebook-f"
-              class="text-xl group-hover:text-abc-green transition-colors"
-            />
-          </NuxtLink>
-
-          <NuxtLink
-            to="https://tiktok.com/@abcsales"
-            target="_blank"
-            class="group flex items-center justify-center w-12 h-12 rounded-full border border-white/10 hover:border-abc-green transition-all duration-300"
-          >
-            <Icon
-              name="ic:baseline-tiktok"
-              class="text-xl group-hover:text-abc-green transition-colors"
-            />
-          </NuxtLink>
-        </div>
-      </div>
-    </MuiPageContainer>
-
-    <MuiPageContainer
-      class="py-8 flex flex-col md:flex-row justify-between items-center text-[10px] tracking-[0.2em] uppercase opacity-60"
-    >
-      <p>
-        &copy; {{ new Date().getFullYear() }} ABC Sales Consulting. All Rights
-        Reserved.
+ <footer class="bg-abc-navy text-white" id="contacts">
+  <MuiPageContainer class="py-16 border-b border-white/10">
+    <div class="text-center mb-10">
+      <h2 class="text-2xl md:text-4xl font-black uppercase mb-2 tracking-tighter">
+        Scale Your Revenue Today
+      </h2>
+      <p class="text-white/80 font-light tracking-wide">
+        Subscribe to get exclusive sales strategies and market insights from ABC Sales Consulting.
       </p>
-      <div class="flex gap-8 mt-4 md:mt-0">
-        <NuxtLink to="/privacy" class="hover:text-abc-green"
-          >Privacy Policy</NuxtLink
-        >
-        <NuxtLink to="/terms" class="hover:text-abc-green"
-          >Terms of Service</NuxtLink
-        >
+    </div>
+
+    <form @submit.prevent class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-0 border border-white/20 rounded-none overflow-hidden shadow-2xl">
+      <input type="text" placeholder="Full Name" class="bg-white text-abc-navy px-6 py-5 outline-none border-b md:border-b-0 md:border-r border-gray-200 placeholder:text-gray-400" />
+      <input type="email" placeholder="Business Email" class="bg-white text-abc-navy px-6 py-5 outline-none border-b md:border-b-0 md:border-r border-gray-200 placeholder:text-gray-400" />
+      <div class="bg-white flex items-center px-6 py-5 border-b md:border-b-0 md:border-r border-gray-200">
+        <div class="flex items-center gap-3 text-gray-400 text-xs uppercase tracking-widest font-bold">
+          <input type="checkbox" class="w-4 h-4 accent-abc-green" />
+          I'm not a robot
+        </div>
       </div>
-    </MuiPageContainer>
-  </footer>
+      <button type="submit" class="bg-abc-green hover:bg-abc-green/90 text-abc-navy font-black uppercase transition-all py-5 px-8 cursor-pointer tracking-widest text-xs">
+        Join the List
+      </button>
+    </form>
+
+    <div class="mt-12 flex flex-col items-center">
+      <p class="text-[10px] tracking-[0.3em] uppercase opacity-50 mb-6 font-bold">Connect with our experts</p>
+      <div class="flex items-center gap-6">
+        <NuxtLink to="https://linkedin.com/company/abc-sales-consulting" target="_blank" class="group flex items-center justify-center w-12 h-12 rounded-full border border-white/10 hover:border-abc-green transition-all duration-300">
+          <Icon name="uil:linkedin" class="text-xl group-hover:text-abc-green transition-colors" />
+        </NuxtLink>
+        <NuxtLink to="https://instagram.com/abcsales" target="_blank" class="group flex items-center justify-center w-12 h-12 rounded-full border border-white/10 hover:border-abc-green transition-all duration-300">
+          <Icon name="uil:instagram" class="text-xl group-hover:text-abc-green transition-colors" />
+        </NuxtLink>
+        <NuxtLink to="https://facebook.com/abcsales" target="_blank" class="group flex items-center justify-center w-12 h-12 rounded-full border border-white/10 hover:border-abc-green transition-all duration-300">
+          <Icon name="uil:facebook-f" class="text-xl group-hover:text-abc-green transition-colors" />
+        </NuxtLink>
+        <NuxtLink to="https://tiktok.com/@abcsales" target="_blank" class="group flex items-center justify-center w-12 h-12 rounded-full border border-white/10 hover:border-abc-green transition-all duration-300">
+          <Icon name="ic:baseline-tiktok" class="text-xl group-hover:text-abc-green transition-colors" />
+        </NuxtLink>
+      </div>
+    </div>
+  </MuiPageContainer>
+
+  <MuiPageContainer class="py-12 border-b border-white/10">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left">
+      <div>
+        <h4 class="text-abc-green text-[10px] tracking-[0.3em] font-bold uppercase mb-4">Our Office</h4>
+        <p class="text-sm text-white/70 leading-relaxed uppercase">
+          Plot 1, Ntinda Church Road<br />
+          Church Bend, Off Martyrs Way<br />
+          Ministers' Village, Ntinda
+        </p>
+      </div>
+
+      <div>
+        <h4 class="text-abc-green text-[10px] tracking-[0.3em] font-bold uppercase mb-4">Contact Us</h4>
+        <p class="text-sm text-white/70 leading-relaxed">
+          <span class="block mb-1">admin@abcsalesconsulting.net</span>
+          <span>+256 748 019 936</span>
+        </p>
+      </div>
+
+      <div class="flex flex-col items-center md:items-start">
+        <h4 class="text-abc-green text-[10px] tracking-[0.3em] font-bold uppercase mb-4">Find Us</h4>
+        <MuiButton 
+          label="VIEW ON GOOGLE MAPS" 
+          href="https://maps.app.goo.gl/35pEPphgGXnyuYSg9m" 
+          target="_blank"
+          variant="white-stroke"
+          class="px-6 !text-[10px]"
+        />
+      </div>
+    </div>
+  </MuiPageContainer>
+
+  <MuiPageContainer class="py-8 flex flex-col md:flex-row justify-between items-center text-[10px] tracking-[0.2em] uppercase opacity-60">
+    <p>&copy; {{ new Date().getFullYear() }} ABC Sales Consulting. All Rights Reserved.</p>
+    <div class="flex gap-8 mt-4 md:mt-0">
+      <NuxtLink to="/privacy" class="hover:text-abc-green">Privacy Policy</NuxtLink>
+      <NuxtLink to="/terms" class="hover:text-abc-green">Terms of Service</NuxtLink>
+    </div>
+  </MuiPageContainer>
+</footer>
 </template>
 
 <script setup>
 import { ref } from "vue";
 import { MuiButton, MuiPageContainer } from "@northgreenug/musizi-ui-kit";
+
+useHead({ title: 'Services' });
 
 const { openForm } = useDiscoveryForm();
 const isMobileMenuOpen = ref(false);

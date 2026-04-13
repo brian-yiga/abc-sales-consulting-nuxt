@@ -110,6 +110,7 @@
 </template>
 
 <script setup>
+useHead({ title: 'Privacy Policy' });
 import { MuiPageContainer } from "@northgreenug/musizi-ui-kit";
 </script>
 

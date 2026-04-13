@@ -18,3 +18,7 @@
     </div>
   </MuiPageContainer>
 </template>
+
+<script setup>
+useHead({ title: 'Coming Soon' })
+</script>

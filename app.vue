@@ -24,7 +24,7 @@ watchEffect(() => {
 });
 
 useHead({
-  titleTemplate: '%s - ABC Sales Consulting',
+  titleTemplate: '%s | ABC Sales Consulting',
   htmlAttrs: {
     lang: 'en',
   },

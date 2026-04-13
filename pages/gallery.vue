@@ -2,6 +2,8 @@
 import { ref } from "vue";
 import { MuiButton } from "@northgreenug/musizi-ui-kit";
 
+useHead({ title: 'Gallery' });
+
 // Section Data - Add your Cloudinary and local assets here
 const sections = ref([
   {

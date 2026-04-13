@@ -127,6 +127,7 @@
 </template>
 
 <script setup>
+useHead({ title: 'Terms of Service' });
 import { MuiPageContainer } from "@northgreenug/musizi-ui-kit";
 </script>
 
