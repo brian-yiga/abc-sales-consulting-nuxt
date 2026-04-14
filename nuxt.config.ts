@@ -45,4 +45,11 @@ export default defineNuxtConfig({
   site: {
     url: 'https://abcsalesconsulting.net',
   },
+
+  nitro: {
+    prerender: {
+      failOnError: false, 
+      crawlLinks: true
+    }
+  },
 });

@@ -458,7 +458,7 @@
     </div>
 
     <div
-      class="relative overflow-hidden py-12 border-y border-gray-100 bg-white"
+      class="relative overflow-hidden py-12 border-y border-gray-100 bg-sky-50 md:bg-white"
     >
       <div class="animate-scroll flex items-center gap-16">
         <div
@@ -469,7 +469,7 @@
           <img
             :src="`/img/logos/client-${n}.png`"
             :alt="'ABC Sales Client ' + n"
-            class="h-10 md:h-20 w-auto object-contain mx-4"
+            class="h-20 md:h-40 w-auto object-contain mx-4"
           />
         </div>
 
@@ -481,7 +481,7 @@
           <img
             :src="`/img/logos/client-${n}.png`"
             :alt="'ABC Sales Client ' + n"
-            class="h-10 md:h-20 w-auto object-contain mx-4"
+            class="h-20 md:h-40 w-auto object-contain mx-4"
           />
         </div>
       </div>

@@ -33,3 +33,13 @@ html {
   width: max-content;
   animation: scroll 40s linear infinite;
 }
+
+footer h4 {
+  font-size: 0.95rem;
+}
+
+@media (min-width: 768px) {
+  footer h4 {
+    font-size: 1.05rem;
+  }
+}

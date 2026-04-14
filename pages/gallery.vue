@@ -297,175 +297,22 @@ const closeLightbox = () => {
   <div
     class="bg-maroon pt-4 pb-5 bg-cover bg-center bg-[url('/bg-images/bg-blue3.png')]"
   >
-    <MuiPageContainer wide class="relative">
-      <header
-        class="flex items-center justify-between px-6 py-4 md:px-8 bg-white/20 backdrop-blur-[10px] border border-white/10 relative z-[210]"
-      >
-        <NuxtLink to="/" class="flex items-center">
-          <img
-            src="/bg-images/abcGlobe-no-bg.png"
-            alt="ABC Icon"
-            class="h-10 md:hidden object-contain"
-          />
-          <img
-            src="/bg-images/abcLogo1-no-bg.png"
-            alt="ABC Sales Consulting"
-            class="h-16 hidden md:block object-contain"
-          />
-        </NuxtLink>
 
-        <nav class="hidden lg:flex items-center gap-8">
-          <template v-for="link in navLinks" :key="link.name">
-            <button
-              v-if="link.subLinks"
-              @click="toggleSubMenu(link.name)"
-              class="text-white font-bold uppercase text-sm hover:opacity-80 transition flex items-center gap-1 cursor-pointer"
-            >
-              {{ link.name }}
-              <span
-                :class="{ 'rotate-180': activeSubMenu === link.name }"
-                class="transition-transform text-[10px]"
-                >▼</span
-              >
-            </button>
-            <NuxtLink
-              v-else
-              :to="link.to"
-              class="text-white font-bold uppercase text-sm hover:opacity-80 cursor-pointer"
-            >
-              {{ link.name }}
-            </NuxtLink>
-          </template>
-        </nav>
-
-        <div class="flex items-center gap-3">
-          <MuiButton
-            label="Get in touch"
-            href="#contacts"
-            variant="all-white"
-            size="medium-small"
-            class="hidden md:flex"
-          />
-          <button
-            class="lg:hidden p-2 text-white cursor-pointer"
-            @click="toggleMenu"
-          >
-            <div v-if="!isMobileMenuOpen" class="space-y-1.5">
-              <span class="block w-6 h-0.5 bg-white" />
-              <span class="block w-6 h-0.5 bg-white" />
-              <span class="block w-6 h-0.5 bg-white" />
-            </div>
-            <div v-else class="text-2xl font-bold">✕</div>
-          </button>
-        </div>
-      </header>
-
-      <Transition
-        enter-active-class="transition duration-200 ease-out"
-        enter-from-class="opacity-0 -translate-y-2"
-        enter-to-class="opacity-100 translate-y-0"
-      >
-        <div
-          v-if="activeSubMenu"
-          class="hidden lg:flex bg-white border-t border-gray-100 shadow-xl w-full z-[200] relative"
-        >
-          <MuiPageContainer wide class="flex items-center">
-            <template
-              v-for="sub in navLinks.find((l) => l.name === activeSubMenu)
-                ?.subLinks"
-              :key="sub.name"
-            >
-              <NuxtLink
-                :to="sub.to"
-                @click="activeSubMenu = null"
-                class="text-maroon px-8 py-4 uppercase font-bold text-xs border-l first:border-l-0 border-gray-100 hover:bg-maroon hover:text-white transition-all cursor-pointer"
-              >
-                {{ sub.name }}
-              </NuxtLink>
-            </template>
-          </MuiPageContainer>
-        </div>
-      </Transition>
-
-      <Transition
-        enter-active-class="transition duration-300 ease-out"
-        enter-from-class="translate-x-full"
-        enter-to-class="translate-x-0"
-        leave-active-class="transition duration-200 ease-in"
-        leave-from-class="translate-x-0"
-        leave-to-class="translate-x-full"
-      >
-        <div
-          v-if="isMobileMenuOpen"
-          class="fixed inset-0 z-[300] lg:hidden bg-maroon text-white flex flex-col p-8"
-        >
-          <div class="flex justify-end mb-8">
-            <button
-              @click="isMobileMenuOpen = false"
-              class="text-4xl font-light p-2 cursor-pointer"
-            >
-              ✕
-            </button>
-          </div>
-          <div class="flex flex-col space-y-6 overflow-y-auto">
-            <div
-              v-for="link in navLinks"
-              :key="link.name"
-              class="border-b border-white/10 pb-4"
-            >
-              <template v-if="link.subLinks">
-                <p
-                  class="text-base font-medium text-white uppercase mb-4"
-                >
-                  {{ link.name }}
-                </p>
-                <div class="flex flex-col gap-5 pl-4 border-l border-white/20">
-                  <NuxtLink
-                    v-for="sub in link.subLinks"
-                    :key="sub.name"
-                    :to="sub.to"
-                    @click="isMobileMenuOpen = false"
-                    class="text-sm font-medium text-gray-400"
-                    >{{ sub.name }}</NuxtLink
-                  >
-                </div>
-              </template>
-              <NuxtLink
-                v-else
-                :to="link.to"
-                @click="isMobileMenuOpen = false"
-                class="text-base font-medium text-white uppercase"
-                >{{ link.name }}</NuxtLink
-              >
-            </div>
-          </div>
-          <div class="mt-auto">
-            <MuiButton
-              label="Get in touch"
-              href="#contacts"
-              variant="all-white"
-              class="w-full justify-center !rounded-full"
-              @click="isMobileMenuOpen = false"
-            />
-          </div>
-        </div>
-      </Transition>
-    </MuiPageContainer>
 
     <MuiPageContainer
-      class="text-white pt-24 pb-20 lg:pt-40 lg:pb-32 bg-maroon bg-cover bg-center relative overflow-hidden bg-[url('/bg-images/pattern-overlay.png')]"
+      class="text-white pt-24 pb-20 lg:pt-40 lg:pb-32 bg-cover bg-center relative overflow-hidden bg-[url('/bg-images/pattern-overlay.png')]"
     >
-      <div class="absolute inset-0 bg-black/20 z-0"></div>
+      <div class="absolute inset-0 z-0"></div>
 
       <div class="relative z-10 max-w-5xl mx-auto">
         <div class="mb-8 flex justify-center">
           <a
             href="/"
-            class="flex items-center gap-2 text-[10px] font-bold tracking-[0.2em] uppercase text-white/60 hover:text-white transition-colors duration-300 mt-10"
+            class="inline-flex items-center gap-3 text-sm md:text-base font-bold tracking-[0.2em] uppercase text-white/90 bg-white/15 hover:bg-white/25 transition-all duration-300 rounded-full px-6 py-3 mt-4"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="h-3 w-3"
+              class="h-4 w-4"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"

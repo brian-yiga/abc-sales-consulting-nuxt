@@ -290,17 +290,14 @@
         :alt="video.title"
         class="w-full h-full object-cover object-top"
       />
-      <div
-        class="absolute inset-0 bg-maroon/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
-      >
-        <div
-          class="w-16 h-16 border-2 border-white rounded-full flex items-center justify-center text-white text-2xl"
-        >
-          ▶
+      <div class="absolute inset-0 bg-black/20 flex items-center justify-center">
+        <div class="w-20 h-20 rounded-full bg-white/90 flex items-center justify-center shadow-2xl transition-transform group-hover:scale-110">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-maroon" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M8 5v14l11-7z" />
+          </svg>
         </div>
       </div>
     </div>
-    
     <div class="p-6">
       <div class="flex items-center justify-between mb-2">
         <h3 class="text-maroon font-extrabold uppercase text-xl">
