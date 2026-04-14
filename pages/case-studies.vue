@@ -120,7 +120,7 @@
             >
               <template v-if="link.subLinks">
                 <p
-                  class="text-xs uppercase text-white/60 font-normal mb-4 tracking-widest"
+                  class="text-base font-medium text-white uppercase mb-4"
                 >
                   {{ link.name }}
                 </p>
@@ -130,7 +130,7 @@
                     :key="sub.name"
                     :to="sub.to"
                     @click="isMobileMenuOpen = false"
-                    class="text-xl font-normal"
+                    class="text-sm font-medium text-gray-400"
                     >{{ sub.name }}</NuxtLink
                   >
                 </div>
@@ -139,7 +139,7 @@
                 v-else
                 :to="link.to"
                 @click="isMobileMenuOpen = false"
-                class="text-3xl font-bold uppercase"
+                class="text-base font-medium text-white uppercase"
                 >{{ link.name }}</NuxtLink
               >
             </div>

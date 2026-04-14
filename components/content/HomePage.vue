@@ -579,7 +579,7 @@
 
 <script setup>
 import { ref } from "vue";
-import { MuiButton, MuiPageContainer, MuiLogoButtonCard } from "@northgreenug/musizi-ui-kit";
+import { MuiButton, MuiPageContainer, MuiLogoButtonCard, MuiTextWithImage } from "@northgreenug/musizi-ui-kit";
 import DiscoveryForm from "~/components/DiscoveryForm.vue";
 
 const isMobileMenuOpen = ref(false);

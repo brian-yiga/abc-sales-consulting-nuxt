@@ -20,5 +20,7 @@
 </template>
 
 <script setup>
+import { MuiLogoMu } from "@northgreenug/musizi-ui-kit";
+
 useHead({ title: 'Resources' })
 </script>

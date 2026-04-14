@@ -120,7 +120,7 @@
             >
               <template v-if="link.subLinks">
                 <p
-                  class="text-xs uppercase text-white/60 font-normal mb-4 tracking-widest"
+                  class="text-base font-medium text-white uppercase mb-4"
                 >
                   {{ link.name }}
                 </p>
@@ -130,7 +130,7 @@
                     :key="sub.name"
                     :to="sub.to"
                     @click="isMobileMenuOpen = false"
-                    class="text-xl font-normal"
+                    class="text-sm font-medium text-gray-400"
                     >{{ sub.name }}</NuxtLink
                   >
                 </div>
@@ -139,7 +139,7 @@
                 v-else
                 :to="link.to"
                 @click="isMobileMenuOpen = false"
-                class="text-3xl font-bold uppercase"
+                class="text-base font-medium text-white uppercase"
                 >{{ link.name }}</NuxtLink
               >
             </div>
@@ -224,7 +224,7 @@
           <img
             :src="founder.image"
             :alt="founder.name"
-            class="w-full aspect-square object-cover object-top transition-all duration-500 grayscale group-hover:grayscale-0"
+            class="w-full aspect-square object-cover object-top transition-all duration-500"
           />
         </div>
         <div class="p-8 flex flex-col flex-grow">
@@ -243,35 +243,43 @@
       </div>
     </div>
 
-    <Transition name="fade">
-      <div v-if="selectedMember" class="fixed inset-0 z-[100] flex items-center justify-center p-4">
-        <div class="absolute inset-0 bg-black/80 backdrop-blur-sm" @click="closeModal"></div>
+   <Transition name="fade">
+  <div v-if="selectedMember" class="fixed inset-0 z-[250] flex items-start md:items-center justify-center p-4 md:p-8">
+    
+    <div class="absolute inset-0 bg-black/80 backdrop-blur-sm" @click="closeModal"></div>
+    
+    <div class="relative bg-white max-w-4xl w-full max-h-[90vh] overflow-y-auto shadow-2xl flex flex-col md:flex-row scrollbar-hide">
+      
+      <button @click="closeModal" class="absolute top-4 right-4 z-20 text-gray-400 hover:text-black bg-white/50 rounded-full p-1">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+
+      <div class="w-full md:w-1/2 bg-gray-100 shrink-0">
+        <img 
+          :src="selectedMember.image" 
+          :alt="selectedMember.name" 
+          class="w-full h-full object-cover aspect-[4/5] md:aspect-auto" 
+        />
+      </div>
+
+      <div class="w-full md:w-1/2 p-6 md:p-10 flex flex-col justify-center">
+        <h2 class="text-3xl font-black uppercase mb-1">{{ selectedMember.name }}</h2>
+        <p class="text-maroon font-bold mb-4">{{ selectedMember.title }}</p>
+        <div class="w-12 h-1 bg-maroon mb-6"></div>
         
-        <div class="relative bg-white max-w-4xl w-full overflow-hidden shadow-2xl flex flex-col md:flex-row">
-          <button @click="closeModal" class="absolute top-4 right-4 z-10 text-gray-400 hover:text-black">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          </button>
+        <p class="text-gray-700 leading-relaxed text-base md:text-lg">
+          {{ selectedMember.fullBio }}
+        </p>
 
-          <div class="w-full md:w-1/2 bg-gray-100">
-            <img :src="selectedMember.image" :alt="selectedMember.name" class="w-full h-full object-cover aspect-square md:aspect-auto" />
-          </div>
-
-          <div class="w-full md:w-1/2 p-10 flex flex-col justify-center">
-            <h2 class="text-3xl font-black uppercase mb-1">{{ selectedMember.name }}</h2>
-            <p class="text-maroon font-bold mb-6">{{ selectedMember.title }}</p>
-            <div class="w-12 h-1 bg-maroon mb-6"></div>
-            <p class="text-gray-700 leading-relaxed text-lg">
-              {{ selectedMember.fullBio }}
-            </p>
-            <div class="mt-8">
-               <MuiButton label="CLOSE" variant="outline" @click="closeModal" />
-            </div>
-          </div>
+        <div class="mt-8">
+           <MuiButton label="CLOSE" variant="outline" class="w-full md:w-auto" @click="closeModal" />
         </div>
       </div>
-    </Transition>
+    </div>
+  </div>
+</Transition>
   </MuiPageContainer>
   </section>
 
@@ -286,27 +294,6 @@
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="bg-white text-black p-0 group shadow-xl">
-          <div class="h-56 overflow-hidden bg-gray-200">
-            <img
-              src="/img/whoWeAre/Mr. Akampa Leon.jpeg"
-              alt="Mr. Akampa Leon"
-              class="w-full h-full object-cover object-top transition-all duration-500"
-            />
-          </div>
-          <div class="p-6">
-            <h4 class="font-black uppercase text-xl">Mr. Akampa Leon</h4>
-            <MuiButton
-              label="LinkedIn"
-              href="https://www.linkedin.com/in/leon-akampa-mugasha-896218138/"
-              target="_blank"
-              rel="noreferrer"
-              variant="outline"
-              class="w-full !border-gray-200"
-            />
-          </div>
-        </div>
-
         <div class="bg-white text-black p-0 group shadow-xl">
           <div class="h-56 overflow-hidden bg-gray-200">
             <img
@@ -325,7 +312,7 @@
               target="_blank"
               rel="noreferrer"
               variant="outline"
-              class="w-full !border-gray-200"
+              class="w-full !border-gray-200 mt-auto"
             />
           </div>
         </div>
@@ -348,7 +335,91 @@
               target="_blank"
               rel="noreferrer"
               variant="outline"
-              class="w-full !border-gray-200"
+              class="w-full !border-gray-200 mt-auto"
+            />
+          </div>
+        </div>
+
+         <div class="bg-white text-black p-0 group shadow-xl">
+          <div class="h-56 overflow-hidden bg-gray-200">
+            <img
+              src="/img/whoWeAre/Mrs. Josephine Sajjabi.jpg"
+              alt="Mrs. Josephine Sajjabi"
+              class="w-full h-full object-cover object-top transition-all duration-500"
+            />
+          </div>
+          <div class="p-6">
+            <h4 class="font-black uppercase text-xl">Mrs. Josephine Sajjabi <span class="text-white">(dahlin)</span> </h4>
+            <MuiButton
+              label="LinkedIn"
+              href="https://www.linkedin.com/in/josephine-sajjabi-9b6a9171/?originalSubdomain=ug"
+              target="_blank"
+              rel="noreferrer"
+              variant="outline"
+              class="w-full !border-gray-200 mt-auto"
+            />
+          </div>
+        </div>
+
+         <div class="bg-white text-black p-0 group shadow-xl">
+          <div class="h-56 overflow-hidden bg-gray-200">
+            <img
+              src="/img/whoWeAre/Ms. Gloria Nakiguli.jpeg"
+              alt="Ms. Gloria Nakiguli"
+              class="w-full h-full object-cover object-top transition-all duration-500"
+            />
+          </div>
+          <div class="p-6">
+            <h4 class="font-black uppercase text-xl">Ms. Gloria Nakiguli</h4>
+            <MuiButton
+              label="LinkedIn"
+              href="https://www.linkedin.com/in/gloria-nakiguli-9b6a9171/?originalSubdomain=ug"
+              target="_blank"
+              rel="noreferrer"
+              variant="outline"
+              class="w-full !border-gray-200 mt-auto"
+            />
+          </div>
+        </div>
+
+         <div class="bg-white text-black p-0 group shadow-xl">
+          <div class="h-56 overflow-hidden bg-gray-200">
+            <img
+              src="/img/whoWeAre/Ms. Primera Muthoni.jpeg"
+              alt="Ms. Primera Muthoni"
+              class="w-full h-full object-cover object-top transition-all duration-500"
+            />
+          </div>
+          <div class="p-6">
+            <h4 class="font-black uppercase text-xl">Ms. Primera Muthoni</h4>
+            <MuiButton
+              label="LinkedIn"
+              href="https://www.linkedin.com/in/primera-muthoni-a3338a23b/?originalSubdomain=ug"
+              target="_blank"
+              rel="noreferrer"
+              variant="outline"
+              class="w-full !border-gray-200 mt-auto"
+            />
+          </div>
+        </div>
+
+         <div class="bg-white text-black p-0 group shadow-xl">
+          <div class="h-56 overflow-hidden bg-gray-200">
+            <img
+              src="/img/whoWeAre/Mr. Akampa Leon.jpeg"
+              alt="Mr. Akampa Leon"
+              class="w-full h-full object-cover object-top transition-all duration-500"
+            />
+          </div>
+          <div class="p-6">
+            <h4 class="font-black uppercase text-xl">Mr. Akampa Leon</h4>
+            <MuiButton
+              label="LinkedIn"
+              href="https://www.linkedin.com/in/leon-akampa-mugasha-896218138/"
+              target="_blank"
+              rel="noreferrer"
+              variant="outline"
+              class="w-full !border-gray-200 mt-auto"
             />
           </div>
         </div>

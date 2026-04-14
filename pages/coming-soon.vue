@@ -20,5 +20,7 @@
 </template>
 
 <script setup>
+import { MuiPageContainer, MuiLogoMu } from "@northgreenug/musizi-ui-kit";
+
 useHead({ title: 'Coming Soon' })
 </script>
