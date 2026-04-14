@@ -167,7 +167,7 @@
           />
           <h2 class="mui-text--display-1 uppercase leading-tight text-white">
             Real Stories. <br />
-            <span class="text-abc-green">Measurable Success.</span>
+            <span class="text-abc-navy">Measurable Success.</span>
           </h2>
           <p class="mt-6 mb-8 text-white/80 text-lg leading-relaxed">
             Explore how ABC Sales Consulting has transformed sales departments
@@ -275,38 +275,49 @@
       </p>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+   <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+  <a
+    v-for="(video, index) in videos"
+    :key="index"
+    :href="video.url"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="bg-white group shadow-sm hover:shadow-xl transition-all overflow-hidden rounded-xl block cursor-pointer"
+  >
+    <div class="relative h-72">
+      <img
+        :src="video.thumb"
+        :alt="video.title"
+        class="w-full h-full object-cover object-top"
+      />
       <div
-        v-for="n in 2"
-        :key="n"
-        class="bg-white group shadow-sm hover:shadow-xl transition-all overflow-hidden rounded-xl"
+        class="absolute inset-0 bg-maroon/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
       >
-        <div class="relative h-72">
-          <img
-            :src="`/img/video-thumbs/thumb-${n}.png`"
-            class="w-full h-full object-cover object-top"
-          />
-          <div
-            class="absolute inset-0 bg-maroon/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
-          >
-            <div
-              class="w-16 h-16 border-2 border-white rounded-full flex items-center justify-center text-white"
-            >
-              ▶
-            </div>
-          </div>
-        </div>
-        <div class="p-6">
-          <h3 class="text-maroon font-extrabold uppercase text-xl mb-2">
-            High-Performance Training Session 0{{ n }}
-          </h3>
-          <p class="text-gray-600 text-sm">
-            A deep dive into the ABC framework implemented with top-tier
-            corporate sales leads.
-          </p>
+        <div
+          class="w-16 h-16 border-2 border-white rounded-full flex items-center justify-center text-white text-2xl"
+        >
+          ▶
         </div>
       </div>
     </div>
+    
+    <div class="p-6">
+      <div class="flex items-center justify-between mb-2">
+        <h3 class="text-maroon font-extrabold uppercase text-xl">
+          {{ video.title }} 0{{ index + 1 }}
+        </h3>
+        <span class="text-maroon opacity-0 group-hover:opacity-100 transition-opacity">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+          </svg>
+        </span>
+      </div>
+      <p class="text-gray-600 text-sm">
+        {{ video.description }}
+      </p>
+    </div>
+  </a>
+</div>
   </MuiPageContainer>
 
   <MuiPageContainer id="whatsapp-wall" class="py-24 bg-white">
@@ -480,6 +491,33 @@ const navLinks = [
 },
   { name: "Gallery", to: "/gallery" },
 ];
+
+const videos = [
+  {
+    title: 'High-Performance Training Session',
+    description: 'A deep dive into the ABC framework implemented with top-tier corporate sales leads.',
+    thumb: '/img/video-thumbs/thumb-1.png',
+    url: 'https://res.cloudinary.com/dz1t6hhe7/video/upload/v1762526041/motorCenter5_rouraq.mp4'
+  },
+  {
+    title: 'Advanced Sales Techniques',
+    description: 'Learn the latest strategies to close deals and exceed targets.',
+    thumb: '/img/video-thumbs/thumb-2.png',
+    url: 'https://res.cloudinary.com/dz1t6hhe7/video/upload/v1760127950/VIDEO-2025-07-01-15-49-31_2_l8sjbr.mp4'
+  },
+  {
+    title: 'KARUKA AGENCIES',
+    description: 'Build lasting relationships with your clients for long-term success.',
+    thumb: '/img/video-thumbs/thumb-3.png',
+    url: 'https://res.cloudinary.com/dz1t6hhe7/video/upload/v1760127900/VIDEO-2025-07-01-15-49-30_2_ecixwe.mp4'
+  },
+  {
+    title: 'SUCCESS MOTORS',
+    description: 'Develop the skills to lead and inspire your sales team to achieve greatness.',
+    thumb: '/img/video-thumbs/thumb-4.png',
+    url: 'https://res.cloudinary.com/dz1t6hhe7/video/upload/v1760126968/VIDEO-2025-08-05-10-07-59_rzqtaw.mp4'
+  }
+]
 </script>
 
 <style scoped>

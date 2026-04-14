@@ -13,17 +13,17 @@ const sections = ref([
     limit: 6,
     items: [
       {
-        url: "/img/gallery/collaborative meeting.jpeg",
+        url: "https://res.cloudinary.com/dz1t6hhe7/image/upload/v1776150799/WhatsApp_Image_2026-04-13_at_10.37.02_ymh7tv.jpg",
         type: "image",
         caption: "Collaborative Meeting",
       },
       {
-        url: "/img/gallery/dahlinTraining.jpeg",
+        url: "https://res.cloudinary.com/dz1t6hhe7/image/upload/v1776150797/WhatsApp_Image_2026-04-09_at_17.45.13_bmtrkn.jpg",
         type: "image",
         caption: "CEO Training",
       },
       {
-        url: "/img/gallery/dahlinTraining2.jpeg",
+        url: "https://res.cloudinary.com/dz1t6hhe7/image/upload/v1776150797/WhatsApp_Image_2026-04-09_at_17.45.12_ckwbhb.jpg",
         type: "image",
         caption: "CEO Training",
       },
@@ -92,6 +92,21 @@ const sections = ref([
       },
       {
         url: "https://res.cloudinary.com/dz1t6hhe7/image/upload/v1760125441/PHOTO-2025-08-28-09-18-47_2_tgduxb.jpg",
+        type: "image",
+        caption: "Prime Training",
+      },
+       {
+        url: "https://res.cloudinary.com/dz1t6hhe7/image/upload/v1760125441/PHOTO-2025-08-28-09-18-47_2_tgduxb.jpg",
+        type: "image",
+        caption: "Prime Training",
+      },
+       {
+        url: "https://res.cloudinary.com/dz1t6hhe7/image/upload/v1776150801/WhatsApp_Image_2026-04-03_at_10.32.04_id22xw.jpgg",
+        type: "image",
+        caption: "Prime Training",
+      },
+       {
+        url: "https://res.cloudinary.com/dz1t6hhe7/image/upload/v1776150801/WhatsApp_Image_2026-04-03_at_10.32.05_mcplq1.jpgg",
         type: "image",
         caption: "Prime Training",
       },

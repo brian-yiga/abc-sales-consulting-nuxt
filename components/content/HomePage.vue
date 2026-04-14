@@ -247,7 +247,7 @@
         class="h-[165px] md:h-[250px] lg:h-[316px] xl:h-[342px] overflow-hidden"
       >
         <NuxtImg
-          src="/img/whoWeAre/groupPhoto.JPG"
+          src="/img/home/rukaPay.jpeg"
           alt="ABC Sales Consulting team and corporate clients after successful workshop"
           class="w-full object-cover block rounded-md h-[166px] md:h-[251px] lg:h-[317px] xl:h-[343px]"
           fit="cover"
