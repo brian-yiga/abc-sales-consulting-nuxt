@@ -247,7 +247,7 @@
         class="h-[165px] md:h-[250px] lg:h-[316px] xl:h-[342px] overflow-hidden"
       >
         <NuxtImg
-          src="/img/whoWeAre/groupPhoto.jpg"
+          src="/img/whoWeAre/groupPhoto.JPG"
           alt="ABC Sales Consulting team and corporate clients after successful workshop"
           class="w-full object-cover block rounded-md h-[166px] md:h-[251px] lg:h-[317px] xl:h-[343px]"
           fit="cover"
@@ -395,7 +395,7 @@
     <div class="grid gap-2 md:grid-cols-2 lg:grid-cols-4 mb-12 justify-center">
       <MuiLogoButtonCard
         :button="{ text: 'View Impact', href: '/testimonies', external: false }"
-        class="bg-abc-navy bg-[url('/bg-images/bg-client-1.jpg')] bg-blend-overlay"
+        class="bg-abc-navy bg-blend-overlay"
       >
         <template #Image>
           <img src="/img/logos/client-3.png" class="h-12 w-auto" />
@@ -410,7 +410,7 @@
 
       <MuiLogoButtonCard
         :button="{ text: 'View Impact', href: '/testimonies', external: false }"
-        class="bg-abc-orange bg-[url('/bg-images/bg-client-3.jpg')] bg-blend-overlay"
+        class="bg-abc-orange bg-blend-overlay"
       >
         <template #Image>
           <img src="/img/logos/client-4.png" class="h-12 w-auto" />
@@ -426,7 +426,7 @@
 
       <MuiLogoButtonCard
         :button="{ text: 'View Impact', href: '/testimonies', external: false }"
-        class="bg-abc-green bg-[url('/bg-images/bg-client-2.jpg')] bg-blend-overlay"
+        class="bg-abc-green bg-blend-overlay"
       >
         <template #Image>
           <img src="/img/logos/client-2.png" class="h-12 w-auto" />
@@ -442,7 +442,7 @@
 
       <MuiLogoButtonCard
         :button="{ text: 'View Impact', href: '/testimonies', external: false }"
-        class="bg-abc-navy bg-[url('/bg-images/bg-client-4.jpg')] bg-blend-overlay"
+        class="bg-abc-navy bg-blend-overlay"
       >
         <template #Image>
           <img src="/img/logos/client-5.png" class="h-12 w-auto" />
@@ -579,7 +579,7 @@
 
 <script setup>
 import { ref } from "vue";
-import { MuiButton, MuiPageContainer } from "@northgreenug/musizi-ui-kit";
+import { MuiButton, MuiPageContainer, MuiLogoButtonCard } from "@northgreenug/musizi-ui-kit";
 import DiscoveryForm from "~/components/DiscoveryForm.vue";
 
 const isMobileMenuOpen = ref(false);

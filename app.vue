@@ -10,40 +10,27 @@
 import { ref, watchEffect } from "vue";
 import DiscoveryForm from "~/components/DiscoveryForm.vue";
 
-// If you are not using @nuxt/content, you can remove the useContent() line.
-// For now, I've kept a fallback to 'ABC Sales Consulting'.
-const { page } = useContent();
-const { setFormRef } = useDiscoveryForm();
 const formRef = ref(null);
+const { setFormRef } = useDiscoveryForm();
 
-// Set the form ref when component mounts
+// Keep your form logic
 watchEffect(() => {
   if (formRef.value) {
     setFormRef(formRef.value);
   }
 });
 
+// Set global SEO (Your index.md will handle the home page SEO automatically)
 useHead({
   titleTemplate: '%s | ABC Sales Consulting',
-  htmlAttrs: {
-    lang: 'en',
-  },
-  link: [
-    {
-      rel: 'icon',
-      type: 'image/png', // Changed to image/png since your file is a .png
-      href: '/favicon.png' // This points to the public folder automatically
-    }
-  ]
+  htmlAttrs: { lang: 'en' },
+  link: [{ rel: 'icon', type: 'image/png', href: '/favicon.png' }]
 });
 
 useServerSeoMeta({
-  title: page.value?.title || 'ABC Sales Consulting',
-  ogTitle: page.value?.title || 'ABC Sales Consulting',
-  description: page.value?.description || 'High-performance sales training and executive coaching across East Africa.',
-  ogDescription: page.value?.description || 'Transforming sales teams into high-performance assets.',
-  // Update this URL to a real banner image in your /public/img folder
-  ogImage: 'https://abcsalesconsulting.com/img/og-banner.jpg', 
+  title: 'ABC Sales Consulting',
+  description: 'High-performance sales training and executive coaching across East Africa.',
+  ogImage: 'https://abcsalesconsulting.com/img/og-banner.jpg',
   twitterCard: 'summary_large_image',
 });
 </script>
