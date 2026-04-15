@@ -3,10 +3,11 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "nuxt build",
+    "preinstall": "echo \"--- DEBUG: Token length check ---\" && if [ -z \"$NPM_TOKEN\" ]; then echo \"ERROR: NPM_TOKEN is EMPTY\"; else echo \"SUCCESS: NPM_TOKEN is present (Length: ${#NPM_TOKEN})\"; fi",
     "dev": "nuxt dev",
     "dev:local-ui": "yalc add @northgreenug/musizi-ui-kit && npm run dev",
     "dev:published-ui": "yalc remove @northgreenug/musizi-ui-kit && npm install && npm run dev",
+    "build": "nuxt build",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
