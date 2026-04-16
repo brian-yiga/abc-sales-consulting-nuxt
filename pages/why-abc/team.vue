@@ -199,12 +199,7 @@
         </div>
         <h2 class="text-4xl font-black mb-8">Built on Decades of Excellence</h2>
         <p class="text-gray-700 text-lg leading-relaxed">
-          ABC Sales Consulting was born from a shared history of excellence at
-          Saladmaster, where our founders honed a combined 50+ years of direct
-          sales expertise. We don't just teach theory; we teach the "Saladmaster
-          Way"—a philosophy of high-impact engagement, emotional intelligence,
-          and relentless consistency that turns prospects into lifelong
-          advocates.
+          ABC Sales Consulting was founded by experts with over 20 years of combined direct sales experience. We don't just teach theory; we teach a philosophy of high-impact engagement, emotional intelligence, and relentless consistency that turns prospects into lifelong advocates.
         </p>
       </div>
     </MuiPageContainer>
@@ -557,7 +552,7 @@ const founders = [
   },
   {
     name: "Priscilla Alela",
-    title: "Founder | Chief Operations Officer",
+    title: "Co-Founder | Chief Operations Officer",
     image: "/img/movingAds/priscillaAlelaNoBg.png",
     shortBio: "For nearly 20 years, she has thrived in the dynamic world of sales, navigating diverse fields...",
     fullBio: "For nearly 20 years, I've thrived in the dynamic world of sales, navigating diverse fields across Kenya and Uganda. It's more than a career; it's a passion that fuels my drive to consistently exceed sales goals and ignite revenue growth. Through clear communication and strategic problem-solving, I develop a deep understanding of their needs. This allows me to craft tailored solutions that empower their businesses to flourish. My success is fuelled by a relentless results orientation and an unwavering commitment to exceptional customer service."

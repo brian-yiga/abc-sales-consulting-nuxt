@@ -200,7 +200,7 @@
             variant="white-stroke"
             label="OUR SERVICES"
             class="!rounded-none px-10 py-4 font-bold text-[10px] tracking-widest hover:bg-white hover:text-abc-navy transition-all"
-            href="#services"
+            href="/services"
           />
         </div>
       </div>
@@ -394,7 +394,7 @@
 
     <div class="grid gap-2 md:grid-cols-2 lg:grid-cols-4 mb-12 justify-center">
       <MuiLogoButtonCard
-        :button="{ text: 'View Impact', href: '/testimonies', external: false }"
+        :button="{ text: 'View Impact', href: '/impact', external: false }"
         class="bg-abc-navy bg-blend-overlay"
       >
         <template #Image>
@@ -409,7 +409,7 @@
       </MuiLogoButtonCard>
 
       <MuiLogoButtonCard
-        :button="{ text: 'View Impact', href: '/testimonies', external: false }"
+        :button="{ text: 'View Impact', href: '/impact', external: false }"
         class="bg-abc-orange bg-blend-overlay"
       >
         <template #Image>
@@ -425,11 +425,11 @@
       </MuiLogoButtonCard>
 
       <MuiLogoButtonCard
-        :button="{ text: 'View Impact', href: '/testimonies', external: false }"
+        :button="{ text: 'View Impact', href: '/impact', external: false }"
         class="bg-abc-green bg-blend-overlay"
       >
         <template #Image>
-          <img src="/img/logos/client-2.png" class="h-12 w-auto" />
+          <img src="/img/logos/client-26.png" class="h-12 w-auto" />
         </template>
         <template #Text>
           <div class="mui-text--headline-2 uppercase text-white">
@@ -441,11 +441,11 @@
       </MuiLogoButtonCard>
 
       <MuiLogoButtonCard
-        :button="{ text: 'View Impact', href: '/testimonies', external: false }"
+        :button="{ text: 'View Impact', href: '/impact', external: false }"
         class="bg-abc-navy bg-blend-overlay"
       >
         <template #Image>
-          <img src="/img/logos/client-5.png" class="h-12 w-auto" />
+          <img src="/img/logos/client-18.png" class="h-12 w-auto" />
         </template>
         <template #Text>
           <div class="mui-text--headline-2 uppercase text-white">
