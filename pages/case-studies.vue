@@ -443,6 +443,8 @@
     </div>
   </MuiPageContainer>
 </footer>
+  <BackToTop />
+
 </template>
 
 <script setup>
@@ -452,6 +454,8 @@ import {
   MuiPageContainer,
   MuiPattern,
 } from "@northgreenug/musizi-ui-kit";
+import BackToTop from "~/components/BackToTop.vue";
+import { useDiscoveryForm } from "~/composables/useDiscoveryForm.js";
 
 useHead({ title: 'Case Studies' });
 

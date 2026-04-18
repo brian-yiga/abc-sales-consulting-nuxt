@@ -575,12 +575,14 @@
 
   <!-- Discovery Form Modal -->
   <DiscoveryForm ref="discoveryFormRef" />
+  <BackToTop />
 </template>
 
 <script setup>
 import { ref } from "vue";
 import { MuiButton, MuiPageContainer, MuiLogoButtonCard, MuiTextWithImage } from "@northgreenug/musizi-ui-kit";
 import DiscoveryForm from "~/components/DiscoveryForm.vue";
+import BackToTop from "~/components/BackToTop.vue";
 
 const isMobileMenuOpen = ref(false);
 const activeSubMenu = ref(null);

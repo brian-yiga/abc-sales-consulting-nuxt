@@ -1,6 +1,7 @@
 <script setup>
 import { ref } from "vue";
 import { MuiButton, MuiPageContainer } from "@northgreenug/musizi-ui-kit";
+import BackToTop from "~/components/BackToTop.vue";
 
 useHead({ title: 'Gallery' });
 
@@ -479,6 +480,7 @@ const closeLightbox = () => {
         </div>
       </div>
     </Transition>
+    <BackToTop />
   </main>
 </template>
 

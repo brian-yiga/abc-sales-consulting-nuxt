@@ -60,6 +60,7 @@
           <div class="absolute -bottom-10 -right-10 w-64 h-64 bg-blue-600/20 rounded-full blur-3xl"></div>
         </div>
       </section>
+      <BackToTop />
     </main>
   </div>
 </template>

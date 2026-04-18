@@ -530,6 +530,7 @@
       <NuxtLink to="/terms" class="hover:text-abc-green">Terms of Service</NuxtLink>
     </div>
   </MuiPageContainer>
+   <BackToTop />
 </footer>
 </template>
 
@@ -540,6 +541,8 @@ import {
   MuiPageContainer,
   MuiPattern,
 } from "@northgreenug/musizi-ui-kit";
+import BackToTop from "~/components/BackToTop.vue";
+import { useDiscoveryForm } from "~/composables/useDiscoveryForm.js";
 
 useHead({ title: 'Methodology' });
 
