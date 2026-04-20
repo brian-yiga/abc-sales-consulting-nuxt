@@ -168,7 +168,8 @@
             <MuiButton
               variant="all-white"
               label="MEET THE TEAM"
-              class="!rounded-full px-8 !font-medium mb-6 pointer-events-none tracking-widest text-[10px]"
+              href="#team"
+              class="!rounded-full px-8 !font-medium mb-6 tracking-widest text-[10px] cursor-pointer"
             />
           </div>
 
@@ -205,7 +206,7 @@
     </MuiPageContainer>
   </section>
 
-  <section class="py-14 bg-white">
+  <section class="py-14 bg-white" id="team">
    <MuiPageContainer>
     <div class="text-center mb-16">
       <h2 class="text-4xl font-black uppercase border-maroon inline-block border-b-4 pb-2">

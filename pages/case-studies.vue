@@ -178,7 +178,7 @@
             <MuiButton
               label="View Testimonials"
               href="#whatsapp-wall"
-              variant="all-white"
+              variant="white-stroke"
             />
           </div>
         </div>

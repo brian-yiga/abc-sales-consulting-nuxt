@@ -187,8 +187,8 @@
           <div class="flex gap-4">
             <MuiButton
               label="Explore Services"
-              href="#our-services"
-              variant="all-white"
+              href="#expertise"
+              variant="white-stroke"
             />
           </div>
         </div>
@@ -254,7 +254,7 @@
     </div>
   </MuiPageContainer>
 
-  <MuiPageContainer class="py-20 bg-gray-50">
+  <MuiPageContainer class="py-20 bg-gray-50" id="expertise">
     <div class="text-center mb-16">
       <div
         class="inline-block bg-gray-200 text-gray-600 px-4 py-1 rounded-full text-[14px] font-bold uppercase mb-4 tracking-widest"
@@ -464,7 +464,7 @@
             />
           </NuxtLink>
           <NuxtLink
-            to="https://instagram.com/abcsales"
+            to="https://instagram.com/abcsalesconsulting"
             target="_blank"
             class="group flex items-center justify-center w-12 h-12 rounded-full border border-white/10 hover:border-abc-green transition-all duration-300"
           >
@@ -474,7 +474,7 @@
             />
           </NuxtLink>
           <NuxtLink
-            to="https://facebook.com/abcsales"
+            to="https://facebook.com/abcsalesconsulting"
             target="_blank"
             class="group flex items-center justify-center w-12 h-12 rounded-full border border-white/10 hover:border-abc-green transition-all duration-300"
           >

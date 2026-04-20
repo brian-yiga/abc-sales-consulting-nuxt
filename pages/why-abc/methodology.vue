@@ -189,8 +189,7 @@
             <MuiButton
               label="EXPLORE OUR STEPS"
               href="#process-flow"
-              variant="all-white"
-              class="!rounded-full px-8"
+              variant="white-stroke"
             />
           </div>
         </div>
