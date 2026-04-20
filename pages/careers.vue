@@ -1,6 +1,6 @@
 <template>
   <div
-    class="bg-maroon pt-4 pb-5 bg-cover bg-center bg-[url('/bg-images/bg-purple.jpg')]"
+    class="bg-maroon pt-4 pb-5 bg-cover bg-center bg-[url('/bg-images/bg-blue.png')]"
   >
     <MuiPageContainer wide class="relative">
       <header
@@ -160,245 +160,72 @@
       </Transition>
     </MuiPageContainer>
 
-    <MuiPageContainer class="py-20 lg:py-32 overflow-hidden relative">
-      <div class="grid lg:grid-cols-2 gap-12 items-center relative z-10">
-        <div class="text-left max-w-xl">
-          <div>
-            <MuiButton
-              variant="all-white"
-              label="Professional Solutions"
-              class="!rounded-full px-8 !font-medium mb-4 pointer-events-none"
-            />
-          </div>
-
-          <h2 class="mui-text--display-1 uppercase leading-tight text-white">
-            Drive Performance. <br />
-            <span class="text-abc-green">Accelerate Revenue.</span>
-          </h2>
-
-          <p class="mt-6 mb-8 text-white/80 text-lg leading-relaxed">
-            From tailored sales training to high-level executive coaching, ABC
-            Sales Consulting provides the strategic framework necessary to
-            dominate your market. We transform your sales teams into
-            high-performance bg-images drive sustainable growth across East
-            Africa.
-          </p>
-
-          <div class="flex gap-4">
-            <MuiButton
-              label="Explore Services"
-              href="#expertise"
-              variant="white-stroke"
-            />
-          </div>
-        </div>
-
-        <div class="relative">
-          <img
-            src="/img/WhatsAppImages/whatsappMarch-4.jpg"
-            alt="Professional Sales Consulting"
-            class="rounded-2xl shadow-2xl w-full object-cover aspect-[4/3] lg:aspect-auto border border-white/10"
-          />
-
-          <div
-            class="absolute -bottom-6 -left-6 h-24 w-24 bg-abc-green rounded-full blur-3xl opacity-30"
-          ></div>
-        </div>
+     <MuiPageContainer>
+      <div class="inline-block border border-abc-green/50 bg-abc-green/10 text-abc-green px-6 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-[0.3em] mb-6">
+        Talent Acquisition & Placements
       </div>
-    </MuiPageContainer>
-  </div>
-
-  <MuiPageContainer class="py-16">
-    <div class="max-w-5xl mx-auto">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-10">
-        <div
-          class="bg-maroon text-white p-8 rounded-sm text-center flex flex-col justify-center items-center min-h-[180px]"
-        >
-          <span class="text-5xl font-bold mb-2 uppercase italic text-abc-green"
-            >95%</span
-          >
-          <span class="uppercase tracking-widest text-sm font-semibold"
-            >REVENUE GROWTH</span
-          >
-        </div>
-
-        <div
-          class="bg-maroon text-white p-8 rounded-sm text-center flex flex-col justify-center items-center min-h-[180px]"
-        >
-          <span class="text-5xl font-bold mb-2 uppercase italic">100+</span>
-          <span class="uppercase tracking-widest text-sm font-semibold"
-            >TEAMS TRAINED</span
-          >
-        </div>
-
-        <div
-          class="bg-maroon text-white p-8 rounded-sm text-center flex flex-col justify-center items-center min-h-[180px]"
-        >
-          <span class="text-5xl font-bold mb-2 uppercase italic text-abc-orange"
-            >20+</span
-          >
-          <span class="uppercase tracking-widest text-sm font-semibold"
-            >YEARS EXPERIENCE</span
-          >
-        </div>
-      </div>
-
-      <div
-        class="text-center italic text-gray-600 max-w-2xl mx-auto leading-relaxed text-[20px]"
-      >
-        <p>
-          "We don't just teach sales; we engineer high-performance cultures that
-          deliver predictable, scalable results."
-        </p>
-      </div>
-    </div>
-  </MuiPageContainer>
-
-  <MuiPageContainer class="py-20 bg-gray-50" id="expertise">
-    <div class="text-center mb-16">
-      <div
-        class="inline-block bg-gray-200 text-gray-600 px-4 py-1 rounded-full text-[14px] font-bold uppercase mb-4 tracking-widest"
-      >
-        Our Core Expertise
-      </div>
-      <h2 class="mui-text--display-1 text-maroon uppercase mb-4">
-        Professional Sales Solutions
-      </h2>
-      <p class="max-w-3xl mx-auto text-gray-600">
-        ABC Sales Consulting offers a comprehensive suite of services designed
-        to address every bottleneck in your sales funnel, from talent
-        acquisition to executive mentorship.
+      <h1 class="mui-text--display-1 uppercase font-black tracking-tighter">Current Placements</h1>
+      <p class="max-w-2xl mx-auto mt-4 text-sm opacity-90 uppercase tracking-widest">
+        ABC Sales Consulting connects world-class sales talent with Africa’s leading organizations.
       </p>
+    </MuiPageContainer>
+  </div>
+
+  <MuiPageContainer class="py-20">
+    <div class="mb-24">
+      <div class="flex items-center gap-4 mb-12">
+        <h2 class="text-3xl font-black uppercase text-abc-navy">Open Opportunities</h2>
+        <div class="h-px flex-1 bg-gray-200"></div>
+      </div>
+
+      <div class="grid gap-12 lg:grid-cols-2">
+        <div v-for="job in activePlacements" :key="job.title" class="flex flex-col md:flex-row gap-6 bg-white border border-gray-100 p-6 shadow-xl hover:shadow-2xl transition-all group">
+          <div class="w-full md:w-48 h-64 bg-gray-200 overflow-hidden rounded-sm flex-shrink-0">
+             <img :src="job.image" :alt="job.title" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          </div>
+
+          <div class="flex flex-col justify-between py-2">
+            <div>
+              <p class="text-abc-green font-bold text-[10px] uppercase tracking-widest mb-1">{{ job.company }}</p>
+              <h3 class="text-xl font-black text-abc-navy uppercase leading-tight mb-3">{{ job.title }}</h3>
+              <div class="flex gap-2 mb-4">
+                <span class="text-[9px] bg-gray-100 px-2 py-1 font-bold text-gray-500 uppercase">{{ job.type }}</span>
+                <span class="text-[9px] bg-abc-navy text-white px-2 py-1 font-bold uppercase">{{ job.salary }}</span>
+              </div>
+              <p class="text-gray-500 text-xs leading-relaxed mb-6">{{ job.description }}</p>
+            </div>
+
+            <div class="flex gap-2">
+              <MuiButton label="APPLY NOW" variant="red-fill" class="!text-[9px] !px-4 !py-3 !rounded-none" :href="getApplyLink(job)" />
+              <MuiButton label="VIEW FLYER" variant="white-stroke" class="!text-[9px] !px-4 !py-3 !rounded-none !border-abc-navy !text-abc-navy" :href="job.image" target="_blank" />
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      <div class="bg-white group shadow-sm hover:shadow-xl transition-all">
-        <img
-          src="/img/WhatsAppImages/whatsappMarch-4.jpg"
-          alt="Sales Leadership"
-          class="w-full h-64 object-cover mb-6 border-b border-gray-100 group-hover:border-abc-green transition-all"
-        />
-        <div class="px-6 pb-8">
-          <h3 class="text-maroon font-extrabold uppercase text-xl mb-3">
-            Sales Leadership & Management
-          </h3>
-          <p class="text-gray-600 text-sm leading-relaxed">
-            Equipping managers with the tools to lead, motivate, and track
-            performance effectively. We focus on CRM mastery and data-driven
-            decision making.
-          </p>
-        </div>
+    <div>
+      <div class="flex items-center gap-4 mb-12 opacity-50">
+        <h2 class="text-2xl font-black uppercase text-gray-400">Recently Filled</h2>
+        <div class="h-px flex-1 bg-gray-100"></div>
       </div>
 
-      <div class="bg-white group shadow-sm hover:shadow-xl transition-all">
-        <img
-          src="/img/WhatsAppImages/whatsappMarch-7.jpg"
-          alt="Sales Techniques"
-          class="w-full h-64 object-cover mb-6 border-b border-gray-100 group-hover:border-abc-green transition-all"
-        />
-        <div class="px-6 pb-8">
-          <h3 class="text-maroon font-extrabold uppercase text-xl mb-3">
-            Advanced Sales Techniques
-          </h3>
-          <p class="text-gray-600 text-sm leading-relaxed">
-            Modern closing strategies, objection handling, and
-            relationship-based selling tailored for the East African corporate
-            landscape.
-          </p>
-        </div>
-      </div>
-
-      <div class="bg-white group shadow-sm hover:shadow-xl transition-all">
-        <img
-          src="/img/WhatsAppImages/whatsappMarch-21.jpg"
-          alt="Recruitment"
-          class="w-full h-64 object-cover mb-6 border-b border-gray-100 group-hover:border-abc-green transition-all"
-        />
-        <div class="px-6 pb-8">
-          <h3 class="text-maroon font-extrabold uppercase text-xl mb-3">
-            Recruitment & Placement
-          </h3>
-          <p class="text-gray-600 text-sm leading-relaxed">
-            Stop the high turnover. We identify, vet, and place top-tier sales
-            talent that actually fits your company culture and KPIs.
-          </p>
-        </div>
-      </div>
-
-      <div class="bg-white group shadow-sm hover:shadow-xl transition-all">
-        <img
-          src="/img/WhatsAppImages/whatsappMarch-32.jpg"
-          alt="Team Building"
-          class="w-full h-64 object-cover mb-6 border-b border-gray-100 group-hover:border-abc-green transition-all"
-        />
-        <div class="px-6 pb-8">
-          <h3 class="text-maroon font-extrabold uppercase text-xl mb-3">
-            Strategic Team Building
-          </h3>
-          <p class="text-gray-600 text-sm leading-relaxed">
-            High-energy sessions focused on collaboration, communication, and
-            aligning your team around a single revenue goal.
-          </p>
-        </div>
-      </div>
-
-      <div class="bg-white group shadow-sm hover:shadow-xl transition-all">
-        <img
-          src="/img/WhatsAppImages/whatsappMarch-11.jpg"
-          alt="Mystery Shopper"
-          class="w-full h-64 object-cover mb-6 border-b border-gray-100 group-hover:border-abc-green transition-all"
-        />
-        <div class="px-6 pb-8">
-          <h3 class="text-maroon font-extrabold uppercase text-xl mb-3">
-            Mystery Shopper Audits
-          </h3>
-          <p class="text-gray-600 text-sm leading-relaxed">
-            Get an unbiased view of your customer experience. We provide
-            detailed reports on staff performance and service quality gaps.
-          </p>
-        </div>
-      </div>
-
-      <div class="bg-white group shadow-sm hover:shadow-xl transition-all">
-        <img
-          src="/img/WhatsAppImages/whatsappMarch-14.jpg"
-          alt="Coaching"
-          class="w-full h-64 object-cover mb-6 border-b border-gray-100 group-hover:border-abc-green transition-all"
-        />
-        <div class="px-6 pb-8">
-          <h3 class="text-maroon font-extrabold uppercase text-xl mb-3">
-            Coaching & Mentorship
-          </h3>
-          <p class="text-gray-600 text-sm leading-relaxed">
-            Personalized 1-on-1 sessions for executives and sales leads to
-            refine leadership skills and high-level strategy.
-          </p>
+      <div class="grid gap-8 md:grid-cols-3">
+        <div v-for="job in filledPlacements" :key="job.title" class="relative group opacity-60 grayscale hover:grayscale-0 transition-all">
+          <div class="relative aspect-[3/4] bg-gray-200 mb-4 overflow-hidden rounded-sm">
+            <img :src="job.image" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-white/40 flex items-center justify-center">
+               <span class="border-4 border-red-600 text-red-600 font-black uppercase text-3xl px-4 py-1 -rotate-12">FILLED</span>
+            </div>
+          </div>
+          <p class="text-[9px] font-bold text-abc-green uppercase">{{ job.company }}</p>
+          <h4 class="text-sm font-black text-abc-navy uppercase">{{ job.title }}</h4>
         </div>
       </div>
     </div>
   </MuiPageContainer>
 
-  <div class="relative bg-black py-20 text-center overflow-hidden">
-    <MuiPageContainer class="relative z-10">
-      <div class="max-w-3xl mx-auto flex flex-col items-center">
-        <h2
-          class="text-3xl md:text-5xl font-bold text-white uppercase mb-6 leading-tight"
-        >
-          Ready to Outperform <br />Your Competition?
-        </h2>
-        <p class="text-white/80 text-lg mb-10 leading-relaxed">
-          Stop guessing and start growing. Join the leading firms in East Africa
-          using the ABC Sales Framework to dominate their sectors.
-        </p>
-        <MuiButton
-          variant="all-white"
-          label="Book a Discovery Session"
-          @click="openForm"
-          class="!rounded-full px-12 py-4 cursor-pointer"
-        />
-      </div>
-    </MuiPageContainer>
-  </div>
+  <BackToTop />
 
   <footer class="bg-abc-navy text-white" id="contacts">
     <MuiPageContainer class="py-16 border-b border-white/10">
@@ -464,7 +291,7 @@
             />
           </NuxtLink>
           <NuxtLink
-            to="https://instagram.com/abcsalesconsulting"
+            to="https://instagram.com/abcsales"
             target="_blank"
             class="group flex items-center justify-center w-12 h-12 rounded-full border border-white/10 hover:border-abc-green transition-all duration-300"
           >
@@ -474,7 +301,7 @@
             />
           </NuxtLink>
           <NuxtLink
-            to="https://facebook.com/abcsalesconsulting"
+            to="https://facebook.com/abcsales"
             target="_blank"
             class="group flex items-center justify-center w-12 h-12 rounded-full border border-white/10 hover:border-abc-green transition-all duration-300"
           >
@@ -560,6 +387,9 @@
       </div>
     </MuiPageContainer>
   </footer>
+
+  <!-- Discovery Form Modal -->
+  <DiscoveryForm ref="discoveryFormRef" />
   <BackToTop />
 </template>
 
@@ -568,16 +398,15 @@ import { ref } from "vue";
 import {
   MuiButton,
   MuiPageContainer,
-  MuiPattern,
+  MuiLogoButtonCard,
+  MuiTextWithImage,
 } from "@northgreenug/musizi-ui-kit";
+import DiscoveryForm from "~/components/DiscoveryForm.vue";
 import BackToTop from "~/components/BackToTop.vue";
-import { useDiscoveryForm } from "~/composables/useDiscoveryForm.js";
 
-useHead({ title: "Services" });
-
-const { openForm } = useDiscoveryForm();
 const isMobileMenuOpen = ref(false);
 const activeSubMenu = ref(null);
+const discoveryFormRef = ref(null);
 
 const toggleMenu = () => {
   isMobileMenuOpen.value = !isMobileMenuOpen.value;
@@ -595,7 +424,7 @@ const navLinks = [
     name: "Resources",
     to: "/resources",
     subLinks: [
-      { name: "Sales Blog", to: "/resources" },
+      { name: "Sales Blogs", to: "/resources" },
       { name: "Whitepapers", to: "/resources" },
       { name: "Job Opportunities", to: "/careers" },
     ],
@@ -611,4 +440,41 @@ const navLinks = [
   },
   { name: "Gallery", to: "/gallery" },
 ];
+
+const activePlacements = [
+  {
+    company: "TechFlow Solutions",
+    title: "Head of Sales",
+    description: "Driving regional expansion and managing a team of 20+ sales executives.",
+    type: "Salaried + Bonus",
+    salary: "Scale: UGX 6M - 8M",
+    image: "/img/careers/techflow-flyer.jpg" // Path to your flyer image
+  },
+  {
+    company: "Nexus Logistics",
+    title: "Business Development Lead",
+    description: "Focusing on B2B partnerships and supply chain contract acquisitions.",
+    type: "Commission Based",
+    salary: "High Performance Tier",
+    image: "/img/careers/nexus-flyer.jpg"
+  }
+];
+
+const filledPlacements = [
+  {
+    company: "Ruka Pay",
+    title: "Sales Operations Manager",
+    description: "Successfully placed a candidate to oversee CRM integration and sales data.",
+    type: "Contract",
+    salary: "Closed",
+    image: "/img/careers/ruka-flyer.jpg"
+  }
+];
+
+// Helper to format the application email
+const getApplyLink = (job) => {
+  const subject = encodeURIComponent(`Application for ${job.title} at ${job.company} (via ABC Sales)`);
+  const body = encodeURIComponent(`Dear ABC Recruitment Team,\n\nI am interested in the ${job.title} position at ${job.company}. Please find my CV attached.\n\nBest regards,`);
+  return `mailto:admin@abcsalesconsulting.net?subject=${subject}&body=${body}`;
+};
 </script>

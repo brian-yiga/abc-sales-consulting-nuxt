@@ -479,6 +479,7 @@ const navLinks = [
     subLinks: [
       { name: "Sales Blog", to: "/resources" },
       { name: "Whitepapers", to: "/resources" },
+      { name: "Job Opportunities", to: "/careers" },
     ],
   },
   { name: "Case Studies", to: "/case-studies" },

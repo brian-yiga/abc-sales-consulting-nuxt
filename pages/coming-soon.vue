@@ -1,7 +1,6 @@
 <template>
   <MuiPageContainer class="min-h-[70vh] flex flex-col items-center justify-center text-center">
     <div class="space-y-6">
-      <MuiLogoMu class="h-24 w-auto mx-auto opacity-20" />
       <h1 class="text-4xl md:text-6xl font-bold text-maroon uppercase tracking-tighter">
         COMING SOON
       </h1>
@@ -22,5 +21,4 @@
 <script setup>
 import { MuiPageContainer, MuiLogoMu } from "@northgreenug/musizi-ui-kit";
 
-useHead({ title: 'Coming Soon' })
 </script>
