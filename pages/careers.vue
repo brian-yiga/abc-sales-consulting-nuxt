@@ -160,14 +160,32 @@
       </Transition>
     </MuiPageContainer>
 
-     <MuiPageContainer>
-      <div class="inline-block border border-abc-green/50 bg-abc-green/10 text-abc-green px-6 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-[0.3em] mb-6">
-        Talent Acquisition & Placements
-      </div>
-      <h1 class="mui-text--display-1 uppercase font-black tracking-tighter">Current Placements</h1>
-      <p class="max-w-2xl mx-auto mt-4 text-sm opacity-90 uppercase tracking-widest">
+    <MuiPageContainer
+      class="text-center text-white pt-20 pb-16 lg:pt-25 lg:pb-20 xl:pt-[120px] xl:pb-25 relative bg-cover bg-center"
+    >
+      <div class="absolute inset-0 pointer-events-none"></div>
+
+      <div class="max-w-3xl mx-auto relative z-10">
+        <div
+          class="inline-block border border-abc-green/50 bg-abc-green/10 text-abc-green px-6 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-[0.3em] mb-8"
+        >
+         Talent Acquisition & Placements
+        </div>
+
+        <h2
+          class="mui-text--display-1 uppercase font-black tracking-tighter leading-tight"
+        >
+          job placements that <br> transform businesses
+        </h2>
+
+        <p
+          class="max-w-xl mt-6 mb-10 mx-auto text-white/90 leading-relaxed text-sm tracking-wide"
+        >
         ABC Sales Consulting connects world-class sales talent with Africa’s leading organizations.
-      </p>
+        </p>
+
+       
+      </div>
     </MuiPageContainer>
   </div>
 
@@ -205,23 +223,35 @@
     </div>
 
     <div>
-      <div class="flex items-center gap-4 mb-12 opacity-50">
-        <h2 class="text-2xl font-black uppercase text-gray-400">Recently Filled</h2>
-        <div class="h-px flex-1 bg-gray-100"></div>
+     <div class="flex items-center gap-4 mb-12">
+        <h2 class="text-3xl font-black uppercase text-abc-navy">Recently Filled</h2>
+        <div class="h-px flex-1 bg-gray-200"></div>
       </div>
 
-      <div class="grid gap-8 md:grid-cols-3">
-        <div v-for="job in filledPlacements" :key="job.title" class="relative group opacity-60 grayscale hover:grayscale-0 transition-all">
-          <div class="relative aspect-[3/4] bg-gray-200 mb-4 overflow-hidden rounded-sm">
-            <img :src="job.image" class="w-full h-full object-cover" />
-            <div class="absolute inset-0 bg-white/40 flex items-center justify-center">
-               <span class="border-4 border-red-600 text-red-600 font-black uppercase text-3xl px-4 py-1 -rotate-12">FILLED</span>
-            </div>
-          </div>
-          <p class="text-[9px] font-bold text-abc-green uppercase">{{ job.company }}</p>
-          <h4 class="text-sm font-black text-abc-navy uppercase">{{ job.title }}</h4>
-        </div>
+     <div class="grid gap-8 md:grid-cols-3">
+  <div 
+    v-for="job in filledPlacements" 
+    :key="job.title" 
+    class="relative group opacity-70 grayscale-[50%] hover:opacity-100 hover:grayscale-0 transition-all duration-300"
+  >
+    <div class="relative aspect-[3/4] bg-gray-200 mb-4 overflow-hidden rounded-sm">
+      <img :src="job.image" class="w-full h-full object-cover" />
+      
+      <div class="absolute inset-0 bg-white/20 flex items-center justify-center">
+         <span class="border-4 border-red-600 text-red-600 font-black uppercase text-3xl px-4 py-1 -rotate-12 shadow-lg">
+           FILLED
+         </span>
       </div>
+    </div>
+
+    <p class="text-[9px] font-bold text-abc-green uppercase tracking-wider">
+      {{ job.company }}
+    </p>
+    <h4 class="text-sm font-black text-abc-navy uppercase leading-tight">
+      {{ job.title }}
+    </h4>
+  </div>
+</div>
     </div>
   </MuiPageContainer>
 
@@ -404,6 +434,13 @@ import {
 import DiscoveryForm from "~/components/DiscoveryForm.vue";
 import BackToTop from "~/components/BackToTop.vue";
 
+useHead({
+  title: "Careers",
+  titleTemplate: (titleChunk) => {
+    return titleChunk ? `${titleChunk} | ABC Sales Consulting` : 'ABC Sales Consulting';
+  }
+});
+
 const isMobileMenuOpen = ref(false);
 const activeSubMenu = ref(null);
 const discoveryFormRef = ref(null);
@@ -443,31 +480,23 @@ const navLinks = [
 
 const activePlacements = [
   {
-    company: "TechFlow Solutions",
-    title: "Head of Sales",
+    company: "ABC Sales Consulting",
+    title: "Executive Administrator",
     description: "Driving regional expansion and managing a team of 20+ sales executives.",
     type: "Salaried + Bonus",
     salary: "Scale: UGX 6M - 8M",
-    image: "/img/careers/techflow-flyer.jpg" // Path to your flyer image
+    image: "/img/jobs/abcAdmin.jpeg" 
   },
-  {
-    company: "Nexus Logistics",
-    title: "Business Development Lead",
-    description: "Focusing on B2B partnerships and supply chain contract acquisitions.",
-    type: "Commission Based",
-    salary: "High Performance Tier",
-    image: "/img/careers/nexus-flyer.jpg"
-  }
 ];
 
 const filledPlacements = [
   {
-    company: "Ruka Pay",
+    company: "Moving Ads Uganda",
     title: "Sales Operations Manager",
-    description: "Successfully placed a candidate to oversee CRM integration and sales data.",
+    description: "Successfully placed a candidate to drive revenue growth and sales data.",
     type: "Contract",
     salary: "Closed",
-    image: "/img/careers/ruka-flyer.jpg"
+    image: "/img/jobs/moving-ads.jpeg"
   }
 ];
 
