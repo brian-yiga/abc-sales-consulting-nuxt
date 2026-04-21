@@ -480,12 +480,12 @@ const navLinks = [
 
 const activePlacements = [
   {
-    company: "ABC Sales Consulting",
-    title: "Executive Administrator",
-    description: "Driving regional expansion and managing a team of 20+ sales executives.",
+    company: "Meik Car Hub",
+    title: "Car Sales Specialist",
+    description: "Meik Car Hub is seeking a high-caliber Car Sales Specialist to spearhead our regional growth and market expansion.",
     type: "Salaried + Bonus",
-    salary: "Scale: UGX 6M - 8M",
-    image: "/img/jobs/abcAdmin.jpeg" 
+    salary: "Attractive",
+    image: "/img/jobs/meik-car-hub.jpeg" 
   },
 ];
 
@@ -497,7 +497,39 @@ const filledPlacements = [
     type: "Contract",
     salary: "Closed",
     image: "/img/jobs/moving-ads.jpeg"
-  }
+  },
+  {
+    company: "BioHaz Waste Solutions",
+    title: "Sales lead",
+    description: "Successfully placed a candidate to drive revenue growth and sales data.",
+    type: "Salaried + Bonus",
+    salary: "Closed",
+    image: "/img/jobs/biohaz1.jpeg"
+  },
+  {
+    company: "Fnacy Packs Limited",
+    title: "Sales Executive",
+    description: "Successfully placed a candidate to drive revenue growth and sales data.",
+    type: "Salaried + Bonus",
+    salary: "Closed",
+    image: "/img/jobs/fancypacks.jpeg"
+  },
+  {
+    company: "International Market Development & Administrative Manager",
+    title: "Sales lead",
+    description: "Successfully placed a candidate to drive revenue growth and sales data.",
+    type: "Salaried + Bonus",
+    salary: "Closed",
+    image: "/img/jobs/internationalDevtMgr.jpeg"
+  },
+  {
+    company: "Kitchen Italian Design",
+    title: "Sales & Marketing Lead",
+    description: "Successfully placed a candidate to drive revenue growth and sales data.",
+    type: "Salaried + Bonus",
+    salary: "Closed",
+    image: "/img/jobs/italianDesignSalesExecs.jpeg"
+  },
 ];
 
 // Helper to format the application email
