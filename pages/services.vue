@@ -409,7 +409,7 @@
       </p>
 
       <a
-        href="#inquiry"
+        href="#newsletter-form"
         class="inline-block bg-white text-maroon px-6 py-3 text-xs font-bold uppercase tracking-widest hover:bg-gray-200 transition-colors duration-300 w-fit"
       >
         Reserve Your Spot
@@ -419,7 +419,7 @@
     <!-- FLYER IMAGE -->
     <div class="h-[420px] md:h-[520px] lg:h-[620px] overflow-hidden">
       <NuxtImg
-        src="/img/flyers/abahoTraining.jpeg "
+        src="/img/flyers/abahoTraining.jpeg"
         alt="ABC Sales Consulting upcoming sales training workshop flyer"
         class="w-full h-full object-cover"
         fit="cover"
@@ -469,6 +469,7 @@
       <form
         @submit.prevent
         class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-0 border border-white/20 rounded-none overflow-hidden shadow-2xl"
+        id="newsletter-form"
       >
         <input
           type="text"
