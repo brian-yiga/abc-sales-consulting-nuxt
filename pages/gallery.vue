@@ -13,6 +13,21 @@ const sections = ref([
     description: "Discover moments that define our journey.",
     limit: 6,
     items: [
+       {
+        url: "https://res.cloudinary.com/dz1t6hhe7/image/upload/v1776851017/WhatsApp_Image_2026-04-16_at_13.37.53_i6n7wq.jpg",
+        type: "image",
+        caption: "Collaborative Meeting",
+      },
+       {
+        url: "https://res.cloudinary.com/dz1t6hhe7/image/upload/v1776851017/WhatsApp_Image_2026-04-16_at_13.37.53_2_qozgq0.jpg",
+        type: "image",
+        caption: "Collaborative Meeting",
+      },
+       {
+        url: "https://res.cloudinary.com/dz1t6hhe7/image/upload/v1776851018/WhatsApp_Image_2026-04-16_at_13.37.54_2_p2ygr2.jpg",
+        type: "image",
+        caption: "Collaborative Meeting",
+      },
       {
         url: "https://res.cloudinary.com/dz1t6hhe7/image/upload/v1776150799/WhatsApp_Image_2026-04-13_at_10.37.02_ymh7tv.jpg",
         type: "image",
