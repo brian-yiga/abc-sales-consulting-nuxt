@@ -378,6 +378,58 @@
     </div>
   </MuiPageContainer>
 
+  <MuiPageContainer class="mt-20 md:mt-24 lg:mt-28">
+  <!-- SECTION TITLE -->
+  <h2 class="text-center text-3xl md:text-5xl lg:text-6xl font-black uppercase mb-10">
+    Upcoming Events
+  </h2>
+
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-0 items-stretch rounded-md overflow-hidden">
+    
+    <!-- TEXT CONTENT -->
+    <div class="bg-maroon text-white flex flex-col justify-center p-8 md:p-12 lg:p-16 min-h-[420px] md:min-h-[520px] lg:min-h-[620px]">
+      
+      <p class="text-xs uppercase tracking-widest font-semibold mb-3 opacity-80">
+        Featured Event
+      </p>
+
+      <h3 class="text-2xl md:text-3xl lg:text-4xl font-black uppercase mb-4">
+        Sales Mastery Workshop
+      </h3>
+
+      <p class="text-sm md:text-base mb-6 leading-relaxed">
+        Join us for a high-impact, hands-on sales training designed to help you
+        close more deals, handle objections with confidence, and build a
+        predictable sales system. This session is tailored for professionals and
+        teams ready to push beyond average performance.
+      </p>
+
+      <p class="text-sm font-semibold mb-8">
+        📍 Kampala | 🗓 29th April | ⏰ 7:30 AM – 8:30 PM
+      </p>
+
+      <a
+        href="#inquiry"
+        class="inline-block bg-white text-maroon px-6 py-3 text-xs font-bold uppercase tracking-widest hover:bg-gray-200 transition-colors duration-300 w-fit"
+      >
+        Reserve Your Spot
+      </a>
+    </div>
+
+    <!-- FLYER IMAGE -->
+    <div class="h-[420px] md:h-[520px] lg:h-[620px] overflow-hidden">
+      <NuxtImg
+        src="/img/flyers/abahoTraining.jpeg "
+        alt="ABC Sales Consulting upcoming sales training workshop flyer"
+        class="w-full h-full object-cover"
+        fit="cover"
+        sizes="100vw lg:50vw"
+      />
+    </div>
+
+  </div>
+</MuiPageContainer>
+
   <div class="relative bg-black py-20 text-center overflow-hidden">
     <MuiPageContainer class="relative z-10">
       <div class="max-w-3xl mx-auto flex flex-col items-center">
