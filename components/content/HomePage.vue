@@ -462,7 +462,7 @@
     >
       <div class="animate-scroll flex items-center gap-16">
         <div
-          v-for="n in 26"
+          v-for="n in 25"
           :key="'logo-' + n"
           class="flex-shrink-0 hover:opacity-100 transition-all duration-900"
         >
