@@ -119,9 +119,7 @@
               class="border-b border-white/10 pb-4"
             >
               <template v-if="link.subLinks">
-                <p
-                  class="text-base font-medium text-white uppercase mb-4"
-                >
+                <p class="text-base font-medium text-white uppercase mb-4">
                   {{ link.name }}
                 </p>
                 <div class="flex flex-col gap-5 pl-4 border-l border-white/20">
@@ -200,83 +198,127 @@
         </div>
         <h2 class="text-4xl font-black mb-8">Built on Decades of Excellence</h2>
         <p class="text-gray-700 text-lg leading-relaxed">
-          ABC Sales Consulting was founded by experts with over 20 years of combined direct sales experience. We don't just teach theory; we teach a philosophy of high-impact engagement, emotional intelligence, and relentless consistency that turns prospects into lifelong advocates.
+          ABC Sales Consulting was founded by experts with over 20 years of
+          combined direct sales experience. We don't just teach theory; we teach
+          a philosophy of high-impact engagement, emotional intelligence, and
+          relentless consistency that turns prospects into lifelong advocates.
         </p>
       </div>
     </MuiPageContainer>
   </section>
 
   <section class="py-14 bg-white" id="team">
-   <MuiPageContainer>
-    <div class="text-center mb-16">
-      <h2 class="text-4xl font-black uppercase border-maroon inline-block border-b-4 pb-2">
-        Founders
-      </h2>
-    </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <div v-for="founder in founders" :key="founder.name" class="bg-white shadow-sm flex flex-col group">
-        <div class="overflow-hidden bg-gray-100">
-          <img
-            :src="founder.image"
-            :alt="founder.name"
-            class="w-full aspect-square object-cover object-top transition-all duration-500"
-          />
-        </div>
-        <div class="p-8 flex flex-col flex-grow">
-          <h3 class="text-2xl font-black uppercase mb-1">{{ founder.name }}</h3>
-          <p class="text-maroon font-bold text-sm mb-4">{{ founder.title }}</p>
-          <p class="text-gray-600 text-sm leading-relaxed mb-8 flex-grow">
-            {{ founder.shortBio }}
-          </p>
-          <MuiButton
-            label="READ MORE"
-            variant="outline"
-            class="w-full !border-gray-200"
-            @click="openModal(founder)"
-          />
-        </div>
-      </div>
-    </div>
-
-   <Transition name="fade">
-  <div v-if="selectedMember" class="fixed inset-0 z-[250] flex items-start md:items-center justify-center p-4 md:p-8">
-    
-    <div class="absolute inset-0 bg-black/80 backdrop-blur-sm" @click="closeModal"></div>
-    
-    <div class="relative bg-white max-w-4xl w-full max-h-[90vh] overflow-y-auto shadow-2xl flex flex-col md:flex-row scrollbar-hide">
-      
-      <button @click="closeModal" class="absolute top-4 right-4 z-20 text-gray-400 hover:text-black bg-white/50 rounded-full p-1">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-        </svg>
-      </button>
-
-      <div class="w-full md:w-1/2 bg-gray-100 shrink-0">
-        <img 
-          :src="selectedMember.image" 
-          :alt="selectedMember.name" 
-          class="w-full h-full object-cover aspect-[4/5] md:aspect-auto" 
-        />
+    <MuiPageContainer>
+      <div class="text-center mb-16">
+        <h2
+          class="text-4xl font-black uppercase border-maroon inline-block border-b-4 pb-2"
+        >
+          Founders
+        </h2>
       </div>
 
-      <div class="w-full md:w-1/2 p-6 md:p-10 flex flex-col justify-center">
-        <h2 class="text-3xl font-black uppercase mb-1">{{ selectedMember.name }}</h2>
-        <p class="text-maroon font-bold mb-4">{{ selectedMember.title }}</p>
-        <div class="w-12 h-1 bg-maroon mb-6"></div>
-        
-        <p class="text-gray-700 leading-relaxed text-base md:text-lg">
-          {{ selectedMember.fullBio }}
-        </p>
-
-        <div class="mt-8">
-           <MuiButton label="CLOSE" variant="outline" class="w-full md:w-auto" @click="closeModal" />
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div
+          v-for="founder in founders"
+          :key="founder.name"
+          class="bg-white shadow-sm flex flex-col group"
+        >
+          <div class="overflow-hidden bg-gray-100">
+            <img
+              :src="founder.image"
+              :alt="founder.name"
+              class="w-full aspect-square object-cover object-top transition-all duration-500"
+            />
+          </div>
+          <div class="p-8 flex flex-col flex-grow">
+            <h3 class="text-2xl font-black uppercase mb-1">
+              {{ founder.name }}
+            </h3>
+            <p class="text-maroon font-bold text-sm mb-4">
+              {{ founder.title }}
+            </p>
+            <p class="text-gray-600 text-sm leading-relaxed mb-8 flex-grow">
+              {{ founder.shortBio }}
+            </p>
+            <MuiButton
+              label="READ MORE"
+              variant="outline"
+              class="w-full !border-gray-200"
+              @click="openModal(founder)"
+            />
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-</Transition>
-  </MuiPageContainer>
+
+      <Transition name="fade">
+        <div
+          v-if="selectedMember"
+          class="fixed inset-0 z-[250] flex items-start md:items-center justify-center p-4 md:p-8"
+        >
+          <div
+            class="absolute inset-0 bg-black/80 backdrop-blur-sm"
+            @click="closeModal"
+          ></div>
+
+          <div
+            class="relative bg-white max-w-4xl w-full max-h-[90vh] overflow-y-auto shadow-2xl flex flex-col md:flex-row scrollbar-hide"
+          >
+            <button
+              @click="closeModal"
+              class="absolute top-4 right-4 z-20 text-gray-400 hover:text-black bg-white/50 rounded-full p-1"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-8 w-8"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+
+            <div class="w-full md:w-1/2 bg-gray-100 shrink-0">
+              <img
+                :src="selectedMember.image"
+                :alt="selectedMember.name"
+                class="w-full h-full object-cover aspect-[4/5] md:aspect-auto"
+              />
+            </div>
+
+            <div
+              class="w-full md:w-1/2 p-6 md:p-10 flex flex-col justify-center"
+            >
+              <h2 class="text-3xl font-black uppercase mb-1">
+                {{ selectedMember.name }}
+              </h2>
+              <p class="text-maroon font-bold mb-4">
+                {{ selectedMember.title }}
+              </p>
+              <div class="w-12 h-1 bg-maroon mb-6"></div>
+
+              <p class="text-gray-700 leading-relaxed text-base md:text-lg">
+                {{ selectedMember.fullBio }}
+              </p>
+
+              <div class="mt-8">
+                <MuiButton
+                  label="CLOSE"
+                  variant="outline"
+                  class="w-full md:w-auto"
+                  @click="closeModal"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </Transition>
+    </MuiPageContainer>
   </section>
 
   <section class="py-14 bg-gray-900 text-white">
@@ -336,7 +378,7 @@
           </div>
         </div>
 
-         <div class="bg-white text-black p-0 group shadow-xl">
+        <div class="bg-white text-black p-0 group shadow-xl">
           <div class="h-56 overflow-hidden bg-gray-200">
             <img
               src="/img/whoWeAre/Mrs. Josephine Sajjabi.jpg"
@@ -345,7 +387,9 @@
             />
           </div>
           <div class="p-6">
-            <h4 class="font-black uppercase text-xl">Mrs. Josephine Sajjabi <span class="text-white">(dahlin)</span> </h4>
+            <h4 class="font-black uppercase text-xl">
+              Mrs. Josephine Sajjabi <span class="text-white">(dahlin)</span>
+            </h4>
             <MuiButton
               label="LinkedIn"
               href="https://www.linkedin.com/in/josephine-sajjabi-9b6a9171/?originalSubdomain=ug"
@@ -357,7 +401,7 @@
           </div>
         </div>
 
-         <div class="bg-white text-black p-0 group shadow-xl">
+        <div class="bg-white text-black p-0 group shadow-xl">
           <div class="h-56 overflow-hidden bg-gray-200">
             <img
               src="/img/whoWeAre/Ms. Gloria Nakiguli.jpeg"
@@ -378,7 +422,7 @@
           </div>
         </div>
 
-         <div class="bg-white text-black p-0 group shadow-xl">
+        <div class="bg-white text-black p-0 group shadow-xl">
           <div class="h-56 overflow-hidden bg-gray-200">
             <img
               src="/img/whoWeAre/Ms. Primera Muthoni.jpeg"
@@ -399,7 +443,7 @@
           </div>
         </div>
 
-         <div class="bg-white text-black p-0 group shadow-xl">
+        <div class="bg-white text-black p-0 group shadow-xl">
           <div class="h-56 overflow-hidden bg-gray-200">
             <img
               src="/img/whoWeAre/Mr. Akampa Leon.jpeg"
@@ -441,91 +485,167 @@
     </MuiPageContainer>
   </div>
 
- <footer class="bg-abc-navy text-white" id="contacts">
-  <MuiPageContainer class="py-16 border-b border-white/10">
-    <div class="text-center mb-10">
-      <h2 class="text-2xl md:text-4xl font-black uppercase mb-2 tracking-tighter">
-        Scale Your Revenue Today
-      </h2>
-      <p class="text-white/80 font-light tracking-wide">
-        Subscribe to get exclusive sales strategies and market insights from ABC Sales Consulting.
-      </p>
-    </div>
+  <footer class="bg-abc-navy text-white" id="contacts">
+    <MuiPageContainer class="py-16 border-b border-white/10">
+      <div class="text-center mb-10">
+        <h2
+          class="text-2xl md:text-4xl font-black uppercase mb-2 tracking-tighter"
+        >
+          Scale Your Revenue Today
+        </h2>
+        <p class="text-white/80 font-light tracking-wide">
+          Subscribe to get exclusive sales strategies and market insights from
+          ABC Sales Consulting.
+        </p>
+      </div>
 
-    <form @submit.prevent class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-0 border border-white/20 rounded-none overflow-hidden shadow-2xl">
-      <input type="text" placeholder="Full Name" class="bg-white text-abc-navy px-6 py-5 outline-none border-b md:border-b-0 md:border-r border-gray-200 placeholder:text-gray-400" />
-      <input type="email" placeholder="Business Email" class="bg-white text-abc-navy px-6 py-5 outline-none border-b md:border-b-0 md:border-r border-gray-200 placeholder:text-gray-400" />
-      <div class="bg-white flex items-center px-6 py-5 border-b md:border-b-0 md:border-r border-gray-200">
-        <div class="flex items-center gap-3 text-gray-400 text-xs uppercase tracking-widest font-bold">
-          <input type="checkbox" class="w-4 h-4 accent-abc-green" />
-          I'm not a robot
+      <form
+        @submit.prevent
+        class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-0 border border-white/20 rounded-none overflow-hidden shadow-2xl"
+      >
+        <input
+          type="text"
+          placeholder="Full Name"
+          class="bg-white text-abc-navy px-6 py-5 outline-none border-b md:border-b-0 md:border-r border-gray-200 placeholder:text-gray-400"
+        />
+        <input
+          type="email"
+          placeholder="Business Email"
+          class="bg-white text-abc-navy px-6 py-5 outline-none border-b md:border-b-0 md:border-r border-gray-200 placeholder:text-gray-400"
+        />
+        <div
+          class="bg-white flex items-center px-6 py-5 border-b md:border-b-0 md:border-r border-gray-200"
+        >
+          <div
+            class="flex items-center gap-3 text-gray-400 text-xs uppercase tracking-widest font-bold"
+          >
+            <input type="checkbox" class="w-4 h-4 accent-abc-green" />
+            I'm not a robot
+          </div>
+        </div>
+        <button
+          type="submit"
+          class="bg-abc-green hover:bg-abc-green/90 text-abc-navy font-black uppercase transition-all py-5 px-8 cursor-pointer tracking-widest text-xs"
+        >
+          Request a Call
+        </button>
+      </form>
+
+      <div class="mt-12 flex flex-col items-center">
+        <p
+          class="text-[10px] tracking-[0.3em] uppercase opacity-50 mb-6 font-bold"
+        >
+          Connect with our experts
+        </p>
+        <div class="flex items-center gap-6">
+          <NuxtLink
+            to="https://linkedin.com/company/abc-sales-consulting"
+            target="_blank"
+            class="group flex items-center justify-center w-12 h-12 rounded-full border border-white/10 hover:border-abc-green transition-all duration-300"
+          >
+            <Icon
+              name="uil:linkedin"
+              class="text-xl group-hover:text-abc-green transition-colors"
+            />
+          </NuxtLink>
+          <NuxtLink
+            to="https://instagram.com/abcsales"
+            target="_blank"
+            class="group flex items-center justify-center w-12 h-12 rounded-full border border-white/10 hover:border-abc-green transition-all duration-300"
+          >
+            <Icon
+              name="uil:instagram"
+              class="text-xl group-hover:text-abc-green transition-colors"
+            />
+          </NuxtLink>
+          <NuxtLink
+            to="https://facebook.com/abcsales"
+            target="_blank"
+            class="group flex items-center justify-center w-12 h-12 rounded-full border border-white/10 hover:border-abc-green transition-all duration-300"
+          >
+            <Icon
+              name="uil:facebook-f"
+              class="text-xl group-hover:text-abc-green transition-colors"
+            />
+          </NuxtLink>
+          <NuxtLink
+            to="https://tiktok.com/@abcsales"
+            target="_blank"
+            class="group flex items-center justify-center w-12 h-12 rounded-full border border-white/10 hover:border-abc-green transition-all duration-300"
+          >
+            <Icon
+              name="ic:baseline-tiktok"
+              class="text-xl group-hover:text-abc-green transition-colors"
+            />
+          </NuxtLink>
         </div>
       </div>
-      <button type="submit" class="bg-abc-green hover:bg-abc-green/90 text-abc-navy font-black uppercase transition-all py-5 px-8 cursor-pointer tracking-widest text-xs">
-        Join the List
-      </button>
-    </form>
+    </MuiPageContainer>
 
-    <div class="mt-12 flex flex-col items-center">
-      <p class="text-[10px] tracking-[0.3em] uppercase opacity-50 mb-6 font-bold">Connect with our experts</p>
-      <div class="flex items-center gap-6">
-        <NuxtLink to="https://linkedin.com/company/abc-sales-consulting" target="_blank" class="group flex items-center justify-center w-12 h-12 rounded-full border border-white/10 hover:border-abc-green transition-all duration-300">
-          <Icon name="uil:linkedin" class="text-xl group-hover:text-abc-green transition-colors" />
-        </NuxtLink>
-        <NuxtLink to="https://instagram.com/abcsales" target="_blank" class="group flex items-center justify-center w-12 h-12 rounded-full border border-white/10 hover:border-abc-green transition-all duration-300">
-          <Icon name="uil:instagram" class="text-xl group-hover:text-abc-green transition-colors" />
-        </NuxtLink>
-        <NuxtLink to="https://facebook.com/abcsales" target="_blank" class="group flex items-center justify-center w-12 h-12 rounded-full border border-white/10 hover:border-abc-green transition-all duration-300">
-          <Icon name="uil:facebook-f" class="text-xl group-hover:text-abc-green transition-colors" />
-        </NuxtLink>
-        <NuxtLink to="https://tiktok.com/@abcsales" target="_blank" class="group flex items-center justify-center w-12 h-12 rounded-full border border-white/10 hover:border-abc-green transition-all duration-300">
-          <Icon name="ic:baseline-tiktok" class="text-xl group-hover:text-abc-green transition-colors" />
-        </NuxtLink>
+    <MuiPageContainer class="py-12 border-b border-white/10">
+      <div
+        class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left"
+      >
+        <div>
+          <h4
+            class="text-abc-green text-[10px] tracking-[0.3em] font-bold uppercase mb-4"
+          >
+            Our Office
+          </h4>
+          <p class="text-sm text-white/70 leading-relaxed uppercase">
+            Plot 1, Ntinda Church Road<br />
+            Church Bend, Off Martyrs Way<br />
+            Ministers' Village, Ntinda
+          </p>
+        </div>
+
+        <div>
+          <h4
+            class="text-abc-green text-[10px] tracking-[0.3em] font-bold uppercase mb-4"
+          >
+            Contact Us
+          </h4>
+          <p class="text-sm text-white/70 leading-relaxed">
+            <span class="block mb-1">admin@abcsalesconsulting.net</span>
+            <span>+256 748 019 936</span>
+          </p>
+        </div>
+
+        <div class="flex flex-col items-center md:items-start">
+          <h4
+            class="text-abc-green text-[10px] tracking-[0.3em] font-bold uppercase mb-4"
+          >
+            Find Us
+          </h4>
+          <MuiButton
+            label="VIEW ON GOOGLE MAPS"
+            href="https://maps.app.goo.gl/35pEPphgGXnyuYSg9m"
+            target="_blank"
+            variant="white-stroke"
+            class="px-6 !text-[10px]"
+          />
+        </div>
       </div>
-    </div>
-  </MuiPageContainer>
+    </MuiPageContainer>
 
-  <MuiPageContainer class="py-12 border-b border-white/10">
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left">
-      <div>
-        <h4 class="text-abc-green text-[10px] tracking-[0.3em] font-bold uppercase mb-4">Our Office</h4>
-        <p class="text-sm text-white/70 leading-relaxed uppercase">
-          Plot 1, Ntinda Church Road<br />
-          Church Bend, Off Martyrs Way<br />
-          Ministers' Village, Ntinda
-        </p>
+    <MuiPageContainer
+      class="py-8 flex flex-col md:flex-row justify-between items-center text-[10px] tracking-[0.2em] uppercase opacity-60"
+    >
+      <p>
+        &copy; {{ new Date().getFullYear() }} ABC Sales Consulting. All Rights
+        Reserved.
+      </p>
+      <div class="flex gap-8 mt-4 md:mt-0">
+        <NuxtLink to="/privacy" class="hover:text-abc-green"
+          >Privacy Policy</NuxtLink
+        >
+        <NuxtLink to="/terms" class="hover:text-abc-green"
+          >Terms of Service</NuxtLink
+        >
       </div>
-
-      <div>
-        <h4 class="text-abc-green text-[10px] tracking-[0.3em] font-bold uppercase mb-4">Contact Us</h4>
-        <p class="text-sm text-white/70 leading-relaxed">
-          <span class="block mb-1">admin@abcsalesconsulting.net</span>
-          <span>+256 748 019 936</span>
-        </p>
-      </div>
-
-      <div class="flex flex-col items-center md:items-start">
-        <h4 class="text-abc-green text-[10px] tracking-[0.3em] font-bold uppercase mb-4">Find Us</h4>
-        <MuiButton 
-          label="VIEW ON GOOGLE MAPS" 
-          href="https://maps.app.goo.gl/35pEPphgGXnyuYSg9m" 
-          target="_blank"
-          variant="white-stroke"
-          class="px-6 !text-[10px]"
-        />
-      </div>
-    </div>
-  </MuiPageContainer>
-
-  <MuiPageContainer class="py-8 flex flex-col md:flex-row justify-between items-center text-[10px] tracking-[0.2em] uppercase opacity-60">
-    <p>&copy; {{ new Date().getFullYear() }} ABC Sales Consulting. All Rights Reserved.</p>
-    <div class="flex gap-8 mt-4 md:mt-0">
-      <NuxtLink to="/privacy" class="hover:text-abc-green">Privacy Policy</NuxtLink>
-      <NuxtLink to="/terms" class="hover:text-abc-green">Terms of Service</NuxtLink>
-    </div>
-  </MuiPageContainer>
-  <BackToTop />
-</footer>
+    </MuiPageContainer>
+    <BackToTop />
+  </footer>
 </template>
 
 <script setup>
@@ -537,45 +657,51 @@ import {
 } from "@northgreenug/musizi-ui-kit";
 import BackToTop from "~/components/BackToTop.vue";
 
-useHead({ title: 'Team' });
+useHead({ title: "Team" });
 
 const { openForm } = useDiscoveryForm();
 const isMobileMenuOpen = ref(false);
 const activeSubMenu = ref(null);
 
-const selectedMember = ref(null)
+const selectedMember = ref(null);
 
 const founders = [
   {
     name: "Dahlin Ssajjabi",
     title: "Co-Founder | Chief Executive Officer",
     image: "/img/movingAds/dahlinSajjabiNoBg.png",
-    shortBio: "My entrepreneurial spirit ignited in 2014 when I co- founded Tasty Yellow Yolk...",
-    fullBio: "My entrepreneurial spirit ignited in 2014 when I co- founded Tasty Yellow Yolk. This experience, coupled with my door-to-door supermarket sales, fuelled my passion for the art of the sale. Following my law degree from Makerere University, I joined Saladmaster for 7 years. There, I not only led the top- performing team in Africa, but globally, driving phenomenal sales across East Africa. My expertise lies in creating high-performing teams through excellence in sales training. My mission is to elevate the sales profession, making it a respected career path, not just in Uganda, but across East Africa."
+    shortBio:
+      "My entrepreneurial spirit ignited in 2014 when I co- founded Tasty Yellow Yolk...",
+    fullBio:
+      "My entrepreneurial spirit ignited in 2014 when I co- founded Tasty Yellow Yolk. This experience, coupled with my door-to-door supermarket sales, fuelled my passion for the art of the sale. Following my law degree from Makerere University, I joined Saladmaster for 7 years. There, I not only led the top- performing team in Africa, but globally, driving phenomenal sales across East Africa. My expertise lies in creating high-performing teams through excellence in sales training. My mission is to elevate the sales profession, making it a respected career path, not just in Uganda, but across East Africa.",
   },
   {
     name: "Priscilla Alela",
     title: "Co-Founder | Chief Operations Officer",
     image: "/img/movingAds/priscillaAlelaNoBg.png",
-    shortBio: "For nearly 20 years, she has thrived in the dynamic world of sales, navigating diverse fields...",
-    fullBio: "For nearly 20 years, I've thrived in the dynamic world of sales, navigating diverse fields across Kenya and Uganda. It's more than a career; it's a passion that fuels my drive to consistently exceed sales goals and ignite revenue growth. Through clear communication and strategic problem-solving, I develop a deep understanding of their needs. This allows me to craft tailored solutions that empower their businesses to flourish. My success is fuelled by a relentless results orientation and an unwavering commitment to exceptional customer service."
+    shortBio:
+      "For nearly 20 years, she has thrived in the dynamic world of sales, navigating diverse fields...",
+    fullBio:
+      "For nearly 20 years, I've thrived in the dynamic world of sales, navigating diverse fields across Kenya and Uganda. It's more than a career; it's a passion that fuels my drive to consistently exceed sales goals and ignite revenue growth. Through clear communication and strategic problem-solving, I develop a deep understanding of their needs. This allows me to craft tailored solutions that empower their businesses to flourish. My success is fuelled by a relentless results orientation and an unwavering commitment to exceptional customer service.",
   },
   {
     name: "Godwin Batuma",
     title: "Co-Founder | Director, Human Resources",
     image: "/img/movingAds/godwinBatumaNoBg.png",
-    shortBio: "I am a results-driven sales and marketing professional with over 10 years of experience...",
-    fullBio: "I am a results-driven sales and marketing professional with over 10 years of experience driving revenue growth, leading high-performing teams, and cultivating long-lasting customer relationships both internationally and locally with my foot print in countries such as Kenya, Mauritius, Burundi , DRC , Malaysia, and Uganda . I believe that clear and effective communication is key to building strong relationships and driving results. Anyone can be taught how to sell with the right training and coaching, and I'm passionate about helping others achieve their full potential.."
-  }
-]
+    shortBio:
+      "I am a results-driven sales and marketing professional with over 10 years of experience...",
+    fullBio:
+      "I am a results-driven sales and marketing professional with over 10 years of experience driving revenue growth, leading high-performing teams, and cultivating long-lasting customer relationships both internationally and locally with my foot print in countries such as Kenya, Mauritius, Burundi , DRC , Malaysia, and Uganda . I believe that clear and effective communication is key to building strong relationships and driving results. Anyone can be taught how to sell with the right training and coaching, and I'm passionate about helping others achieve their full potential..",
+  },
+];
 
 const openModal = (member) => {
-  selectedMember.value = member
-}
+  selectedMember.value = member;
+};
 
 const closeModal = () => {
-  selectedMember.value = null
-}
+  selectedMember.value = null;
+};
 
 const toggleMenu = () => {
   isMobileMenuOpen.value = !isMobileMenuOpen.value;

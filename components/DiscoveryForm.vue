@@ -183,14 +183,14 @@
             <button
               type="submit"
               :disabled="isSubmitting"
-              class="flex-1 bg-abc-green hover:bg-abc-green/90 disabled:bg-gray-400 text-white font-bold uppercase py-3 px-6 rounded transition-all"
+              class="flex-1 bg-abc-green hover:bg-abc-green/90 disabled:bg-gray-400 text-white font-bold uppercase py-3 px-6 rounded transition-all cursor-pointer"
             >
               {{ isSubmitting ? "Submitting..." : "Request Discovery Call" }}
             </button>
             <button
               type="button"
               @click="close"
-              class="flex-1 border-2 border-gray-300 hover:border-gray-400 text-gray-700 font-bold uppercase py-3 px-6 rounded transition-all"
+              class="flex-1 border-2 border-gray-300 hover:border-gray-400 text-gray-700 font-bold uppercase py-3 px-6 rounded transition-all cursor-pointer"
             >
               Cancel
             </button>

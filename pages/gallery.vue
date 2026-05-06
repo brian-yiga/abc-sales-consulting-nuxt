@@ -225,6 +225,24 @@ const sections = ref([
     limit: 6,
     items: [
       {
+        url: "https://res.cloudinary.com/dz1t6hhe7/video/upload/v1778061835/WhatsApp_Video_2026-05-04_at_14.37.34_ggwsas.mp4",
+        type: "video",
+        thumbnail: "/img/video-thumbs/thumb-12.png",
+        caption: "Training Session Highlights",
+      },
+      {
+        url: "https://res.cloudinary.com/dz1t6hhe7/video/upload/v1778061835/WhatsApp_Video_2026-05-04_at_12.59.10_gye5s4.mp4",
+        type: "video",
+        thumbnail: "/img/video-thumbs/thumb-11.png",
+        caption: "Training Session Highlights",
+      },
+      {
+        url: "https://res.cloudinary.com/dz1t6hhe7/video/upload/v1778061834/WhatsApp_Video_2026-05-04_at_14.37.54_zumj5i.mp4",
+        type: "video",
+        thumbnail: "/img/video-thumbs/thumb-10.png",
+        caption: "Training Session Highlights",
+      },
+      {
         url: "https://res.cloudinary.com/dz1t6hhe7/video/upload/v1762526041/motorCenter5_rouraq.mp4",
         type: "video",
         thumbnail: "/img/video-thumbs/thumb-4.png",
@@ -258,36 +276,6 @@ const sections = ref([
         url: "https://res.cloudinary.com/dz1t6hhe7/video/upload/v1760129626/ALELA-23-10-36-50_egu2ib.mp4",
         type: "video",
         thumbnail: "/img/video-thumbs/thumb-9.png",
-        caption: "Training Session Highlights",
-      },
-      {
-        url: "https://res.cloudinary.com/dz1t6hhe7/video/upload/v1762526041/motorCenter5_rouraq.mp4",
-        type: "video",
-        thumbnail: "/img/video-thumbs/thumb-4.png",
-        caption: "Training Session Highlights",
-      },
-      {
-        url: "https://res.cloudinary.com/dz1t6hhe7/video/upload/v1762526041/motorCenter5_rouraq.mp4",
-        type: "video",
-        thumbnail: "/img/video-thumbs/thumb-4.png",
-        caption: "Training Session Highlights",
-      },
-      {
-        url: "https://res.cloudinary.com/dz1t6hhe7/video/upload/v1762526041/motorCenter5_rouraq.mp4",
-        type: "video",
-        thumbnail: "/img/video-thumbs/thumb-4.png",
-        caption: "Training Session Highlights",
-      },
-      {
-        url: "https://res.cloudinary.com/dz1t6hhe7/video/upload/v1762526041/motorCenter5_rouraq.mp4",
-        type: "video",
-        thumbnail: "/img/video-thumbs/thumb-4.png",
-        caption: "Training Session Highlights",
-      },
-      {
-        url: "https://res.cloudinary.com/dz1t6hhe7/video/upload/v1762526041/motorCenter5_rouraq.mp4",
-        type: "video",
-        thumbnail: "/img/video-thumbs/thumb-4.png",
         caption: "Training Session Highlights",
       },
     ],

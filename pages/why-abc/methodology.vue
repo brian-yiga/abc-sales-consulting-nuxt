@@ -467,7 +467,7 @@
         </div>
       </div>
       <button type="submit" class="bg-abc-green hover:bg-abc-green/90 text-abc-navy font-black uppercase transition-all py-5 px-8 cursor-pointer tracking-widest text-xs">
-        Join the List
+        Request a Call
       </button>
     </form>
 
