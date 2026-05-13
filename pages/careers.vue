@@ -492,7 +492,7 @@ const activePlacements = [
     description: "Meik Car Hub is seeking a high-caliber Car Sales Specialist to spearhead our regional growth and market expansion.",
     type: "Salaried + Bonus",
     salary: "Attractive",
-    image: "/img/jobs/meik-car-hub.jpeg" 
+    image: "/img/jobs/car-hub-meik2.jpeg" 
   },
 ];
 
