@@ -272,16 +272,23 @@
       </div>
 
       <form
-        @submit.prevent
+        action="https://api.web3forms.com/submit"
+        method="POST"
         class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-0 border border-white/20 rounded-none overflow-hidden shadow-2xl"
+        id="newsletter-form"
       >
+        <input type="hidden" name="access_key" value="1b3f2db3-70e6-4917-b8dc-affe334cdaf1" />
         <input
           type="text"
+          name="name"
+          required
           placeholder="Full Name"
           class="bg-white text-abc-navy px-6 py-5 outline-none border-b md:border-b-0 md:border-r border-gray-200 placeholder:text-gray-400"
         />
         <input
           type="email"
+          name="email"
+          required
           placeholder="Business Email"
           class="bg-white text-abc-navy px-6 py-5 outline-none border-b md:border-b-0 md:border-r border-gray-200 placeholder:text-gray-400"
         />
@@ -291,7 +298,7 @@
           <div
             class="flex items-center gap-3 text-gray-400 text-xs uppercase tracking-widest font-bold"
           >
-            <input type="checkbox" class="w-4 h-4 accent-abc-green" />
+            <input type="checkbox" name="botcheck" class="w-4 h-4 accent-abc-green" required />
             I'm not a robot
           </div>
         </div>

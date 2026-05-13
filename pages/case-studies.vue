@@ -370,19 +370,44 @@
       </p>
     </div>
 
-    <form @submit.prevent class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-0 border border-white/20 rounded-none overflow-hidden shadow-2xl">
-      <input type="text" placeholder="Full Name" class="bg-white text-abc-navy px-6 py-5 outline-none border-b md:border-b-0 md:border-r border-gray-200 placeholder:text-gray-400" />
-      <input type="email" placeholder="Business Email" class="bg-white text-abc-navy px-6 py-5 outline-none border-b md:border-b-0 md:border-r border-gray-200 placeholder:text-gray-400" />
-      <div class="bg-white flex items-center px-6 py-5 border-b md:border-b-0 md:border-r border-gray-200">
-        <div class="flex items-center gap-3 text-gray-400 text-xs uppercase tracking-widest font-bold">
-          <input type="checkbox" class="w-4 h-4 accent-abc-green" />
-          I'm not a robot
+    <form
+        action="https://api.web3forms.com/submit"
+        method="POST"
+        class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-0 border border-white/20 rounded-none overflow-hidden shadow-2xl"
+        id="newsletter-form"
+      >
+        <input type="hidden" name="access_key" value="1b3f2db3-70e6-4917-b8dc-affe334cdaf1" />
+        <input
+          type="text"
+          name="name"
+          required
+          placeholder="Full Name"
+          class="bg-white text-abc-navy px-6 py-5 outline-none border-b md:border-b-0 md:border-r border-gray-200 placeholder:text-gray-400"
+        />
+        <input
+          type="email"
+          name="email"
+          required
+          placeholder="Business Email"
+          class="bg-white text-abc-navy px-6 py-5 outline-none border-b md:border-b-0 md:border-r border-gray-200 placeholder:text-gray-400"
+        />
+        <div
+          class="bg-white flex items-center px-6 py-5 border-b md:border-b-0 md:border-r border-gray-200"
+        >
+          <div
+            class="flex items-center gap-3 text-gray-400 text-xs uppercase tracking-widest font-bold"
+          >
+            <input type="checkbox" name="botcheck" class="w-4 h-4 accent-abc-green" required />
+            I'm not a robot
+          </div>
         </div>
-      </div>
-      <button type="submit" class="bg-abc-green hover:bg-abc-green/90 text-abc-navy font-black uppercase transition-all py-5 px-8 cursor-pointer tracking-widest text-xs">
-        Request a Call
-      </button>
-    </form>
+        <button
+          type="submit"
+          class="bg-abc-green hover:bg-abc-green/90 text-abc-navy font-black uppercase transition-all py-5 px-8 cursor-pointer tracking-widest text-xs"
+        >
+          Request a Call
+        </button>
+      </form>
 
     <div class="mt-12 flex flex-col items-center">
       <p class="text-[10px] tracking-[0.3em] uppercase opacity-50 mb-6 font-bold">Connect with our experts</p>
