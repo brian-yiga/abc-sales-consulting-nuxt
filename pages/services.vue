@@ -394,18 +394,15 @@
       </p>
 
       <h3 class="text-2xl md:text-3xl lg:text-4xl font-black uppercase mb-4">
-        Sales Mastery Workshop
+        Interview Mastery Workshop
       </h3>
 
       <p class="text-sm md:text-base mb-6 leading-relaxed">
-        Join us for a high-impact, hands-on sales training designed to help you
-        close more deals, handle objections with confidence, and build a
-        predictable sales system. This session is tailored for professionals and
-        teams ready to push beyond average performance.
+        Join us for a powerful online session with our very own GODWIN BATUMA as we break down "The Interview Questions Most People Fail" and how to answer them with confidence, clarity, and impact.
       </p>
 
       <p class="text-sm font-semibold mb-8">
-        📍 Kampala | 🗓 29th April | ⏰ 7:30 AM – 8:30 PM
+        📍 Kampala | 🗓 20th May | ⏰ 7:30 AM – 8:30 PM
       </p>
 
       <a
@@ -419,7 +416,7 @@
     <!-- FLYER IMAGE -->
     <div class="h-[420px] md:h-[520px] lg:h-[620px] overflow-hidden">
       <NuxtImg
-        src="/img/flyers/abahoTraining.jpeg"
+        src="/img/flyers/batumaTraining.jpeg"
         alt="ABC Sales Consulting upcoming sales training workshop flyer"
         class="w-full h-full object-cover"
         fit="cover"
