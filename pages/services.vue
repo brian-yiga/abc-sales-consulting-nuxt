@@ -564,9 +564,9 @@
             Our Office
           </h4>
           <p class="text-sm text-white/70 leading-relaxed uppercase">
-            Plot 1, Ntinda Church Road<br />
-            Church Bend, Off Martyrs Way<br />
-            Ministers' Village, Ntinda
+            Plot 18, Mukulu Curve<br />
+            Off Martyrs Way,<br />
+            Ntinda
           </p>
         </div>
 
@@ -590,7 +590,7 @@
           </h4>
           <MuiButton
             label="VIEW ON GOOGLE MAPS"
-            href="https://maps.app.goo.gl/35pEPphgGXnyuYSg9m"
+            href="https://www.google.com/maps/place/0%C2%B020'51.9%22N+32%C2%B037'03.2%22E/@0.3476621,32.6149775,17.65z/data=!4m4!3m3!8m2!3d0.3477551!4d32.6175576?hl=en&entry=ttu&g_ep=EgoyMDI2MDUxMi4wIKXMDSoASAFQAw%3D%3D"
             target="_blank"
             variant="white-stroke"
             class="px-6 !text-[10px]"
