@@ -196,7 +196,7 @@
 
         <div class="relative hidden lg:block">
           <img
-            src="/img/whatsappimages/whatsappMarch-11.jpg"
+            src="/img/WhatsAppImages/whatsappMarch-11.jpg"
             alt="Methodology in Action"
             class="rounded-2xl shadow-2xl w-full object-cover aspect-[4/3] border border-white/10"
           />
