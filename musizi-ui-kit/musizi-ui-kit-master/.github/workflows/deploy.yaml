@@ -1,0 +1,211 @@
+name: CI / Publish / Deploy
+
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+
+env:
+  REGISTRY: ghcr.io
+  IMAGE_NAME: northgreenug/musizi-ui-kit-storybook
+
+jobs:
+  # ──────────────────────────────────────────────
+  # 1. Quality Gate — lint, test, build:lib
+  # ──────────────────────────────────────────────
+  quality-gate:
+    name: Quality Gate
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10.28.1
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps chromium
+
+      - name: Lint
+        run: pnpm run lint
+
+      - name: Unit tests
+        run: pnpm run test:unit -- --run
+
+      - name: Build library
+        run: pnpm run build:lib
+
+      - name: Upload dist artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: dist/
+          retention-days: 1
+
+  # ──────────────────────────────────────────────
+  # 2. Publish — bump patch, npm publish, GH release
+  # ──────────────────────────────────────────────
+  publish:
+    name: Publish Package
+    needs: quality-gate
+    if: ${{ !startsWith(github.event.head_commit.message, 'chore(release):') }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      packages: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10.28.1
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'pnpm'
+
+      - name: Download dist artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: dist
+          path: dist/
+
+      - name: Configure Git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Bump patch version
+        id: version
+        run: |
+          NEW_VERSION=$(pnpm version patch --no-git-tag-version)
+          echo "version=$NEW_VERSION" >> "$GITHUB_OUTPUT"
+          echo "Bumped to $NEW_VERSION"
+
+      - name: Commit and tag
+        env:
+          NEW_VERSION: ${{ steps.version.outputs.version }}
+        run: |
+          git add package.json pnpm-lock.yaml
+          git commit -m "chore(release): $NEW_VERSION"
+          git tag "$NEW_VERSION"
+          git push origin master --tags
+
+      - name: Configure npm for GitHub Packages
+        run: |
+          npm config set //npm.pkg.github.com/:_authToken ${{ secrets.NPM_TOKEN }}
+          npm config set @northgreenug:registry https://npm.pkg.github.com/
+
+      - name: Publish to GitHub Packages
+        run: |
+          npm pkg delete scripts.prepare
+          pnpm publish --ignore-scripts --no-git-checks
+
+      - name: Create GitHub Release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NEW_VERSION: ${{ steps.version.outputs.version }}
+        run: gh release create "$NEW_VERSION" --generate-notes
+
+  # ──────────────────────────────────────────────
+  # 3. Build Storybook — Docker image → GHCR
+  # ──────────────────────────────────────────────
+  build-storybook:
+    name: Build Storybook Image
+    needs: quality-gate
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v4
+
+      - name: Log in to GHCR
+        uses: docker/login-action@v4
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Extract metadata
+        id: meta
+        uses: docker/metadata-action@v6
+        with:
+          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+          tags: |
+            type=raw,value=latest,enable={{is_default_branch}}
+            type=sha,prefix=sha-,format=short
+
+      - name: Build and push
+        uses: docker/build-push-action@v7
+        with:
+          context: .
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+          platforms: linux/amd64
+
+  # ──────────────────────────────────────────────
+  # 4. Deploy Storybook — kubectl rollout to K3s
+  # ──────────────────────────────────────────────
+  deploy-storybook:
+    name: Deploy Storybook to K3s
+    needs: build-storybook
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Set up kubectl
+        uses: azure/setup-kubectl@v5
+        with:
+          version: 'v1.28.0'
+
+      - name: Configure Kubeconfig
+        run: |
+          mkdir -p ~/.kube
+          echo "${{ secrets.PROD_KUBECONFIG }}" | base64 -d > ~/.kube/config
+          sed -i "s/127.0.0.1/${{ secrets.PROD_IP }}/g" ~/.kube/config
+          chmod 600 ~/.kube/config
+
+      - name: Update deployment
+        run: |
+          kubectl set image deployment/mui-vue-storybook \
+            app=${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:sha-${GITHUB_SHA::7} \
+            -n apps-musizi
+
+      - name: Wait for rollout
+        run: |
+          kubectl rollout status deployment/mui-vue-storybook -n apps-musizi --timeout=300s
+
+      - name: Verify health
+        run: |
+          RS=$(kubectl get deployment mui-vue-storybook -n apps-musizi -o jsonpath='{.status.updatedReplicas}')
+          echo "Updated replicas: $RS"
+          kubectl run health-check --rm -i --restart=Never --image=busybox -n apps-musizi -- wget -qO- http://mui-vue-storybook-svc:80 > /dev/null
+          echo "Deployment healthy"

@@ -1,0 +1,7 @@
+export { default as MuiLogoBusiness } from './MuiLogoBusiness.vue'
+export { default as MuiLogoFoundation } from './MuiLogoFoundation.vue'
+export { default as MuiLogoHealth } from './MuiLogoHealth.vue'
+export { default as MuiLogoMu } from './MuiLogoMu.vue'
+export { default as MuiLogoUniversity } from './MuiLogoUniversity.vue'
+export { default as MuiLogoWings } from './MuiLogoWings.vue'
+export * from './types'

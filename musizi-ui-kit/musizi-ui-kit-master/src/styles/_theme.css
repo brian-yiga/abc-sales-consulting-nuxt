@@ -1,0 +1,21 @@
+/*
+ * Internal theme file for library CSS builds.
+ *
+ * Uses @reference to access Tailwind utilities for @apply processing
+ * WITHOUT emitting them in the output. The consuming app provides
+ * utilities, preflight, and base theme via @import "tailwindcss".
+ *
+ * @source not excludes non-component files from Tailwind's automatic
+ * source detection, ensuring only component styles are included.
+ *
+ * For Storybook/development, full Tailwind is imported in .storybook/storybook.css.
+ */
+
+/* Exclude non-component files from source detection */
+@source not "../stories";
+@source not "../../.storybook";
+@source not "../../cypress";
+@source not "../../public";
+
+@reference 'tailwindcss';
+@reference './theme.css';

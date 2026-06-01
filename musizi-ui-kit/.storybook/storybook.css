@@ -1,0 +1,10 @@
+/*
+ * Storybook CSS entry point.
+ *
+ * This file imports full Tailwind for development/Storybook environment.
+ * The library build uses a minimal setup that doesn't emit utilities.
+ */
+@import 'tailwindcss';
+@import '../src/styles/theme.css';
+@source "../src/components/**/*.vue";
+@source "../src/stories/**/*.ts";

@@ -1,0 +1,155 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Foundation/Typography" />
+
+# Typography System
+
+The Musizi UI Kit includes a responsive typography system that automatically adapts to viewport size. All typography classes follow a mobile-first approach.
+
+**Accessibility:** Font sizes use `rem` units to respect user browser settings. Line heights use unitless values for proportional scaling.
+
+## Installation
+
+Import the typography CSS in your project:
+
+```js
+import '@northgreenug/musizi-ui-kit/typography.css'
+```
+
+This will:
+- Apply body typography (`Open Sans 1rem/1.5`) to the `<body>` element automatically
+- Set default text color to `neutral-800`
+- Provide all `mui-text--*` utility classes
+
+## Typography Scale
+
+### Display Styles (Poppins Bold)
+
+For large hero text and prominent headings.
+
+<div style={{ display: 'flex', flexDirection: 'column', gap: '24px', marginTop: '24px', marginBottom: '32px' }}>
+  <div style={{ borderBottom: '1px solid #eee', paddingBottom: '16px' }}>
+    <p className="mui-text--display-1">Display 1</p>
+    <code style={{ fontSize: '12px', color: '#666' }}>.mui-text--display-1 — Mobile: 2.6875rem (43px)/1.2 → Desktop: 3.75rem (60px)/1.2</code>
+  </div>
+  <div style={{ borderBottom: '1px solid #eee', paddingBottom: '16px' }}>
+    <p className="mui-text--display-2">Display 2</p>
+    <code style={{ fontSize: '12px', color: '#666' }}>.mui-text--display-2 — Mobile: 2.4375rem (39px)/1.2 → Desktop: 3.0625rem (49px)/1.2</code>
+  </div>
+  <div style={{ borderBottom: '1px solid #eee', paddingBottom: '16px' }}>
+    <p className="mui-text--display-3">Display 3</p>
+    <code style={{ fontSize: '12px', color: '#666' }}>.mui-text--display-3 — Mobile: 1.9375rem (31px)/1.2 → Desktop: 2.4375rem (39px)/1.2</code>
+  </div>
+</div>
+
+### Headline Styles (Poppins Bold)
+
+For section headings and subheadings.
+
+<div style={{ display: 'flex', flexDirection: 'column', gap: '24px', marginTop: '24px', marginBottom: '32px' }}>
+  <div style={{ borderBottom: '1px solid #eee', paddingBottom: '16px' }}>
+    <p className="mui-text--headline-1">Headline 1</p>
+    <code style={{ fontSize: '12px', color: '#666' }}>.mui-text--headline-1 — Mobile: 1.5625rem (25px)/1.2 → Desktop: 1.9375rem (31px)/1.2</code>
+  </div>
+  <div style={{ borderBottom: '1px solid #eee', paddingBottom: '16px' }}>
+    <p className="mui-text--headline-2">Headline 2</p>
+    <code style={{ fontSize: '12px', color: '#666' }}>.mui-text--headline-2 — Mobile: 1.25rem (20px)/1.2 → Desktop: 1.5625rem (25px)/1.2</code>
+  </div>
+  <div style={{ borderBottom: '1px solid #eee', paddingBottom: '16px' }}>
+    <p className="mui-text--headline-3">Headline 3</p>
+    <code style={{ fontSize: '12px', color: '#666' }}>.mui-text--headline-3 — Mobile: 1rem (16px)/1.5 → Desktop: 1.25rem (20px)/1.2</code>
+  </div>
+</div>
+
+### Body Style (Open Sans Regular)
+
+For paragraph text and general content. This is applied to the `<body>` element by default.
+
+<div style={{ display: 'flex', flexDirection: 'column', gap: '24px', marginTop: '24px', marginBottom: '32px' }}>
+  <div style={{ borderBottom: '1px solid #eee', paddingBottom: '16px' }}>
+    <p className="mui-text--body">Body text is used for paragraphs and general content. It uses Open Sans at 1rem with a 1.5 line height, providing excellent readability for longer passages of text.</p>
+    <code style={{ fontSize: '12px', color: '#666' }}>.mui-text--body — All breakpoints: 1rem (16px)/1.5</code>
+  </div>
+</div>
+
+### Small Styles (Open Sans Regular)
+
+For captions, labels, and fine print.
+
+<div style={{ display: 'flex', flexDirection: 'column', gap: '24px', marginTop: '24px', marginBottom: '32px' }}>
+  <div style={{ borderBottom: '1px solid #eee', paddingBottom: '16px' }}>
+    <p className="mui-text--small-1">Small 1 - For secondary text and captions</p>
+    <code style={{ fontSize: '12px', color: '#666' }}>.mui-text--small-1 — All breakpoints: 0.8125rem (13px)/1.54</code>
+  </div>
+  <div style={{ borderBottom: '1px solid #eee', paddingBottom: '16px' }}>
+    <p className="mui-text--small-2">Small 2 - For labels and metadata</p>
+    <code style={{ fontSize: '12px', color: '#666' }}>.mui-text--small-2 — All breakpoints: 0.6875rem (11px)/1.55</code>
+  </div>
+  <div style={{ borderBottom: '1px solid #eee', paddingBottom: '16px' }}>
+    <p className="mui-text--small-3">Small 3 - For fine print and disclaimers</p>
+    <code style={{ fontSize: '12px', color: '#666' }}>.mui-text--small-3 — All breakpoints: 0.625rem (10px)/1.5</code>
+  </div>
+</div>
+
+## Usage Examples
+
+```html
+<!-- Hero section -->
+<h1 class="mui-text--display-1">Welcome to Musizi University</h1>
+<p class="mui-text--headline-2">Building Tomorrow's Leaders</p>
+
+<!-- Article content -->
+<h2 class="mui-text--headline-1">About Our Programs</h2>
+<p>Body text is applied automatically to the page...</p>
+
+<!-- Footer -->
+<small class="mui-text--small-2">© 2024 Musizi University</small>
+```
+
+## Responsive Behavior
+
+| Class | Mobile (&lt;768px) | Tablet/Desktop (≥768px) | Desktop (≥1024px) |
+|-------|-----------------|-------------------------|-------------------|
+| `.mui-text--display-1` | 2.6875rem (43px)/1.2 | 3.75rem (60px)/1.2 | 3.75rem (60px)/1.2 |
+| `.mui-text--display-2` | 2.4375rem (39px)/1.2 | 3.0625rem (49px)/1.2 | 3.0625rem (49px)/1.2 |
+| `.mui-text--display-3` | 1.9375rem (31px)/1.2 | 2.4375rem (39px)/1.2 | 2.4375rem (39px)/1.2 |
+| `.mui-text--headline-1` | 1.5625rem (25px)/1.2 | 1.9375rem (31px)/1.2 | 1.9375rem (31px)/1.2 |
+| `.mui-text--headline-2` | 1.25rem (20px)/1.2 | 1.5625rem (25px)/1.2 | 1.5625rem (25px)/1.2 |
+| `.mui-text--headline-3` | 1rem (16px)/1.5 | 1rem (16px)/1.5 | 1.25rem (20px)/1.2 |
+| `.mui-text--body` | 1rem (16px)/1.5 | 1rem (16px)/1.5 | 1rem (16px)/1.5 |
+| `.mui-text--small-1` | 0.8125rem (13px)/1.54 | 0.8125rem (13px)/1.54 | 0.8125rem (13px)/1.54 |
+| `.mui-text--small-2` | 0.6875rem (11px)/1.55 | 0.6875rem (11px)/1.55 | 0.6875rem (11px)/1.55 |
+| `.mui-text--small-3` | 0.625rem (10px)/1.5 | 0.625rem (10px)/1.5 | 0.625rem (10px)/1.5 |
+
+*Font sizes use `rem` for accessibility. Line heights are unitless.*
+
+## Why rem and unitless line-height?
+
+- **`rem` for font sizes:** Respects user browser settings. If a user sets their browser default to 24px, all text scales proportionally.
+- **Unitless line-height:** Prevents inheritance bugs and ensures line spacing scales with the current font size.
+
+## Font Families
+
+The typography system uses two font families:
+
+- **Poppins** (Bold) - Display and Headline styles
+- **Open Sans** (Regular) - Body and Small styles
+
+Make sure to import the fonts:
+
+```js
+import '@northgreenug/musizi-ui-kit/fonts.css'
+```
+
+## Tailwind Utilities
+
+If you're using Tailwind CSS with the Musizi preset, you also have access to individual font size utilities:
+
+```html
+<!-- Using Tailwind utilities directly -->
+<h1 class="font-poppins font-bold text-display-1-sm md:text-display-1">
+  Custom responsive heading
+</h1>
+```
+
+Available font sizes: `text-display-1`, `text-display-2`, `text-display-3`, `text-headline-1`, `text-headline-2`, `text-headline-3`, `text-body`, `text-small-1`, `text-small-2`, `text-small-3` (and their `-sm` mobile variants).

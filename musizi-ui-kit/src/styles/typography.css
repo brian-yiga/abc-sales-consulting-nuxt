@@ -1,0 +1,140 @@
+/**
+ * Musizi UI Kit - Typography System
+ *
+ * Responsive typography classes that automatically adapt to viewport size.
+ * Import this file to use semantic typography classes:
+ *
+ *   import '@northgreenug/musizi-ui-kit/typography.css'
+ *
+ * Typography Classes:
+ *   .mui-text--display-1, .mui-text--display-2, .mui-text--display-3
+ *   .mui-text--headline-1, .mui-text--headline-2, .mui-text--headline-3
+ *   .mui-text--body, .mui-text--small-1, .mui-text--small-2, .mui-text--small-3
+ *
+ * Utility Classes:
+ *   .mui-smooth-scroll - Apply to <html> to enable smooth scrolling for anchor links
+ *
+ * All typography classes are mobile-first and automatically scale up at breakpoints:
+ *   - Mobile: < 768px (base styles)
+ *   - Tablet/Desktop: >= 768px (md breakpoint)
+ *   - Desktop only: >= 1024px (lg breakpoint, for Headline 3)
+ *
+ * Note: This file automatically applies body typography to the <body> element.
+ */
+
+@reference "./_theme.css";
+
+/* ==========================================================================
+   Base Styles
+   Applies body typography as the default for the document
+   ========================================================================== */
+
+body {
+  @apply font-sans font-normal text-body text-neutral-800 bg-gray-100;
+}
+
+/* ==========================================================================
+   Display Styles - Poppins Bold
+   Mobile-first: starts with mobile sizes, scales up at 768px
+   ========================================================================== */
+
+.mui-text--display-1 {
+  @apply font-poppins font-bold text-display-1-sm;
+}
+
+.mui-text--display-2 {
+  @apply font-poppins font-bold text-display-2-sm;
+}
+
+.mui-text--display-3 {
+  @apply font-poppins font-bold text-display-3-sm;
+}
+
+/* ==========================================================================
+   Headline Styles - Poppins Bold
+   Mobile-first: starts with mobile sizes, scales up at breakpoints
+   ========================================================================== */
+
+.mui-text--headline-1 {
+  @apply font-poppins font-bold text-headline-1-sm;
+}
+
+.mui-text--headline-2 {
+  @apply font-poppins font-bold text-headline-2-sm;
+}
+
+.mui-text--headline-3 {
+  @apply font-poppins font-bold text-headline-3-sm;
+}
+
+/* ==========================================================================
+   Body Style - Open Sans Regular
+   Consistent across all breakpoints
+   ========================================================================== */
+
+.mui-text--body {
+  @apply font-sans font-normal text-body text-neutral-800;
+}
+
+/* ==========================================================================
+   Small Styles - Open Sans Regular
+   Consistent across all breakpoints
+   ========================================================================== */
+
+.mui-text--small-1 {
+  @apply font-sans font-normal text-small-1;
+}
+
+.mui-text--small-2 {
+  @apply font-sans font-normal text-small-2;
+}
+
+.mui-text--small-3 {
+  @apply font-sans font-normal text-small-3;
+}
+
+/* ==========================================================================
+   Responsive Scaling - Tablet/Desktop (768px+)
+   Display and Headline styles scale up at this breakpoint
+   ========================================================================== */
+
+@media (min-width: 768px) {
+  .mui-text--display-1 {
+    @apply text-display-1;
+  }
+
+  .mui-text--display-2 {
+    @apply text-display-2;
+  }
+
+  .mui-text--display-3 {
+    @apply text-display-3;
+  }
+
+  .mui-text--headline-1 {
+    @apply text-headline-1;
+  }
+
+  .mui-text--headline-2 {
+    @apply text-headline-2;
+  }
+}
+
+/* ==========================================================================
+   Responsive Scaling - Desktop (1024px+)
+   Headline 3 scales up at this breakpoint
+   ========================================================================== */
+
+@media (min-width: 1024px) {
+  .mui-text--headline-3 {
+    @apply text-headline-3;
+  }
+}
+
+/* ==========================================================================
+   Utility Classes
+   ========================================================================== */
+
+.mui-smooth-scroll {
+  scroll-behavior: smooth;
+}

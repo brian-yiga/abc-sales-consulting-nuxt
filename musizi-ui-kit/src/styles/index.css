@@ -1,0 +1,24 @@
+/*
+ * Musizi UI Kit - Component Styles
+ *
+ * This file contains component-specific styles for the library.
+ * It does NOT include Tailwind utilities or preflight.
+ * The consuming app provides these - see CLAUDE.md for setup instructions.
+ */
+@import './_theme.css';
+
+@layer components {
+  /* ==========================================================================
+     Smooth Scrolling
+     Apply this class to <html> to enable smooth scrolling for anchor links
+     ========================================================================== */
+  .mui-smooth-scroll {
+    scroll-behavior: smooth;
+  }
+
+  /* Logo components */
+  .mui-logo > svg {
+    width: var(--mui-logo-width, auto);
+    height: var(--mui-logo-height, auto);
+  }
+}

@@ -43,7 +43,7 @@
     "vite": "^6.0.0"
   },
   "dependencies": {
-    "@northgreenug/musizi-ui-kit": "^0.9.7",
+    "@northgreenug/musizi-ui-kit": "file:./musizi-ui-kit",
     "@nuxt/image": "^1.0.0-rc.1",
     "@tailwindcss/forms": "^0.5.6",
     "@tailwindcss/postcss": "^4.1.18",

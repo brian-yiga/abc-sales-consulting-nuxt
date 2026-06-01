@@ -1,0 +1,10 @@
+/*
+ * Build entry point for typography.css
+ * This file is processed by Tailwind CLI during build.
+ *
+ * Uses @reference to process @apply directives without emitting
+ * Tailwind's theme layer. Consumer provides this via @import "tailwindcss".
+ */
+@reference 'tailwindcss';
+@reference './theme.css';
+@import './typography.css';
