@@ -1,10 +1,10 @@
 @import "tailwindcss";
-@import "@northgreenug/musizi-ui-kit/theme.css";
-@import "@northgreenug/musizi-ui-kit/styles.css";
-@import "@northgreenug/musizi-ui-kit/fonts.css";
-@import "@northgreenug/musizi-ui-kit/typography.css";
+@import "../../musizi-ui-kit/dist/theme.css";
+@import "../../musizi-ui-kit/dist/styles.css";
+@import "../../musizi-ui-kit/dist/fonts.css";
+@import "../../musizi-ui-kit/dist/typography.css";
 
-@source "../../node_modules/@northgreenug/musizi-ui-kit/dist/**/*.js";
+@source "../../musizi-ui-kit/dist/**/*.js";
 @source "../../components/**/*.vue";
 
 @theme {
