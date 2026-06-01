@@ -10,7 +10,7 @@
     "build": "nuxt build",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare",
+    "postinstall": "cd musizi-ui-kit && npm install && npm run build && cd .. && nuxt prepare",
     "lint": "eslint ."
   },
   "devDependencies": {
