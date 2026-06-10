@@ -1,6 +1,5 @@
 @import "tailwindcss";
 @import "../../musizi-ui-kit/dist/fonts.css";
-@import "../../musizi-ui-kit/dist/typography.css";
 
 @source "../../musizi-ui-kit/dist/**/*.js";
 @source "../../components/**/*.vue";

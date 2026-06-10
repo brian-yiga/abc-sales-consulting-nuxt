@@ -26,6 +26,7 @@ export default defineNuxtConfig({
 
   css: [
     '~/assets/css/index.css',
+    '~/musizi-ui-kit/dist/typography.css'
   ],
   content: {
     documentDriven: true,
