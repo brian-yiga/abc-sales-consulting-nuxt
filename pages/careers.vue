@@ -487,14 +487,6 @@ const navLinks = [
 
 const activePlacements = [
   {
-    company: "Meik Car Hub",
-    title: "Car Sales Specialist",
-    description: "Meik Car Hub is seeking a high-caliber Car Sales Specialist to spearhead our regional growth and market expansion.",
-    type: "Salaried + Bonus",
-    salary: "Attractive",
-    image: "/img/jobs/car-hub-meik2.jpeg" 
-  },
-  {
     company: "Ruka Pay",
     title: "Commercial Growth & Sales Manager",
     description: "Ruka Pay is seeking a dynamic Commercial Growth & Sales Manager to drive our sales strategy and revenue growth.",
@@ -502,9 +494,33 @@ const activePlacements = [
     salary: "Attractive",
     image: "/img/jobs/ruka-pay.jpeg" 
   },
+  {
+    company: "Furaha Financial",
+    title: "Sales Manager",
+    description: "Furaha Financial is looking for an ambitious Sales Manager to lead our sales initiatives and drive client acquisition across the region.",
+    type: "Salaried + Bonus",
+    salary: "Attractive",
+    image: "/img/jobs/furaha-financial.jpeg" 
+  },
+  {
+    company: "BioHaz Waste Solutions",
+    title: "Sales Lead",
+    description: "BioHaz Waste Solutions is seeking an experienced Sales Lead to manage key accounts and drive revenue growth in the waste management sector.",
+    type: "Salaried + Bonus",
+    salary: "Attractive",
+    image: "/img/jobs/biohaz-saleslead.jpeg" 
+  },
 ];
 
 const filledPlacements = [
+  {
+    company: "Meik Car Hub",
+    title: "Car Sales Specialist",
+    description: "Successfully placed a candidate to spearhead regional growth and market expansion.",
+    type: "Salaried + Bonus",
+    salary: "Closed",
+    image: "/img/jobs/car-hub-meik2.jpeg" 
+  },
   {
     company: "Moving Ads Uganda",
     title: "Sales Operations Manager",

@@ -253,6 +253,36 @@
         />
       </div>
     </MuiPageContainer>
+
+    <MuiPageContainer class="max-w-7xl mx-auto mt-12 md:mt-16 lg:mt-20 bg-white/5 rounded-[28px] border border-white/10 p-6 md:p-8">
+      <div class="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] items-center">
+        <div class="max-w-2xl">
+          <div class="inline-block px-4 py-2 mb-4 text-[11px] tracking-[0.3em] uppercase font-bold text-abc-green bg-abc-green/10 rounded-full">
+            Short Clip
+          </div>
+          <h3 class="mui-text--headline-1 uppercase tracking-tight text-white mb-4">
+            Meet Alela & our face-to-face classes
+          </h3>
+          <p class="text-white/80 leading-relaxed text-sm md:text-base">
+            Watch a quick introduction from Alela as she explains how our classroom-based sales programs help teams build real selling confidence and close deals faster. This short clip is designed to give visitors an instant feel for the energy, expertise, and practical training we deliver.
+          </p>
+        </div>
+
+        <div class="overflow-hidden rounded-[24px] border border-white/10 bg-black/80">
+          <video
+            controls
+            playsinline
+            muted
+            loop
+            class="w-full h-full min-h-[220px] max-h-[420px] object-cover rounded-[24px]"
+          >
+            <source src="/img/tiktok-videos/alela-class-intro.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+    </MuiPageContainer>
+
   </div>
 
   <MuiPageContainer class="mt-16 md:mt-20 lg:mt-25">
