@@ -266,6 +266,13 @@
           <p class="text-white/80 leading-relaxed text-sm md:text-base">
             Watch a quick introduction from Alela as she explains how our classroom-based sales programs help teams build real selling confidence and close deals faster. This short clip is designed to give visitors an instant feel for the energy, expertise, and practical training we deliver.
           </p>
+
+          <a
+            href="#contacts"
+            class="inline-block bg-abc-green text-abc-navy px-6 py-3 text-xs font-bold uppercase tracking-widest hover:bg-abc-green/90 transition-colors duration-300 mt-4"
+          >
+            Book a Slot
+          </a>
         </div>
 
         <div class="overflow-hidden rounded-[24px] border border-white/10 bg-black/80">

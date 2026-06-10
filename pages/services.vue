@@ -394,15 +394,15 @@
       </p>
 
       <h3 class="text-2xl md:text-3xl lg:text-4xl font-black uppercase mb-4">
-        Interview Mastery Workshop
+        Face-to-Face Sales Class
       </h3>
 
       <p class="text-sm md:text-base mb-6 leading-relaxed">
-        Join us for a powerful online session with our very own GODWIN BATUMA as we break down "The Interview Questions Most People Fail" and how to answer them with confidence, clarity, and impact.
+        Experience our in-person sales training designed for teams who want practical, classroom-based coaching and live role-play practice. This session introduces our new face-to-face classes and shows how we help salespeople close more deals with confidence.
       </p>
 
       <p class="text-sm font-semibold mb-8">
-        📍 Kampala | 🗓 20th May | ⏰ 7:30 AM – 8:30 PM
+        📍 Kampala | 🗓 20th June | ⏰ 9:00 AM – 4:00 PM | Limited seats available
       </p>
 
       <a
@@ -416,8 +416,8 @@
     <!-- FLYER IMAGE -->
     <div class="h-[420px] md:h-[520px] lg:h-[620px] overflow-hidden">
       <NuxtImg
-        src="/img/flyers/batumaTraining.jpeg"
-        alt="ABC Sales Consulting upcoming sales training workshop flyer"
+        src="/img/flyers/face-to-face-class.jpg"
+        alt="ABC Sales Consulting face-to-face sales class flyer"
         class="w-full h-full object-cover"
         fit="cover"
         sizes="100vw lg:50vw"
