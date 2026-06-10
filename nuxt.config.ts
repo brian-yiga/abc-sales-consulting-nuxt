@@ -25,8 +25,10 @@ export default defineNuxtConfig({
   },
 
   css: [
+    '~/musizi-ui-kit/dist/fonts.css',
+    '~/musizi-ui-kit/dist/musizi-ui-kit.css',
+    '~/musizi-ui-kit/dist/typography.css',
     '~/assets/css/index.css',
-    '~/musizi-ui-kit/dist/typography.css'
   ],
   content: {
     documentDriven: true,
