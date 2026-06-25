@@ -674,13 +674,13 @@ const selectedMember = ref(null);
 
 const founders = [
   {
-    name: "Cathy Ninsiima",
+    name: "Dahlin Ssajjabi",
     title: "Co-Founder | Chief Executive Officer",
-    image: "/img/newDirectors/cathy-ninsiima.png",
+    image: "/img/movingAds/dahlinSajjabiNoBg.png",
     shortBio:
-      "Visionary leader with 16+ years driving market expansion and revenue transformation across East Africa...",
+      "My entrepreneurial spirit ignited in 2014 when I co- founded Tasty Yellow Yolk...",
     fullBio:
-      "Cathy brings a wealth of experience from building and scaling high-performing teams in competitive markets. With a background in strategic sales leadership and market penetration, she has consistently driven 40%+ revenue growth. Her approach combines data-driven insights with emotional intelligence, creating sustainable sales cultures that transform organizations. Cathy is passionate about elevating the sales profession across East Africa.",
+      "My entrepreneurial spirit ignited in 2014 when I co- founded Tasty Yellow Yolk. This experience, coupled with my door-to-door supermarket sales, fuelled my passion for the art of the sale. Following my law degree from Makerere University, I joined Saladmaster for 7 years. There, I not only led the top- performing team in Africa, but globally, driving phenomenal sales across East Africa. My expertise lies in creating high-performing teams through excellence in sales training. My mission is to elevate the sales profession, making it a respected career path, not just in Uganda, but across East Africa.",
   },
   {
     name: "Priscilla Alela",
@@ -692,22 +692,13 @@ const founders = [
       "For nearly 20 years, I've thrived in the dynamic world of sales, navigating diverse fields across Kenya and Uganda. It's more than a career; it's a passion that fuels my drive to consistently exceed sales goals and ignite revenue growth. Through clear communication and strategic problem-solving, I develop a deep understanding of their needs. This allows me to craft tailored solutions that empower their businesses to flourish. My success is fuelled by a relentless results orientation and an unwavering commitment to exceptional customer service.",
   },
   {
-    name: "Hilda Owagazzi",
-    title: "Co-Founder | Director, Strategic Partnerships",
-    image: "/img/newDirectors/hilda-amazing.png",
+    name: "Godwin Batuma",
+    title: "Co-Founder | Director, Human Resources",
+    image: "/img/movingAds/godwinBatumaNoBg.png",
     shortBio:
-      "Strategic innovator specializing in partnership development and market ecosystem building across the region...",
+      "I am a results-driven sales and marketing professional with over 10 years of experience...",
     fullBio:
-      "Hilda's 14-year career spans relationship management, business development, and ecosystem building. She has forged partnerships that generated $5M+ in annual revenue and expanded market presence into 8 new territories. Her expertise lies in identifying synergies, negotiating complex deals, and creating win-win scenarios that drive mutual growth. Hilda believes sustainable success is built on authentic relationships and shared values.",
-  },
-  {
-    name: "Maustine Omukozi",
-    title: "Co-Founder | Director, Training & Development",
-    image: "/img/newDirectors/maustine-braveOne.png",
-    shortBio:
-      "Behavioral coaching expert focused on transforming sales teams through innovative, results-oriented methodologies...",
-    fullBio:
-      "Maustine is a certified behavioral coach with 11+ years of experience designing and delivering transformative sales training programs. Her unique methodology combines neuroscience, psychology, and practical sales tactics to unlock individual and team potential. She has coached 500+ sales professionals, achieving an average 35% improvement in conversion rates and 28% improvement in deal sizes. Maustine is committed to making exceptional sales coaching accessible to organizations across Africa.",
+      "I am a results-driven sales and marketing professional with over 10 years of experience driving revenue growth, leading high-performing teams, and cultivating long-lasting customer relationships both internationally and locally with my foot print in countries such as Kenya, Mauritius, Burundi , DRC , Malaysia, and Uganda . I believe that clear and effective communication is key to building strong relationships and driving results. Anyone can be taught how to sell with the right training and coaching, and I'm passionate about helping others achieve their full potential..",
   },
 ];
 
