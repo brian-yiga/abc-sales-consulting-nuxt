@@ -169,22 +169,22 @@
         <div
           class="inline-block border border-abc-green/50 bg-abc-green/10 text-abc-green px-6 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-[0.3em] mb-8"
         >
-         Talent Acquisition & Placements
+          Talent Acquisition & Placements
         </div>
 
         <h2
           class="mui-text--display-1 uppercase font-black tracking-tighter leading-tight"
         >
-          job placements that <br> transform businesses
+          job placements that <br />
+          transform businesses
         </h2>
 
         <p
           class="max-w-xl mt-6 mb-10 mx-auto text-white/90 leading-relaxed text-sm tracking-wide"
         >
-        ABC Sales Consulting connects world-class sales talent with Africa’s leading organizations.
+          ABC Sales Consulting connects world-class sales talent with Africa’s
+          leading organizations.
         </p>
-
-       
       </div>
     </MuiPageContainer>
   </div>
@@ -192,30 +192,69 @@
   <MuiPageContainer class="py-20">
     <div class="mb-24">
       <div class="flex items-center gap-4 mb-12">
-        <h2 class="text-3xl font-black uppercase text-abc-navy">Open Opportunities</h2>
+        <h2 class="text-3xl font-black uppercase text-abc-navy">
+          Open Opportunities
+        </h2>
         <div class="h-px flex-1 bg-gray-200"></div>
       </div>
 
       <div class="grid gap-12 lg:grid-cols-2">
-        <div v-for="job in activePlacements" :key="job.title" class="flex flex-col md:flex-row gap-6 bg-white border border-gray-100 p-6 shadow-xl hover:shadow-2xl transition-all group">
-          <div class="w-full md:w-48 h-64 bg-gray-200 overflow-hidden rounded-sm flex-shrink-0">
-             <img :src="job.image" :alt="job.title" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+        <div
+          v-for="job in activePlacements"
+          :key="job.title"
+          class="flex flex-col md:flex-row gap-6 bg-white border border-gray-100 p-6 shadow-xl hover:shadow-2xl transition-all group"
+        >
+          <div
+            class="w-full md:w-48 h-64 bg-gray-200 overflow-hidden rounded-sm flex-shrink-0"
+          >
+            <img
+              :src="job.image"
+              :alt="job.title"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            />
           </div>
 
           <div class="flex flex-col justify-between py-2">
             <div>
-              <p class="text-abc-green font-bold text-[10px] uppercase tracking-widest mb-1">{{ job.company }}</p>
-              <h3 class="text-xl font-black text-abc-navy uppercase leading-tight mb-3">{{ job.title }}</h3>
+              <p
+                class="text-abc-green font-bold text-[10px] uppercase tracking-widest mb-1"
+              >
+                {{ job.company }}
+              </p>
+              <h3
+                class="text-xl font-black text-abc-navy uppercase leading-tight mb-3"
+              >
+                {{ job.title }}
+              </h3>
               <div class="flex gap-2 mb-4">
-                <span class="text-[9px] bg-gray-100 px-2 py-1 font-bold text-gray-500 uppercase">{{ job.type }}</span>
-                <span class="text-[9px] bg-abc-navy text-white px-2 py-1 font-bold uppercase">{{ job.salary }}</span>
+                <span
+                  class="text-[9px] bg-gray-100 px-2 py-1 font-bold text-gray-500 uppercase"
+                  >{{ job.type }}</span
+                >
+                <span
+                  class="text-[9px] bg-abc-navy text-white px-2 py-1 font-bold uppercase"
+                  >{{ job.salary }}</span
+                >
               </div>
-              <p class="text-gray-500 text-xs leading-relaxed mb-6">{{ job.description }}</p>
+              <p class="text-gray-500 text-xs leading-relaxed mb-6">
+                {{ job.description }}
+              </p>
             </div>
 
             <div class="flex gap-2">
-              <MuiButton label="APPLY NOW" variant="red-fill" class="!text-[9px] !px-4 !py-3 !rounded-none" :href="getApplyLink(job)" />
-              <MuiButton label="VIEW FLYER" variant="white-stroke" class="!text-[9px] !px-4 !py-3 !rounded-none !border-abc-navy !text-abc-navy" :href="job.image" target="_blank" />
+              <MuiButton
+                label="APPLY NOW"
+                variant="red-fill"
+                class="!text-[9px] !px-4 !py-3 !rounded-none"
+                :href="getApplyLink(job)"
+              />
+              <MuiButton
+                label="VIEW FLYER"
+                variant="white-stroke"
+                class="!text-[9px] !px-4 !py-3 !rounded-none !border-abc-navy !text-abc-navy"
+                :href="job.image"
+                target="_blank"
+              />
             </div>
           </div>
         </div>
@@ -223,35 +262,45 @@
     </div>
 
     <div>
-     <div class="flex items-center gap-4 mb-12">
-        <h2 class="text-3xl font-black uppercase text-abc-navy">Recently Filled</h2>
+      <div class="flex items-center gap-4 mb-12">
+        <h2 class="text-3xl font-black uppercase text-abc-navy">
+          Recently Filled
+        </h2>
         <div class="h-px flex-1 bg-gray-200"></div>
       </div>
 
-     <div class="grid gap-8 md:grid-cols-3">
-  <div 
-    v-for="job in filledPlacements" 
-    :key="job.title" 
-    class="relative group opacity-70 grayscale-[50%] hover:opacity-100 hover:grayscale-0 transition-all duration-300"
-  >
-    <div class="relative aspect-[3/4] bg-gray-200 mb-4 overflow-hidden rounded-sm">
-      <img :src="job.image" class="w-full h-full object-cover" />
-      
-      <div class="absolute inset-0 bg-white/20 flex items-center justify-center">
-         <span class="border-4 border-red-600 text-red-600 font-black uppercase text-3xl px-4 py-1 -rotate-12 shadow-lg">
-           FILLED
-         </span>
-      </div>
-    </div>
+      <div class="grid gap-8 md:grid-cols-3">
+        <div
+          v-for="job in filledPlacements"
+          :key="job.title"
+          class="relative group opacity-70 grayscale-[50%] hover:opacity-100 hover:grayscale-0 transition-all duration-300"
+        >
+          <div
+            class="relative aspect-[3/4] bg-gray-200 mb-4 overflow-hidden rounded-sm"
+          >
+            <img :src="job.image" class="w-full h-full object-cover" />
 
-    <p class="text-[9px] font-bold text-abc-green uppercase tracking-wider">
-      {{ job.company }}
-    </p>
-    <h4 class="text-sm font-black text-abc-navy uppercase leading-tight">
-      {{ job.title }}
-    </h4>
-  </div>
-</div>
+            <div
+              class="absolute inset-0 bg-white/20 flex items-center justify-center"
+            >
+              <span
+                class="border-4 border-red-600 text-red-600 font-black uppercase text-3xl px-4 py-1 -rotate-12 shadow-lg"
+              >
+                FILLED
+              </span>
+            </div>
+          </div>
+
+          <p
+            class="text-[9px] font-bold text-abc-green uppercase tracking-wider"
+          >
+            {{ job.company }}
+          </p>
+          <h4 class="text-sm font-black text-abc-navy uppercase leading-tight">
+            {{ job.title }}
+          </h4>
+        </div>
+      </div>
     </div>
   </MuiPageContainer>
 
@@ -277,7 +326,11 @@
         class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-0 border border-white/20 rounded-none overflow-hidden shadow-2xl"
         id="newsletter-form"
       >
-        <input type="hidden" name="access_key" value="1b3f2db3-70e6-4917-b8dc-affe334cdaf1" />
+        <input
+          type="hidden"
+          name="access_key"
+          value="1b3f2db3-70e6-4917-b8dc-affe334cdaf1"
+        />
         <input
           type="text"
           name="name"
@@ -298,7 +351,12 @@
           <div
             class="flex items-center gap-3 text-gray-400 text-xs uppercase tracking-widest font-bold"
           >
-            <input type="checkbox" name="botcheck" class="w-4 h-4 accent-abc-green" required />
+            <input
+              type="checkbox"
+              name="botcheck"
+              class="w-4 h-4 accent-abc-green"
+              required
+            />
             I'm not a robot
           </div>
         </div>
@@ -444,8 +502,10 @@ import BackToTop from "~/components/BackToTop.vue";
 useHead({
   title: "Careers",
   titleTemplate: (titleChunk) => {
-    return titleChunk ? `${titleChunk} | ABC Sales Consulting` : 'ABC Sales Consulting';
-  }
+    return titleChunk
+      ? `${titleChunk} | ABC Sales Consulting`
+      : "ABC Sales Consulting";
+  },
 });
 
 const isMobileMenuOpen = ref(false);
@@ -487,86 +547,117 @@ const navLinks = [
 
 const activePlacements = [
   {
-    company: "Ruka Pay",
-    title: "Commercial Growth & Sales Manager",
-    description: "Ruka Pay is seeking a dynamic Commercial Growth & Sales Manager to drive our sales strategy and revenue growth.",
+    company: "BioHaz Waste Solutions",
+    title: "Sales Executive / Waste Management Solutions",
+    description:
+      "BioHaz Waste Solutions is seeking an experienced Sales Executive to manage key accounts and drive revenue growth in the waste management sector.",
     type: "Salaried + Bonus",
     salary: "Attractive",
-    image: "/img/jobs/ruka-pay.jpeg" 
-  },
-  {
-    company: "Furaha Financial",
-    title: "Sales Manager",
-    description: "Furaha Financial is looking for an ambitious Sales Manager to lead our sales initiatives and drive client acquisition across the region.",
-    type: "Salaried + Bonus",
-    salary: "Attractive",
-    image: "/img/jobs/furaha-financial.jpeg" 
+    image: "/img/jobs/biohaz-saleslead.jpeg",
   },
   {
     company: "BioHaz Waste Solutions",
-    title: "Sales Lead",
-    description: "BioHaz Waste Solutions is seeking an experienced Sales Lead to manage key accounts and drive revenue growth in the waste management sector.",
+    title: "Assistant Sales Executive / Waste Management Solutions",
+    description:
+      "BioHaz Waste Solutions is seeking an experienced Assistant Sales Executive to manage key accounts and drive revenue growth in the waste management sector.",
     type: "Salaried + Bonus",
     salary: "Attractive",
-    image: "/img/jobs/biohaz-saleslead.jpeg" 
+    image: "/img/jobs/biohaz-saleslead.jpeg",
   },
 ];
 
 const filledPlacements = [
   {
+    company: "Ruka Pay",
+    title: "Commercial Growth & Sales Manager",
+    description:
+      "Ruka Pay is seeking a dynamic Commercial Growth & Sales Manager to drive our sales strategy and revenue growth.",
+    type: "Salaried + Bonus",
+    salary: "Attractive",
+    image: "/img/jobs/ruka-pay.jpeg",
+  },
+  {
+    company: "Furaha Financial",
+    title: "Sales Manager",
+    description:
+      "Furaha Financial is looking for an ambitious Sales Manager to lead our sales initiatives and drive client acquisition across the region.",
+    type: "Salaried + Bonus",
+    salary: "Attractive",
+    image: "/img/jobs/furaha-financial.jpeg",
+  },
+  {
+    company: "BioHaz Waste Solutions",
+    title: "Sales Lead",
+    description:
+      "BioHaz Waste Solutions is seeking an experienced Sales Lead to manage key accounts and drive revenue growth in the waste management sector.",
+    type: "Salaried + Bonus",
+    salary: "Attractive",
+    image: "/img/jobs/biohaz-saleslead.jpeg",
+  },
+  {
     company: "Meik Car Hub",
     title: "Car Sales Specialist",
-    description: "Successfully placed a candidate to spearhead regional growth and market expansion.",
+    description:
+      "Successfully placed a candidate to spearhead regional growth and market expansion.",
     type: "Salaried + Bonus",
     salary: "Closed",
-    image: "/img/jobs/car-hub-meik2.jpeg" 
+    image: "/img/jobs/car-hub-meik2.jpeg",
   },
   {
     company: "Moving Ads Uganda",
     title: "Sales Operations Manager",
-    description: "Successfully placed a candidate to drive revenue growth and sales data.",
+    description:
+      "Successfully placed a candidate to drive revenue growth and sales data.",
     type: "Contract",
     salary: "Closed",
-    image: "/img/jobs/moving-ads.jpeg"
+    image: "/img/jobs/moving-ads.jpeg",
   },
   {
     company: "BioHaz Waste Solutions",
     title: "Sales lead",
-    description: "Successfully placed a candidate to drive revenue growth and sales data.",
+    description:
+      "Successfully placed a candidate to drive revenue growth and sales data.",
     type: "Salaried + Bonus",
     salary: "Closed",
-    image: "/img/jobs/biohaz1.jpeg"
+    image: "/img/jobs/biohaz1.jpeg",
   },
   {
     company: "Fnacy Packs Limited",
     title: "Sales Executive",
-    description: "Successfully placed a candidate to drive revenue growth and sales data.",
+    description:
+      "Successfully placed a candidate to drive revenue growth and sales data.",
     type: "Salaried + Bonus",
     salary: "Closed",
-    image: "/img/jobs/fancypacks.jpeg"
+    image: "/img/jobs/fancypacks.jpeg",
   },
   {
     company: "International Market Development & Administrative Manager",
     title: "Sales lead",
-    description: "Successfully placed a candidate to drive revenue growth and sales data.",
+    description:
+      "Successfully placed a candidate to drive revenue growth and sales data.",
     type: "Salaried + Bonus",
     salary: "Closed",
-    image: "/img/jobs/internationalDevtMgr.jpeg"
+    image: "/img/jobs/internationalDevtMgr.jpeg",
   },
   {
     company: "Kitchen Italian Design",
     title: "Sales & Marketing Lead",
-    description: "Successfully placed a candidate to drive revenue growth and sales data.",
+    description:
+      "Successfully placed a candidate to drive revenue growth and sales data.",
     type: "Salaried + Bonus",
     salary: "Closed",
-    image: "/img/jobs/italianDesignSalesExecs.jpeg"
+    image: "/img/jobs/italianDesignSalesExecs.jpeg",
   },
 ];
 
 // Helper to format the application email
 const getApplyLink = (job) => {
-  const subject = encodeURIComponent(`Application for ${job.title} at ${job.company} (via ABC Sales)`);
-  const body = encodeURIComponent(`Dear ABC Recruitment Team,\n\nI am interested in the ${job.title} position at ${job.company}. Please find my CV attached.\n\nBest regards,`);
+  const subject = encodeURIComponent(
+    `Application for ${job.title} at ${job.company} (via ABC Sales)`,
+  );
+  const body = encodeURIComponent(
+    `Dear ABC Recruitment Team,\n\nI am interested in the ${job.title} position at ${job.company}. Please find my CV attached.\n\nBest regards,`,
+  );
   return `mailto:admin@abcsalesconsulting.net?subject=${subject}&body=${body}`;
 };
 </script>

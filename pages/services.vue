@@ -379,53 +379,112 @@
   </MuiPageContainer>
 
   <MuiPageContainer class="mt-20 md:mt-24 lg:mt-28" id="upcoming-events">
-  <!-- SECTION TITLE -->
-  <h2 class="text-center text-3xl md:text-5xl lg:text-6xl font-black uppercase mb-10">
-    Upcoming Events
-  </h2>
+    <!-- SECTION TITLE -->
+    <h2
+      class="text-center text-3xl md:text-5xl lg:text-6xl font-black uppercase mb-10 text-abc-navy"
+    >
+      Upcoming Events
+    </h2>
 
-  <div class="grid grid-cols-1 lg:grid-cols-2 gap-0 items-stretch rounded-md overflow-hidden">
-    
-    <!-- TEXT CONTENT -->
-    <div class="bg-maroon text-white flex flex-col justify-center p-8 md:p-12 lg:p-16 min-h-[420px] md:min-h-[520px] lg:min-h-[620px]">
-      
-      <p class="text-xs uppercase tracking-widest font-semibold mb-3 opacity-80">
-        Featured Event
-      </p>
-
-      <h3 class="text-2xl md:text-3xl lg:text-4xl font-black uppercase mb-4">
-        Face-to-Face Sales Class
-      </h3>
-
-      <p class="text-sm md:text-base mb-6 leading-relaxed">
-        Experience our in-person sales training designed for teams who want practical, classroom-based coaching and live role-play practice. This session introduces our new face-to-face classes and shows how we help salespeople close more deals with confidence.
-      </p>
-
-      <p class="text-sm font-semibold mb-8">
-        📍 Kampala | 🗓 20th June | ⏰ 9:00 AM – 4:00 PM | Limited seats available
-      </p>
-
-      <a
-        href="#newsletter-form"
-        class="inline-block bg-white text-maroon px-6 py-3 text-xs font-bold uppercase tracking-widest hover:bg-gray-200 transition-colors duration-300 w-fit"
+    <div
+      class="grid grid-cols-1 lg:grid-cols-2 gap-0 items-stretch rounded-md overflow-hidden shadow-2xl"
+    >
+      <!-- TEXT CONTENT -->
+      <div
+        class="bg-maroon text-white flex flex-col justify-center p-8 md:p-12 lg:p-16 min-h-[420px] md:min-h-[520px] lg:min-h-[620px]"
       >
-        Reserve Your Spot
-      </a>
-    </div>
+        <p
+          class="text-xs uppercase tracking-widest font-bold mb-3 text-abc-orange"
+        >
+          Featured Cohort • Registration Open
+        </p>
 
-    <!-- FLYER IMAGE -->
-    <div class="h-[420px] md:h-[520px] lg:h-[620px] overflow-hidden">
-      <NuxtImg
-        src="/img/flyers/face-to-face-class.jpg"
-        alt="ABC Sales Consulting face-to-face sales class flyer"
-        class="w-full h-full object-cover"
-        fit="cover"
-        sizes="100vw lg:50vw"
-      />
-    </div>
+        <h3
+          class="text-2xl md:text-3xl lg:text-4xl font-black uppercase mb-4 leading-tight"
+        >
+          ABC Sales Training <br />
+          <span class="text-abc-green">August 2026 Cohort</span>
+        </h3>
 
-  </div>
-</MuiPageContainer>
+        <p class="text-sm md:text-base mb-6 leading-relaxed text-white/90">
+          Sell with confidence and grow with skill. Our signature 4-week,
+          face-to-face program is engineered for sales professionals,
+          entrepreneurs, and team leaders who want to master practical
+          prospecting, build rapid rapport, handle tough objections
+          professionally, and close more deals consistently.
+        </p>
+
+        <!-- FLYER KEY DETAILS -->
+        <div
+          class="grid grid-cols-2 gap-y-4 gap-x-2 border-t border-b border-white/10 py-5 mb-8 text-xs"
+        >
+          <div>
+            <span
+              class="block text-abc-green uppercase tracking-wider font-bold text-[10px]"
+              >🗓 Start Date</span
+            >
+            <span class="font-medium">Monday, 3rd August 2026</span>
+          </div>
+          <div>
+            <span
+              class="block text-abc-green uppercase tracking-wider font-bold text-[10px]"
+              >⏰ Schedule & Duration</span
+            >
+            <span class="font-medium"
+              >4 Weeks (1 Session per week, 5:30 PM – 7:30 PM)</span
+            >
+          </div>
+          <div>
+            <span
+              class="block text-abc-green uppercase tracking-wider font-bold text-[10px]"
+              >📍 Venue</span
+            >
+            <span class="font-medium">Ntinda Ministers Village, Kampala</span>
+          </div>
+          <div>
+            <span
+              class="block text-abc-orange uppercase tracking-wider font-bold text-[10px]"
+              >💰 Investment</span
+            >
+            <span class="font-medium font-bold"
+              >UGX 600,000
+              <span class="text-[9px] text-white/70 block"
+                >(Includes Certificate & Resources)</span
+              ></span
+            >
+          </div>
+        </div>
+
+        <!-- INCENTIVE & ACTION BUTTON -->
+        <div
+          class="flex flex-col sm:flex-row items-start sm:items-center gap-4"
+        >
+          <MuiButton
+            variant="red-fill"
+            label="RESERVE YOUR SPOT"
+            class="!rounded-none px-8 py-3.5 font-bold text-[10px] tracking-widest !bg-abc-orange !border-abc-orange hover:brightness-110 cursor-pointer"
+            @click="discoveryFormRef?.open()"
+          />
+          <div class="text-xs text-abc-orange font-bold animate-pulse">
+            ⚡ Only 15 Seats Available!
+          </div>
+        </div>
+      </div>
+
+      <!-- FLYER IMAGE (Updated path and alt tags) -->
+      <div
+        class="h-[420px] md:h-[520px] lg:h-[620px] overflow-hidden bg-black/5"
+      >
+        <NuxtImg
+          src="/img/flyers/August-Cohort-Training.png"
+          alt="ABC Sales Training August 2026 Cohort flyer detailing price, schedules, and skills taught"
+          class="w-full h-full object-cover"
+          fit="cover"
+          sizes="100vw lg:50vw"
+        />
+      </div>
+    </div>
+  </MuiPageContainer>
 
   <div class="relative bg-black py-20 text-center overflow-hidden">
     <MuiPageContainer class="relative z-10">
@@ -469,7 +528,11 @@
         class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-0 border border-white/20 rounded-none overflow-hidden shadow-2xl"
         id="newsletter-form"
       >
-        <input type="hidden" name="access_key" value="1b3f2db3-70e6-4917-b8dc-affe334cdaf1" />
+        <input
+          type="hidden"
+          name="access_key"
+          value="1b3f2db3-70e6-4917-b8dc-affe334cdaf1"
+        />
         <input
           type="text"
           name="name"
@@ -490,7 +553,12 @@
           <div
             class="flex items-center gap-3 text-gray-400 text-xs uppercase tracking-widest font-bold"
           >
-            <input type="checkbox" name="botcheck" class="w-4 h-4 accent-abc-green" required />
+            <input
+              type="checkbox"
+              name="botcheck"
+              class="w-4 h-4 accent-abc-green"
+              required
+            />
             I'm not a robot
           </div>
         </div>

@@ -294,7 +294,7 @@
         class="h-[165px] md:h-[250px] lg:h-[316px] xl:h-[342px] overflow-hidden"
       >
         <NuxtImg
-          src="/img/home/freeDiscovery.jpg"
+          src="/img/home/newTraining.png"
           alt="ABC Sales Consulting free discovery session with professional sales team"
           class="w-full object-cover object-center block rounded-md h-[166px] md:h-[251px] lg:h-[317px] xl:h-[343px]"
           fit="cover"
@@ -318,7 +318,7 @@
         class="h-[165px] md:h-[250px] lg:h-[316px] xl:h-[342px] overflow-hidden"
       >
         <NuxtImg
-          src="/img/home/consultation.jpg"
+          src="/img/home/staff-appraisal1.png"
           alt="One-on-one professional sales coaching and consultation session"
           class="w-full object-cover block rounded-md h-[166px] md:h-[251px] lg:h-[317px] xl:h-[343px]"
           fit="cover"
@@ -395,8 +395,8 @@
   <MuiPageContainer class="mt-16 md:mt-20 lg:mt-25">
     <MuiTextWithImage
       :img="{
-        small: '/img/carousel/training.jpeg',
-        large: '/img/carousel/training.jpeg',
+        small: '/img/home/newTraining2.png',
+        large: '/img/home/newTraining2.png',
       }"
       img-alt="ABC Sales Consulting high-impact sales training workshop in Uganda"
       class="mb-6 lg:mb-0"

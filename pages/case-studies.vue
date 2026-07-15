@@ -329,7 +329,7 @@
     </div>
     <div class="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
       <div
-        v-for="i in 9"
+        v-for="i in 16"
         :key="i"
         class="break-inside-avoid bg-white p-2 rounded-lg shadow-sm border border-gray-100"
       >
