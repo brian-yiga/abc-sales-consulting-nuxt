@@ -1,8 +1,41 @@
 <template>
   <div
-    class="bg-maroon pt-4 pb-5 bg-cover bg-center bg-[url('/bg-images/bg-blue.png')]"
+    class="bg-maroon pb-5 bg-cover bg-center bg-[url('/bg-images/bg-blue.png')]"
   >
-    <MuiPageContainer wide class="relative">
+    <!-- 1. SCROLLING ANNOUNCEMENT TICKER (Full-width at the very top) -->
+    <div
+      class="w-full bg-abc-orange text-white py-2.5 overflow-hidden relative z-[220] border-b border-white/10"
+    >
+      <div
+        class="flex whitespace-nowrap animate-marquee text-[10px] font-bold tracking-widest uppercase"
+      >
+        <!-- Loop Set 1 -->
+        <span class="mx-4">🔥 August 2026 Cohort Registration Now Open!</span>
+        <span class="mx-4">•</span>
+        <span class="mx-4">📅 Starts Monday, 3rd August 2026</span>
+        <span class="mx-4">•</span>
+        <span class="mx-4">👥 Only 15 Seats Left!</span>
+        <span class="mx-4">•</span>
+        <span class="mx-4">📍 Plot 18, Mukulu Curve, Off Martyrs Way</span>
+        <span class="mx-4">•</span>
+        <span class="mx-4">📞 Call/WhatsApp 0791 178 657</span>
+        <span class="mx-4">•</span>
+
+        <!-- Loop Set 2 (Duplicates for seamless scrolling) -->
+        <span class="mx-4">🔥 August 2026 Cohort Registration Now Open!</span>
+        <span class="mx-4">•</span>
+        <span class="mx-4">📅 Starts Monday, 3rd August 2026</span>
+        <span class="mx-4">•</span>
+        <span class="mx-4">👥 Only 15 Seats Left!</span>
+        <span class="mx-4">•</span>
+        <span class="mx-4">📍 Ntinda Ministers Village</span>
+        <span class="mx-4">•</span>
+        <span class="mx-4">📞 Call/WhatsApp 0791 178 657</span>
+      </div>
+    </div>
+
+    <!-- HEADER & NAVIGATION -->
+    <MuiPageContainer wide class="relative pt-4">
       <header
         class="flex items-center justify-between px-6 py-4 md:px-8 bg-white/20 backdrop-blur-[10px] border border-white/10 relative z-[210]"
       >
@@ -160,16 +193,28 @@
       </Transition>
     </MuiPageContainer>
 
+    <!-- HERO SECTION WITH INTEGRATED COHORT BADGE -->
     <MuiPageContainer
-      class="text-center text-white pt-20 pb-16 lg:pt-25 lg:pb-20 xl:pt-[120px] xl:pb-25 relative bg-cover bg-center"
+      class="text-center text-white pt-16 pb-16 lg:pt-20 lg:pb-20 xl:pt-[100px] xl:pb-25 relative bg-cover bg-center"
     >
       <div class="absolute inset-0 pointer-events-none"></div>
 
       <div class="max-w-3xl mx-auto relative z-10">
         <div
-          class="inline-block border border-abc-green/50 bg-abc-green/10 text-abc-green px-6 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-[0.3em] mb-8"
+          class="flex flex-col sm:flex-row items-center justify-center gap-3 mb-8"
         >
-          Sales Strategy & Excellence
+          <div
+            class="inline-block border border-abc-green/50 bg-abc-green/10 text-abc-green px-6 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-[0.3em]"
+          >
+            Sales Strategy & Excellence
+          </div>
+          <!-- Live Action Pill -->
+          <NuxtLink
+            to="/services#upcoming-events"
+            class="inline-block border border-abc-orange bg-abc-orange/20 text-abc-orange px-5 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-[0.2em] animate-pulse cursor-pointer hover:bg-abc-orange/30 transition-colors"
+          >
+            🔴 August 2026 Cohort
+          </NuxtLink>
         </div>
 
         <h2
@@ -180,30 +225,70 @@
         </h2>
 
         <p
-          class="max-w-xl mt-6 mb-10 mx-auto text-white/90 leading-relaxed text-sm tracking-wide"
+          class="max-w-xl mt-6 mb-8 mx-auto text-white/90 leading-relaxed text-sm tracking-wide"
         >
           ABC Sales Consulting provides world-class training and strategic
           interventions to help African businesses scale faster, close bigger
           deals, and build sustainable, predictable growth.
         </p>
 
+        <!-- COHORT METRICS GRID (Direct from the Flyer) -->
+        <div
+          class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto mb-10 text-center border-t border-b border-white/10 py-6"
+        >
+          <div>
+            <div class="text-abc-green font-extrabold text-base md:text-lg">
+              UGX 600,000
+            </div>
+            <div class="text-[9px] uppercase tracking-wider text-white/60 mt-1">
+              Investment
+            </div>
+          </div>
+          <div>
+            <div class="text-abc-green font-extrabold text-base md:text-lg">
+              4 Weeks
+            </div>
+            <div class="text-[9px] uppercase tracking-wider text-white/60 mt-1">
+              Duration
+            </div>
+          </div>
+          <div>
+            <div class="text-abc-orange font-extrabold text-base md:text-lg">
+              15 Seats
+            </div>
+            <div class="text-[9px] uppercase tracking-wider text-white/60 mt-1">
+              Class Limit
+            </div>
+          </div>
+          <div>
+            <div class="text-abc-green font-extrabold text-base md:text-lg">
+              Certificate
+            </div>
+            <div class="text-[9px] uppercase tracking-wider text-white/60 mt-1">
+              Included
+            </div>
+          </div>
+        </div>
+
+        <!-- REPOSITIONED CTAs -->
         <div class="flex flex-col sm:flex-row justify-center gap-4">
           <MuiButton
             variant="red-fill"
-            label="BOOK A DISCOVERY CALL"
-            class="!rounded-none px-10 py-4 font-bold text-[10px] tracking-widest shadow-xl cursor-pointer"
+            label="REGISTER FOR AUGUST COHORT"
+            class="!rounded-none px-10 py-4 font-bold text-[10px] tracking-widest shadow-xl cursor-pointer !bg-abc-orange !border-abc-orange hover:brightness-110"
             @click="discoveryFormRef?.open()"
           />
           <MuiButton
             variant="white-stroke"
-            label="OUR SERVICES"
+            label="BOOK A DISCOVERY CALL"
             class="!rounded-none px-10 py-4 font-bold text-[10px] tracking-widest hover:bg-white hover:text-abc-navy transition-all"
-            href="/services"
+            @click="discoveryFormRef?.open()"
           />
         </div>
       </div>
     </MuiPageContainer>
 
+    <!-- PORTFOLIO GRID IMAGES -->
     <MuiPageContainer wide class="grid grid-cols-2 gap-2 max-w-7xl">
       <div
         class="h-[165px] md:h-[250px] lg:h-[316px] xl:h-[342px] overflow-hidden"
@@ -254,17 +339,28 @@
       </div>
     </MuiPageContainer>
 
-    <MuiPageContainer class="max-w-7xl mx-auto mt-12 md:mt-16 lg:mt-20 bg-white/5 rounded-[28px] border border-white/10 p-6 md:p-8">
+    <!-- 4. VIDEO TESTIMONIAL UPDATE (Redesigned as Client Testimony) -->
+    <MuiPageContainer
+      class="max-w-7xl mx-auto mt-12 md:mt-16 lg:mt-20 bg-white/5 rounded-[28px] border border-white/10 p-6 md:p-8"
+    >
       <div class="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] items-center">
         <div class="max-w-2xl">
-          <div class="inline-block px-4 py-2 mb-4 text-[11px] tracking-[0.3em] uppercase font-bold text-abc-green bg-abc-green/10 rounded-full">
-            Short Clip
+          <div
+            class="inline-block px-4 py-2 mb-4 text-[11px] tracking-[0.3em] uppercase font-bold text-abc-orange bg-abc-orange/10 rounded-full"
+          >
+            Client Testimony
           </div>
-          <h3 class="mui-text--headline-1 uppercase tracking-tight text-white mb-4">
-            Meet Alela & our face-to-face classes
+          <h3
+            class="mui-text--headline-1 uppercase tracking-tight text-white mb-4"
+          >
+            Real Classroom Energy, Real Sales Growth
           </h3>
           <p class="text-white/80 leading-relaxed text-sm md:text-base">
-            Watch a quick introduction from Alela as she explains how our classroom-based sales programs help teams build real selling confidence and close deals faster. This short clip is designed to give visitors an instant feel for the energy, expertise, and practical training we deliver.
+            Hear directly from our graduates as they share how our interactive,
+            face-to-face classes completely transformed their sales approach.
+            From mastering tough objections to confidently closing high-value
+            deals with structured frameworks, our classroom programs give team
+            members the exact skills needed to deliver immediate revenue growth.
           </p>
 
           <a
@@ -275,7 +371,9 @@
           </a>
         </div>
 
-        <div class="overflow-hidden rounded-[24px] border border-white/10 bg-black/80">
+        <div
+          class="overflow-hidden rounded-[24px] border border-white/10 bg-black/80"
+        >
           <video
             controls
             playsinline
@@ -283,13 +381,15 @@
             loop
             class="w-full h-full min-h-[220px] max-h-[420px] object-cover rounded-[24px]"
           >
-            <source src="/img/tiktok-videos/alela-class-intro.mp4" type="video/mp4" />
+            <source
+              src="/img/tiktok-videos/desire-deebah.mp4"
+              type="video/mp4"
+            />
             Your browser does not support the video tag.
           </video>
         </div>
       </div>
     </MuiPageContainer>
-
   </div>
 
   <MuiPageContainer class="mt-16 md:mt-20 lg:mt-25">
@@ -542,7 +642,11 @@
         class="grid grid-cols-1 md:grid-cols-4 gap-0 border border-white/20 rounded-none overflow-hidden shadow-2xl"
       >
         <!-- Web3Forms Configuration -->
-        <input type="hidden" name="access_key" value="1b3f2db3-70e6-4917-b8dc-affe334cdaf1" />
+        <input
+          type="hidden"
+          name="access_key"
+          value="1b3f2db3-70e6-4917-b8dc-affe334cdaf1"
+        />
         <input
           type="hidden"
           name="subject"
@@ -775,16 +879,18 @@ const submitForm = async (e) => {
   try {
     const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
-      body: formData
+      body: formData,
     });
 
     const result = await response.json();
     if (result.success) {
       status.value = "Success!";
       e.target.reset();
-      
+
       // Optional: Clear success message after 5 seconds
-      setTimeout(() => { status.value = ""; }, 5000);
+      setTimeout(() => {
+        status.value = "";
+      }, 5000);
     } else {
       status.value = "Error. Try again.";
     }

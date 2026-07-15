@@ -378,7 +378,7 @@
     </div>
   </MuiPageContainer>
 
-  <MuiPageContainer class="mt-20 md:mt-24 lg:mt-28">
+  <MuiPageContainer class="mt-20 md:mt-24 lg:mt-28" id="upcoming-events">
   <!-- SECTION TITLE -->
   <h2 class="text-center text-3xl md:text-5xl lg:text-6xl font-black uppercase mb-10">
     Upcoming Events
