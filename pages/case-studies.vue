@@ -119,9 +119,7 @@
               class="border-b border-white/10 pb-4"
             >
               <template v-if="link.subLinks">
-                <p
-                  class="text-base font-medium text-white uppercase mb-4"
-                >
+                <p class="text-base font-medium text-white uppercase mb-4">
                   {{ link.name }}
                 </p>
                 <div class="flex flex-col gap-5 pl-4 border-l border-white/20">
@@ -275,46 +273,68 @@
       </p>
     </div>
 
-   <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-  <a
-    v-for="(video, index) in videos"
-    :key="index"
-    :href="video.url"
-    target="_blank"
-    rel="noopener noreferrer"
-    class="bg-white group shadow-sm hover:shadow-xl transition-all overflow-hidden rounded-xl block cursor-pointer"
-  >
-    <div class="relative h-72">
-      <img
-        :src="video.thumb"
-        :alt="video.title"
-        class="w-full h-full object-cover object-top"
-      />
-      <div class="absolute inset-0 bg-black/20 flex items-center justify-center">
-        <div class="w-20 h-20 rounded-full bg-white/90 flex items-center justify-center shadow-2xl transition-transform group-hover:scale-110">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-maroon" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M8 5v14l11-7z" />
-          </svg>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <a
+        v-for="(video, index) in videos"
+        :key="index"
+        :href="video.url"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="bg-white group shadow-sm hover:shadow-xl transition-all overflow-hidden rounded-xl block cursor-pointer"
+      >
+        <div class="relative h-72">
+          <img
+            :src="video.thumb"
+            :alt="video.title"
+            class="w-full h-full object-cover object-top"
+          />
+          <div
+            class="absolute inset-0 bg-black/20 flex items-center justify-center"
+          >
+            <div
+              class="w-20 h-20 rounded-full bg-white/90 flex items-center justify-center shadow-2xl transition-transform group-hover:scale-110"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-10 w-10 text-maroon"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path d="M8 5v14l11-7z" />
+              </svg>
+            </div>
+          </div>
         </div>
-      </div>
+        <div class="p-6">
+          <div class="flex items-center justify-between mb-2">
+            <h3 class="text-maroon font-extrabold uppercase text-xl">
+              {{ video.title }} 0{{ index + 1 }}
+            </h3>
+            <span
+              class="text-maroon opacity-0 group-hover:opacity-100 transition-opacity"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                />
+              </svg>
+            </span>
+          </div>
+          <p class="text-gray-600 text-sm">
+            {{ video.description }}
+          </p>
+        </div>
+      </a>
     </div>
-    <div class="p-6">
-      <div class="flex items-center justify-between mb-2">
-        <h3 class="text-maroon font-extrabold uppercase text-xl">
-          {{ video.title }} 0{{ index + 1 }}
-        </h3>
-        <span class="text-maroon opacity-0 group-hover:opacity-100 transition-opacity">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-          </svg>
-        </span>
-      </div>
-      <p class="text-gray-600 text-sm">
-        {{ video.description }}
-      </p>
-    </div>
-  </a>
-</div>
   </MuiPageContainer>
 
   <MuiPageContainer id="whatsapp-wall" class="py-24 bg-white">
@@ -359,24 +379,31 @@
     </MuiPageContainer>
   </div>
 
- <footer class="bg-abc-navy text-white" id="contacts">
-  <MuiPageContainer class="py-16 border-b border-white/10">
-    <div class="text-center mb-10">
-      <h2 class="text-2xl md:text-4xl font-black uppercase mb-2 tracking-tighter">
-        Scale Your Revenue Today
-      </h2>
-      <p class="text-white/80 font-light tracking-wide">
-        Subscribe to get exclusive sales strategies and market insights from ABC Sales Consulting.
-      </p>
-    </div>
+  <footer class="bg-abc-navy text-white" id="contacts">
+    <MuiPageContainer class="py-16 border-b border-white/10">
+      <div class="text-center mb-10">
+        <h2
+          class="text-2xl md:text-4xl font-black uppercase mb-2 tracking-tighter"
+        >
+          Scale Your Revenue Today
+        </h2>
+        <p class="text-white/80 font-light tracking-wide">
+          Subscribe to get exclusive sales strategies and market insights from
+          ABC Sales Consulting.
+        </p>
+      </div>
 
-    <form
+      <form
         action="https://api.web3forms.com/submit"
         method="POST"
         class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-0 border border-white/20 rounded-none overflow-hidden shadow-2xl"
         id="newsletter-form"
       >
-        <input type="hidden" name="access_key" value="1b3f2db3-70e6-4917-b8dc-affe334cdaf1" />
+        <input
+          type="hidden"
+          name="access_key"
+          value="1b3f2db3-70e6-4917-b8dc-affe334cdaf1"
+        />
         <input
           type="text"
           name="name"
@@ -397,7 +424,12 @@
           <div
             class="flex items-center gap-3 text-gray-400 text-xs uppercase tracking-widest font-bold"
           >
-            <input type="checkbox" name="botcheck" class="w-4 h-4 accent-abc-green" required />
+            <input
+              type="checkbox"
+              name="botcheck"
+              class="w-4 h-4 accent-abc-green"
+              required
+            />
             I'm not a robot
           </div>
         </div>
@@ -409,67 +441,141 @@
         </button>
       </form>
 
-    <div class="mt-12 flex flex-col items-center">
-      <p class="text-[10px] tracking-[0.3em] uppercase opacity-50 mb-6 font-bold">Connect with our experts</p>
-      <div class="flex items-center gap-6">
-        <NuxtLink to="https://linkedin.com/company/abc-sales-consulting" target="_blank" class="group flex items-center justify-center w-12 h-12 rounded-full border border-white/10 hover:border-abc-green transition-all duration-300">
-          <Icon name="uil:linkedin" class="text-xl group-hover:text-abc-green transition-colors" />
-        </NuxtLink>
-        <NuxtLink to="https://instagram.com/abcsales" target="_blank" class="group flex items-center justify-center w-12 h-12 rounded-full border border-white/10 hover:border-abc-green transition-all duration-300">
-          <Icon name="uil:instagram" class="text-xl group-hover:text-abc-green transition-colors" />
-        </NuxtLink>
-        <NuxtLink to="https://facebook.com/abcsales" target="_blank" class="group flex items-center justify-center w-12 h-12 rounded-full border border-white/10 hover:border-abc-green transition-all duration-300">
-          <Icon name="uil:facebook-f" class="text-xl group-hover:text-abc-green transition-colors" />
-        </NuxtLink>
-        <NuxtLink to="https://tiktok.com/@abcsales" target="_blank" class="group flex items-center justify-center w-12 h-12 rounded-full border border-white/10 hover:border-abc-green transition-all duration-300">
-          <Icon name="ic:baseline-tiktok" class="text-xl group-hover:text-abc-green transition-colors" />
-        </NuxtLink>
-      </div>
-    </div>
-  </MuiPageContainer>
-
-  <MuiPageContainer class="py-12 border-b border-white/10">
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left">
-      <div>
-        <h4 class="text-abc-green text-[10px] tracking-[0.3em] font-bold uppercase mb-4">Our Office</h4>
-        <p class="text-sm text-white/70 leading-relaxed uppercase">
-          Plot 18, Mukulu Curve<br />
-          Off Martyrs Way,<br />
-          Ntinda
+      <div class="mt-12 flex flex-col items-center">
+        <p
+          class="text-[10px] tracking-[0.3em] uppercase opacity-50 mb-6 font-bold"
+        >
+          Connect with our experts
         </p>
+        <div class="flex items-center gap-6">
+          <NuxtLink
+            to="https://linkedin.com/company/abc-sales-consulting"
+            target="_blank"
+            class="group flex items-center justify-center w-12 h-12 rounded-full border border-white/10 hover:border-abc-green transition-all duration-300"
+          >
+            <Icon
+              name="uil:linkedin"
+              class="text-xl group-hover:text-abc-green transition-colors"
+            />
+          </NuxtLink>
+          <NuxtLink
+            to="https://instagram.com/abcsales"
+            target="_blank"
+            class="group flex items-center justify-center w-12 h-12 rounded-full border border-white/10 hover:border-abc-green transition-all duration-300"
+          >
+            <Icon
+              name="uil:instagram"
+              class="text-xl group-hover:text-abc-green transition-colors"
+            />
+          </NuxtLink>
+          <NuxtLink
+            to="https://facebook.com/abcsales"
+            target="_blank"
+            class="group flex items-center justify-center w-12 h-12 rounded-full border border-white/10 hover:border-abc-green transition-all duration-300"
+          >
+            <Icon
+              name="uil:facebook-f"
+              class="text-xl group-hover:text-abc-green transition-colors"
+            />
+          </NuxtLink>
+          <NuxtLink
+            to="https://tiktok.com/@abcsales"
+            target="_blank"
+            class="group flex items-center justify-center w-12 h-12 rounded-full border border-white/10 hover:border-abc-green transition-all duration-300"
+          >
+            <Icon
+              name="ic:baseline-tiktok"
+              class="text-xl group-hover:text-abc-green transition-colors"
+            />
+          </NuxtLink>
+        </div>
       </div>
+    </MuiPageContainer>
 
-      <div>
-        <h4 class="text-abc-green text-[10px] tracking-[0.3em] font-bold uppercase mb-4">Contact Us</h4>
-        <p class="text-sm text-white/70 leading-relaxed">
-          <span class="block mb-1">admin@abcsalesconsulting.net</span>
-          <span>+256 748 019 936</span>
-        </p>
+    <MuiPageContainer class="py-12 border-b border-white/10">
+      <div
+        class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left"
+      >
+        <div>
+          <h4
+            class="text-abc-green text-[10px] tracking-[0.3em] font-bold uppercase mb-4"
+          >
+            Our Office
+          </h4>
+          <p class="text-sm text-white/70 leading-relaxed uppercase">
+            Plot 18, Mukulu Curve<br />
+            Off Martyrs Way,<br />
+            Ntinda
+          </p>
+        </div>
+
+        <div>
+          <h4
+            class="text-abc-green text-[10px] tracking-[0.3em] font-bold uppercase mb-4"
+          >
+            Contact Us
+          </h4>
+          <p class="text-sm text-white/70 leading-relaxed">
+            <span class="block mb-1">admin@abcsalesconsulting.net</span>
+            <span>+256 748 019 936</span>
+          </p>
+        </div>
+
+        <div class="flex flex-col items-center md:items-start">
+          <h4
+            class="text-abc-green text-[10px] tracking-[0.3em] font-bold uppercase mb-4"
+          >
+            Find Us
+          </h4>
+          <MuiButton
+            label="VIEW ON GOOGLE MAPS"
+            href="https://www.google.com/maps/place/0%C2%B020'51.9%22N+32%C2%B037'03.2%22E/@0.3476621,32.6149775,17.65z/data=!4m4!3m3!8m2!3d0.3477551!4d32.6175576?hl=en&entry=ttu&g_ep=EgoyMDI2MDUxMi4wIKXMDSoASAFQAw%3D%3D"
+            target="_blank"
+            variant="white-stroke"
+            class="px-6 !text-[10px]"
+          />
+        </div>
       </div>
+    </MuiPageContainer>
 
-      <div class="flex flex-col items-center md:items-start">
-        <h4 class="text-abc-green text-[10px] tracking-[0.3em] font-bold uppercase mb-4">Find Us</h4>
-        <MuiButton 
-          label="VIEW ON GOOGLE MAPS" 
-          href="https://www.google.com/maps/place/0%C2%B020'51.9%22N+32%C2%B037'03.2%22E/@0.3476621,32.6149775,17.65z/data=!4m4!3m3!8m2!3d0.3477551!4d32.6175576?hl=en&entry=ttu&g_ep=EgoyMDI2MDUxMi4wIKXMDSoASAFQAw%3D%3D" 
-          target="_blank"
-          variant="white-stroke"
-          class="px-6 !text-[10px]"
-        />
+    <MuiPageContainer
+      class="py-8 flex flex-col md:flex-row justify-between items-center gap-4 md:gap-0 text-[10px] tracking-[0.2em] uppercase opacity-60"
+    >
+      <!-- 1. Copyright -->
+      <p class="text-center md:text-left">
+        &copy; {{ new Date().getFullYear() }} ABC Sales Consulting. All Rights
+        Reserved.
+      </p>
+
+      <!-- 2. Developer/Designer Credits -->
+      <p class="text-center my-2 md:my-0">
+        Designed by
+        <span class="font-bold text-abc-green">Ivory Media House</span> |
+        <a
+          href="tel:+256709203470"
+          class="hover:text-abc-green transition-colors"
+          >0709203470</a
+        >
+        /
+        <a
+          href="tel:+256752024280"
+          class="hover:text-abc-green transition-colors"
+          >0752024280</a
+        >
+      </p>
+
+      <!-- 3. Policy Links -->
+      <div class="flex gap-8">
+        <NuxtLink to="/privacy" class="hover:text-abc-green transition-colors"
+          >Privacy Policy</NuxtLink
+        >
+        <NuxtLink to="/terms" class="hover:text-abc-green transition-colors"
+          >Terms of Service</NuxtLink
+        >
       </div>
-    </div>
-  </MuiPageContainer>
-
-  <MuiPageContainer class="py-8 flex flex-col md:flex-row justify-between items-center text-[10px] tracking-[0.2em] uppercase opacity-60">
-    <p>&copy; {{ new Date().getFullYear() }} ABC Sales Consulting. All Rights Reserved.</p>
-    <div class="flex gap-8 mt-4 md:mt-0">
-      <NuxtLink to="/privacy" class="hover:text-abc-green">Privacy Policy</NuxtLink>
-      <NuxtLink to="/terms" class="hover:text-abc-green">Terms of Service</NuxtLink>
-    </div>
-  </MuiPageContainer>
-</footer>
+    </MuiPageContainer>
+  </footer>
   <BackToTop />
-
 </template>
 
 <script setup>
@@ -482,7 +588,7 @@ import {
 import BackToTop from "~/components/BackToTop.vue";
 import { useDiscoveryForm } from "~/composables/useDiscoveryForm.js";
 
-useHead({ title: 'Case Studies' });
+useHead({ title: "Case Studies" });
 
 const { openForm } = useDiscoveryForm();
 const isMobileMenuOpen = ref(false);
@@ -509,42 +615,46 @@ const navLinks = [
   },
   { name: "Case Studies", to: "/case-studies" },
   {
-  name: "Why ABC?",
-  to: "/why-abc/methodology", // This acts as a fallback if they click the header
-  subLinks: [
-    { name: "Methodology", to: "/why-abc/methodology" }, // Points to pages/why-abc/methodology.vue
-    { name: "Our Team", to: "/why-abc/team" },           // Points to pages/why-abc/team.vue
-  ],
-},
+    name: "Why ABC?",
+    to: "/why-abc/methodology", // This acts as a fallback if they click the header
+    subLinks: [
+      { name: "Methodology", to: "/why-abc/methodology" }, // Points to pages/why-abc/methodology.vue
+      { name: "Our Team", to: "/why-abc/team" }, // Points to pages/why-abc/team.vue
+    ],
+  },
   { name: "Gallery", to: "/gallery" },
 ];
 
 const videos = [
   {
-    title: 'High-Performance Training Session',
-    description: 'A deep dive into the ABC framework implemented with top-tier corporate sales leads.',
-    thumb: '/img/video-thumbs/thumb-1.png',
-    url: 'https://res.cloudinary.com/dz1t6hhe7/video/upload/v1762526041/motorCenter5_rouraq.mp4'
+    title: "High-Performance Training Session",
+    description:
+      "A deep dive into the ABC framework implemented with top-tier corporate sales leads.",
+    thumb: "/img/video-thumbs/thumb-1.png",
+    url: "https://res.cloudinary.com/dz1t6hhe7/video/upload/v1762526041/motorCenter5_rouraq.mp4",
   },
   {
-    title: 'Advanced Sales Techniques',
-    description: 'Learn the latest strategies to close deals and exceed targets.',
-    thumb: '/img/video-thumbs/thumb-2.png',
-    url: 'https://res.cloudinary.com/dz1t6hhe7/video/upload/v1760127950/VIDEO-2025-07-01-15-49-31_2_l8sjbr.mp4'
+    title: "Advanced Sales Techniques",
+    description:
+      "Learn the latest strategies to close deals and exceed targets.",
+    thumb: "/img/video-thumbs/thumb-2.png",
+    url: "https://res.cloudinary.com/dz1t6hhe7/video/upload/v1760127950/VIDEO-2025-07-01-15-49-31_2_l8sjbr.mp4",
   },
   {
-    title: 'KARUKA AGENCIES',
-    description: 'Build lasting relationships with your clients for long-term success.',
-    thumb: '/img/video-thumbs/thumb-3.png',
-    url: 'https://res.cloudinary.com/dz1t6hhe7/video/upload/v1760127900/VIDEO-2025-07-01-15-49-30_2_ecixwe.mp4'
+    title: "KARUKA AGENCIES",
+    description:
+      "Build lasting relationships with your clients for long-term success.",
+    thumb: "/img/video-thumbs/thumb-3.png",
+    url: "https://res.cloudinary.com/dz1t6hhe7/video/upload/v1760127900/VIDEO-2025-07-01-15-49-30_2_ecixwe.mp4",
   },
   {
-    title: 'SUCCESS MOTORS',
-    description: 'Develop the skills to lead and inspire your sales team to achieve greatness.',
-    thumb: '/img/video-thumbs/thumb-4.png',
-    url: 'https://res.cloudinary.com/dz1t6hhe7/video/upload/v1760126968/VIDEO-2025-08-05-10-07-59_rzqtaw.mp4'
-  }
-]
+    title: "SUCCESS MOTORS",
+    description:
+      "Develop the skills to lead and inspire your sales team to achieve greatness.",
+    thumb: "/img/video-thumbs/thumb-4.png",
+    url: "https://res.cloudinary.com/dz1t6hhe7/video/upload/v1760126968/VIDEO-2025-08-05-10-07-59_rzqtaw.mp4",
+  },
+];
 </script>
 
 <style scoped>

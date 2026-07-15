@@ -466,17 +466,37 @@
     </MuiPageContainer>
 
     <MuiPageContainer
-      class="py-8 flex flex-col md:flex-row justify-between items-center text-[10px] tracking-[0.2em] uppercase opacity-60"
+      class="py-8 flex flex-col md:flex-row justify-between items-center gap-4 md:gap-0 text-[10px] tracking-[0.2em] uppercase opacity-60"
     >
-      <p>
+      <!-- 1. Copyright -->
+      <p class="text-center md:text-left">
         &copy; {{ new Date().getFullYear() }} ABC Sales Consulting. All Rights
         Reserved.
       </p>
-      <div class="flex gap-8 mt-4 md:mt-0">
-        <NuxtLink to="/privacy" class="hover:text-abc-green"
+
+      <!-- 2. Developer/Designer Credits -->
+      <p class="text-center my-2 md:my-0">
+        Designed by
+        <span class="font-bold text-abc-green">Ivory Media House</span> |
+        <a
+          href="tel:+256709203470"
+          class="hover:text-abc-green transition-colors"
+          >0709203470</a
+        >
+        /
+        <a
+          href="tel:+256752024280"
+          class="hover:text-abc-green transition-colors"
+          >0752024280</a
+        >
+      </p>
+
+      <!-- 3. Policy Links -->
+      <div class="flex gap-8">
+        <NuxtLink to="/privacy" class="hover:text-abc-green transition-colors"
           >Privacy Policy</NuxtLink
         >
-        <NuxtLink to="/terms" class="hover:text-abc-green"
+        <NuxtLink to="/terms" class="hover:text-abc-green transition-colors"
           >Terms of Service</NuxtLink
         >
       </div>

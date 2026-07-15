@@ -233,9 +233,9 @@
           <div class="p-8 flex flex-col flex-grow">
             <!-- 1. CLICKABLE FOUNDER NAME (GREEN ON HOVER) -->
             <h3 class="text-2xl font-black uppercase mb-1">
-              <a 
-                :href="founder.linkedin || '#'" 
-                target="_blank" 
+              <a
+                :href="founder.linkedin || '#'"
+                target="_blank"
                 rel="noopener noreferrer"
                 class="hover:text-abc-green transition-colors duration-200 inline-block cursor-pointer"
               >
@@ -324,12 +324,18 @@
                   class="flex items-center justify-center gap-2 border border-[#0a66c2] text-[#0a66c2] hover:bg-[#0a66c2] hover:text-white px-6 py-3 text-xs font-bold uppercase tracking-widest transition-all duration-300 w-full sm:w-auto"
                 >
                   <!-- SVG LinkedIn Icon -->
-                  <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                  <svg
+                    class="w-4 h-4 fill-current"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+                    />
                   </svg>
                   Connect on LinkedIn
                 </a>
-                
+
                 <MuiButton
                   label="CLOSE"
                   variant="outline"
@@ -522,13 +528,17 @@
         </p>
       </div>
 
-     <form
+      <form
         action="https://api.web3forms.com/submit"
         method="POST"
         class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-0 border border-white/20 rounded-none overflow-hidden shadow-2xl"
         id="newsletter-form"
       >
-        <input type="hidden" name="access_key" value="1b3f2db3-70e6-4917-b8dc-affe334cdaf1" />
+        <input
+          type="hidden"
+          name="access_key"
+          value="1b3f2db3-70e6-4917-b8dc-affe334cdaf1"
+        />
         <input
           type="text"
           name="name"
@@ -549,7 +559,12 @@
           <div
             class="flex items-center gap-3 text-gray-400 text-xs uppercase tracking-widest font-bold"
           >
-            <input type="checkbox" name="botcheck" class="w-4 h-4 accent-abc-green" required />
+            <input
+              type="checkbox"
+              name="botcheck"
+              class="w-4 h-4 accent-abc-green"
+              required
+            />
             I'm not a robot
           </div>
         </div>
@@ -659,17 +674,37 @@
     </MuiPageContainer>
 
     <MuiPageContainer
-      class="py-8 flex flex-col md:flex-row justify-between items-center text-[10px] tracking-[0.2em] uppercase opacity-60"
+      class="py-8 flex flex-col md:flex-row justify-between items-center gap-4 md:gap-0 text-[10px] tracking-[0.2em] uppercase opacity-60"
     >
-      <p>
+      <!-- 1. Copyright -->
+      <p class="text-center md:text-left">
         &copy; {{ new Date().getFullYear() }} ABC Sales Consulting. All Rights
         Reserved.
       </p>
-      <div class="flex gap-8 mt-4 md:mt-0">
-        <NuxtLink to="/privacy" class="hover:text-abc-green"
+
+      <!-- 2. Developer/Designer Credits -->
+      <p class="text-center my-2 md:my-0">
+        Designed by
+        <span class="font-bold text-abc-green">Ivory Media House</span> |
+        <a
+          href="tel:+256709203470"
+          class="hover:text-abc-green transition-colors"
+          >0709203470</a
+        >
+        /
+        <a
+          href="tel:+256752024280"
+          class="hover:text-abc-green transition-colors"
+          >0752024280</a
+        >
+      </p>
+
+      <!-- 3. Policy Links -->
+      <div class="flex gap-8">
+        <NuxtLink to="/privacy" class="hover:text-abc-green transition-colors"
           >Privacy Policy</NuxtLink
         >
-        <NuxtLink to="/terms" class="hover:text-abc-green"
+        <NuxtLink to="/terms" class="hover:text-abc-green transition-colors"
           >Terms of Service</NuxtLink
         >
       </div>

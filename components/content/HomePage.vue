@@ -2,35 +2,55 @@
   <div
     class="bg-maroon pb-5 bg-cover bg-center bg-[url('/bg-images/bg-blue.png')]"
   >
-    <!-- 1. SCROLLING ANNOUNCEMENT TICKER (Full-width at the very top) -->
+    <!-- 1. GLASSY ANNOUNCEMENT TICKER -->
     <div
-      class="w-full bg-abc-orange text-white py-2.5 overflow-hidden relative z-[220] border-b border-white/10"
+      class="w-full bg-white/5 backdrop-blur-[8px] text-white py-2.5 overflow-hidden relative z-[220] border-b border-white/10"
     >
       <div
         class="flex whitespace-nowrap animate-marquee text-[10px] font-bold tracking-widest uppercase"
       >
         <!-- Loop Set 1 -->
-        <span class="mx-4">🔥 August 2026 Cohort Registration Now Open!</span>
-        <span class="mx-4">•</span>
-        <span class="mx-4">📅 Starts Monday, 3rd August 2026</span>
-        <span class="mx-4">•</span>
-        <span class="mx-4">👥 Only 15 Seats Left!</span>
-        <span class="mx-4">•</span>
-        <span class="mx-4">📍 Plot 18, Mukulu Curve, Off Martyrs Way</span>
-        <span class="mx-4">•</span>
-        <span class="mx-4">📞 Call/WhatsApp 0791 178 657</span>
-        <span class="mx-4">•</span>
+        <span class="mx-4 text-abc-orange"
+          >🔥 August 2026 Cohort Registration Now Open!</span
+        >
+        <span class="mx-4 text-white/40">•</span>
+        <span class="mx-4"
+          ><span class="text-white/60">📅 Starts:</span> Monday, 3rd August
+          2026</span
+        >
+        <span class="mx-4 text-white/40">•</span>
+        <span class="mx-4 text-abc-green">👥 Only 15 Seats Left!</span>
+        <span class="mx-4 text-white/40">•</span>
+        <span class="mx-4"
+          ><span class="text-white/60">📍 Venue:</span> Ntinda Ministers
+          Village</span
+        >
+        <span class="mx-4 text-white/40">•</span>
+        <span class="mx-4"
+          ><span class="text-white/60">📞 Contact:</span> 0791 178 657</span
+        >
+        <span class="mx-4 text-white/40">•</span>
 
         <!-- Loop Set 2 (Duplicates for seamless scrolling) -->
-        <span class="mx-4">🔥 August 2026 Cohort Registration Now Open!</span>
-        <span class="mx-4">•</span>
-        <span class="mx-4">📅 Starts Monday, 3rd August 2026</span>
-        <span class="mx-4">•</span>
-        <span class="mx-4">👥 Only 15 Seats Left!</span>
-        <span class="mx-4">•</span>
-        <span class="mx-4">📍 Ntinda Ministers Village</span>
-        <span class="mx-4">•</span>
-        <span class="mx-4">📞 Call/WhatsApp 0791 178 657</span>
+        <span class="mx-4 text-abc-orange"
+          >🔥 August 2026 Cohort Registration Now Open!</span
+        >
+        <span class="mx-4 text-white/40">•</span>
+        <span class="mx-4"
+          ><span class="text-white/60">📅 Starts:</span> Monday, 3rd August
+          2026</span
+        >
+        <span class="mx-4 text-white/40">•</span>
+        <span class="mx-4 text-abc-green">👥 Only 15 Seats Left!</span>
+        <span class="mx-4 text-white/40">•</span>
+        <span class="mx-4"
+          ><span class="text-white/60">📍 Venue:</span> Ntinda Ministers
+          Village</span
+        >
+        <span class="mx-4 text-white/40">•</span>
+        <span class="mx-4"
+          ><span class="text-white/60">📞 Contact:</span> 0791 178 657</span
+        >
       </div>
     </div>
 
@@ -270,13 +290,13 @@
           </div>
         </div>
 
-        <!-- REPOSITIONED CTAs -->
+        <!-- REPOSITIONED & REFINED CTAs -->
         <div class="flex flex-col sm:flex-row justify-center gap-4">
           <MuiButton
-            variant="red-fill"
+            variant="white-fill"
             label="REGISTER FOR AUGUST COHORT"
-            class="!rounded-none px-10 py-4 font-bold text-[10px] tracking-widest shadow-xl cursor-pointer !bg-abc-orange !border-abc-orange hover:brightness-110"
-            @click="discoveryFormRef?.open()"
+            class="!rounded-none px-10 py-4 font-bold text-[10px] tracking-widest !text-abc-orange !border-abc-orange/60 bg-abc-orange/5 hover:bg-abc-orange hover:!text-white transition-all cursor-pointer"
+            @click="augustCohortFormRef?.open()"
           />
           <MuiButton
             variant="white-stroke"
@@ -800,25 +820,46 @@
     </MuiPageContainer>
 
     <MuiPageContainer
-      class="py-8 flex flex-col md:flex-row justify-between items-center text-[10px] tracking-[0.2em] uppercase opacity-60"
+      class="py-8 flex flex-col md:flex-row justify-between items-center gap-4 md:gap-0 text-[10px] tracking-[0.2em] uppercase opacity-60"
     >
-      <p>
+      <!-- 1. Copyright -->
+      <p class="text-center md:text-left">
         &copy; {{ new Date().getFullYear() }} ABC Sales Consulting. All Rights
         Reserved.
       </p>
-      <div class="flex gap-8 mt-4 md:mt-0">
-        <NuxtLink to="/privacy" class="hover:text-abc-green"
+
+      <!-- 2. Developer/Designer Credits -->
+      <p class="text-center my-2 md:my-0">
+        Designed by
+        <span class="font-bold text-abc-green">Ivory Media House</span> |
+        <a
+          href="tel:+256709203470"
+          class="hover:text-abc-green transition-colors"
+          >0709203470</a
+        >
+        /
+        <a
+          href="tel:+256752024280"
+          class="hover:text-abc-green transition-colors"
+          >0752024280</a
+        >
+      </p>
+
+      <!-- 3. Policy Links -->
+      <div class="flex gap-8">
+        <NuxtLink to="/privacy" class="hover:text-abc-green transition-colors"
           >Privacy Policy</NuxtLink
         >
-        <NuxtLink to="/terms" class="hover:text-abc-green"
+        <NuxtLink to="/terms" class="hover:text-abc-green transition-colors"
           >Terms of Service</NuxtLink
         >
       </div>
     </MuiPageContainer>
   </footer>
 
-  <!-- Discovery Form Modal -->
+  <!-- Discovery and August Cohort Form Modals -->
   <DiscoveryForm ref="discoveryFormRef" />
+  <AugustCohortForm ref="augustCohortFormRef" />
   <BackToTop />
 </template>
 
@@ -831,11 +872,13 @@ import {
   MuiTextWithImage,
 } from "@northgreenug/musizi-ui-kit";
 import DiscoveryForm from "~/components/DiscoveryForm.vue";
+import AugustCohortForm from "~/components/AugustCohortForm.vue";
 import BackToTop from "~/components/BackToTop.vue";
 
 const isMobileMenuOpen = ref(false);
 const activeSubMenu = ref(null);
 const discoveryFormRef = ref(null);
+const augustCohortFormRef = ref(null);
 
 const toggleMenu = () => {
   isMobileMenuOpen.value = !isMobileMenuOpen.value;
