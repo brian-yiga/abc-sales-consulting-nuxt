@@ -463,7 +463,7 @@
             variant="red-fill"
             label="RESERVE YOUR SPOT"
             class="!rounded-none px-8 py-3.5 font-bold text-[10px] tracking-widest !bg-abc-orange !border-abc-orange hover:brightness-110 cursor-pointer"
-            @click="discoveryFormRef?.open()"
+            @click="augustCohortFormRef?.open()"
           />
           <div class="text-xs text-abc-orange font-bold animate-pulse">
             ⚡ Only 15 Seats Available!
@@ -704,8 +704,10 @@
       </div>
     </MuiPageContainer>
   </footer>
+  <AugustCohortForm ref="augustCohortFormRef" />
   <BackToTop />
 </template>
+
 
 <script setup>
 import { ref } from "vue";
@@ -716,12 +718,14 @@ import {
 } from "@northgreenug/musizi-ui-kit";
 import BackToTop from "~/components/BackToTop.vue";
 import { useDiscoveryForm } from "~/composables/useDiscoveryForm.js";
+import AugustCohortForm from "~/components/AugustCohortForm.vue";
 
 useHead({ title: "Services" });
 
 const { openForm } = useDiscoveryForm();
 const isMobileMenuOpen = ref(false);
 const activeSubMenu = ref(null);
+const augustCohortFormRef = ref(null);
 
 const toggleMenu = () => {
   isMobileMenuOpen.value = !isMobileMenuOpen.value;
