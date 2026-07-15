@@ -231,8 +231,16 @@
             />
           </div>
           <div class="p-8 flex flex-col flex-grow">
+            <!-- 1. CLICKABLE FOUNDER NAME (GREEN ON HOVER) -->
             <h3 class="text-2xl font-black uppercase mb-1">
-              {{ founder.name }}
+              <a 
+                :href="founder.linkedin || '#'" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="hover:text-abc-green transition-colors duration-200 inline-block cursor-pointer"
+              >
+                {{ founder.name }}
+              </a>
             </h3>
             <p class="text-maroon font-bold text-sm mb-4">
               {{ founder.title }}
@@ -306,11 +314,26 @@
                 {{ selectedMember.fullBio }}
               </p>
 
-              <div class="mt-8">
+              <!-- 2. ACTION FOOTER WITH LINKEDIN BUTTON -->
+              <div class="mt-8 flex flex-col sm:flex-row gap-3">
+                <a
+                  v-if="selectedMember.linkedin"
+                  :href="selectedMember.linkedin"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="flex items-center justify-center gap-2 border border-[#0a66c2] text-[#0a66c2] hover:bg-[#0a66c2] hover:text-white px-6 py-3 text-xs font-bold uppercase tracking-widest transition-all duration-300 w-full sm:w-auto"
+                >
+                  <!-- SVG LinkedIn Icon -->
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                  </svg>
+                  Connect on LinkedIn
+                </a>
+                
                 <MuiButton
                   label="CLOSE"
                   variant="outline"
-                  class="w-full md:w-auto"
+                  class="w-full sm:w-auto !border-gray-200"
                   @click="closeModal"
                 />
               </div>
@@ -681,6 +704,7 @@ const founders = [
       "My entrepreneurial spirit ignited in 2014 when I co- founded Tasty Yellow Yolk...",
     fullBio:
       "My entrepreneurial spirit ignited in 2014 when I co- founded Tasty Yellow Yolk. This experience, coupled with my door-to-door supermarket sales, fuelled my passion for the art of the sale. Following my law degree from Makerere University, I joined Saladmaster for 7 years. There, I not only led the top- performing team in Africa, but globally, driving phenomenal sales across East Africa. My expertise lies in creating high-performing teams through excellence in sales training. My mission is to elevate the sales profession, making it a respected career path, not just in Uganda, but across East Africa.",
+    linkedin: "https://www.linkedin.com/in/sajjabi-dahlin-7b728b148/",
   },
   {
     name: "Priscilla Alela",
@@ -690,6 +714,7 @@ const founders = [
       "For nearly 20 years, she has thrived in the dynamic world of sales, navigating diverse fields...",
     fullBio:
       "For nearly 20 years, I've thrived in the dynamic world of sales, navigating diverse fields across Kenya and Uganda. It's more than a career; it's a passion that fuels my drive to consistently exceed sales goals and ignite revenue growth. Through clear communication and strategic problem-solving, I develop a deep understanding of their needs. This allows me to craft tailored solutions that empower their businesses to flourish. My success is fuelled by a relentless results orientation and an unwavering commitment to exceptional customer service.",
+    linkedin: "https://www.linkedin.com/in/priscilla-alela-982a9529b/",
   },
   {
     name: "Godwin Batuma",
@@ -699,6 +724,7 @@ const founders = [
       "I am a results-driven sales and marketing professional with over 10 years of experience...",
     fullBio:
       "I am a results-driven sales and marketing professional with over 10 years of experience driving revenue growth, leading high-performing teams, and cultivating long-lasting customer relationships both internationally and locally with my foot print in countries such as Kenya, Mauritius, Burundi , DRC , Malaysia, and Uganda . I believe that clear and effective communication is key to building strong relationships and driving results. Anyone can be taught how to sell with the right training and coaching, and I'm passionate about helping others achieve their full potential..",
+    linkedin: "https://www.linkedin.com/in/godwin-batuma-a3925a27b/",
   },
 ];
 
