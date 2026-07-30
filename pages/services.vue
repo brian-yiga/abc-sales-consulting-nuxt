@@ -439,7 +439,7 @@
               class="block text-abc-green uppercase tracking-wider font-bold text-[10px]"
               >📍 Venue</span
             >
-            <span class="font-medium">Ntinda Ministers Village, Kampala</span>
+            <span class="font-medium">Plot 8, Mukulu Curve, Off Martyrs Way, Ntinda</span>
           </div>
           <div>
             <span

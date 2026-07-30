@@ -4,10 +4,10 @@
   >
     <!-- 1. GLASSY ANNOUNCEMENT TICKER -->
     <div
-      class="w-full bg-white/5 backdrop-blur-[8px] text-white py-2.5 overflow-hidden relative z-[220] border-b border-white/10"
+      class="w-full bg-white/5 backdrop-blur-[8px] text-white py-3.5 overflow-hidden relative z-[220] border-b border-white/10"
     >
       <div
-        class="flex whitespace-nowrap animate-marquee text-[10px] font-bold tracking-widest uppercase"
+        class="flex whitespace-nowrap animate-marquee text-[13px] font-bold tracking-widest uppercase"
       >
         <!-- Loop Set 1 -->
         <span class="mx-4 text-abc-orange"
@@ -22,8 +22,8 @@
         <span class="mx-4 text-abc-green">👥 Only 15 Seats Left!</span>
         <span class="mx-4 text-white/40">•</span>
         <span class="mx-4"
-          ><span class="text-white/60">📍 Venue:</span> Ntinda Ministers
-          Village</span
+          ><span class="text-white/60">📍 Venue:</span> Plot 8, Mukulu Curve,
+          Off Martyrs Way, Ntinda</span
         >
         <span class="mx-4 text-white/40">•</span>
         <span class="mx-4"
@@ -44,8 +44,8 @@
         <span class="mx-4 text-abc-green">👥 Only 15 Seats Left!</span>
         <span class="mx-4 text-white/40">•</span>
         <span class="mx-4"
-          ><span class="text-white/60">📍 Venue:</span> Ntinda Ministers
-          Village</span
+          ><span class="text-white/60">📍 Venue:</span> Plot 8, Mukulu Curve,
+          Off Martyrs Way, Ntinda</span
         >
         <span class="mx-4 text-white/40">•</span>
         <span class="mx-4"
@@ -224,28 +224,28 @@
           class="flex flex-col sm:flex-row items-center justify-center gap-3 mb-8"
         >
           <div
-            class="inline-block border border-abc-green/50 bg-abc-green/10 text-abc-green px-6 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-[0.3em]"
+            class="inline-block border border-abc-green/50 bg-abc-green/10 text-abc-green px-6 py-1.5 rounded-full text-[13px] font-bold uppercase tracking-[0.3em]"
           >
             Sales Strategy & Excellence
           </div>
           <!-- Live Action Pill -->
           <NuxtLink
             to="/services#upcoming-events"
-            class="inline-block border border-abc-orange bg-abc-orange/20 text-abc-orange px-5 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-[0.2em] animate-pulse cursor-pointer hover:bg-abc-orange/30 transition-colors"
+            class="inline-block border border-abc-orange bg-abc-orange/20 text-abc-orange px-5 py-1.5 rounded-full text-[13px] font-bold uppercase tracking-[0.2em] animate-pulse cursor-pointer hover:bg-abc-orange/30 transition-colors"
           >
             🔴 August 2026 Cohort
           </NuxtLink>
         </div>
 
         <h2
-          class="mui-text--display-1 uppercase font-black tracking-tighter leading-tight"
+          class="mui-text--display-1 uppercase font-black tracking-tighter leading-tight sm:text-xl"
         >
           Transform Your Sales <br />
           Into a Revenue Engine
         </h2>
 
         <p
-          class="max-w-xl mt-6 mb-8 mx-auto text-white/90 leading-relaxed text-sm tracking-wide"
+          class="max-w-xl mt-6 mb-8 mx-auto text-white/90 leading-relaxed sm:text-base md:text-sm tracking-wide"
         >
           ABC Sales Consulting provides world-class training and strategic
           interventions to help African businesses scale faster, close bigger
@@ -366,7 +366,7 @@
       <div class="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] items-center">
         <div class="max-w-2xl">
           <div
-            class="inline-block px-4 py-2 mb-4 text-[11px] tracking-[0.3em] uppercase font-bold text-abc-orange bg-abc-orange/10 rounded-full"
+            class="inline-block px-4 py-2 mb-4 text-[13px] tracking-[0.3em] uppercase font-black text-abc-orange bg-abc-orange/10 rounded-full"
           >
             Client Testimony
           </div>
@@ -375,7 +375,7 @@
           >
             Real Classroom Energy, Real Sales Growth
           </h3>
-          <p class="text-white/80 leading-relaxed text-sm md:text-base">
+          <p class="text-white/80 leading-relaxed sm:text-base">
             Hear directly from our graduates as they share how our interactive,
             face-to-face classes completely transformed their sales approach.
             From mastering tough objections to confidently closing high-value
@@ -399,6 +399,7 @@
             playsinline
             muted
             loop
+            poster="/img/video-thumbs/desire-thumb.png"
             class="w-full h-full min-h-[220px] max-h-[420px] object-cover rounded-[24px]"
           >
             <source

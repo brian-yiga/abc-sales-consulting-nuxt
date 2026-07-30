@@ -573,7 +573,7 @@ const activePlacements = [
       "BioHaz Waste Solutions is seeking an experienced Sales Executive to manage key accounts and drive revenue growth in the waste management sector.",
     type: "Salaried + Bonus",
     salary: "Attractive",
-    image: "/img/jobs/biohaz-saleslead.jpeg",
+    image: "/img/jobs/biohaz-salesExec.jpeg",
   },
   {
     company: "BioHaz Waste Solutions",
