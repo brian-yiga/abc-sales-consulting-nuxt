@@ -403,7 +403,7 @@
           class="text-2xl md:text-3xl lg:text-4xl font-black uppercase mb-4 leading-tight"
         >
           ABC Sales Training <br />
-          <span class="text-abc-green">August 2026 Cohort</span>
+          <span class="text-abc-green">September 2026 Cohort</span>
         </h3>
 
         <p class="text-sm md:text-base mb-6 leading-relaxed text-white/90">
@@ -423,7 +423,7 @@
               class="block text-abc-green uppercase tracking-wider font-bold text-[10px]"
               >🗓 Start Date</span
             >
-            <span class="font-medium">Monday, 3rd August 2026</span>
+            <span class="font-medium">Wednesday 2nd September 2026</span>
           </div>
           <div>
             <span
@@ -466,7 +466,7 @@
             @click="augustCohortFormRef?.open()"
           />
           <div class="text-xs text-abc-orange font-bold animate-pulse">
-            ⚡ Only 15 Seats Available!
+            ⚡ Only 12 Slots Available!
           </div>
         </div>
       </div>
@@ -476,8 +476,8 @@
         class="h-[420px] md:h-[520px] lg:h-[620px] overflow-hidden bg-black/5"
       >
         <NuxtImg
-          src="/img/flyers/August-Cohort-Training.png"
-          alt="ABC Sales Training August 2026 Cohort flyer detailing price, schedules, and skills taught"
+          src="/img/flyers/September-Cohort-Training.jpg"
+          alt="ABC Sales Training September 2026 Cohort flyer detailing price, schedules, and skills taught"
           class="w-full h-full object-cover"
           fit="cover"
           sizes="100vw lg:50vw"

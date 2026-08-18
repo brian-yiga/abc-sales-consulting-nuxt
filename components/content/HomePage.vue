@@ -15,10 +15,11 @@
         >
         <span class="mx-4 text-white/40">•</span>
         <span class="mx-4"
-          ><span class="text-white/60">📅 Starts:</span> 7th September 2026</span
+          ><span class="text-white/60">📅 Starts:</span> Wednesday, 2nd
+          September 2026</span
         >
         <span class="mx-4 text-white/40">•</span>
-        <span class="mx-4 text-abc-green">👥 Only 18 Slots Available!</span>
+        <span class="mx-4 text-abc-green">👥 Only 12 Slots Available!</span>
         <span class="mx-4 text-white/40">•</span>
         <span class="mx-4"
           ><span class="text-white/60">📍 Venue:</span> Plot 8, Mukulu Curve,
@@ -36,10 +37,11 @@
         >
         <span class="mx-4 text-white/40">•</span>
         <span class="mx-4"
-          ><span class="text-white/60">📅 Starts:</span> 7th September 2026</span
+          ><span class="text-white/60">📅 Starts:</span> Wednesday, 2nd
+          September 2026</span
         >
         <span class="mx-4 text-white/40">•</span>
-        <span class="mx-4 text-abc-green">👥 Only 18 Slots Available!</span>
+        <span class="mx-4 text-abc-green">👥 Only 12 Slots Available!</span>
         <span class="mx-4 text-white/40">•</span>
         <span class="mx-4"
           ><span class="text-white/60">📍 Venue:</span> Plot 8, Mukulu Curve,
@@ -256,7 +258,7 @@
         >
           <div>
             <div class="text-abc-green font-extrabold text-base md:text-lg">
-              UGX 800,000
+              UGX 600,000
             </div>
             <div class="text-[9px] uppercase tracking-wider text-white/60 mt-1">
               Investment
@@ -272,7 +274,7 @@
           </div>
           <div>
             <div class="text-abc-orange font-extrabold text-base md:text-lg">
-              18 Seats
+              12 Seats
             </div>
             <div class="text-[9px] uppercase tracking-wider text-white/60 mt-1">
               Class Limit
