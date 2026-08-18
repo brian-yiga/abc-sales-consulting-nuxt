@@ -18,7 +18,7 @@
               🔴 Limited Seats Available
             </span>
             <h2 class="text-xl md:text-2xl font-black uppercase">
-              Register: August 2026 Cohort
+              Register: September 2026 Cohort
             </h2>
           </div>
           <button
@@ -44,7 +44,7 @@
           <input
             type="hidden"
             name="subject"
-            value="New August 2026 Cohort Registration - ABC Sales Consulting"
+            value="New September 2026 Cohort Registration - ABC Sales Consulting"
           />
           <input
             type="hidden"
@@ -59,9 +59,9 @@
 
           <div class="bg-abc-orange/5 border border-abc-orange/20 rounded p-4 text-sm text-gray-700 space-y-1">
             <p class="font-bold text-abc-navy uppercase text-xs tracking-wider">Cohort Information:</p>
-            <p>📅 <strong>Starts:</strong> Monday, 3rd August 2026</p>
+            <p>📅 <strong>Date:</strong> 7th September 2026</p>
             <p>📍 <strong>Venue:</strong> Plot 8, Mukulu Curve, Off Martyrs Way, Ntinda</p>
-            <p>💰 <strong>Investment:</strong> UGX 600,000 per participant</p>
+            <p>💰 <strong>Investment:</strong> UGX 800,000 per participant</p>
           </div>
 
           <!-- Name -->
@@ -158,7 +158,7 @@
               class="w-4 h-4 mt-1 accent-abc-green cursor-pointer"
             />
             <label for="consent" class="text-sm text-gray-600 cursor-pointer select-none">
-              I understand that registration is confirmed upon payment of the training fee (UGX 600,000).
+              I understand that registration is confirmed upon payment of the training fee (UGX 800,000).
             </label>
           </div>
 

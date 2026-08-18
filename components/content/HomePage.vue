@@ -11,15 +11,14 @@
       >
         <!-- Loop Set 1 -->
         <span class="mx-4 text-abc-orange"
-          >🔥 August 2026 Cohort Registration Now Open!</span
+          >🔥 September Upcoming Cohort Registration Now Open!</span
         >
         <span class="mx-4 text-white/40">•</span>
         <span class="mx-4"
-          ><span class="text-white/60">📅 Starts:</span> Monday, 3rd August
-          2026</span
+          ><span class="text-white/60">📅 Starts:</span> 7th September 2026</span
         >
         <span class="mx-4 text-white/40">•</span>
-        <span class="mx-4 text-abc-green">👥 Only 15 Seats Left!</span>
+        <span class="mx-4 text-abc-green">👥 Only 18 Slots Available!</span>
         <span class="mx-4 text-white/40">•</span>
         <span class="mx-4"
           ><span class="text-white/60">📍 Venue:</span> Plot 8, Mukulu Curve,
@@ -33,15 +32,14 @@
 
         <!-- Loop Set 2 (Duplicates for seamless scrolling) -->
         <span class="mx-4 text-abc-orange"
-          >🔥 August 2026 Cohort Registration Now Open!</span
+          >🔥 September Upcoming Cohort Registration Now Open!</span
         >
         <span class="mx-4 text-white/40">•</span>
         <span class="mx-4"
-          ><span class="text-white/60">📅 Starts:</span> Monday, 3rd August
-          2026</span
+          ><span class="text-white/60">📅 Starts:</span> 7th September 2026</span
         >
         <span class="mx-4 text-white/40">•</span>
-        <span class="mx-4 text-abc-green">👥 Only 15 Seats Left!</span>
+        <span class="mx-4 text-abc-green">👥 Only 18 Slots Available!</span>
         <span class="mx-4 text-white/40">•</span>
         <span class="mx-4"
           ><span class="text-white/60">📍 Venue:</span> Plot 8, Mukulu Curve,
@@ -233,7 +231,7 @@
             to="/services#upcoming-events"
             class="inline-block border border-abc-orange bg-abc-orange/20 text-abc-orange px-5 py-1.5 rounded-full text-[13px] font-bold uppercase tracking-[0.2em] animate-pulse cursor-pointer hover:bg-abc-orange/30 transition-colors"
           >
-            🔴 August 2026 Cohort
+            🔴 September 2026 Cohort
           </NuxtLink>
         </div>
 
@@ -258,7 +256,7 @@
         >
           <div>
             <div class="text-abc-green font-extrabold text-base md:text-lg">
-              UGX 600,000
+              UGX 800,000
             </div>
             <div class="text-[9px] uppercase tracking-wider text-white/60 mt-1">
               Investment
@@ -274,7 +272,7 @@
           </div>
           <div>
             <div class="text-abc-orange font-extrabold text-base md:text-lg">
-              15 Seats
+              18 Seats
             </div>
             <div class="text-[9px] uppercase tracking-wider text-white/60 mt-1">
               Class Limit
@@ -294,7 +292,7 @@
         <div class="flex flex-col sm:flex-row justify-center gap-4">
           <MuiButton
             variant="white-fill"
-            label="REGISTER FOR AUGUST COHORT"
+            label="REGISTER FOR SEPTEMBER COHORT"
             class="!rounded-none px-10 py-4 font-bold text-[10px] tracking-widest !text-abc-orange !border-abc-orange/60 bg-abc-orange/5 hover:bg-abc-orange hover:!text-white transition-all cursor-pointer"
             @click="augustCohortFormRef?.open()"
           />
