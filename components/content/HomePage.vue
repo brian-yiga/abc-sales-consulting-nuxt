@@ -392,18 +392,18 @@
         </div>
 
         <div
-          class="overflow-hidden rounded-[24px] border border-white/10 bg-black/80"
+          class="overflow-hidden border border-white/10 bg-black/80"
         >
           <video
             controls
             playsinline
             muted
             loop
-            poster="/img/video-thumbs/desire-thumb.png"
-            class="w-full h-full min-h-[220px] max-h-[420px] object-cover rounded-[24px]"
+            poster="/img/video-thumbs/nicole-thumb.png"
+            class="w-full h-full min-h-[220px] max-h-[420px] object-cover"
           >
             <source
-              src="/img/tiktok-videos/desire-deebah.mp4"
+              src="/img/tiktok-videos/nicole-kabatesi.mp4"
               type="video/mp4"
             />
             Your browser does not support the video tag.
