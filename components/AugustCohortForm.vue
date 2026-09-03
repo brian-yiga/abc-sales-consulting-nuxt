@@ -59,7 +59,7 @@
 
           <div class="bg-abc-orange/5 border border-abc-orange/20 rounded p-4 text-sm text-gray-700 space-y-1">
             <p class="font-bold text-abc-navy uppercase text-xs tracking-wider">Cohort Information:</p>
-            <p>📅 <strong>Date:</strong> Wednesday, 2nd September 2026</p>
+            <p>📅 <strong>Date:</strong> Wednesday, 16th September 2026</p>
             <p>📍 <strong>Venue:</strong> Plot 8, Mukulu Curve, Off Martyrs Way, Ntinda</p>
             <p>💰 <strong>Investment:</strong> UGX 600,000 per participant</p>
           </div>

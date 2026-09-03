@@ -423,7 +423,7 @@
               class="block text-abc-green uppercase tracking-wider font-bold text-[10px]"
               >🗓 Start Date</span
             >
-            <span class="font-medium">Wednesday 2nd September 2026</span>
+            <span class="font-medium">Wednesday 16th September 2026</span>
           </div>
           <div>
             <span
@@ -431,7 +431,7 @@
               >⏰ Schedule & Duration</span
             >
             <span class="font-medium"
-              >4 Weeks (1 Session per week, 5:30 PM – 7:30 PM)</span
+              >6 Weeks (1 Session per week, 10 AM – 12 PM)</span
             >
           </div>
           <div>

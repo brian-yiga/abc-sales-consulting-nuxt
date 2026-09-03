@@ -37,11 +37,11 @@
         >
         <span class="mx-4 text-white/40">•</span>
         <span class="mx-4"
-          ><span class="text-white/60">📅 Starts:</span> Wednesday, 2nd
+          ><span class="text-white/60">📅 Starts:</span> Wednesday, 16th
           September 2026</span
         >
         <span class="mx-4 text-white/40">•</span>
-        <span class="mx-4 text-abc-green">👥 Only 12 Slots Available!</span>
+        <span class="mx-4 text-abc-green">👥 Only 12 Slots Available! 10am - 12pm</span>
         <span class="mx-4 text-white/40">•</span>
         <span class="mx-4"
           ><span class="text-white/60">📍 Venue:</span> Plot 8, Mukulu Curve,
@@ -266,7 +266,7 @@
           </div>
           <div>
             <div class="text-abc-green font-extrabold text-base md:text-lg">
-              4 Weeks
+              6 Weeks
             </div>
             <div class="text-[9px] uppercase tracking-wider text-white/60 mt-1">
               Duration
