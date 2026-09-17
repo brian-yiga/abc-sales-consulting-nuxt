@@ -688,11 +688,11 @@
             playsinline
             muted
             loop
-            poster="/img/video-thumbs/nicole-thumb.png"
+            poster="/img/video-thumbs/primera-thumb.png"
             class="w-full h-full min-h-[220px] max-h-[420px] object-cover"
           >
             <source
-              src="/img/tiktok-videos/nicole-kabatesi.mp4"
+              src="/img/tiktok-videos/primera-mutoni.mp4"
               type="video/mp4"
             />
             Your browser does not support the video tag.

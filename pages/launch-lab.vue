@@ -543,7 +543,7 @@
         </div>
 
         <div class="order-1 lg:order-2">
-          <span class="text-base font-black uppercase tracking-[0.25em] text-abc-green block mb-2">
+          <span class="text-2xl font-black uppercase tracking-[0.25em] text-abc-green block mb-2">
             Pillar 04 • Venture Creation & Capstone
           </span>
           <h3 class="text-2xl sm:text-3xl font-black uppercase text-abc-navy mb-4">
