@@ -85,7 +85,7 @@
               <NuxtLink
                 :to="sub.to"
                 @click="activeSubMenu = null"
-                class="text-maroon px-8 py-4 uppercase font-bold text-xs border-l first:border-l-0 border-gray-100 hover:bg-maroon hover:text-white transition-all cursor-pointer"
+                class="text-maroon px-8 py-4 uppercase font-bold text-base border-l first:border-l-0 border-gray-100 hover:bg-maroon hover:text-white transition-all cursor-pointer"
               >
                 {{ sub.name }}
               </NuxtLink>
@@ -165,7 +165,7 @@
       <div class="grid lg:grid-cols-12 gap-10 items-center">
         <!-- Hero Left Column: Core Value Proposition -->
         <div class="lg:col-span-7 text-center lg:text-left text-white">
-          <div class="inline-flex items-center gap-2 border border-abc-orange/60 bg-abc-orange/15 text-abc-orange px-5 py-1.5 rounded-full text-xs font-extrabold uppercase tracking-[0.25em] mb-6">
+          <div class="inline-flex items-center gap-2 border border-abc-orange/60 bg-abc-orange/15 text-abc-orange px-5 py-1.5 rounded-full text-base font-extrabold uppercase tracking-[0.25em] mb-6">
             <span>🚀</span> Real Skills. Real Experience. A Brighter Future.
           </div>
 
@@ -236,7 +236,7 @@
                   Pre-University Advantage
                 </span>
               </div>
-              <p class="text-xs font-semibold leading-snug">
+              <p class="text-base font-semibold leading-snug">
                 Mukuru Curve in Ministers Village, Ntinda (next to Industrial Court)
               </p>
             </div>
@@ -254,7 +254,7 @@
   <section class="py-16 lg:py-24 bg-white border-b border-gray-100">
     <MuiPageContainer class="max-w-6xl mx-auto">
       <div class="text-center max-w-3xl mx-auto mb-14">
-        <span class="inline-block px-4 py-1.5 mb-3 text-xs tracking-[0.25em] uppercase font-black text-abc-orange bg-abc-orange/10 rounded-full">
+        <span class="inline-block px-4 py-1.5 mb-3 text-base tracking-[0.25em] uppercase font-black text-abc-orange bg-abc-orange/10 rounded-full">
           The Core Philosophy
         </span>
         <h2 class="text-3xl sm:text-4xl font-black uppercase tracking-tight text-abc-navy mb-4">
@@ -267,7 +267,7 @@
       </div>
 
       <!-- Grid of Career Disciplines -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 mb-6">
         <div class="p-6 rounded-2xl border border-gray-100 bg-gray-50/50 hover:bg-white hover:border-abc-orange/40 hover:shadow-lg transition-all duration-300">
           <div class="w-10 h-10 rounded-xl bg-abc-orange/10 flex items-center justify-center text-abc-orange text-xl font-black mb-4">
             🔬
@@ -331,7 +331,7 @@
 
       <!-- Highlight Quotation Banner -->
       <div class="bg-gradient-to-r from-abc-navy via-abc-navy/95 to-abc-navy rounded-2xl p-8 md:p-10 text-white text-center shadow-xl border border-white/10">
-        <span class="text-abc-orange font-extrabold uppercase tracking-[0.3em] text-xs block mb-2">
+        <span class="text-abc-orange font-extrabold uppercase tracking-[0.3em] text-base block mb-2">
           The Programme Proposition
         </span>
         <h3 class="text-2xl sm:text-3xl font-black uppercase tracking-tight max-w-3xl mx-auto mb-4">
@@ -348,7 +348,7 @@
   <section class="py-16 lg:py-24 bg-gray-50/70 border-b border-gray-100" id="curriculum">
     <MuiPageContainer class="max-w-6xl mx-auto">
       <div class="text-center max-w-3xl mx-auto mb-14">
-        <span class="inline-block px-4 py-1.5 mb-3 text-xs tracking-[0.25em] uppercase font-black text-abc-green bg-abc-green/10 rounded-full">
+        <span class="inline-block px-4 py-1.5 mb-3 text-base tracking-[0.25em] uppercase font-black text-abc-green bg-abc-green/10 rounded-full">
           The Journey
         </span>
         <h2 class="text-3xl sm:text-4xl font-black uppercase tracking-tight text-abc-navy mb-4">
@@ -364,7 +364,7 @@
         <div class="bg-white p-6 rounded-2xl border border-gray-200/80 shadow-sm hover:border-abc-orange transition-colors">
           <div class="text-abc-orange font-black text-2xl mb-2">01</div>
           <h3 class="font-extrabold text-base uppercase text-abc-navy mb-2">DISCOVER</h3>
-          <p class="text-xs text-gray-600 leading-relaxed">
+          <p class="text-base text-gray-600 leading-relaxed">
             Understand yourself, understand human psychology, and spot real opportunities in the market.
           </p>
         </div>
@@ -373,7 +373,7 @@
         <div class="bg-white p-6 rounded-2xl border border-gray-200/80 shadow-sm hover:border-abc-green transition-colors">
           <div class="text-abc-green font-black text-2xl mb-2">02</div>
           <h3 class="font-extrabold text-base uppercase text-abc-navy mb-2">BUILD</h3>
-          <p class="text-xs text-gray-600 leading-relaxed">
+          <p class="text-base text-gray-600 leading-relaxed">
             Build persuasive communication, executive confidence, and core sales methodologies.
           </p>
         </div>
@@ -382,7 +382,7 @@
         <div class="bg-white p-6 rounded-2xl border border-gray-200/80 shadow-sm hover:border-abc-orange transition-colors">
           <div class="text-abc-orange font-black text-2xl mb-2">03</div>
           <h3 class="font-extrabold text-base uppercase text-abc-navy mb-2">SELL</h3>
-          <p class="text-xs text-gray-600 leading-relaxed">
+          <p class="text-base text-gray-600 leading-relaxed">
             Take these skills directly into the marketplace. Prospect, pitch, handle rejection, and close real transactions.
           </p>
         </div>
@@ -391,7 +391,7 @@
         <div class="bg-white p-6 rounded-2xl border border-gray-200/80 shadow-sm hover:border-abc-green transition-colors">
           <div class="text-abc-green font-black text-2xl mb-2">04</div>
           <h3 class="font-extrabold text-base uppercase text-abc-navy mb-2">CREATE</h3>
-          <p class="text-xs text-gray-600 leading-relaxed">
+          <p class="text-base text-gray-600 leading-relaxed">
             Form collaborative teams and build an original venture, product, event, or social enterprise.
           </p>
         </div>
@@ -400,7 +400,7 @@
         <div class="bg-white p-6 rounded-2xl border border-gray-200/80 shadow-sm hover:border-abc-orange transition-colors">
           <div class="text-abc-orange font-black text-2xl mb-2">05</div>
           <h3 class="font-extrabold text-base uppercase text-abc-navy mb-2">LAUNCH</h3>
-          <p class="text-xs text-gray-600 leading-relaxed">
+          <p class="text-base text-gray-600 leading-relaxed">
             Pitch the venture live on Launch Day to a panel of entrepreneurs, executives, and active investors.
           </p>
         </div>
@@ -415,7 +415,7 @@
       <!-- PILLAR 1: THE FUNDAMENTALS OF SALES -->
       <div class="grid lg:grid-cols-2 gap-12 items-center">
         <div>
-          <span class="text-xs font-black uppercase tracking-[0.25em] text-abc-orange block mb-2">
+          <span class="text-2xl font-black uppercase tracking-[0.25em] text-abc-orange block mb-2">
             Pillar 01 • Core Capabilities
           </span>
           <h3 class="text-2xl sm:text-3xl font-black uppercase text-abc-navy mb-4">
@@ -424,7 +424,7 @@
           <p class="text-gray-600 text-sm sm:text-base leading-relaxed mb-6">
             We break down the science and psychology of human decisions. Students gain a rigorous toolkit that strips away awkwardness and replaces it with structured conversation frameworks.
           </p>
-          <div class="grid grid-cols-2 gap-3 text-xs sm:text-sm font-semibold text-gray-700">
+          <div class="grid grid-cols-2 gap-3 text-base sm:text-sm font-semibold text-gray-700">
             <div class="flex items-center gap-2">
               <span class="text-abc-green font-black">✓</span> Understanding People
             </div>
@@ -455,7 +455,7 @@
         <div class="bg-gray-50 border border-gray-200/80 rounded-2xl p-6 sm:p-8">
           <div class="border-l-4 border-abc-orange pl-4 mb-4">
             <h4 class="font-extrabold uppercase text-abc-navy text-base">Key Mastery Outcome</h4>
-            <p class="text-xs text-gray-500 mt-1">From anxiety to authentic persuasion</p>
+            <p class="text-base text-gray-500 mt-1">From anxiety to authentic persuasion</p>
           </div>
           <p class="text-sm text-gray-600 leading-relaxed italic">
             "Selling isn't pushing people into things they don't need; it is understanding what people care about, diagnosing their real friction, and showing them how your solution solves it with clarity."
@@ -474,7 +474,7 @@
         </div>
 
         <div class="order-1 lg:order-2">
-          <span class="text-xs font-black uppercase tracking-[0.25em] text-abc-green block mb-2">
+          <span class="text-2xl font-black uppercase tracking-[0.25em] text-abc-green block mb-2">
             Pillar 02 • Experiential Learning
           </span>
           <h3 class="text-2xl sm:text-3xl font-black uppercase text-abc-navy mb-4">
@@ -486,7 +486,7 @@
           <p class="text-gray-600 text-sm leading-relaxed mb-6">
             Participants choose something they genuinely care about, or partner with established partner companies across tech, fashion, food, art, events, fitness, or digital services:
           </p>
-          <div class="bg-abc-orange/5 border border-abc-orange/20 rounded-xl p-4 text-xs text-gray-700 space-y-1.5 font-medium">
+          <div class="bg-abc-orange/5 border border-abc-orange/20 rounded-xl p-4 text-base text-gray-700 space-y-1.5 font-medium">
             <p>🎯 <strong>Real Targets:</strong> They receive practical revenue targets.</p>
             <p>📞 <strong>Real Outreach:</strong> They prospect, pick up the phone, and approach real people.</p>
             <p>🛡️ <strong>Real Rejection:</strong> They experience real objections and learn not to take 'no' personally.</p>
@@ -498,7 +498,7 @@
       <!-- PILLAR 3: SELL YOURSELF -->
       <div class="grid lg:grid-cols-2 gap-12 items-center">
         <div>
-          <span class="text-xs font-black uppercase tracking-[0.25em] text-abc-orange block mb-2">
+          <span class="text-2xl font-black uppercase tracking-[0.25em] text-abc-orange block mb-2">
             Pillar 03 • Personal Branding & Presence
           </span>
           <h3 class="text-2xl sm:text-3xl font-black uppercase text-abc-navy mb-4">
@@ -509,16 +509,16 @@
           </p>
           <div class="space-y-3">
             <div class="p-3.5 bg-gray-50 rounded-xl border border-gray-100">
-              <h5 class="font-bold text-xs uppercase text-abc-navy">The 30-Second Pitch</h5>
-              <p class="text-xs text-gray-600 mt-0.5">Articulating who you are and what value you bring without stumbling or hesitating.</p>
+              <h5 class="font-bold text-base uppercase text-abc-navy">The 30-Second Pitch</h5>
+              <p class="text-base text-gray-600 mt-0.5">Articulating who you are and what value you bring without stumbling or hesitating.</p>
             </div>
             <div class="p-3.5 bg-gray-50 rounded-xl border border-gray-100">
-              <h5 class="font-bold text-xs uppercase text-abc-navy">Fearless Networking</h5>
-              <p class="text-xs text-gray-600 mt-0.5">Walking into a room of strangers or senior executives and creating lasting professional rapport without shrinking.</p>
+              <h5 class="font-bold text-base uppercase text-abc-navy">Fearless Networking</h5>
+              <p class="text-base text-gray-600 mt-0.5">Walking into a room of strangers or senior executives and creating lasting professional rapport without shrinking.</p>
             </div>
             <div class="p-3.5 bg-gray-50 rounded-xl border border-gray-100">
-              <h5 class="font-bold text-xs uppercase text-abc-navy">Pre-University LinkedIn & Digital Identity</h5>
-              <p class="text-xs text-gray-600 mt-0.5">Optimizing profiles to attract internships, mentors, and global academic opportunities.</p>
+              <h5 class="font-bold text-base uppercase text-abc-navy">Pre-University LinkedIn & Digital Identity</h5>
+              <p class="text-base text-gray-600 mt-0.5">Optimizing profiles to attract internships, mentors, and global academic opportunities.</p>
             </div>
           </div>
         </div>
@@ -543,7 +543,7 @@
         </div>
 
         <div class="order-1 lg:order-2">
-          <span class="text-xs font-black uppercase tracking-[0.25em] text-abc-green block mb-2">
+          <span class="text-base font-black uppercase tracking-[0.25em] text-abc-green block mb-2">
             Pillar 04 • Venture Creation & Capstone
           </span>
           <h3 class="text-2xl sm:text-3xl font-black uppercase text-abc-navy mb-4">
@@ -552,13 +552,13 @@
           <p class="text-gray-600 text-sm sm:text-base leading-relaxed mb-4">
             Students form multidisciplinary teams, conceive an innovative concept, build a pitch deck, and validate its market feasibility:
           </p>
-          <div class="grid grid-cols-2 gap-2 text-xs text-gray-700 font-medium mb-6">
+          <div class="grid grid-cols-2 gap-2 text-base text-gray-700 font-medium mb-6">
             <span class="p-2 bg-gray-50 rounded border border-gray-100">💡 Tech Startups</span>
             <span class="p-2 bg-gray-50 rounded border border-gray-100">🌍 Social Enterprises</span>
             <span class="p-2 bg-gray-50 rounded border border-gray-100">🎨 Creative Brands</span>
             <span class="p-2 bg-gray-50 rounded border border-gray-100">🌱 Eco Solutions</span>
           </div>
-          <div class="bg-abc-green/10 border border-abc-green/30 rounded-xl p-4 text-xs text-abc-navy leading-relaxed">
+          <div class="bg-abc-green/10 border border-abc-green/30 rounded-xl p-4 text-base text-abc-navy leading-relaxed">
             <strong class="text-abc-navy font-bold uppercase block mb-1">The Launch Day Pitch:</strong>
             The capstone event challenges teams to pitch directly to a guest panel of prominent business owners, entrepreneurs, and corporate investors—giving them real-world validation under bright lights!
           </div>
@@ -572,7 +572,7 @@
   <section class="py-16 lg:py-24 bg-abc-navy text-white relative overflow-hidden">
     <MuiPageContainer class="max-w-6xl mx-auto relative z-10">
       <div class="text-center max-w-3xl mx-auto mb-14">
-        <span class="inline-block px-4 py-1.5 mb-3 text-xs tracking-[0.25em] uppercase font-black text-abc-orange bg-abc-orange/10 border border-abc-orange/30 rounded-full">
+        <span class="inline-block px-4 py-1.5 mb-3 text-base tracking-[0.25em] uppercase font-black text-abc-orange bg-abc-orange/10 border border-abc-orange/30 rounded-full">
           Why It Matters
         </span>
         <h2 class="text-3xl sm:text-4xl font-black uppercase tracking-tight text-white mb-4">
@@ -587,13 +587,13 @@
             <span class="text-3xl">🎒</span>
             <div>
               <h3 class="text-xl font-black uppercase text-abc-orange">For Students</h3>
-              <p class="text-xs text-white/60">Ages 18 – 20 • Year 13 Graduates</p>
+              <p class="text-base text-white/60">Ages 18 – 20 • Year 13 Graduates</p>
             </div>
           </div>
           <p class="text-sm sm:text-base text-white/85 leading-relaxed mb-6 italic">
             "You just finished high school. Before university starts, don't just wait around. Build something. Sell something. Meet inspiring peers and mentors. Discover what you are truly capable of when the training wheels come off."
           </p>
-          <ul class="space-y-2 text-xs sm:text-sm text-white/75">
+          <ul class="space-y-2 text-base sm:text-sm text-white/75">
             <li class="flex items-center gap-2">
               <span class="text-abc-orange font-bold">✓</span> Make new ambitious friends & mentors
             </li>
@@ -612,13 +612,13 @@
             <span class="text-3xl">👨‍👩‍👧</span>
             <div>
               <h3 class="text-xl font-black uppercase text-abc-green">For Parents</h3>
-              <p class="text-xs text-white/60">Investing in Real-World Readiness</p>
+              <p class="text-base text-white/60">Investing in Real-World Readiness</p>
             </div>
           </div>
           <p class="text-sm sm:text-base text-white/85 leading-relaxed mb-6 italic">
             "Your child has spent years excelling academically. The Launch Lab gives them practical exposure to communication, negotiation, resilience, and professional acumen before they step into the unstructured environment of university."
           </p>
-          <ul class="space-y-2 text-xs sm:text-sm text-white/75">
+          <ul class="space-y-2 text-base sm:text-sm text-white/75">
             <li class="flex items-center gap-2">
               <span class="text-abc-green font-bold">✓</span> Buying preparedness, maturity, and self-reliance
             </li>
@@ -638,7 +638,7 @@
   <section class="py-16 lg:py-24 bg-white border-b border-gray-100">
     <MuiPageContainer class="max-w-6xl mx-auto">
       <div class="text-center max-w-3xl mx-auto mb-14">
-        <span class="inline-block px-4 py-1.5 mb-3 text-xs tracking-[0.25em] uppercase font-black text-abc-green bg-abc-green/10 rounded-full">
+        <span class="inline-block px-4 py-1.5 mb-3 text-base tracking-[0.25em] uppercase font-black text-abc-green bg-abc-green/10 rounded-full">
           Key Takeaways
         </span>
         <h2 class="text-3xl sm:text-4xl font-black uppercase tracking-tight text-abc-navy mb-4">
@@ -655,7 +655,7 @@
             💼
           </div>
           <h4 class="font-extrabold text-base uppercase text-abc-navy mb-2">Practical Sales Experience</h4>
-          <p class="text-xs text-gray-600 leading-relaxed">
+          <p class="text-base text-gray-600 leading-relaxed">
             Real field exposure, real cold calls, structured pipeline management, and real completed deals.
           </p>
         </div>
@@ -665,7 +665,7 @@
             🗣️
           </div>
           <h4 class="font-extrabold text-base uppercase text-abc-navy mb-2">Stronger Communication</h4>
-          <p class="text-xs text-gray-600 leading-relaxed">
+          <p class="text-base text-gray-600 leading-relaxed">
             Unshakable poise, persuasive presentation skills, and the confidence to hold conversations with any leader.
           </p>
         </div>
@@ -675,7 +675,7 @@
             🌍
           </div>
           <h4 class="font-extrabold text-base uppercase text-abc-navy mb-2">Opportunity Mindset</h4>
-          <p class="text-xs text-gray-600 leading-relaxed">
+          <p class="text-base text-gray-600 leading-relaxed">
             The ability to spot gaps, create value, and seize commercial or career opportunities anywhere in the world.
           </p>
         </div>
@@ -685,7 +685,7 @@
             ⭐
           </div>
           <h4 class="font-extrabold text-base uppercase text-abc-navy mb-2">Pre-Uni Advantage</h4>
-          <p class="text-xs text-gray-600 leading-relaxed">
+          <p class="text-base text-gray-600 leading-relaxed">
             An outstanding resume, a verified project, professional references, and a clear head start over peers.
           </p>
         </div>
@@ -711,14 +711,14 @@
             <a
               href="/img/flyers/launch-lab.jpeg"
               download="ABC-Launch-Lab-Flyer.jpeg"
-              class="inline-flex items-center gap-2 text-xs font-bold uppercase text-abc-orange hover:underline"
+              class="inline-flex items-center gap-2 text-base font-bold uppercase text-abc-orange hover:underline"
             >
               <span>📥</span> Download Flyer
             </a>
             <a
               href="https://wa.me/256791178657"
               target="_blank"
-              class="inline-flex items-center gap-2 text-xs font-bold uppercase text-abc-green hover:underline"
+              class="inline-flex items-center gap-2 text-base font-bold uppercase text-abc-green hover:underline"
             >
               <span>💬</span> Chat on WhatsApp
             </a>
@@ -728,13 +728,13 @@
         <!-- Right: Registration Form & Direct Contact -->
         <div class="lg:col-span-7 bg-white rounded-3xl p-8 sm:p-10 shadow-xl border border-gray-200/80">
           <div class="mb-6">
-            <span class="text-xs uppercase tracking-widest font-extrabold text-abc-orange block mb-1">
+            <span class="text-base uppercase tracking-widest font-extrabold text-abc-orange block mb-1">
               Enrollment Form • Cohort October 2026
             </span>
             <h3 class="text-2xl sm:text-3xl font-black uppercase text-abc-navy">
               Register for The Launch Lab
             </h3>
-            <p class="text-xs sm:text-sm text-gray-600 mt-1">
+            <p class="text-base sm:text-sm text-gray-600 mt-1">
               Fee: <strong>UGX 900,000 per child</strong> • Starts <strong>1st October 2026</strong> (6 Weeks) • Mukuru Curve, Ntinda.
             </p>
           </div>
@@ -758,7 +758,7 @@
 
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
-                <label class="block text-xs font-bold uppercase text-gray-700 mb-1">Student Full Name *</label>
+                <label class="block text-base font-bold uppercase text-gray-700 mb-1">Student Full Name *</label>
                 <input
                   v-model="formData.studentName"
                   type="text"
@@ -768,7 +768,7 @@
                 />
               </div>
               <div>
-                <label class="block text-xs font-bold uppercase text-gray-700 mb-1">Student Age (18–20) *</label>
+                <label class="block text-base font-bold uppercase text-gray-700 mb-1">Student Age (18–20) *</label>
                 <input
                   v-model="formData.studentAge"
                   type="number"
@@ -783,7 +783,7 @@
 
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
-                <label class="block text-xs font-bold uppercase text-gray-700 mb-1">Parent / Guardian Name *</label>
+                <label class="block text-base font-bold uppercase text-gray-700 mb-1">Parent / Guardian Name *</label>
                 <input
                   v-model="formData.parentName"
                   type="text"
@@ -793,7 +793,7 @@
                 />
               </div>
               <div>
-                <label class="block text-xs font-bold uppercase text-gray-700 mb-1">Primary Phone Number *</label>
+                <label class="block text-base font-bold uppercase text-gray-700 mb-1">Primary Phone Number *</label>
                 <input
                   v-model="formData.phone"
                   type="tel"
@@ -805,7 +805,7 @@
             </div>
 
             <div>
-              <label class="block text-xs font-bold uppercase text-gray-700 mb-1">Email Address *</label>
+              <label class="block text-base font-bold uppercase text-gray-700 mb-1">Email Address *</label>
               <input
                 v-model="formData.email"
                 type="email"
@@ -816,7 +816,7 @@
             </div>
 
             <div>
-              <label class="block text-xs font-bold uppercase text-gray-700 mb-1">High School Completed *</label>
+              <label class="block text-base font-bold uppercase text-gray-700 mb-1">High School Completed *</label>
               <input
                 v-model="formData.school"
                 type="text"
@@ -827,7 +827,7 @@
             </div>
 
             <div>
-              <label class="block text-xs font-bold uppercase text-gray-700 mb-1">Intended University Course / Area of Interest</label>
+              <label class="block text-base font-bold uppercase text-gray-700 mb-1">Intended University Course / Area of Interest</label>
               <input
                 v-model="formData.interest"
                 type="text"
@@ -839,14 +839,14 @@
             <button
               type="submit"
               :disabled="status === 'Submitting...'"
-              class="w-full bg-abc-orange hover:bg-abc-orange/90 text-white font-black uppercase text-xs tracking-widest py-4 rounded-lg transition-colors cursor-pointer disabled:opacity-50"
+              class="w-full bg-abc-orange hover:bg-abc-orange/90 text-white font-black uppercase text-base tracking-widest py-4 rounded-lg transition-colors cursor-pointer disabled:opacity-50"
             >
               {{ status || 'Submit Registration Application' }}
             </button>
           </form>
 
           <!-- Direct Line Help Box -->
-          <div class="mt-6 pt-4 border-t border-gray-100 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-500 gap-2">
+          <div class="mt-6 pt-4 border-t border-gray-100 flex flex-col sm:flex-row items-center justify-between text-base text-gray-500 gap-2">
             <div>
               Prefer to register over the phone? Call <strong class="text-abc-navy">0791 178 657</strong>
             </div>
@@ -912,7 +912,7 @@
         />
 
         <div class="bg-white flex items-center px-6 py-5 border-b md:border-b-0 md:border-r border-gray-200">
-          <label class="flex items-center gap-3 text-gray-400 text-xs uppercase tracking-widest font-bold cursor-pointer select-none">
+          <label class="flex items-center gap-3 text-gray-400 text-base uppercase tracking-widest font-bold cursor-pointer select-none">
             <input type="checkbox" required class="w-4 h-4 accent-abc-green" />
             I'm not a robot
           </label>
@@ -921,7 +921,7 @@
         <button
           type="submit"
           :disabled="footerStatus === 'Sending...'"
-          class="bg-abc-green hover:bg-abc-green/90 text-abc-navy font-black uppercase transition-all py-5 px-8 cursor-pointer tracking-widest text-xs disabled:opacity-50 disabled:cursor-not-allowed"
+          class="bg-abc-green hover:bg-abc-green/90 text-abc-navy font-black uppercase transition-all py-5 px-8 cursor-pointer tracking-widest text-base disabled:opacity-50 disabled:cursor-not-allowed"
         >
           {{ footerStatus || "Request a Call" }}
         </button>
