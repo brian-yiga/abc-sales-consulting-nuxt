@@ -181,7 +181,7 @@
             to="/launch-lab"
             class="inline-block border border-abc-orange bg-abc-orange/20 text-abc-orange px-5 py-1.5 rounded-full text-[13px] font-bold uppercase tracking-[0.2em] animate-pulse cursor-pointer hover:bg-abc-orange/30 transition-colors"
           >
-            🔴 ABC Launch Lab
+            🔴 SEPTEMBER COHORT REGISTER
           </NuxtLink>
         </div>
 
@@ -258,9 +258,9 @@
             >
               <MuiButton
                 variant="white-fill"
-                label="REGISTER FOR LAUNCH LAB"
+                label="REGISTER FOR SEPTEMBER COHORT"
                 class="!rounded-none px-8 py-4 font-bold text-[10px] tracking-widest !text-abc-orange !border-abc-orange/60 bg-abc-orange/5 hover:bg-abc-orange hover:!text-white transition-all cursor-pointer"
-                @click="discoveryFormRef?.open()"
+                @click="AugustCohortFormRef?.open()"
               />
               <MuiButton
                 variant="white-stroke"
@@ -404,7 +404,7 @@
       </div>
     </MuiPageContainer>
 
-    <!-- SEPTEMBER COHORT GRADUATION HIGHLIGHT -->
+    <!-- AUGUST COHORT GRADUATION HIGHLIGHT -->
     <MuiPageContainer class="max-w-7xl mx-auto my-8 md:my-12 lg:my-16">
       <div
         class="bg-white/5 backdrop-blur-[12px] rounded-2xl md:rounded-[32px] border border-white/10 p-6 md:p-10 lg:p-12 text-white shadow-2xl relative overflow-hidden"
@@ -423,12 +423,12 @@
             <div
               class="inline-flex items-center gap-2 px-4 py-1.5 mb-4 text-base tracking-[0.25em] uppercase font-black text-abc-orange bg-abc-orange/10 border border-abc-orange/30 rounded-full"
             >
-              <span>🎓</span> Cohort Milestone • Class of September 2026
+              <span>🎓</span> Cohort Milestone • Class of August 2026
             </div>
             <h3
               class="text-2xl sm:text-3xl md:text-4xl font-black uppercase tracking-tight text-white mb-4"
             >
-              Celebrating Our September Cohort Graduates
+              Celebrating Our August Cohort Graduates
             </h3>
             <p class="text-white/80 text-base leading-relaxed">
               We proudly celebrate the ambitious sales professionals who just
@@ -446,8 +446,8 @@
               class="group relative rounded-2xl overflow-hidden border border-white/15 bg-black/40 shadow-lg"
             >
               <NuxtImg
-                src="/img/cohort-graduands/september-graduands1.jpeg"
-                alt="ABC Sales Consulting September Cohort graduation celebration"
+                src="/img/cohort-graduands/august-graduands1.jpeg"
+                alt="ABC Sales Consulting August Cohort graduation celebration"
                 class="w-full h-[280px] sm:h-[340px] md:h-[380px] object-cover object-center group-hover:scale-105 transition-transform duration-500"
                 sizes="sm:100vw md:50vw lg:600px"
               />
@@ -461,7 +461,7 @@
                   Graduation & Celebration
                 </span>
                 <p class="text-white text-base font-semibold">
-                  September 2026 Cohort • Celebration & Milestone Achievement
+                  August 2026 Cohort • Celebration & Milestone Achievement
                 </p>
               </div>
             </div>
@@ -470,8 +470,8 @@
               class="group relative rounded-2xl overflow-hidden border border-white/15 bg-black/40 shadow-lg"
             >
               <NuxtImg
-                src="/img/cohort-graduands/september-graduands2.jpeg"
-                alt="ABC Sales Consulting September Cohort team portrait"
+                src="/img/cohort-graduands/august-graduands2.jpeg"
+                alt="ABC Sales Consulting August Cohort team portrait"
                 class="w-full h-[280px] sm:h-[340px] md:h-[380px] object-cover object-center group-hover:scale-105 transition-transform duration-500"
                 sizes="sm:100vw md:50vw lg:600px"
               />
@@ -502,7 +502,7 @@
               <h4
                 class="text-xl sm:text-2xl font-bold uppercase tracking-tight text-white"
               >
-                What Our September Graduates Say
+                What Our August Graduates Say
               </h4>
             </div>
 
@@ -528,7 +528,7 @@
                           Joseph Paul
                         </h5>
                         <p class="text-base text-abc-green font-medium">
-                          September Cohort Graduate • Sales Lead
+                          August Cohort Graduate • Sales Lead
                         </p>
                       </div>
                     </div>
@@ -569,7 +569,7 @@
                           Primera Mutoni
                         </h5>
                         <p class="text-base text-abc-orange font-medium">
-                          September Cohort Graduate • B2B Sales Executive
+                          August Cohort Graduate • B2B Sales Executive
                         </p>
                       </div>
                     </div>
