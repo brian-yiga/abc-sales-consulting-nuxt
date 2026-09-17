@@ -470,7 +470,7 @@
               class="group relative rounded-2xl overflow-hidden border border-white/15 bg-black/40 shadow-lg"
             >
               <NuxtImg
-                src="/img/cohort-graduands/august-graduands2.jpeg"
+                src="/img/cohort-graduands/august-graduands3.jpeg"
                 alt="ABC Sales Consulting August Cohort team portrait"
                 class="w-full h-[280px] sm:h-[340px] md:h-[380px] object-cover object-center group-hover:scale-105 transition-transform duration-500"
                 sizes="sm:100vw md:50vw lg:600px"

@@ -69,7 +69,7 @@
       <!-- HERO SECTION -->
       <MuiPageContainer class="py-16 md:py-20 text-center text-white">
         <div class="max-w-3xl mx-auto space-y-6">
-          <div class="inline-block border border-abc-green/50 bg-abc-green/10 text-abc-green px-6 py-1.5 rounded-full text-xs font-bold uppercase tracking-[0.3em]">
+          <div class="inline-block border border-abc-green/50 bg-abc-green/10 text-abc-green px-6 py-1.5 rounded-full text-base font-bold uppercase tracking-[0.3em]">
             THE ABC SALES LADDER
           </div>
           
@@ -86,13 +86,13 @@
             <a
               href="https://wa.me/256000000000?text=Hello%20ABC%20Sales,%20I%20want%20to%20enrol%20in%20The%20ABC%20Sales%20Ladder"
               target="_blank"
-              class="inline-block bg-abc-orange hover:bg-abc-orange/90 text-white font-black uppercase text-xs tracking-widest px-8 py-4 transition-colors"
+              class="inline-block bg-abc-orange hover:bg-abc-orange/90 text-white font-black uppercase text-base tracking-widest px-8 py-4 transition-colors"
             >
               Message Us On WhatsApp →
             </a>
             <a
               href="#ladder-levels"
-              class="inline-block border border-white/30 hover:bg-white hover:text-abc-navy text-white font-bold uppercase text-xs tracking-widest px-8 py-4 transition-colors"
+              class="inline-block border border-white/30 hover:bg-white hover:text-abc-navy text-white font-bold uppercase text-base tracking-widest px-8 py-4 transition-colors"
             >
               View Programme Levels
             </a>
@@ -117,11 +117,11 @@
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <!-- LUCK -->
             <div class="bg-red-50 border border-red-200 rounded-2xl p-6 sm:p-8 space-y-4">
-              <div class="flex items-center gap-2 text-red-600 font-black text-xs uppercase tracking-widest border-b border-red-200 pb-3">
+              <div class="flex items-center gap-2 text-red-600 font-black text-base uppercase tracking-widest border-b border-red-200 pb-3">
                 <span>❌</span>
                 <span>Selling On Luck</span>
               </div>
-              <ul class="space-y-3 text-xs sm:text-sm text-gray-700">
+              <ul class="space-y-3 text-base sm:text-sm text-gray-700">
                 <li class="flex items-start gap-2">
                   <span class="text-red-500">•</span>
                   <span>You drop your price the moment someone hesitates.</span>
@@ -147,11 +147,11 @@
 
             <!-- PURPOSE -->
             <div class="bg-emerald-50 border border-emerald-200 rounded-2xl p-6 sm:p-8 space-y-4">
-              <div class="flex items-center gap-2 text-emerald-700 font-black text-xs uppercase tracking-widest border-b border-emerald-200 pb-3">
+              <div class="flex items-center gap-2 text-emerald-700 font-black text-base uppercase tracking-widest border-b border-emerald-200 pb-3">
                 <span>✅</span>
                 <span>Selling On Purpose</span>
               </div>
-              <ul class="space-y-3 text-xs sm:text-sm text-gray-800 font-medium">
+              <ul class="space-y-3 text-base sm:text-sm text-gray-800 font-medium">
                 <li class="flex items-start gap-2">
                   <span class="text-emerald-600">✓</span>
                   <span>You hold your price because you can show the value.</span>
@@ -184,7 +184,7 @@
       <MuiPageContainer>
         <div class="max-w-5xl mx-auto text-center space-y-8">
           <div class="space-y-2">
-            <span class="text-abc-green text-xs font-black uppercase tracking-widest">Framework</span>
+            <span class="text-abc-green text-base font-black uppercase tracking-widest">Framework</span>
             <h2 class="text-3xl font-black uppercase tracking-tight text-white">
               One Process. Seven Steps. Yours For Life.
             </h2>
@@ -197,13 +197,13 @@
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-7 gap-3 pt-4">
             <div v-for="(step, idx) in steps" :key="step" class="bg-white/5 border border-white/10 p-4 rounded-xl text-center flex flex-col justify-between hover:border-abc-orange transition-colors">
               <span class="text-abc-orange font-black text-lg">0{{ idx + 1 }}</span>
-              <span class="text-xs font-bold uppercase tracking-wider text-white mt-2">{{ step }}</span>
+              <span class="text-base font-bold uppercase tracking-wider text-white mt-2">{{ step }}</span>
             </div>
           </div>
 
           <!-- MINDSET FOUNDATION -->
           <div class="bg-abc-orange/20 border border-abc-orange/50 p-4 rounded-xl max-w-xl mx-auto text-center mt-6">
-            <span class="text-abc-orange font-black text-xs uppercase tracking-widest block mb-1">
+            <span class="text-abc-orange font-black text-base uppercase tracking-widest block mb-1">
               IT ALL STANDS ON ONE THING
             </span>
             <span class="text-white font-extrabold text-base uppercase">Sales Mindset</span>
@@ -217,7 +217,7 @@
       <MuiPageContainer>
         <div class="max-w-6xl mx-auto space-y-12">
           <div class="text-center space-y-3">
-            <span class="text-abc-orange text-xs font-black uppercase tracking-widest">Where You Start Is Up To You</span>
+            <span class="text-abc-orange text-base font-black uppercase tracking-widest">Where You Start Is Up To You</span>
             <h2 class="text-3xl sm:text-4xl font-black uppercase text-white tracking-tight">
               Choose Your Rung
             </h2>
@@ -228,21 +228,21 @@
             <div class="bg-white/5 border border-white/15 rounded-2xl p-6 sm:p-8 flex flex-col justify-between hover:border-abc-green transition-all">
               <div class="space-y-6">
                 <div class="space-y-2 border-b border-white/10 pb-4">
-                  <span class="text-abc-green text-xs font-black uppercase tracking-widest">Level 1</span>
+                  <span class="text-abc-green text-base font-black uppercase tracking-widest">Level 1</span>
                   <h3 class="text-xl font-black uppercase text-white">Foundational Selling</h3>
-                  <p class="text-xs text-white/70">Learn to sell properly, for the first time.</p>
+                  <p class="text-base text-white/70">Learn to sell properly, for the first time.</p>
                 </div>
 
                 <div class="space-y-2">
                   <span class="text-[10px] font-bold uppercase text-white/50 tracking-wider">Is This You?</span>
-                  <p class="text-xs text-white/90 leading-relaxed">
+                  <p class="text-base text-white/90 leading-relaxed">
                     You sell every day but you've never been trained how. You're winging it, and you know it.
                   </p>
                 </div>
 
                 <div class="space-y-2">
                   <span class="text-[10px] font-bold uppercase text-white/50 tracking-wider">You Walk Away With</span>
-                  <ul class="space-y-2 text-xs text-white/80">
+                  <ul class="space-y-2 text-base text-white/80">
                     <li class="flex items-start gap-2">
                       <span class="text-abc-green font-bold">✓</span>
                       <span>The full 7-step process running on your product</span>
@@ -273,7 +273,7 @@
                 <a
                   href="https://wa.me/256000000000?text=Hello%20ABC%20Sales,%20I%20want%20to%20register%20for%20Level%201%20Foundational%20Selling"
                   target="_blank"
-                  class="block w-full bg-white/10 hover:bg-abc-green hover:text-abc-navy text-white text-center font-black uppercase text-xs tracking-widest py-3 transition-colors rounded-lg"
+                  class="block w-full bg-white/10 hover:bg-abc-green hover:text-abc-navy text-white text-center font-black uppercase text-base tracking-widest py-3 transition-colors rounded-lg"
                 >
                   Enrol In Level 1
                 </a>
@@ -288,21 +288,21 @@
 
               <div class="space-y-6">
                 <div class="space-y-2 border-b border-white/10 pb-4">
-                  <span class="text-abc-orange text-xs font-black uppercase tracking-widest">Level 2</span>
+                  <span class="text-abc-orange text-base font-black uppercase tracking-widest">Level 2</span>
                   <h3 class="text-xl font-black uppercase text-white">Frontline Practitioner</h3>
-                  <p class="text-xs text-white/70">Stop discounting. Start closing on value.</p>
+                  <p class="text-base text-white/70">Stop discounting. Start closing on value.</p>
                 </div>
 
                 <div class="space-y-2">
                   <span class="text-[10px] font-bold uppercase text-white/50 tracking-wider">Is This You?</span>
-                  <p class="text-xs text-white/90 leading-relaxed">
+                  <p class="text-base text-white/90 leading-relaxed">
                     You can sell, but you cave on price, your pipeline is a mess, and you lose deals you should win.
                   </p>
                 </div>
 
                 <div class="space-y-2">
                   <span class="text-[10px] font-bold uppercase text-white/50 tracking-wider">You Walk Away With</span>
-                  <ul class="space-y-2 text-xs text-white/80">
+                  <ul class="space-y-2 text-base text-white/80">
                     <li class="flex items-start gap-2">
                       <span class="text-abc-orange font-bold">✓</span>
                       <span>Discovery that uncovers what people will really pay for</span>
@@ -333,7 +333,7 @@
                 <a
                   href="https://wa.me/256000000000?text=Hello%20ABC%20Sales,%20I%20want%20to%20register%20for%20Level%202%20Frontline%20Practitioner"
                   target="_blank"
-                  class="block w-full bg-abc-orange hover:bg-abc-orange/90 text-white text-center font-black uppercase text-xs tracking-widest py-3 transition-colors rounded-lg"
+                  class="block w-full bg-abc-orange hover:bg-abc-orange/90 text-white text-center font-black uppercase text-base tracking-widest py-3 transition-colors rounded-lg"
                 >
                   Enrol In Level 2
                 </a>
@@ -344,21 +344,21 @@
             <div class="bg-white/5 border border-white/15 rounded-2xl p-6 sm:p-8 flex flex-col justify-between hover:border-abc-green transition-all">
               <div class="space-y-6">
                 <div class="space-y-2 border-b border-white/10 pb-4">
-                  <span class="text-abc-green text-xs font-black uppercase tracking-widest">Level 3</span>
+                  <span class="text-abc-green text-base font-black uppercase tracking-widest">Level 3</span>
                   <h3 class="text-xl font-black uppercase text-white">Sales Leadership</h3>
-                  <p class="text-xs text-white/70">Build a team that sells without you in the room.</p>
+                  <p class="text-base text-white/70">Build a team that sells without you in the room.</p>
                 </div>
 
                 <div class="space-y-2">
                   <span class="text-[10px] font-bold uppercase text-white/50 tracking-wider">Is This You?</span>
-                  <p class="text-xs text-white/90 leading-relaxed">
+                  <p class="text-base text-white/90 leading-relaxed">
                     You've outgrown selling solo. Now you need others to sell as well as you do.
                   </p>
                 </div>
 
                 <div class="space-y-2">
                   <span class="text-[10px] font-bold uppercase text-white/50 tracking-wider">You Walk Away With</span>
-                  <ul class="space-y-2 text-xs text-white/80">
+                  <ul class="space-y-2 text-base text-white/80">
                     <li class="flex items-start gap-2">
                       <span class="text-abc-green font-bold">✓</span>
                       <span>A playbook your whole team can run</span>
@@ -389,7 +389,7 @@
                 <a
                   href="https://wa.me/256000000000?text=Hello%20ABC%20Sales,%20I%20want%20to%20register%20for%20Level%203%20Sales%20Leadership"
                   target="_blank"
-                  class="block w-full bg-white/10 hover:bg-abc-green hover:text-abc-navy text-white text-center font-black uppercase text-xs tracking-widest py-3 transition-colors rounded-lg"
+                  class="block w-full bg-white/10 hover:bg-abc-green hover:text-abc-navy text-white text-center font-black uppercase text-base tracking-widest py-3 transition-colors rounded-lg"
                 >
                   Enrol In Level 3
                 </a>
@@ -406,16 +406,16 @@
         <div class="max-w-4xl mx-auto bg-gradient-to-r from-abc-navy to-slate-800 border border-abc-orange/40 rounded-3xl p-8 sm:p-10 relative overflow-hidden">
           <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center relative z-10">
             <div class="md:col-span-8 space-y-4">
-              <span class="text-abc-orange text-xs font-black uppercase tracking-widest block">
+              <span class="text-abc-orange text-base font-black uppercase tracking-widest block">
                 And When You've Mastered It
               </span>
               <h3 class="text-2xl sm:text-3xl font-black uppercase text-white">
                 Certified ABC Trainer
               </h3>
-              <p class="text-xs sm:text-sm text-white/80 leading-relaxed">
+              <p class="text-base sm:text-sm text-white/80 leading-relaxed">
                 Teach it. Earn a living from it. Open to Level 3 graduates and proven sellers ready to teach. Get the right to teach the full ABC method in your own business or as a licensed ABC trainer.
               </p>
-              <div class="flex flex-wrap gap-4 text-xs font-bold text-abc-green">
+              <div class="flex flex-wrap gap-4 text-base font-bold text-abc-green">
                 <span>• Intensive + Assessed Teach-Back</span>
                 <span>• Investment: UGX 2,500,000</span>
               </div>
