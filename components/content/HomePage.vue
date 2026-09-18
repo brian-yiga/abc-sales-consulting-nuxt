@@ -330,12 +330,10 @@
               <div
                 class="pt-2 border-t border-white/10 flex items-center justify-between"
               >
-                <div class="text-[14px] text-white/60">
-                  📍 Ntinda Ministers Village
-                </div>
+                
                 <NuxtLink
                   to="/launch-lab"
-                  class="inline-flex items-center gap-1.5 bg-abc-orange text-white hover:bg-abc-orange/90 px-3.5 py-1.5 text-[14px] font-black uppercase tracking-widest rounded-md transition-all"
+                  class="inline-flex items-center gap-1.5 bg-abc-orange text-white hover:bg-abc-orange/90 px-3.5 py-1.5 text-[14px] font-bold uppercase tracking-widest rounded-md transition-all"
                 >
                   Explore Launch Lab →
                 </NuxtLink>
@@ -386,14 +384,10 @@
               <div
                 class="pt-2 border-t border-white/10 flex items-center justify-between"
               >
-                <span
-                  class="text-[14px] text-white/50 tracking-wider uppercase"
-                >
-                  Proven Playbooks
-                </span>
+                
                 <NuxtLink
                   to="/sales-ladder"
-                  class="inline-flex items-center gap-1.5 bg-abc-green text-abc-navy hover:bg-abc-green/90 px-3.5 py-1.5 text-base font-black uppercase tracking-widest rounded-md transition-all"
+                  class="inline-flex items-center gap-1.5 bg-abc-green text-abc-navy hover:bg-abc-green/90 px-3.5 py-1.5 text-base font-bold uppercase tracking-wide rounded-md transition-all"
                 >
                   Explore Sales Ladder →
                 </NuxtLink>
@@ -566,7 +560,7 @@
                       </div>
                       <div>
                         <h5 class="font-extrabold text-white text-base">
-                          Primera Mutoni
+                          Primera Muthoni
                         </h5>
                         <p class="text-base text-abc-orange font-medium">
                           August Cohort Graduate • B2B Sales Executive
