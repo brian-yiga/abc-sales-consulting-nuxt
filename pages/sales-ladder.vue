@@ -84,7 +84,7 @@
 
           <div class="pt-4 flex flex-wrap justify-center gap-4">
             <a
-              href="htt256791178657?text=Hello%20ABC%20Sales,%20I%20want%20to%20enrol%20in%20The%20ABC%20Sales%20Ladder"
+             href="https://wa.me/256791178657?text=Hello%20ABC%20Sales,%20I%20want%20to%20enrol%20in%20The%20ABC%20Sales%20Ladder"
               target="_blank"
               class="inline-block bg-abc-orange hover:bg-abc-orange/90 text-white font-black uppercase text-base tracking-widest px-8 py-4 transition-colors"
             >
@@ -331,7 +331,7 @@
                   </div>
                 </div>
                 <a
-                  href="htt256791178657?text=Hello%20ABC%20Sales,%20I%20want%20to%20register%20for%20Level%202%20Frontline%20Practitioner"
+                  href="https://wa.me/256791178657?text=Hello%20ABC%20Sales,%20I%20want%20to%20enrol%20in%20The%20ABC%20Sales%20Ladder"
                   target="_blank"
                   class="block w-full bg-abc-orange hover:bg-abc-orange/90 text-white text-center font-black uppercase text-base tracking-widest py-3 transition-colors rounded-lg"
                 >
@@ -387,7 +387,7 @@
                   </div>
                 </div>
                 <a
-                  href="htt256791178657?text=Hello%20ABC%20Sales,%20I%20want%20to%20register%20for%20Level%203%20Sales%20Leadership"
+                  href="https://wa.me/256791178657?text=Hello%20ABC%20Sales,%20I%20want%20to%20enrol%20in%20The%20ABC%20Sales%20Ladder"
                   target="_blank"
                   class="block w-full bg-white/10 hover:bg-abc-green hover:text-abc-navy text-white text-center font-black uppercase text-base tracking-widest py-3 transition-colors rounded-lg"
                 >
@@ -422,7 +422,7 @@
             </div>
             <div class="md:col-span-4 text-left md:text-right">
               <a
-                href="htt256791178657?text=Hello%20ABC%20Sales,%20I%20am%20interested%20in%20the%20Certified%20ABC%20Trainer%20programme"
+                href="https://wa.me/256791178657?text=Hello%20ABC%20Sales,%20I%20am%20interested%20in%20the%20Certified%20ABC%20Trainer%20programme"
                 target="_blank"
                 class="inline-block bg-abc-orange hover:bg-abc-orange/90 text-white font-black uppercase text-xs tracking-widest px-6 py-3.5 rounded-lg transition-colors"
               >
@@ -489,7 +489,7 @@
           </p>
           <div>
             <a
-              href="htt256791178657?text=Hello%20ABC%20Sales,%20I%20am%20ready%20to%20grab%20a%20seat%20in%20the%20next%20cohort"
+              href="https://wa.me/256791178657?text=Hello%20ABC%20Sales,%20I%20am%20ready%20to%20grab%20a%20seat%20in%20the%20next%20cohort"
               target="_blank"
               class="inline-block bg-abc-orange hover:bg-abc-orange/90 text-white font-black uppercase text-xs tracking-widest px-10 py-4 transition-colors"
             >
