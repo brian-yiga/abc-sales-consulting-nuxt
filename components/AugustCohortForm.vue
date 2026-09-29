@@ -18,7 +18,7 @@
               🔴 Limited Seats Available
             </span>
             <h2 class="text-xl md:text-2xl font-black uppercase">
-              Register: September 2026 Cohort
+              Register: November 2026 Cohort
             </h2>
           </div>
           <button
@@ -44,7 +44,7 @@
           <input
             type="hidden"
             name="subject"
-            value="New September 2026 Cohort Registration - ABC Sales Consulting"
+            value="New November 2026 Cohort Registration - ABC Sales Consulting"
           />
           <input
             type="hidden"
@@ -59,7 +59,7 @@
 
           <div class="bg-abc-orange/5 border border-abc-orange/20 rounded p-4 text-sm text-gray-700 space-y-1">
             <p class="font-bold text-abc-navy uppercase text-xs tracking-wider">Cohort Information:</p>
-            <p>📅 <strong>Date:</strong> Wednesday, 16th September 2026</p>
+            <p>📅 <strong>Date:</strong> Wednesday, 18th November 2026</p>
             <p>📍 <strong>Venue:</strong> Plot 8, Mukulu Curve, Off Martyrs Way, Ntinda</p>
             <p>💰 <strong>Investment:</strong> UGX 600,000 per participant</p>
           </div>

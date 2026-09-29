@@ -2,6 +2,61 @@
   <div
     class="bg-maroon pb-5 bg-cover bg-center bg-[url('/bg-images/bg-blue.png')]"
   >
+    <!-- 1. GLASSY ANNOUNCEMENT TICKER -->
+    <div
+      class="w-full bg-white/5 backdrop-blur-[8px] text-white py-3.5 overflow-hidden relative z-[220] border-b border-white/10"
+    >
+      <div
+        class="flex whitespace-nowrap animate-marquee text-[13px] font-bold tracking-widest uppercase"
+      >
+        <!-- Loop Set 1 -->
+        <span class="mx-4 text-abc-orange"
+          >🔥 November Upcoming Cohort Registration Now Open!</span
+        >
+        <span class="mx-4 text-white/40">•</span>
+        <span class="mx-4"
+          ><span class="text-white/60">📅 Starts:</span> Wednesday, 18th
+          November 2026</span
+        >
+        <span class="mx-4 text-white/40">•</span>
+        <span class="mx-4 text-abc-green"
+          >👥 Only 12 Slots Available! 10am - 12pm</span
+        >
+        <span class="mx-4 text-white/40">•</span>
+        <span class="mx-4"
+          ><span class="text-white/60">📍 Venue:</span> Plot 8, Mukulu Curve,
+          Off Martyrs Way, Ntinda</span
+        >
+        <span class="mx-4 text-white/40">•</span>
+        <span class="mx-4"
+          ><span class="text-white/60">📞 Contact:</span> 0791 178 657</span
+        >
+        <span class="mx-4 text-white/40">•</span>
+
+        <!-- Loop Set 2 (Duplicates for seamless scrolling) -->
+        <span class="mx-4 text-abc-orange"
+          >🔥 November Upcoming Cohort Registration Now Open!</span
+        >
+        <span class="mx-4 text-white/40">•</span>
+        <span class="mx-4"
+          ><span class="text-white/60">📅 Starts:</span> Wednesday, 18th
+          November 2026</span
+        >
+        <span class="mx-4 text-white/40">•</span>
+        <span class="mx-4 text-abc-green"
+          >👥 Only 12 Slots Available! 10am - 12pm</span
+        >
+        <span class="mx-4 text-white/40">•</span>
+        <span class="mx-4"
+          ><span class="text-white/60">📍 Venue:</span> Plot 8, Mukulu Curve,
+          Off Martyrs Way, Ntinda</span
+        >
+        <span class="mx-4 text-white/40">•</span>
+        <span class="mx-4"
+          ><span class="text-white/60">📞 Contact:</span> 0791 178 657</span
+        >
+      </div>
+    </div>
     <!-- HEADER & NAVIGATION -->
     <MuiPageContainer wide class="relative pt-4">
       <header
@@ -161,7 +216,7 @@
       </Transition>
     </MuiPageContainer>
 
-    <!-- HERO SECTION WITH LAUNCH LAB AND SELLING LADDER FEATURE -->
+    <!-- HERO SECTION WITH SUNDAY EVENT FEATURE -->
     <MuiPageContainer
       class="text-white pt-12 pb-16 lg:pt-16 lg:pb-20 xl:pt-[80px] xl:pb-20 relative bg-cover bg-center"
     >
@@ -178,10 +233,10 @@
             Sales Strategy & Excellence
           </div>
           <NuxtLink
-            to="/launch-lab"
+            to="/services#upcoming-events"
             class="inline-block border border-abc-orange bg-abc-orange/20 text-abc-orange px-5 py-1.5 rounded-full text-[13px] font-bold uppercase tracking-[0.2em] animate-pulse cursor-pointer hover:bg-abc-orange/30 transition-colors"
           >
-            🔴 SEPTEMBER COHORT REGISTER
+            🔴 November 2026 Cohort
           </NuxtLink>
         </div>
 
@@ -197,7 +252,7 @@
             </h2>
 
             <p
-              class="mt-5 mb-8 text-white/90 leading-relaxed text-base tracking-wide max-w-xl mx-auto lg:mx-0"
+              class="mt-5 mb-8 text-white/90 leading-relaxed text-sm sm:text-base tracking-wide max-w-xl mx-auto lg:mx-0"
             >
               ABC Sales Consulting provides world-class training and strategic
               interventions to help African businesses scale faster, close
@@ -213,7 +268,7 @@
                   UGX 600,000
                 </div>
                 <div
-                  class="text-[14px] uppercase tracking-wider font-bold text-white/60 mt-1"
+                  class="text-[9px] uppercase tracking-wider text-white/60 mt-1"
                 >
                   Investment
                 </div>
@@ -223,7 +278,7 @@
                   6 Weeks
                 </div>
                 <div
-                  class="text-[14px] uppercase tracking-wider font-bold text-white/60 mt-1"
+                  class="text-[9px] uppercase tracking-wider text-white/60 mt-1"
                 >
                   Duration
                 </div>
@@ -235,7 +290,7 @@
                   12 Seats
                 </div>
                 <div
-                  class="text-[14px] uppercase tracking-wider font-bold text-white/60 mt-1"
+                  class="text-[9px] uppercase tracking-wider text-white/60 mt-1"
                 >
                   Class Limit
                 </div>
@@ -245,7 +300,7 @@
                   Certificate
                 </div>
                 <div
-                  class="text-[14px] uppercase tracking-wider font-bold text-white/60 mt-1"
+                  class="text-[9px] uppercase tracking-wider text-white/60 mt-1"
                 >
                   Included
                 </div>
@@ -258,9 +313,9 @@
             >
               <MuiButton
                 variant="white-fill"
-                label="REGISTER FOR SEPTEMBER COHORT"
+                label="REGISTER FOR NOVEMBER COHORT"
                 class="!rounded-none px-8 py-4 font-bold text-[10px] tracking-widest !text-abc-orange !border-abc-orange/60 bg-abc-orange/5 hover:bg-abc-orange hover:!text-white transition-all cursor-pointer"
-                @click="AugustCohortFormRef?.open()"
+                @click="augustCohortFormRef?.open()"
               />
               <MuiButton
                 variant="white-stroke"
@@ -271,7 +326,7 @@
             </div>
           </div>
 
-          <!-- RIGHT COLUMN: FEATURED INITIATIVES (LAUNCH LAB & SALES LADDER) (5 Columns) -->
+          <!-- RIGHT COLUMN: FEATURED INITIATIVES (CAREER LAUNCH LAB & SALES LADDER) (5 Columns) -->
           <div class="lg:col-span-5 flex flex-col gap-4">
             <!-- CARD 1: ABC CAREER LAUNCH LAB -->
             <div
@@ -282,16 +337,16 @@
               >
                 <div class="flex items-center gap-2">
                   <span
-                    class="inline-block w-2 h-2 rounded-full bg-abc-orange animate-ping"
+                    class="inline-block w-2.5 h-2.5 rounded-full bg-abc-orange animate-ping"
                   ></span>
                   <span
-                    class="text-abc-orange text-[14px] font-extrabold uppercase tracking-widest"
+                    class="text-abc-orange text-xs font-bold uppercase tracking-widest"
                   >
                     New Programme • Ages 18–20
                   </span>
                 </div>
                 <span
-                  class="text-[14px] bg-abc-green/20 text-abc-green px-2 py-0.5 rounded font-bold uppercase tracking-wider"
+                  class="text-[10px] bg-abc-green/20 text-abc-green px-2.5 py-0.5 rounded font-bold uppercase tracking-wider"
                 >
                   Starts 1st Oct 2026
                 </span>
@@ -309,17 +364,17 @@
                 </div>
                 <div class="space-y-1 text-left flex-1 min-w-0">
                   <h3
-                    class="text-base font-black uppercase text-white leading-tight"
+                    class="text-base sm:text-lg font-black uppercase text-white leading-tight"
                   >
                     Career Launch Lab
                   </h3>
                   <p
-                    class="text-abc-orange font-bold text-base uppercase tracking-wider"
+                    class="text-abc-orange font-bold text-[11px] uppercase tracking-wider"
                   >
-                    Sell Your Skill. Build Confidence.
+                    Sell Your Skill. Build Your Confidence.
                   </p>
                   <p
-                    class="text-base text-white/70 line-clamp-2 leading-relaxed"
+                    class="text-[11px] text-white/70 line-clamp-2 leading-relaxed"
                   >
                     Practical sales & real-world transition for Year 13
                     graduates before university. 6 weeks • UGX 900k.
@@ -330,10 +385,12 @@
               <div
                 class="pt-2 border-t border-white/10 flex items-center justify-between"
               >
-                
+                <div class="text-[10px] text-white/60">
+                  📍 Ntinda Ministers Village
+                </div>
                 <NuxtLink
                   to="/launch-lab"
-                  class="inline-flex items-center gap-1.5 bg-abc-orange text-white hover:bg-abc-orange/90 px-3.5 py-1.5 text-[14px] font-bold uppercase tracking-widest rounded-md transition-all"
+                  class="inline-flex items-center gap-1.5 bg-abc-orange text-white hover:bg-abc-orange/90 px-3.5 py-1.5 text-[10px] font-black uppercase tracking-widest rounded-md transition-all"
                 >
                   Explore Launch Lab →
                 </NuxtLink>
@@ -352,30 +409,32 @@
                     class="inline-block w-2 h-2 rounded-full bg-abc-green"
                   ></span>
                   <span
-                    class="text-abc-green text-[14px] font-extrabold uppercase tracking-widest"
+                    class="text-abc-green text-[10px] font-extrabold uppercase tracking-widest"
                   >
                     Career Acceleration
                   </span>
                 </div>
                 <span
-                  class="text-[14px] bg-white/10 text-white/70 px-2 py-0.5 rounded font-bold uppercase tracking-wider"
+                  class="text-[10px] bg-white/10 text-white/70 px-2 py-0.5 rounded font-medium uppercase tracking-wider"
                 >
                   Framework
                 </span>
               </div>
 
-              <div class="space-y-1 text-left mb-3">
+              <div class="space-y-2 text-left mb-3">
                 <h3
-                  class="text-base font-black uppercase text-white leading-tight"
+                  class="text-base sm:text-lg font-black uppercase text-white leading-tight"
                 >
-                  The ABC Selling Ladder
+                  The ABC Sales Ladder
                 </h3>
+
                 <p
-                  class="text-abc-green font-bold text-base uppercase tracking-wider"
+                  class="text-abc-green font-bold text-[11px] uppercase tracking-wider"
                 >
                   Master Every Rung of High-Performance Sales
                 </p>
-                <p class="text-base text-white/75 leading-relaxed">
+
+                <p class="text-xs text-white/75 leading-relaxed">
                   A structured progression pathway taking you from core sales
                   fundamentals to enterprise closing and revenue leadership.
                 </p>
@@ -384,10 +443,14 @@
               <div
                 class="pt-2 border-t border-white/10 flex items-center justify-between"
               >
-                
+                <span
+                  class="text-[10px] text-white/50 tracking-wider uppercase"
+                >
+                  Proven Playbooks
+                </span>
                 <NuxtLink
                   to="/sales-ladder"
-                  class="inline-flex items-center gap-1.5 bg-abc-green text-abc-navy hover:bg-abc-green/90 px-3.5 py-1.5 text-base font-bold uppercase tracking-wide rounded-md transition-all"
+                  class="inline-flex items-center gap-1.5 bg-abc-green text-abc-navy hover:bg-abc-green/90 px-3.5 py-1.5 text-[10px] font-black uppercase tracking-widest rounded-md transition-all"
                 >
                   Explore Sales Ladder →
                 </NuxtLink>
@@ -399,7 +462,7 @@
     </MuiPageContainer>
 
     <!-- AUGUST COHORT GRADUATION HIGHLIGHT -->
-    <MuiPageContainer class="max-w-7xl mx-auto my-8 md:my-12 lg:my-16">
+    <MuiPageContainer class="max-w-7xl mx-auto my-12 md:my-16 lg:my-20">
       <div
         class="bg-white/5 backdrop-blur-[12px] rounded-2xl md:rounded-[32px] border border-white/10 p-6 md:p-10 lg:p-12 text-white shadow-2xl relative overflow-hidden"
       >
@@ -415,16 +478,16 @@
           <!-- Section Header -->
           <div class="text-center max-w-3xl mx-auto mb-10 md:mb-12">
             <div
-              class="inline-flex items-center gap-2 px-4 py-1.5 mb-4 text-base tracking-[0.25em] uppercase font-black text-abc-orange bg-abc-orange/10 border border-abc-orange/30 rounded-full"
+              class="inline-flex items-center gap-2 px-4 py-1.5 mb-4 text-xs tracking-[0.25em] uppercase font-black text-abc-orange bg-abc-orange/10 border border-abc-orange/30 rounded-full"
             >
-              <span>🎓</span> Cohort Milestone • Class of August 2026
+              <span>🎓</span> Cohort Milestone • Class of September 2026
             </div>
             <h3
               class="text-2xl sm:text-3xl md:text-4xl font-black uppercase tracking-tight text-white mb-4"
             >
-              Celebrating Our August Cohort Graduates
+              Celebrating Our September Cohort Graduates
             </h3>
-            <p class="text-white/80 text-base leading-relaxed">
+            <p class="text-white/80 text-sm sm:text-base leading-relaxed">
               We proudly celebrate the ambitious sales professionals who just
               completed our intensive 6-week Sales Strategy & Mastery Program!
               From conquering high-stakes objection handling to embedding
@@ -440,8 +503,8 @@
               class="group relative rounded-2xl overflow-hidden border border-white/15 bg-black/40 shadow-lg"
             >
               <NuxtImg
-                src="/img/cohort-graduands/august-graduands1.jpeg"
-                alt="ABC Sales Consulting August Cohort graduation celebration"
+                src="/img/cohort-graduands/september-graduands1.jpeg"
+                alt="ABC Sales Consulting September Cohort graduation celebration"
                 class="w-full h-[280px] sm:h-[340px] md:h-[380px] object-cover object-center group-hover:scale-105 transition-transform duration-500"
                 sizes="sm:100vw md:50vw lg:600px"
               />
@@ -454,8 +517,8 @@
                 >
                   Graduation & Celebration
                 </span>
-                <p class="text-white text-base font-semibold">
-                  August 2026 Cohort • Celebration & Milestone Achievement
+                <p class="text-white text-xs sm:text-sm font-semibold">
+                  September 2026 Cohort • Celebration & Milestone Achievement
                 </p>
               </div>
             </div>
@@ -464,8 +527,8 @@
               class="group relative rounded-2xl overflow-hidden border border-white/15 bg-black/40 shadow-lg"
             >
               <NuxtImg
-                src="/img/cohort-graduands/august-graduands3.jpeg"
-                alt="ABC Sales Consulting August Cohort team portrait"
+                src="/img/cohort-graduands/september-graduands2.jpeg"
+                alt="ABC Sales Consulting September Cohort team portrait"
                 class="w-full h-[280px] sm:h-[340px] md:h-[380px] object-cover object-center group-hover:scale-105 transition-transform duration-500"
                 sizes="sm:100vw md:50vw lg:600px"
               />
@@ -478,7 +541,7 @@
                 >
                   Cohort Class
                 </span>
-                <p class="text-white text-base font-semibold">
+                <p class="text-white text-xs sm:text-sm font-semibold">
                   Classroom Energy • Practical, Face-to-Face Sales Excellence
                 </p>
               </div>
@@ -489,19 +552,19 @@
           <div class="border-t border-white/10 pt-10">
             <div class="text-center mb-8">
               <span
-                class="text-[14px] uppercase tracking-[0.25em] font-bold text-abc-green block mb-1"
+                class="text-[11px] uppercase tracking-[0.25em] font-bold text-abc-green block mb-1"
               >
                 Direct Feedback
               </span>
               <h4
                 class="text-xl sm:text-2xl font-bold uppercase tracking-tight text-white"
               >
-                What Our August Graduates Say
+                What Our September Graduates Say
               </h4>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <!-- Joseph's Comment -->
+              <!-- Andrew's Comment -->
               <div
                 class="bg-white/5 border border-white/10 rounded-2xl p-6 sm:p-7 flex flex-col justify-between hover:border-abc-green/40 transition-colors"
               >
@@ -511,42 +574,45 @@
                       <div
                         class="w-12 h-12 rounded-full overflow-hidden border-2 border-abc-green/50 flex-shrink-0 bg-abc-navy"
                       >
-                        <div
-                          class="w-12 h-12 rounded-full bg-gradient-to-tr from-abc-orange to-abc-green flex items-center justify-center font-black text-abc-navy text-lg flex-shrink-0"
-                        >
-                          J
-                        </div>
+                        <NuxtImg
+                          src="/img/video-thumbs/andrew-thumb.jpeg"
+                          alt="Andrew - September Cohort Graduate"
+                          class="w-full h-full object-cover"
+                        />
                       </div>
                       <div>
                         <h5 class="font-extrabold text-white text-base">
-                          Joseph Paul
+                          Andrew Oloya
                         </h5>
-                        <p class="text-base text-abc-green font-medium">
-                          August Cohort Graduate • Sales Lead
+                        <p class="text-xs text-abc-green font-medium">
+                          September Cohort Graduate • Sales Lead
                         </p>
                       </div>
                     </div>
                     <div class="flex text-abc-orange text-sm">★★★★★</div>
                   </div>
                   <p
-                    class="text-white/85 text-base leading-relaxed italic mb-4"
+                    class="text-white/85 text-sm sm:text-[15px] leading-relaxed italic mb-4"
                   >
                     "The practical sales frameworks and live objection-handling
                     drills completely changed how I approach prospects. Within
                     just weeks of the training, I closed two enterprise deals
                     that had stalled for months! If you're serious about
-                    leveling up your closing rates, don't miss the next
+                    leveling up your closing rates, don't miss the September
                     cohort—it's 100% worth every shilling."
                   </p>
                 </div>
                 <div
-                  class="pt-3 border-t border-white/10 flex items-center justify-between text-sm text-white/50"
+                  class="pt-3 border-t border-white/10 flex items-center justify-between text-xs text-white/50"
                 >
                   <span>Verified Graduate</span>
+                  <span class="text-abc-orange font-semibold"
+                    >Recommended for November Cohort</span
+                  >
                 </div>
               </div>
 
-              <!-- Primera's Comment -->
+              <!-- Josephine's Comment -->
               <div
                 class="bg-white/5 border border-white/10 rounded-2xl p-6 sm:p-7 flex flex-col justify-between hover:border-abc-orange/40 transition-colors"
               >
@@ -556,37 +622,66 @@
                       <div
                         class="w-12 h-12 rounded-full bg-gradient-to-tr from-abc-orange to-abc-green flex items-center justify-center font-black text-abc-navy text-lg flex-shrink-0"
                       >
-                        P
+                        JB
                       </div>
                       <div>
                         <h5 class="font-extrabold text-white text-base">
-                          Primera Muthoni
+                          Justine Byansi
                         </h5>
-                        <p class="text-base text-abc-orange font-medium">
-                          August Cohort Graduate • B2B Sales Executive
+                        <p class="text-xs text-abc-orange font-medium">
+                          September Cohort Graduate • B2B Sales Executive
                         </p>
                       </div>
                     </div>
                     <div class="flex text-abc-orange text-sm">★★★★★</div>
                   </div>
                   <p
-                    class="text-white/85 text-base leading-relaxed italic mb-4"
+                    class="text-white/85 text-sm sm:text-[15px] leading-relaxed italic mb-4"
                   >
                     "ABC Sales Consulting delivers far beyond standard sales
                     theory. The hands-on roleplays, personalized coaching, and
                     psychological prospecting strategies gave me a predictable
                     playbook I use daily. The classroom energy was unmatched!
                     With only 12 seats available, I strongly encourage anyone
-                    serious about hitting revenue targets to secure ABC's future
-                    training packages."
+                    serious about hitting revenue targets to secure their spot
+                    for November before it's full."
                   </p>
                 </div>
                 <div
-                  class="pt-3 border-t border-white/10 flex items-center justify-between text-sm text-white/50"
+                  class="pt-3 border-t border-white/10 flex items-center justify-between text-xs text-white/50"
                 >
                   <span>Verified Graduate</span>
+                  <span class="text-abc-green font-semibold"
+                    >Recommended for November Cohort</span
+                  >
                 </div>
               </div>
+            </div>
+
+            <!-- Cohort Sign-Up Callout Banner -->
+            <div
+              class="mt-10 bg-gradient-to-r from-abc-navy/90 via-white/5 to-abc-navy/90 border border-abc-orange/30 rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left"
+            >
+              <div>
+                <span
+                  class="inline-block text-[11px] uppercase tracking-widest font-extrabold text-abc-orange mb-1"
+                >
+                  Next Cohort Now Enrolling
+                </span>
+                <h4 class="text-lg sm:text-xl font-black uppercase text-white">
+                  Ready to achieve similar results? Join the November Cohort!
+                </h4>
+                <p class="text-xs sm:text-sm text-white/70 mt-1">
+                  Starts 18th November 2026 • Only 12 Slots Available •
+                  Practical In-Person Coaching
+                </p>
+              </div>
+              <MuiButton
+                variant="white-fill"
+                label="ENROLL IN NOVEMBER COHORT"
+                class="!rounded-none px-8 py-4 font-bold text-[11px] tracking-widest !text-abc-orange !border-abc-orange bg-abc-orange/10 hover:bg-abc-orange hover:!text-white transition-all cursor-pointer flex-shrink-0"
+                @click="augustCohortFormRef?.open()"
+              />
             </div>
           </div>
         </div>
@@ -599,7 +694,7 @@
         class="h-[165px] md:h-[250px] lg:h-[316px] xl:h-[342px] overflow-hidden"
       >
         <NuxtImg
-          src="/img/home/newTraining.png"
+          src="/img/home/sept-cohort5.jpeg"
           alt="ABC Sales Consulting free discovery session with professional sales team"
           class="w-full object-cover object-center block rounded-md h-[166px] md:h-[251px] lg:h-[317px] xl:h-[343px]"
           fit="cover"
@@ -611,7 +706,7 @@
         class="h-[165px] md:h-[250px] lg:h-[316px] xl:h-[342px] overflow-hidden"
       >
         <NuxtImg
-          src="/img/home/sept-cohort2.jpeg"
+          src="/img/home/sept-cohort6.jpeg"
           alt="Strategic sales planning and board meeting at ABC Sales Consulting"
           class="w-full object-cover block rounded-md h-[166px] md:h-[251px] lg:h-[317px] xl:h-[343px]"
           fit="cover"
@@ -623,7 +718,7 @@
         class="h-[165px] md:h-[250px] lg:h-[316px] xl:h-[342px] overflow-hidden"
       >
         <NuxtImg
-          src="/img/home/sept-cohort1.jpeg"
+          src="/img/home/sept-cohort7.jpeg"
           alt="One-on-one professional sales coaching and consultation session"
           class="w-full object-cover block rounded-md h-[166px] md:h-[251px] lg:h-[317px] xl:h-[343px]"
           fit="cover"
@@ -682,14 +777,14 @@
             playsinline
             muted
             loop
-            poster="/img/video-thumbs/primera-thumb.png"
+            poster="/img/video-thumbs/juliet-byansi-thumb.png"
             class="w-full h-full min-h-[220px] max-h-[420px] object-cover"
           >
             <source
-              src="/img/tiktok-videos/primera-mutoni.mp4"
+              src="/img/tiktok-videos/juliet-byansi.mp4"
               type="video/mp4"
             />
-            Your browser does not support the video tag.
+            Your browser does not support the video tag.``
           </video>
         </div>
       </div>
@@ -699,8 +794,8 @@
   <MuiPageContainer class="mt-16 md:mt-20 lg:mt-25">
     <MuiTextWithImage
       :img="{
-        small: '/img/home/newTraining2.png',
-        large: '/img/home/newTraining2.png',
+        small: '/img/home/sept-cohort8.jpeg',
+        large: '/img/home/sept-cohort8.jpeg',
       }"
       img-alt="ABC Sales Consulting high-impact sales training workshop in Uganda"
       class="mb-6 lg:mb-0"
@@ -837,7 +932,7 @@
         class="bg-abc-navy bg-blend-overlay"
       >
         <template #Image>
-          <img src="/img/logos/client-3.png" class="h-12 w-auto" />
+          <img src="/img/logos/client-38.png" class="h-12 w-auto" />
         </template>
         <template #Text>
           <div class="mui-text--headline-2 uppercase text-white">
@@ -852,7 +947,7 @@
         class="bg-abc-orange bg-blend-overlay"
       >
         <template #Image>
-          <img src="/img/logos/client-4.png" class="h-12 w-auto" />
+          <img src="/img/logos/client-11.png" class="h-12 w-auto" />
         </template>
         <template #Text>
           <div class="mui-text--headline-2 uppercase text-white">
@@ -868,7 +963,7 @@
         class="bg-abc-green bg-blend-overlay"
       >
         <template #Image>
-          <img src="/img/logos/client-26.png" class="h-12 w-auto" />
+          <img src="/img/logos/client-40.png" class="h-12 w-auto" />
         </template>
         <template #Text>
           <div class="mui-text--headline-2 uppercase text-white">
@@ -884,7 +979,7 @@
         class="bg-abc-navy bg-blend-overlay"
       >
         <template #Image>
-          <img src="/img/logos/client-18.png" class="h-12 w-auto" />
+          <img src="/img/logos/client-27.png" class="h-12 w-auto" />
         </template>
         <template #Text>
           <div class="mui-text--headline-2 uppercase text-white">
@@ -901,7 +996,7 @@
     >
       <div class="animate-scroll flex items-center gap-16">
         <div
-          v-for="n in 25"
+          v-for="n in 42"
           :key="'logo-' + n"
           class="flex-shrink-0 hover:opacity-100 transition-all duration-900"
         >
@@ -913,7 +1008,7 @@
         </div>
 
         <div
-          v-for="n in 26"
+          v-for="n in 42"
           :key="'dup-' + n"
           class="flex-shrink-0 transition-all duration-900"
         >
