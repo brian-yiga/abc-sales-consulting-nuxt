@@ -403,7 +403,7 @@
           class="text-2xl md:text-3xl lg:text-4xl font-black uppercase mb-4 leading-tight"
         >
           ABC Sales Training <br />
-          <span class="text-abc-green">September 2026 Cohort</span>
+          <span class="text-abc-green">November 2026 Cohort</span>
         </h3>
 
         <p class="text-sm md:text-base mb-6 leading-relaxed text-white/90">
@@ -423,7 +423,7 @@
               class="block text-abc-green uppercase tracking-wider font-bold text-[10px]"
               >🗓 Start Date</span
             >
-            <span class="font-medium">Wednesday 16th September 2026</span>
+            <span class="font-medium">Wednesday 16th November 2026</span>
           </div>
           <div>
             <span
