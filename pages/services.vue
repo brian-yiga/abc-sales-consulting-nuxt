@@ -447,7 +447,7 @@
               >💰 Investment</span
             >
             <span class="font-medium font-bold"
-              >UGX 600,000
+              >UGX 900,000
               <span class="text-[9px] text-white/70 block"
                 >(Includes Certificate & Resources)</span
               ></span

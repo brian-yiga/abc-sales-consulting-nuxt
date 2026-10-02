@@ -223,20 +223,30 @@
       <div class="absolute inset-0 pointer-events-none"></div>
 
       <div class="max-w-6xl mx-auto relative z-10">
-        <!-- TOP PILLS -->
+        <!-- TOP PILLS / HIGHLIGHTS -->
         <div
-          class="flex flex-col sm:flex-row items-center justify-center gap-3 mb-8 text-center"
+          class="flex flex-wrap items-center justify-center gap-2.5 sm:gap-3 mb-8 text-center"
         >
           <div
-            class="inline-block border border-abc-green/50 bg-abc-green/10 text-abc-green px-6 py-1.5 rounded-full text-[13px] font-bold uppercase tracking-[0.3em]"
+            class="inline-block border border-abc-green/50 bg-abc-green/10 text-abc-green px-5 py-1.5 rounded-full text-[12px] sm:text-[13px] font-bold uppercase tracking-[0.25em]"
           >
             Sales Strategy & Excellence
           </div>
+
           <NuxtLink
             to="/services#upcoming-events"
-            class="inline-block border border-abc-orange bg-abc-orange/20 text-abc-orange px-5 py-1.5 rounded-full text-[13px] font-bold uppercase tracking-[0.2em] animate-pulse cursor-pointer hover:bg-abc-orange/30 transition-colors"
+            class="inline-block border border-abc-orange bg-abc-orange/20 text-abc-orange px-5 py-1.5 rounded-full text-[12px] sm:text-[13px] font-bold uppercase tracking-[0.2em] animate-pulse cursor-pointer hover:bg-abc-orange/30 transition-colors"
           >
             🔴 November 2026 Cohort
+          </NuxtLink>
+
+          <!-- JOB OFFERS / CAREERS HIGHLIGHT -->
+          <NuxtLink
+            to="/careers"
+            class="inline-flex items-center gap-1.5 border border-white/30 bg-white/10 hover:bg-white/20 text-white px-5 py-1.5 rounded-full text-[12px] sm:text-[13px] font-bold uppercase tracking-[0.2em] transition-all cursor-pointer group"
+          >
+            <span class="w-2 h-2 rounded-full bg-abc-green animate-ping"></span>
+            💼 JOB OPPORTUNITIES
           </NuxtLink>
         </div>
 
@@ -265,7 +275,7 @@
             >
               <div>
                 <div class="text-abc-green font-extrabold text-base md:text-lg">
-                  UGX 600,000
+                  UGX 900,000
                 </div>
                 <div
                   class="text-[9px] uppercase tracking-wider text-white/60 mt-1"
@@ -315,7 +325,7 @@
                 variant="white-fill"
                 label="REGISTER FOR NOVEMBER COHORT"
                 class="!rounded-none px-8 py-4 font-bold text-[10px] tracking-widest !text-abc-orange !border-abc-orange/60 bg-abc-orange/5 hover:bg-abc-orange hover:!text-white transition-all cursor-pointer"
-                @click="augustCohortFormRef?.open()"
+                @click="novemberCohortFormRef?.open()"
               />
               <MuiButton
                 variant="white-stroke"
@@ -461,6 +471,113 @@
       </div>
     </MuiPageContainer>
 
+    <!-- MANAGING DIRECTOR'S MESSAGE OF THE WEEK -->
+    <div
+      class="bg-white/5 backdrop-blur-md border border-white/15 rounded-2xl p-6 lg:p-8 shadow-2xl relative overflow-hidden group hover:border-abc-orange/50 transition-all duration-300"
+    >
+      <!-- SINGLE HEADER: Managing Director's Corner Highlighted -->
+      <div
+        class="flex flex-wrap items-center justify-between gap-3 mb-6 border-b border-white/10 pb-4"
+      >
+        <!-- LEFT: MANAGING DIRECTOR'S CORNER (Highlighted & Larger) -->
+        <span
+          class="text-sm sm:text-base font-black uppercase tracking-widest text-abc-green bg-abc-green/20 border border-abc-green/40 px-4 py-1.5 rounded-full shadow-sm"
+        >
+          Managing Director's Corner
+        </span>
+
+        <!-- RIGHT: WEEKLY LEADERSHIP INSIGHTS -->
+        <div class="flex items-center gap-2.5">
+          <span
+            class="inline-block w-3 h-3 rounded-full bg-abc-orange animate-pulse"
+          ></span>
+          <span
+            class="text-abc-orange text-xs font-black uppercase tracking-widest"
+          >
+            Weekly Leadership Insights
+          </span>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <!-- LEFT: VIDEO PLAYER CONTAINER -->
+        <div class="lg:col-span-5 relative group/video">
+          <div
+            class="relative rounded-xl overflow-hidden border border-white/20 bg-black shadow-2xl aspect-[4/5] sm:aspect-[3/4] lg:aspect-[4/5] max-h-[500px] w-full flex items-center justify-center mx-auto"
+          >
+            <video
+              controls
+              preload="metadata"
+              poster="/img/video-thumbs/md-message.png"
+              class="w-full h-full object-cover object-top bg-black"
+            >
+              <source
+                src="/img/tiktok-videos/md-message.mp4"
+                type="video/mp4"
+              />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+
+        <!-- RIGHT: TITLE & ACCOMPANYING MESSAGE -->
+        <div class="lg:col-span-7 space-y-4 text-left">
+          <div class="space-y-1">
+            <span
+              class="text-abc-green font-bold text-xs uppercase tracking-widest block"
+            >
+              Message of the Week
+            </span>
+            <h3
+              class="text-xl sm:text-2xl lg:text-3xl font-black uppercase text-white leading-tight"
+            >
+              Disrupting Goliath: Why Market Giants Must Rethink Their Sales
+              Strategy
+            </h3>
+          </div>
+
+          <p class="text-sm sm:text-base text-white/85 leading-relaxed">
+            Being an established industry giant is no longer an insurmountable
+            moat. As nimble, aggressive competitors enter the market with
+            hyper-focused value propositions, industry leaders must urgently
+            disrupt their own complacency. True revenue resilience requires
+            legacy brands to continuously challenge their foundational
+            assumptions, modernize their sales playbooks, and re-strategize
+            their go-to-market execution before agile contenders redefine the
+            standard.
+          </p>
+
+          <div
+            class="pt-4 border-t border-white/10 flex flex-wrap items-center justify-between gap-4"
+          >
+            <div class="flex items-center gap-3">
+              <div
+                class="w-9 h-9 rounded-full bg-abc-orange/20 border border-abc-orange flex items-center justify-center text-abc-orange font-bold text-xs"
+              >
+                MD
+              </div>
+              <div>
+                <span class="block text-xs font-bold text-white uppercase"
+                  >Executive Leadership</span
+                >
+                <span
+                  class="block text-[10px] text-white/60 uppercase tracking-wider"
+                  >ABC Sales Consulting</span
+                >
+              </div>
+            </div>
+
+            <NuxtLink
+              to="/services#discovery-call"
+              class="inline-flex items-center gap-2 bg-abc-orange text-white hover:bg-abc-orange/90 px-5 py-2.5 text-xs font-black uppercase tracking-widest rounded-lg transition-all cursor-pointer shadow-lg hover:shadow-abc-orange/20"
+            >
+              Strategy Consultation →
+            </NuxtLink>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- AUGUST COHORT GRADUATION HIGHLIGHT -->
     <MuiPageContainer class="max-w-7xl mx-auto my-12 md:my-16 lg:my-20">
       <div
@@ -478,9 +595,14 @@
           <!-- Section Header -->
           <div class="text-center max-w-3xl mx-auto mb-10 md:mb-12">
             <div
-              class="inline-flex items-center gap-2 px-4 py-1.5 mb-4 text-xs tracking-[0.25em] uppercase font-black text-abc-orange bg-abc-orange/10 border border-abc-orange/30 rounded-full"
+              class="inline-flex flex-wrap items-center gap-2 px-4 py-1.5 mb-4 text-xs tracking-[0.2em] uppercase font-black text-abc-orange bg-abc-orange/10 border border-abc-orange/30 rounded-full"
             >
               <span>🎓</span> Cohort Milestone • Class of September 2026
+              <span
+                class="ml-1 px-2.5 py-0.5 text-[10px] tracking-wider text-white bg-red-600 rounded-full font-black animate-pulse shadow-sm"
+              >
+                🔥 SOLD OUT
+              </span>
             </div>
             <h3
               class="text-2xl sm:text-3xl md:text-4xl font-black uppercase tracking-tight text-white mb-4"
@@ -736,57 +858,6 @@
           fit="cover"
           sizes="200px md:400px lg:500px xl:540px"
         />
-      </div>
-    </MuiPageContainer>
-
-    <!-- 4. VIDEO TESTIMONIAL UPDATE (Redesigned as Client Testimony) -->
-    <MuiPageContainer
-      class="max-w-7xl mx-auto mt-12 md:mt-16 lg:mt-20 bg-white/5 rounded-[28px] border border-white/10 p-6 md:p-8"
-    >
-      <div class="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] items-center">
-        <div class="max-w-2xl">
-          <div
-            class="inline-block px-4 py-2 mb-4 text-[13px] tracking-[0.3em] uppercase font-black text-abc-orange bg-abc-orange/10 rounded-full"
-          >
-            Client Testimony
-          </div>
-          <h3
-            class="mui-text--headline-1 uppercase tracking-tight text-white mb-4"
-          >
-            Real Classroom Energy, Real Sales Growth
-          </h3>
-          <p class="text-white/80 leading-relaxed sm:text-base">
-            Hear directly from our graduates as they share how our interactive,
-            face-to-face classes completely transformed their sales approach.
-            From mastering tough objections to confidently closing high-value
-            deals with structured frameworks, our classroom programs give team
-            members the exact skills needed to deliver immediate revenue growth.
-          </p>
-
-          <a
-            href="#contacts"
-            class="inline-block bg-abc-green text-abc-navy px-6 py-3 text-xs font-bold uppercase tracking-widest hover:bg-abc-green/90 transition-colors duration-300 mt-4"
-          >
-            Book a Slot
-          </a>
-        </div>
-
-        <div class="overflow-hidden border border-white/10 bg-black/80">
-          <video
-            controls
-            playsinline
-            muted
-            loop
-            poster="/img/video-thumbs/juliet-byansi-thumb.png"
-            class="w-full h-full min-h-[220px] max-h-[420px] object-cover"
-          >
-            <source
-              src="/img/tiktok-videos/juliet-byansi.mp4"
-              type="video/mp4"
-            />
-            Your browser does not support the video tag.``
-          </video>
-        </div>
       </div>
     </MuiPageContainer>
   </div>

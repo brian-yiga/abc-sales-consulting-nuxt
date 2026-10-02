@@ -567,6 +567,19 @@ const navLinks = [
 
 const activePlacements = [
   {
+    company: "Kingdom Trading Limited",
+    title: "Sales Manager",
+    description:
+      "Kingdom Trading Limited is seeking an experienced Sales Manager to lead our sales initiatives and drive client acquisition across the region.",
+    type: "Salaried + Bonus",
+    salary: "Attractive",
+    image: "/img/jobs/abc-sales-manager.jpeg",
+  },
+  
+];
+
+const filledPlacements = [
+  {
     company: "BioHaz Waste Solutions",
     title: "Sales Executive / Waste Management Solutions",
     description:
@@ -584,9 +597,6 @@ const activePlacements = [
     salary: "Attractive",
     image: "/img/jobs/biohaz-saleslead.jpeg",
   },
-];
-
-const filledPlacements = [
   {
     company: "Ruka Pay",
     title: "Commercial Growth & Sales Manager",

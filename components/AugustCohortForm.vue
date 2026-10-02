@@ -61,7 +61,7 @@
             <p class="font-bold text-abc-navy uppercase text-xs tracking-wider">Cohort Information:</p>
             <p>📅 <strong>Date:</strong> Wednesday, 18th November 2026</p>
             <p>📍 <strong>Venue:</strong> Plot 8, Mukulu Curve, Off Martyrs Way, Ntinda</p>
-            <p>💰 <strong>Investment:</strong> UGX 600,000 per participant</p>
+            <p>💰 <strong>Investment:</strong> UGX 900,000 per participant</p>
           </div>
 
           <!-- Name -->
@@ -158,7 +158,7 @@
               class="w-4 h-4 mt-1 accent-abc-green cursor-pointer"
             />
             <label for="consent" class="text-sm text-gray-600 cursor-pointer select-none">
-              I understand that registration is confirmed upon payment of the training fee (UGX 600,000).
+              I understand that registration is confirmed upon payment of the training fee (UGX 900,000).
             </label>
           </div>
 
