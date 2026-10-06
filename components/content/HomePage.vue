@@ -483,7 +483,7 @@
         <span
           class="text-sm sm:text-base font-black uppercase tracking-widest text-abc-green bg-abc-green/20 border border-abc-green/40 px-4 py-1.5 rounded-full shadow-sm"
         >
-          Managing Director's Corner
+          MD's Corner
         </span>
 
         <!-- RIGHT: WEEKLY LEADERSHIP INSIGHTS -->
@@ -686,7 +686,7 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <!-- Andrew's Comment -->
+              <!-- Andrew Oloya's Testimonial Card -->
               <div
                 class="bg-white/5 border border-white/10 rounded-2xl p-6 sm:p-7 flex flex-col justify-between hover:border-abc-green/40 transition-colors"
               >
@@ -698,7 +698,7 @@
                       >
                         <NuxtImg
                           src="/img/video-thumbs/andrew-thumb.jpeg"
-                          alt="Andrew - September Cohort Graduate"
+                          alt="Andrew Oloya - CEO Technologies Limited"
                           class="w-full h-full object-cover"
                         />
                       </div>
@@ -707,7 +707,7 @@
                           Andrew Oloya
                         </h5>
                         <p class="text-xs text-abc-green font-medium">
-                          September Cohort Graduate • Sales Lead
+                          CEO, Cedarnet Technologies Limited • Guest Judge
                         </p>
                       </div>
                     </div>
@@ -716,18 +716,19 @@
                   <p
                     class="text-white/85 text-sm sm:text-[15px] leading-relaxed italic mb-4"
                   >
-                    "The practical sales frameworks and live objection-handling
-                    drills completely changed how I approach prospects. Within
-                    just weeks of the training, I closed two enterprise deals
-                    that had stalled for months! If you're serious about
-                    leveling up your closing rates, don't miss the September
-                    cohort—it's 100% worth every shilling."
+                    "Serving as a guest judge for the September Cohort final
+                    presentations was an incredible experience. The depth of
+                    practical sales strategy, confidence, and real-world
+                    objection handling displayed by the participants was truly
+                    impressive. ABC Sales Consulting is building exceptional
+                    closing talent that any forward-thinking business would be
+                    lucky to hire."
                   </p>
                 </div>
                 <div
                   class="pt-3 border-t border-white/10 flex items-center justify-between text-xs text-white/50"
                 >
-                  <span>Verified Graduate</span>
+                  <span>Guest Judge & Evaluator</span>
                   <span class="text-abc-orange font-semibold"
                     >Recommended for November Cohort</span
                   >
@@ -751,7 +752,7 @@
                           Justine Byansi
                         </h5>
                         <p class="text-xs text-abc-orange font-medium">
-                          September Cohort Graduate • B2B Sales Executive
+                          September Cohort Graduate • Code Clinic
                         </p>
                       </div>
                     </div>
