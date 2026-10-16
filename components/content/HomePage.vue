@@ -227,17 +227,20 @@
         <div
           class="flex flex-wrap items-center justify-center gap-2.5 sm:gap-3 mb-8 text-center"
         >
-          <div
-            class="inline-block border border-abc-green/50 bg-abc-green/10 text-abc-green px-5 py-1.5 rounded-full text-[12px] sm:text-[13px] font-bold uppercase tracking-[0.25em]"
+          <!-- UPCOMING MASTERCLASS PILL -->
+          <NuxtLink
+            to="/services#upcoming-events"
+            class="inline-flex items-center gap-1.5 border border-abc-green bg-abc-green/20 text-abc-green px-5 py-1.5 rounded-full text-[12px] sm:text-[13px] font-bold uppercase tracking-[0.2em] hover:bg-abc-green/30 transition-colors cursor-pointer"
           >
-            Sales Strategy & Excellence
-          </div>
+            <span class="w-2 h-2 rounded-full bg-abc-green animate-ping"></span>
+            🎙️ MASTERCLASS • 21ST OCT
+          </NuxtLink>
 
           <NuxtLink
             to="/services#upcoming-events"
             class="inline-block border border-abc-orange bg-abc-orange/20 text-abc-orange px-5 py-1.5 rounded-full text-[12px] sm:text-[13px] font-bold uppercase tracking-[0.2em] animate-pulse cursor-pointer hover:bg-abc-orange/30 transition-colors"
           >
-            🔴 November 2026 Cohort
+            🔴 November Cohort
           </NuxtLink>
 
           <!-- JOB OFFERS / CAREERS HIGHLIGHT -->
@@ -336,7 +339,7 @@
             </div>
           </div>
 
-          <!-- RIGHT COLUMN: FEATURED INITIATIVES (CAREER LAUNCH LAB & SALES LADDER) (5 Columns) -->
+          <!-- RIGHT COLUMN: FEATURED INITIATIVES & UPCOMING MASTERCLASS (5 Columns) -->
           <div class="lg:col-span-5 flex flex-col gap-4">
             <!-- CARD 1: ABC CAREER LAUNCH LAB -->
             <div
@@ -407,7 +410,7 @@
               </div>
             </div>
 
-            <!-- CARD 2: THE ABC SALES LADDER -->
+            <!-- CARD 2: UPCOMING LIVE MASTERCLASS WITH DAHLIN SAJJABI -->
             <div
               class="bg-white/5 backdrop-blur-md border border-white/15 rounded-2xl p-4 sm:p-5 shadow-2xl relative overflow-hidden group hover:border-abc-green/50 transition-all duration-300"
             >
@@ -416,54 +419,65 @@
               >
                 <div class="flex items-center gap-2">
                   <span
-                    class="inline-block w-2 h-2 rounded-full bg-abc-green"
+                    class="inline-block w-2.5 h-2.5 rounded-full bg-abc-green animate-ping"
                   ></span>
                   <span
-                    class="text-abc-green text-[10px] font-extrabold uppercase tracking-widest"
+                    class="text-abc-green text-xs font-black uppercase tracking-widest"
                   >
-                    Career Acceleration
+                    Live Masterclass • Google Meet
                   </span>
                 </div>
                 <span
-                  class="text-[10px] bg-white/10 text-white/70 px-2 py-0.5 rounded font-medium uppercase tracking-wider"
+                  class="text-[10px] bg-abc-orange/20 text-abc-orange border border-abc-orange/30 px-2.5 py-0.5 rounded font-black uppercase tracking-wider"
                 >
-                  Framework
+                  21st Oct • 7:30 PM
                 </span>
               </div>
 
-              <div class="space-y-2 text-left mb-3">
-                <h3
-                  class="text-base sm:text-lg font-black uppercase text-white leading-tight"
+              <div class="flex gap-4 items-center mb-3">
+                <div
+                  class="w-20 h-20 sm:w-24 sm:h-24 rounded-xl overflow-hidden border border-white/10 flex-shrink-0 relative bg-gray-800"
                 >
-                  The ABC Sales Ladder
-                </h3>
-
-                <p
-                  class="text-abc-green font-bold text-[11px] uppercase tracking-wider"
-                >
-                  Master Every Rung of High-Performance Sales
-                </p>
-
-                <p class="text-xs text-white/75 leading-relaxed">
-                  A structured progression pathway taking you from core sales
-                  fundamentals to enterprise closing and revenue leadership.
-                </p>
+                  <img
+                    src="/img/flyers/dahlinTraining.jpeg"
+                    alt="Dahlin Sajjabi - Sales Masterclass Speaker"
+                    class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <div class="space-y-1 text-left flex-1 min-w-0">
+                  <span
+                    class="text-[10px] font-bold text-abc-green uppercase tracking-wider block"
+                  >
+                    Speaker: Dahlin Sajjabi
+                  </span>
+                  <h3
+                    class="text-sm sm:text-base font-black uppercase text-white leading-tight"
+                  >
+                    How to Handle "I Need To Think About It"
+                  </h3>
+                  <p
+                    class="text-[11px] text-white/70 line-clamp-2 leading-relaxed"
+                  >
+                    Master proven strategies to navigate tough client objections
+                    and close deals with confidence.
+                  </p>
+                </div>
               </div>
 
               <div
                 class="pt-2 border-t border-white/10 flex items-center justify-between"
               >
-                <span
-                  class="text-[10px] text-white/50 tracking-wider uppercase"
+                <div class="text-[10px] text-white/60">
+                  💻 Live on Google Meet
+                </div>
+                <a
+                  href="https://calendar.app.google/QUrvBwTN1DHDv6WW8"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center justify-center rounded-md px-3.5 py-1.5 text-[10px] font-black tracking-widest bg-abc-green text-abc-navy hover:bg-abc-green/90 transition-all cursor-pointer uppercase shadow-md"
                 >
-                  Proven Playbooks
-                </span>
-                <NuxtLink
-                  to="/sales-ladder"
-                  class="inline-flex items-center gap-1.5 bg-abc-green text-abc-navy hover:bg-abc-green/90 px-3.5 py-1.5 text-[10px] font-black uppercase tracking-widest rounded-md transition-all"
-                >
-                  Explore Sales Ladder →
-                </NuxtLink>
+                  REGISTER NOW →
+                </a>
               </div>
             </div>
           </div>
@@ -792,7 +806,9 @@
           </div>
 
           <!-- Graduate Testimonials -->
+          <!-- Graduate Testimonials Section -->
           <div class="border-t border-white/10 pt-10">
+            <!-- Section Header & View All Link -->
             <div
               class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8"
             >
@@ -820,6 +836,92 @@
               </NuxtLink>
             </div>
 
+            <!-- 1. FEATURED PORTRAIT VIDEO SPOTLIGHT (STACKED ON TOP) -->
+            <div
+              class="bg-white/5 border border-white/15 rounded-2xl p-6 lg:p-8 shadow-2xl mb-10 relative overflow-hidden group hover:border-abc-orange/50 transition-all duration-300"
+            >
+              <!-- Card Header -->
+              <div
+                class="flex items-center justify-between mb-6 border-b border-white/10 pb-4"
+              >
+                <div class="flex items-center gap-2.5">
+                  <span
+                    class="w-3 h-3 rounded-full bg-abc-orange animate-ping"
+                  ></span>
+                  <span
+                    class="text-xs sm:text-sm font-black uppercase tracking-widest text-abc-orange"
+                  >
+                    Featured Video Spotlight
+                  </span>
+                </div>
+                <span
+                  class="text-xs bg-abc-green/20 text-abc-green border border-abc-green/40 px-3 py-1 rounded-full font-bold uppercase tracking-wider"
+                >
+                  Graduate Review
+                </span>
+              </div>
+
+              <!-- Portrait Video + Accompanying Content Grid -->
+              <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <!-- Left: Portrait Phone Video Player (5 Columns) -->
+                <div class="lg:col-span-5 relative group/video">
+                  <div
+                    class="relative rounded-xl overflow-hidden border border-white/20 bg-black shadow-2xl aspect-[4/5] sm:aspect-[3/4] lg:aspect-[4/5] max-h-[460px] w-full flex items-center justify-center mx-auto"
+                  >
+                    <video
+                      controls
+                      preload="metadata"
+                      poster="/img/video-thumbs/cohort-testimony-1.png"
+                      class="w-full h-full object-cover object-top bg-black"
+                    >
+                      <source
+                        src="/img/testimonies/cohort/testimony-1.mp4"
+                        type="video/mp4"
+                      />
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                </div>
+
+                <!-- Right: Accompanying Quote Content (7 Columns) -->
+                <div class="lg:col-span-7 space-y-4 text-left">
+                  <span
+                    class="text-abc-green font-bold text-xs uppercase tracking-widest block"
+                  >
+                    Communicating Real Value
+                  </span>
+                  <h3
+                    class="text-xl sm:text-2xl font-black uppercase text-white leading-tight"
+                  >
+                    Beyond Features: Helping Clients See Why It Matters
+                  </h3>
+
+                  <p class="text-xs sm:text-sm text-white/85 leading-relaxed">
+                    You can find the right client and identify their needs, but
+                    still lose the sale if you haven’t communicated your
+                    product's true value.
+                  </p>
+                  <p class="text-xs sm:text-sm text-white/85 leading-relaxed">
+                    In our sales cohort, participants learn how to move past
+                    simply listing features—showing clients exactly how those
+                    features solve their problems. That’s the practical selling
+                    we focus on at ABC Sales Consulting.
+                  </p>
+
+                  <div
+                    class="pt-4 border-t border-white/10 flex items-center justify-between text-xs text-white/60"
+                  >
+                    <span>🎥 Verified Alumni Review</span>
+                    <span
+                      class="text-abc-orange font-semibold uppercase tracking-wider"
+                      >ABC Sales Cohort</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 2. WRITTEN GRADUATE TESTIMONIALS GRID (BELOW VIDEO) -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div
                 v-for="testimony in graduateTestimonies"
@@ -829,7 +931,6 @@
                 <div>
                   <div class="flex items-center justify-between mb-4">
                     <div class="flex items-center gap-3">
-                      <!-- Initials Icon Avatar Badge -->
                       <div
                         class="w-12 h-12 rounded-full flex items-center justify-center font-black text-abc-navy text-sm sm:text-base flex-shrink-0 shadow-md bg-gradient-to-tr"
                         :class="testimony.accentGradient"
@@ -862,17 +963,6 @@
                   }}</span>
                 </div>
               </div>
-            </div>
-
-            <!-- View More Testimonies CTA Link Block -->
-            <div class="text-center mt-8">
-              <NuxtLink
-                to="/case-studies#whatsapp-wall"
-                class="inline-flex items-center gap-2 bg-white/10 hover:bg-white text-white hover:text-abc-navy border border-white/20 px-6 py-3 text-xs font-black uppercase tracking-widest rounded-lg transition-all shadow-md"
-              >
-                <span>View More Client Testimonials & WhatsApp Reviews</span>
-                <span>→</span>
-              </NuxtLink>
             </div>
           </div>
 
@@ -1084,6 +1174,17 @@
           effectively, and build long-term client loyalty.
         </p>
       </MuiTextWithImage>
+    </div>
+    <div
+      class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8"
+    >
+      <NuxtLink
+        to="/case-studies#whatsapp-wall"
+        class="inline-flex items-center gap-2 text-xs font-black uppercase tracking-widest text-abc-orange hover:text-white transition-colors self-start md:self-auto group"
+      >
+        <span>View More & All Testimonials</span>
+        <span class="group-hover:translate-x-1 transition-transform">→</span>
+      </NuxtLink>
     </div>
   </MuiPageContainer>
 
@@ -1490,15 +1591,14 @@ const supportTeam = [
     linkedin:
       "https://www.linkedin.com/search/results/all/?keywords=Nicole%20Mbabazi%20ABC%20Sales%20Consulting",
   },
-    {
+  {
     name: "Catherine Ninsiima",
     role: "Assistant Sales Administrator",
     roleBadgeClass: "text-abc-green bg-abc-green/10 border border-abc-green/20",
     bio: "Catherine Ninsiima is an Assistant Sales Administrator at ABC Sales Consulting, supporting both administrative operations and sales coordination. She facilitates client communication, coordinates sales activities, manages schedules and follow-ups, and supports the team in maintaining strong client relationships and driving business growth.",
     image: "/img/support-team/catherine-ninsiima.png",
-    linkedin:
-      "https://www.linkedin.com/in/catherine-ninsiima-60103b19b"
-  }
+    linkedin: "https://www.linkedin.com/in/catherine-ninsiima-60103b19b",
+  },
 ];
 
 // UPDATED GRADUATE & CLIENT TESTIMONIES
