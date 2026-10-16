@@ -472,113 +472,239 @@
     </MuiPageContainer>
 
     <!-- MANAGING DIRECTOR'S MESSAGE OF THE WEEK -->
-    <div
-      class="bg-white/5 backdrop-blur-md border border-white/15 rounded-2xl p-6 lg:p-8 shadow-2xl relative overflow-hidden group hover:border-abc-orange/50 transition-all duration-300"
-    >
-      <!-- SINGLE HEADER: Managing Director's Corner Highlighted -->
+    <MuiPageContainer class="max-w-7xl mx-auto my-12 md:my-16 lg:my-20">
       <div
-        class="flex flex-wrap items-center justify-between gap-3 mb-6 border-b border-white/10 pb-4"
+        class="bg-white/5 backdrop-blur-md border border-white/15 rounded-2xl p-6 lg:p-8 shadow-2xl relative overflow-hidden group hover:border-abc-orange/50 transition-all duration-300"
       >
-        <!-- LEFT: MANAGING DIRECTOR'S CORNER (Highlighted & Larger) -->
-        <span
-          class="text-sm sm:text-base font-black uppercase tracking-widest text-abc-green bg-abc-green/20 border border-abc-green/40 px-4 py-1.5 rounded-full shadow-sm"
+        <!-- SINGLE HEADER: MD's Corner Highlighted -->
+        <div
+          class="flex flex-wrap items-center justify-between gap-3 mb-6 border-b border-white/10 pb-4"
         >
-          MD's Corner
-        </span>
-
-        <!-- RIGHT: WEEKLY LEADERSHIP INSIGHTS -->
-        <div class="flex items-center gap-2.5">
+          <!-- LEFT: MD'S CORNER -->
           <span
-            class="inline-block w-3 h-3 rounded-full bg-abc-orange animate-pulse"
-          ></span>
-          <span
-            class="text-abc-orange text-xs font-black uppercase tracking-widest"
+            class="text-sm sm:text-base font-black uppercase tracking-widest text-abc-green bg-abc-green/20 border border-abc-green/40 px-4 py-1.5 rounded-full shadow-sm"
           >
-            Weekly Leadership Insights
+            MD's Corner
           </span>
-        </div>
-      </div>
 
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-        <!-- LEFT: VIDEO PLAYER CONTAINER -->
-        <div class="lg:col-span-5 relative group/video">
-          <div
-            class="relative rounded-xl overflow-hidden border border-white/20 bg-black shadow-2xl aspect-[4/5] sm:aspect-[3/4] lg:aspect-[4/5] max-h-[500px] w-full flex items-center justify-center mx-auto"
-          >
-            <video
-              controls
-              preload="metadata"
-              poster="/img/video-thumbs/md-message.png"
-              class="w-full h-full object-cover object-top bg-black"
-            >
-              <source
-                src="/img/tiktok-videos/md-message.mp4"
-                type="video/mp4"
-              />
-              Your browser does not support the video tag.
-            </video>
-          </div>
-        </div>
-
-        <!-- RIGHT: TITLE & ACCOMPANYING MESSAGE -->
-        <div class="lg:col-span-7 space-y-4 text-left">
-          <div class="space-y-1">
+          <!-- RIGHT: WEEKLY LEADERSHIP INSIGHTS -->
+          <div class="flex items-center gap-2.5">
             <span
-              class="text-abc-green font-bold text-xs uppercase tracking-widest block"
+              class="inline-block w-3 h-3 rounded-full bg-abc-orange animate-pulse"
+            ></span>
+            <span
+              class="text-abc-orange text-xs font-black uppercase tracking-widest"
             >
-              Message of the Week
+              Weekly Leadership Insights
             </span>
-            <h3
-              class="text-xl sm:text-2xl lg:text-3xl font-black uppercase text-white leading-tight"
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <!-- LEFT: VIDEO PLAYER CONTAINER -->
+          <div class="lg:col-span-5 relative group/video">
+            <div
+              class="relative rounded-xl overflow-hidden border border-white/20 bg-black shadow-2xl aspect-[4/5] sm:aspect-[3/4] lg:aspect-[4/5] max-h-[500px] w-full flex items-center justify-center mx-auto"
             >
-              Disrupting Goliath: Why Market Giants Must Rethink Their Sales
-              Strategy
-            </h3>
+              <video
+                controls
+                preload="metadata"
+                poster="/img/video-thumbs/md-message3.png"
+                class="w-full h-full object-cover object-top bg-black"
+              >
+                <source
+                  src="/img/tiktok-videos/md-message3.mp4"
+                  type="video/mp4"
+                />
+                Your browser does not support the video tag.
+              </video>
+            </div>
           </div>
 
-          <p class="text-sm sm:text-base text-white/85 leading-relaxed">
-            Being an established industry giant is no longer an insurmountable
-            moat. As nimble, aggressive competitors enter the market with
-            hyper-focused value propositions, industry leaders must urgently
-            disrupt their own complacency. True revenue resilience requires
-            legacy brands to continuously challenge their foundational
-            assumptions, modernize their sales playbooks, and re-strategize
-            their go-to-market execution before agile contenders redefine the
-            standard.
-          </p>
-
-          <div
-            class="pt-4 border-t border-white/10 flex flex-wrap items-center justify-between gap-4"
-          >
-            <div class="flex items-center gap-3">
-              <div
-                class="w-9 h-9 rounded-full bg-abc-orange/20 border border-abc-orange flex items-center justify-center text-abc-orange font-bold text-xs"
+          <!-- RIGHT: TITLE & ACCOMPANYING MESSAGE -->
+          <div class="lg:col-span-7 space-y-4 text-left">
+            <div class="space-y-1">
+              <span
+                class="text-abc-green font-bold text-xs uppercase tracking-widest block"
               >
-                MD
-              </div>
-              <div>
-                <span class="block text-xs font-bold text-white uppercase"
-                  >Executive Leadership</span
-                >
-                <span
-                  class="block text-[10px] text-white/60 uppercase tracking-wider"
-                  >ABC Sales Consulting</span
-                >
-              </div>
+                Message of the Week
+              </span>
+              <h3
+                class="text-xl sm:text-2xl lg:text-3xl font-black uppercase text-white leading-tight"
+              >
+                How to Talk Money Without Sounding Like You’re Selling
+              </h3>
             </div>
 
-            <NuxtLink
-              to="/services#discovery-call"
-              class="inline-flex items-center gap-2 bg-abc-orange text-white hover:bg-abc-orange/90 px-5 py-2.5 text-xs font-black uppercase tracking-widest rounded-lg transition-all cursor-pointer shadow-lg hover:shadow-abc-orange/20"
+            <p class="text-sm sm:text-base text-white/85 leading-relaxed">
+              When bringing up money with a client, the secret is shifting your
+              entire focus to the outcome. Instead of dwelling on price or
+              appearing transaction-focused, highlight what your client becomes
+              and the exact value they will experience. By clearly illustrating
+              where your product or service will take them, both your mind and
+              the client's naturally move away from the cost and onto the real
+              transformation.
+            </p>
+
+            <div
+              class="pt-4 border-t border-white/10 flex flex-wrap items-center justify-between gap-4"
             >
-              Strategy Consultation →
-            </NuxtLink>
+              <div class="flex items-center gap-3">
+                <div
+                  class="w-9 h-9 rounded-full bg-abc-orange/20 border border-abc-orange flex items-center justify-center text-abc-orange font-bold text-xs"
+                >
+                  MD
+                </div>
+                <div>
+                  <span class="block text-xs font-bold text-white uppercase"
+                    >Executive Leadership</span
+                  >
+                  <span
+                    class="block text-[10px] text-white/60 uppercase tracking-wider"
+                    >ABC Sales Consulting</span
+                  >
+                </div>
+              </div>
+
+              <NuxtLink
+                to="/services#discovery-call"
+                class="inline-flex items-center gap-2 bg-abc-orange text-white hover:bg-abc-orange/90 px-5 py-2.5 text-xs font-black uppercase tracking-widest rounded-lg transition-all cursor-pointer shadow-lg hover:shadow-abc-orange/20"
+              >
+                Strategy Consultation →
+              </NuxtLink>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </MuiPageContainer>
+    <!-- MEET THE EXPANDED ABC SUPPORT TEAM -->
+    <MuiPageContainer class="max-w-7xl mx-auto my-12 md:my-16 lg:my-20">
+      <div
+        class="bg-white/5 backdrop-blur-md border border-white/15 rounded-2xl md:rounded-[28px] p-6 md:p-10 lg:p-12 shadow-2xl relative overflow-hidden group"
+      >
+        <!-- Subtle Ambient Glows -->
+        <div
+          class="absolute -top-24 -right-24 w-80 h-80 bg-abc-green/10 rounded-full blur-3xl pointer-events-none"
+        />
+        <div
+          class="absolute -bottom-24 -left-24 w-80 h-80 bg-abc-orange/10 rounded-full blur-3xl pointer-events-none"
+        />
 
-    <!-- AUGUST COHORT GRADUATION HIGHLIGHT -->
+        <div class="relative z-10">
+          <!-- Section Header -->
+          <div class="max-w-3xl mb-8">
+            <div
+              class="inline-flex items-center gap-2 px-4 py-1.5 mb-4 text-xs tracking-[0.2em] uppercase font-black text-abc-green bg-abc-green/10 border border-abc-green/30 rounded-full"
+            >
+              <span>👥</span> Beefing Up Our Capacity • Support Team
+            </div>
+            <h3
+              class="text-2xl sm:text-3xl md:text-4xl font-black uppercase tracking-tight text-white mb-3"
+            >
+              A Resilient Team Driving Your Growth
+            </h3>
+            <p class="text-white/80 text-sm sm:text-base leading-relaxed">
+              To beef up our operations and deliver unmatched client
+              responsiveness, ABC Sales Consulting has recruited a dedicated,
+              resilient support team. Meet the talented professionals driving
+              business relationships, agile sales coordination, and compelling
+              digital brand visibility.
+            </p>
+          </div>
+
+          <!-- Direct Link to Leadership & Board -->
+          <div
+            class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-4 md:p-5 rounded-xl bg-white/[0.04] border border-white/10 mb-10"
+          >
+            <div class="flex items-center gap-3.5">
+              <div
+                class="w-10 h-10 rounded-lg bg-abc-orange/20 border border-abc-orange/40 flex items-center justify-center text-abc-orange text-lg flex-shrink-0"
+              >
+                👔
+              </div>
+              <div>
+                <h4
+                  class="text-xs sm:text-sm font-black uppercase text-white tracking-wider"
+                >
+                  Executive Directors & Strategic Advisory Board
+                </h4>
+                <p class="text-[11px] sm:text-xs text-white/70">
+                  Looking for our founding directors, managing partners, and
+                  strategic board advisors?
+                </p>
+              </div>
+            </div>
+            <NuxtLink
+              to="/why-abc/team"
+              class="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white text-white hover:text-abc-navy border border-white/20 px-5 py-2.5 text-xs font-black uppercase tracking-widest rounded-lg transition-all flex-shrink-0 cursor-pointer shadow-md"
+            >
+              Meet The Directors & Board →
+            </NuxtLink>
+          </div>
+
+          <!-- Support Team Cards Grid -->
+          <div
+            class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 items-stretch"
+          >
+            <div
+              v-for="member in supportTeam"
+              :key="member.name"
+              class="bg-white/[0.04] border border-white/10 rounded-2xl overflow-hidden hover:border-abc-orange/50 transition-all duration-300 flex flex-col group/card shadow-lg"
+            >
+              <!-- Studio Grey Hue Backdrop behind portrait -->
+              <div
+                class="relative h-72 sm:h-80 w-full overflow-hidden bg-gradient-to-b from-gray-200 via-gray-300 to-gray-400 flex items-end justify-center pt-3"
+              >
+                <div
+                  class="absolute inset-0 bg-[radial-gradient(circle_at_50%_35%,rgba(255,255,255,0.45),rgba(0,0,0,0.15))] pointer-events-none"
+                />
+                <img
+                  :src="member.image"
+                  :alt="`${member.name} - ${member.role}`"
+                  class="w-full h-full object-contain object-bottom group-hover/card:scale-105 transition-transform duration-500 relative z-10"
+                />
+              </div>
+
+              <!-- Card Details -->
+              <div class="p-6 flex flex-col flex-grow text-left">
+                <span
+                  class="text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full self-start mb-3"
+                  :class="member.roleBadgeClass"
+                >
+                  {{ member.role }}
+                </span>
+                <h4 class="text-xl font-black uppercase text-white mb-3">
+                  {{ member.name }}
+                </h4>
+                <p
+                  class="text-white/80 text-xs sm:text-[13px] leading-relaxed mb-6 flex-grow"
+                >
+                  {{ member.bio }}
+                </p>
+
+                <div class="pt-4 border-t border-white/10 mt-auto">
+                  <a
+                    :href="member.linkedin"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center justify-center gap-2 w-full border border-[#0a66c2]/50 text-[#70b5f9] hover:bg-[#0a66c2] hover:text-white px-4 py-2.5 text-xs font-bold uppercase tracking-wider rounded-lg transition-all"
+                  >
+                    <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
+                      <path
+                        d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+                      />
+                    </svg>
+                    Connect on LinkedIn
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </MuiPageContainer>
+
+    <!-- COHORT GRADUATION HIGHLIGHT -->
     <MuiPageContainer class="max-w-7xl mx-auto my-12 md:my-16 lg:my-20">
       <div
         class="bg-white/5 backdrop-blur-[12px] rounded-2xl md:rounded-[32px] border border-white/10 p-6 md:p-10 lg:p-12 text-white shadow-2xl relative overflow-hidden"
@@ -597,25 +723,20 @@
             <div
               class="inline-flex flex-wrap items-center gap-2 px-4 py-1.5 mb-4 text-xs tracking-[0.2em] uppercase font-black text-abc-orange bg-abc-orange/10 border border-abc-orange/30 rounded-full"
             >
-              <span>🎓</span> Cohort Milestone • Class of September 2026
-              <span
-                class="ml-1 px-2.5 py-0.5 text-[10px] tracking-wider text-white bg-red-600 rounded-full font-black animate-pulse shadow-sm"
-              >
-                🔥 SOLD OUT
-              </span>
+              <span>🎓</span> Cohort Milestone • Practical Sales Mastery
             </div>
             <h3
               class="text-2xl sm:text-3xl md:text-4xl font-black uppercase tracking-tight text-white mb-4"
             >
-              Celebrating Our September Cohort Graduates
+              Celebrating Our Cohort Graduates
             </h3>
             <p class="text-white/80 text-sm sm:text-base leading-relaxed">
-              We proudly celebrate the ambitious sales professionals who just
-              completed our intensive 6-week Sales Strategy & Mastery Program!
-              From conquering high-stakes objection handling to embedding
-              structured pipeline frameworks, these leaders are already
-              transforming their sales pipelines into predictable revenue
-              engines.
+              We proudly celebrate the ambitious sales professionals and
+              business leaders who have completed our intensive 6-week Sales
+              Strategy & Mastery Program! From conquering high-stakes objection
+              handling to embedding structured pipeline frameworks, these
+              leaders are transforming their sales pipelines into predictable
+              revenue engines.
             </p>
           </div>
 
@@ -626,7 +747,7 @@
             >
               <NuxtImg
                 src="/img/cohort-graduands/september-graduands1.jpeg"
-                alt="ABC Sales Consulting September Cohort graduation celebration"
+                alt="ABC Sales Consulting Cohort graduation celebration"
                 class="w-full h-[280px] sm:h-[340px] md:h-[380px] object-cover object-center group-hover:scale-105 transition-transform duration-500"
                 sizes="sm:100vw md:50vw lg:600px"
               />
@@ -640,7 +761,7 @@
                   Graduation & Celebration
                 </span>
                 <p class="text-white text-xs sm:text-sm font-semibold">
-                  September 2026 Cohort • Celebration & Milestone Achievement
+                  Cohort Celebration • Milestone Achievement & Practical Growth
                 </p>
               </div>
             </div>
@@ -650,7 +771,7 @@
             >
               <NuxtImg
                 src="/img/cohort-graduands/september-graduands2.jpeg"
-                alt="ABC Sales Consulting September Cohort team portrait"
+                alt="ABC Sales Consulting Cohort team portrait"
                 class="w-full h-[280px] sm:h-[340px] md:h-[380px] object-cover object-center group-hover:scale-105 transition-transform duration-500"
                 sizes="sm:100vw md:50vw lg:600px"
               />
@@ -672,140 +793,113 @@
 
           <!-- Graduate Testimonials -->
           <div class="border-t border-white/10 pt-10">
-            <div class="text-center mb-8">
-              <span
-                class="text-[11px] uppercase tracking-[0.25em] font-bold text-abc-green block mb-1"
-              >
-                Direct Feedback
-              </span>
-              <h4
-                class="text-xl sm:text-2xl font-bold uppercase tracking-tight text-white"
-              >
-                What Our September Graduates Say
-              </h4>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <!-- Andrew Oloya's Testimonial Card -->
-              <div
-                class="bg-white/5 border border-white/10 rounded-2xl p-6 sm:p-7 flex flex-col justify-between hover:border-abc-green/40 transition-colors"
-              >
-                <div>
-                  <div class="flex items-center justify-between mb-4">
-                    <div class="flex items-center gap-3">
-                      <div
-                        class="w-12 h-12 rounded-full overflow-hidden border-2 border-abc-green/50 flex-shrink-0 bg-abc-navy"
-                      >
-                        <NuxtImg
-                          src="/img/video-thumbs/andrew-thumb.jpeg"
-                          alt="Andrew Oloya - CEO Technologies Limited"
-                          class="w-full h-full object-cover"
-                        />
-                      </div>
-                      <div>
-                        <h5 class="font-extrabold text-white text-base">
-                          Andrew Oloya
-                        </h5>
-                        <p class="text-xs text-abc-green font-medium">
-                          CEO, Cedarnet Technologies Limited • Guest Judge
-                        </p>
-                      </div>
-                    </div>
-                    <div class="flex text-abc-orange text-sm">★★★★★</div>
-                  </div>
-                  <p
-                    class="text-white/85 text-sm sm:text-[15px] leading-relaxed italic mb-4"
-                  >
-                    "Serving as a guest judge for the September Cohort final
-                    presentations was an incredible experience. The depth of
-                    practical sales strategy, confidence, and real-world
-                    objection handling displayed by the participants was truly
-                    impressive. ABC Sales Consulting is building exceptional
-                    closing talent that any forward-thinking business would be
-                    lucky to hire."
-                  </p>
-                </div>
-                <div
-                  class="pt-3 border-t border-white/10 flex items-center justify-between text-xs text-white/50"
-                >
-                  <span>Guest Judge & Evaluator</span>
-                  <span class="text-abc-orange font-semibold"
-                    >Recommended for November Cohort</span
-                  >
-                </div>
-              </div>
-
-              <!-- Josephine's Comment -->
-              <div
-                class="bg-white/5 border border-white/10 rounded-2xl p-6 sm:p-7 flex flex-col justify-between hover:border-abc-orange/40 transition-colors"
-              >
-                <div>
-                  <div class="flex items-center justify-between mb-4">
-                    <div class="flex items-center gap-3">
-                      <div
-                        class="w-12 h-12 rounded-full bg-gradient-to-tr from-abc-orange to-abc-green flex items-center justify-center font-black text-abc-navy text-lg flex-shrink-0"
-                      >
-                        JB
-                      </div>
-                      <div>
-                        <h5 class="font-extrabold text-white text-base">
-                          Justine Byansi
-                        </h5>
-                        <p class="text-xs text-abc-orange font-medium">
-                          September Cohort Graduate • Code Clinic
-                        </p>
-                      </div>
-                    </div>
-                    <div class="flex text-abc-orange text-sm">★★★★★</div>
-                  </div>
-                  <p
-                    class="text-white/85 text-sm sm:text-[15px] leading-relaxed italic mb-4"
-                  >
-                    "ABC Sales Consulting delivers far beyond standard sales
-                    theory. The hands-on roleplays, personalized coaching, and
-                    psychological prospecting strategies gave me a predictable
-                    playbook I use daily. The classroom energy was unmatched!
-                    With only 12 seats available, I strongly encourage anyone
-                    serious about hitting revenue targets to secure their spot
-                    for November before it's full."
-                  </p>
-                </div>
-                <div
-                  class="pt-3 border-t border-white/10 flex items-center justify-between text-xs text-white/50"
-                >
-                  <span>Verified Graduate</span>
-                  <span class="text-abc-green font-semibold"
-                    >Recommended for November Cohort</span
-                  >
-                </div>
-              </div>
-            </div>
-
-            <!-- Cohort Sign-Up Callout Banner -->
             <div
-              class="mt-10 bg-gradient-to-r from-abc-navy/90 via-white/5 to-abc-navy/90 border border-abc-orange/30 rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left"
+              class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8"
             >
               <div>
                 <span
-                  class="inline-block text-[11px] uppercase tracking-widest font-extrabold text-abc-orange mb-1"
+                  class="text-[11px] uppercase tracking-[0.25em] font-bold text-abc-green block mb-1"
                 >
-                  Next Cohort Now Enrolling
+                  Direct Feedback & Impact
                 </span>
-                <h4 class="text-lg sm:text-xl font-black uppercase text-white">
-                  Ready to achieve similar results? Join the November Cohort!
+                <h4
+                  class="text-xl sm:text-2xl lg:text-3xl font-black uppercase tracking-tight text-white"
+                >
+                  What Our Graduates Have to Say About Us
                 </h4>
-                <p class="text-xs sm:text-sm text-white/70 mt-1">
-                  Starts 18th November 2026 • Only 12 Slots Available •
-                  Practical In-Person Coaching
-                </p>
               </div>
-              <MuiButton
-                variant="white-fill"
-                label="ENROLL IN NOVEMBER COHORT"
-                class="!rounded-none px-8 py-4 font-bold text-[11px] tracking-widest !text-abc-orange !border-abc-orange bg-abc-orange/10 hover:bg-abc-orange hover:!text-white transition-all cursor-pointer flex-shrink-0"
-                @click="augustCohortFormRef?.open()"
-              />
+
+              <NuxtLink
+                to="/case-studies#whatsapp-wall"
+                class="inline-flex items-center gap-2 text-xs font-black uppercase tracking-widest text-abc-orange hover:text-white transition-colors self-start md:self-auto group"
+              >
+                <span>View More & All Testimonials</span>
+                <span class="group-hover:translate-x-1 transition-transform"
+                  >→</span
+                >
+              </NuxtLink>
             </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div
+                v-for="testimony in graduateTestimonies"
+                :key="testimony.name"
+                class="bg-white/5 border border-white/10 rounded-2xl p-6 sm:p-7 flex flex-col justify-between hover:border-abc-orange/40 transition-colors shadow-lg"
+              >
+                <div>
+                  <div class="flex items-center justify-between mb-4">
+                    <div class="flex items-center gap-3">
+                      <!-- Initials Icon Avatar Badge -->
+                      <div
+                        class="w-12 h-12 rounded-full flex items-center justify-center font-black text-abc-navy text-sm sm:text-base flex-shrink-0 shadow-md bg-gradient-to-tr"
+                        :class="testimony.accentGradient"
+                      >
+                        {{ testimony.initials }}
+                      </div>
+                      <div>
+                        <h5 class="font-extrabold text-white text-base">
+                          {{ testimony.name }}
+                        </h5>
+                        <p class="text-xs text-abc-green font-medium">
+                          {{ testimony.role }}
+                        </p>
+                      </div>
+                    </div>
+                    <div class="flex text-abc-orange text-sm">★★★★★</div>
+                  </div>
+                  <p
+                    class="text-white/85 text-xs sm:text-[13px] leading-relaxed italic mb-4 whitespace-pre-line"
+                  >
+                    {{ testimony.quote }}
+                  </p>
+                </div>
+                <div
+                  class="pt-3 border-t border-white/10 flex items-center justify-between text-xs text-white/50"
+                >
+                  <span>{{ testimony.badge }}</span>
+                  <span class="text-abc-orange font-semibold">{{
+                    testimony.status
+                  }}</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- View More Testimonies CTA Link Block -->
+            <div class="text-center mt-8">
+              <NuxtLink
+                to="/case-studies#whatsapp-wall"
+                class="inline-flex items-center gap-2 bg-white/10 hover:bg-white text-white hover:text-abc-navy border border-white/20 px-6 py-3 text-xs font-black uppercase tracking-widest rounded-lg transition-all shadow-md"
+              >
+                <span>View More Client Testimonials & WhatsApp Reviews</span>
+                <span>→</span>
+              </NuxtLink>
+            </div>
+          </div>
+
+          <!-- Cohort Sign-Up Callout Banner -->
+          <div
+            class="mt-10 bg-gradient-to-r from-abc-navy/90 via-white/5 to-abc-navy/90 border border-abc-orange/30 rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left"
+          >
+            <div>
+              <span
+                class="inline-block text-[11px] uppercase tracking-widest font-extrabold text-abc-orange mb-1"
+              >
+                Next Cohort Now Enrolling
+              </span>
+              <h4 class="text-lg sm:text-xl font-black uppercase text-white">
+                Ready to achieve similar results? Join the November Cohort!
+              </h4>
+              <p class="text-xs sm:text-sm text-white/70 mt-1">
+                Starts 18th November 2026 • Only 12 Slots Available • Practical
+                In-Person Coaching
+              </p>
+            </div>
+            <MuiButton
+              variant="white-fill"
+              label="ENROLL IN NOVEMBER COHORT"
+              class="!rounded-none px-8 py-4 font-bold text-[11px] tracking-widest !text-abc-orange !border-abc-orange bg-abc-orange/10 hover:bg-abc-orange hover:!text-white transition-all cursor-pointer flex-shrink-0"
+              @click="augustCohortFormRef?.open()"
+            />
           </div>
         </div>
       </div>
@@ -1364,6 +1458,99 @@ const navLinks = [
     ],
   },
   { name: "Gallery", to: "/gallery" },
+];
+
+// EXPANDED SUPPORT TEAM
+const supportTeam = [
+  {
+    name: "Shaka Amos",
+    role: "Sales Executive",
+    roleBadgeClass: "text-abc-green bg-abc-green/10 border border-abc-green/20",
+    bio: "I'm a Sales Executive at ABC Sales Consulting, where I connect Kampala businesses with ABC's sales training and consulting services. My background is in hospitality and insurance sales, and in insurance. I'm also studying Cyber Security and Networking at Victoria University.",
+    image: "/img/support-team/shaka-amos.png",
+    linkedin:
+      "https://www.linkedin.com/search/results/all/?keywords=Shaka%20Amos%20ABC%20Sales%20Consulting",
+  },
+  {
+    name: "Sharifah Shinarz Nassiwa",
+    role: "Sales Coordinator",
+    roleBadgeClass:
+      "text-abc-orange bg-abc-orange/10 border border-abc-orange/20",
+    bio: "Sharifah is a results-driven professional with experience in sales, customer service, and administration. At ABC Sales Consulting, she focuses on building business relationships, effective follow-ups, and connecting businesses with solutions that drive sales growth and success.",
+    image: "/img/support-team/sharifah_shinarz_nassiwa.png",
+    linkedin:
+      "https://www.linkedin.com/search/results/all/?keywords=Sharifah%20Shinarz%20Nassiwa%20ABC%20Sales",
+  },
+  {
+    name: "Nicole Mbabazi",
+    role: "Social Media & Content Manager",
+    roleBadgeClass: "text-abc-green bg-abc-green/10 border border-abc-green/20",
+    bio: "Nicole Mbabazi is a Social Media and Content Manager at ABC Sales Consulting, where she drives brand visibility through content creation, social media management, and audience engagement. She also supports business growth through prospecting, client outreach, and lead generation. Her work focuses on communicating ABC’s expertise in sales training and helping more businesses discover practical ways to improve their sales performance.",
+    image: "/img/support-team/nicole-mbabazi.png",
+    linkedin:
+      "https://www.linkedin.com/search/results/all/?keywords=Nicole%20Mbabazi%20ABC%20Sales%20Consulting",
+  },
+    {
+    name: "Catherine Ninsiima",
+    role: "Assistant Sales Administrator",
+    roleBadgeClass: "text-abc-green bg-abc-green/10 border border-abc-green/20",
+    bio: "Catherine Ninsiima is an Assistant Sales Administrator at ABC Sales Consulting, supporting both administrative operations and sales coordination. She facilitates client communication, coordinates sales activities, manages schedules and follow-ups, and supports the team in maintaining strong client relationships and driving business growth.",
+    image: "/img/support-team/catherine-ninsiima.png",
+    linkedin:
+      "https://www.linkedin.com/in/catherine-ninsiima-60103b19b"
+  }
+];
+
+// UPDATED GRADUATE & CLIENT TESTIMONIES
+const graduateTestimonies = [
+  {
+    name: "Maria Goretti Namuddu",
+    initials: "MN",
+    role: "Head Of Business, Baifam Group",
+    quote: `“What stood out to me was how well business owners understood their products and how effectively they could explain their value. The participants also challenged my perspective on certain services that I would typically consider a luxury, helping me see them differently.
+
+One of the most powerful things I witnessed was the growth in confidence and communication. I had watched one of the participants present at BNI two months earlier, and seeing that same person present at graduation, I could clearly see the difference. The improvement in their confidence and ability to communicate was remarkable.
+
+It was powerful to witness how much someone can grow when given the right training and opportunity.”`,
+    badge: "Guest Leader & Evaluator",
+    status: "Verified Review",
+    accentGradient: "from-abc-orange to-abc-green",
+  },
+  {
+    name: "Laeticia Kay Kalema",
+    initials: "LK",
+    role: "August Cohort Graduate, Packaging Hub",
+    quote: `“The ABC Sales Cohort was a great learning experience. What stood out to me most was how each session focused on honing and sharpening our sales skills. Every session was an opportunity to learn, practise, and improve. The experience helped me appreciate the importance of continuously developing my sales skills and becoming better at what I do.”`,
+    badge: "Verified Graduate",
+    status: "Cohort Alumni",
+    accentGradient: "from-abc-green to-abc-orange",
+  },
+  {
+    name: "Ahmed Nkono",
+    initials: "AN",
+    role: "CEO, Vita Plate • Tanzania",
+    quote: `“One thing that stood out to me was the eagerness of the participants to push their products and services. I also noticed the difference between how a business owner sells and how an employee sells.
+
+Business owners need to understand how to sell because they are often the best people to communicate what their products or services do, how they work, and the value they offer. When business owners can effectively communicate that value, they are better positioned to help customers understand why they should buy.
+
+The experience reinforced the importance of sales skills, not just for sales teams, but for business owners themselves.”`,
+    badge: "Regional Business Leader",
+    status: "Executive Perspective",
+    accentGradient: "from-abc-orange via-white to-abc-green",
+  },
+  {
+    name: "Ritah Gashishiri",
+    initials: "RG",
+    role: "CEO, Santa Viva Travel Agency",
+    quote: `“Before the training, our company mainly relied on walk-in clients. Through the ABC Sales Cohort, I have learnt the importance of prospecting instead of simply waiting for customers to come to us.
+
+I have also learnt how to build rapport and establish meaningful relationships with customers. These skills are important because sales go beyond making a single transaction. They help us build lasting relationships that encourage customers to return and do business with us again.
+
+The training has changed how I approach sales and helped me understand the importance of being proactive in finding and retaining customers.”`,
+    badge: "Business Owner & Graduate",
+    status: "Verified Review",
+    accentGradient: "from-abc-green via-white to-abc-orange",
+  },
 ];
 
 const status = ref("");
