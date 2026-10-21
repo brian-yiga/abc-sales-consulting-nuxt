@@ -527,7 +527,7 @@
                 class="w-full h-full object-cover object-top bg-black"
               >
                 <source
-                  src="/img/tiktok-videos/md-message3.mp4"
+                  src="/img/tiktok-videos/md-message4.mp4"
                   type="video/mp4"
                 />
                 Your browser does not support the video tag.
@@ -546,18 +546,23 @@
               <h3
                 class="text-xl sm:text-2xl lg:text-3xl font-black uppercase text-white leading-tight"
               >
-                How to Talk Money Without Sounding Like You’re Selling
+                There Is No Perfect Time for Sales Training
               </h3>
             </div>
 
             <p class="text-sm sm:text-base text-white/85 leading-relaxed">
-              When bringing up money with a client, the secret is shifting your
-              entire focus to the outcome. Instead of dwelling on price or
-              appearing transaction-focused, highlight what your client becomes
-              and the exact value they will experience. By clearly illustrating
-              where your product or service will take them, both your mind and
-              the client's naturally move away from the cost and onto the real
-              transformation.
+              When is the right time to train your sales team? January, June or
+              December? The truth is, there is no perfect time. Your sales team
+              needs to perform all year round, so their training should not be
+              limited to the beginning of the year or when sales start dropping.
+              Markets change, customers evolve, and new challenges arise. Your
+              team needs to keep learning, practising and improving to stay
+              effective. Don’t wait for sales to drop before investing in your
+              people. Sales training is not a one-time event. It’s an ongoing
+              investment in your business growth. At ABC Sales Consulting, we
+              believe every season is an opportunity to sharpen your team’s
+              skills and improve performance. The best time to train your sales
+              team is now.
             </p>
 
             <div
