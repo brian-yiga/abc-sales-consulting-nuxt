@@ -523,7 +523,7 @@
               <video
                 controls
                 preload="metadata"
-                poster="/img/video-thumbs/md-message3.png"
+                poster="/img/video-thumbs/md-message4.png"
                 class="w-full h-full object-cover object-top bg-black"
               >
                 <source
