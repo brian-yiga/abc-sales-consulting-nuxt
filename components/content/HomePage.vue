@@ -232,13 +232,12 @@
             href="#graduate-testimonies"
             class="inline-flex items-center gap-1.5 border border-abc-green bg-abc-green/20 text-abc-green px-5 py-1.5 rounded-full text-[12px] sm:text-[13px] font-bold uppercase tracking-[0.2em] hover:bg-abc-green/30 transition-colors cursor-pointer"
           >
-            <span class="w-2 h-2 rounded-full bg-abc-green animate-ping"></span>
-            💬 VIEW CLIENT TESTIMONIES
+            🟢 VIEW CLIENT TESTIMONIES
           </a>
 
           <NuxtLink
             to="/services#upcoming-events"
-            class="inline-block border border-abc-orange bg-abc-orange/20 text-abc-orange px-5 py-1.5 rounded-full text-[12px] sm:text-[13px] font-bold uppercase tracking-[0.2em] animate-pulse cursor-pointer hover:bg-abc-orange/30 transition-colors"
+            class="inline-block border border-abc-orange bg-abc-orange/20 text-abc-orange px-5 py-1.5 rounded-full text-[12px] sm:text-[13px] font-bold uppercase tracking-[0.2em] cursor-pointer hover:bg-abc-orange/30 transition-colors"
           >
             🔴 November Cohort
           </NuxtLink>
@@ -248,7 +247,6 @@
             to="/careers"
             class="inline-flex items-center gap-1.5 border border-white/30 bg-white/10 hover:bg-white/20 text-white px-5 py-1.5 rounded-full text-[12px] sm:text-[13px] font-bold uppercase tracking-[0.2em] transition-all cursor-pointer group"
           >
-            <span class="w-2 h-2 rounded-full bg-abc-green animate-ping"></span>
             💼 JOB OPPORTUNITIES
           </NuxtLink>
         </div>
