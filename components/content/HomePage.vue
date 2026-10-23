@@ -227,14 +227,14 @@
         <div
           class="flex flex-wrap items-center justify-center gap-2.5 sm:gap-3 mb-8 text-center"
         >
-          <!-- UPCOMING MASTERCLASS PILL -->
-          <NuxtLink
-            to="/services#upcoming-events"
+          <!-- VIEW CLIENT TESTIMONIES PILL -->
+          <a
+            href="#graduate-testimonies"
             class="inline-flex items-center gap-1.5 border border-abc-green bg-abc-green/20 text-abc-green px-5 py-1.5 rounded-full text-[12px] sm:text-[13px] font-bold uppercase tracking-[0.2em] hover:bg-abc-green/30 transition-colors cursor-pointer"
           >
             <span class="w-2 h-2 rounded-full bg-abc-green animate-ping"></span>
-            🎙️ MASTERCLASS • 21ST OCT
-          </NuxtLink>
+            💬 VIEW CLIENT TESTIMONIES
+          </a>
 
           <NuxtLink
             to="/services#upcoming-events"
@@ -361,7 +361,7 @@
                 <span
                   class="text-[10px] bg-abc-green/20 text-abc-green px-2.5 py-0.5 rounded font-bold uppercase tracking-wider"
                 >
-                  Starts 1st Oct 2026
+                  STARTS SOON
                 </span>
               </div>
 
@@ -430,7 +430,7 @@
                 <span
                   class="text-[10px] bg-abc-orange/20 text-abc-orange border border-abc-orange/30 px-2.5 py-0.5 rounded font-black uppercase tracking-wider"
                 >
-                  21st Oct • 7:30 PM
+                  CLOED
                 </span>
               </div>
 
@@ -476,7 +476,7 @@
                   rel="noopener noreferrer"
                   class="inline-flex items-center justify-center rounded-md px-3.5 py-1.5 text-[10px] font-black tracking-widest bg-abc-green text-abc-navy hover:bg-abc-green/90 transition-all cursor-pointer uppercase shadow-md"
                 >
-                  REGISTER NOW →
+                  REGISTRATION CLOSED →
                 </a>
               </div>
             </div>
@@ -810,9 +810,11 @@
             </div>
           </div>
 
-          <!-- Graduate Testimonials -->
           <!-- Graduate Testimonials Section -->
-          <div class="border-t border-white/10 pt-10">
+          <div
+            id="graduate-testimonies"
+            class="border-t border-white/10 pt-10 scroll-mt-24"
+          >
             <!-- Section Header & View All Link -->
             <div
               class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8"
@@ -826,7 +828,7 @@
                 <h4
                   class="text-xl sm:text-2xl lg:text-3xl font-black uppercase tracking-tight text-white"
                 >
-                  What Our Graduates Have to Say About Us
+                  What Our Graduates and Clients Have to Say About Us
                 </h4>
               </div>
 
@@ -834,16 +836,16 @@
                 to="/case-studies#whatsapp-wall"
                 class="inline-flex items-center gap-2 text-xs font-black uppercase tracking-widest text-abc-orange hover:text-white transition-colors self-start md:self-auto group"
               >
-                <span>View More & All Testimonials</span>
+                <span>View More & WhatsApp Testimonials</span>
                 <span class="group-hover:translate-x-1 transition-transform"
                   >→</span
                 >
               </NuxtLink>
             </div>
 
-            <!-- 1. FEATURED PORTRAIT VIDEO SPOTLIGHT (STACKED ON TOP) -->
+            <!-- 1. FEATURED PORTRAIT VIDEO SPOTLIGHT (VIDEO 1) -->
             <div
-              class="bg-white/5 border border-white/15 rounded-2xl p-6 lg:p-8 shadow-2xl mb-10 relative overflow-hidden group hover:border-abc-orange/50 transition-all duration-300"
+              class="bg-white/5 border border-white/15 rounded-2xl p-6 lg:p-8 shadow-2xl mb-8 relative overflow-hidden group hover:border-abc-orange/50 transition-all duration-300"
             >
               <!-- Card Header -->
               <div
@@ -862,7 +864,7 @@
                 <span
                   class="text-xs bg-abc-green/20 text-abc-green border border-abc-green/40 px-3 py-1 rounded-full font-bold uppercase tracking-wider"
                 >
-                  Graduate Review
+                  Trainee Review
                 </span>
               </div>
 
@@ -876,11 +878,11 @@
                     <video
                       controls
                       preload="metadata"
-                      poster="/img/video-thumbs/cohort-testimony-1.png"
+                      poster="/img/video-thumbs/cohort-testimony-2.png"
                       class="w-full h-full object-cover object-top bg-black"
                     >
                       <source
-                        src="/img/testimonies/cohort/testimony-1.mp4"
+                        src="/img/testimonies/cohort/testimony-2.mp4"
                         type="video/mp4"
                       />
                       Your browser does not support the video tag.
@@ -898,19 +900,20 @@
                   <h3
                     class="text-xl sm:text-2xl font-black uppercase text-white leading-tight"
                   >
-                    Beyond Features: Helping Clients See Why It Matters
+                    Beyond Features: Commit to Developing Your Sales Teams'
+                    Value and Skills
                   </h3>
 
                   <p class="text-xs sm:text-sm text-white/85 leading-relaxed">
-                    You can find the right client and identify their needs, but
-                    still lose the sale if you haven’t communicated your
-                    product's true value.
+                    This is what happens when you commit to developing your team
+                    and giving them the right tools to sell.
                   </p>
                   <p class="text-xs sm:text-sm text-white/85 leading-relaxed">
-                    In our sales cohort, participants learn how to move past
-                    simply listing features—showing clients exactly how those
-                    features solve their problems. That’s the practical selling
-                    we focus on at ABC Sales Consulting.
+                    We’ve been training the RukaPay team for seven months, and
+                    this is what their CEO has to say about the experience! This
+                    could be you. This could be your business. Imagine what
+                    seven months of the right sales training could do for your
+                    team and your revenue. 🚀
                   </p>
 
                   <div
@@ -919,7 +922,90 @@
                     <span>🎥 Verified Alumni Review</span>
                     <span
                       class="text-abc-orange font-semibold uppercase tracking-wider"
-                      >ABC Sales Cohort</span
+                      >ABC Sales Training</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 2. FEATURED PORTRAIT VIDEO SPOTLIGHT (VIDEO 2) -->
+            <div
+              class="bg-white/5 border border-white/15 rounded-2xl p-6 lg:p-8 shadow-2xl mb-10 relative overflow-hidden group hover:border-abc-green/50 transition-all duration-300"
+            >
+              <!-- Card Header -->
+              <div
+                class="flex items-center justify-between mb-6 border-b border-white/10 pb-4"
+              >
+                <div class="flex items-center gap-2.5">
+                  <span
+                    class="w-3 h-3 rounded-full bg-abc-green animate-ping"
+                  ></span>
+                  <span
+                    class="text-xs sm:text-sm font-black uppercase tracking-widest text-abc-green"
+                  >
+                    Featured Video Spotlight
+                  </span>
+                </div>
+                <span
+                  class="text-xs bg-abc-orange/20 text-abc-orange border border-abc-orange/40 px-3 py-1 rounded-full font-bold uppercase tracking-wider"
+                >
+                  Transformation Story
+                </span>
+              </div>
+
+              <!-- Portrait Video + Accompanying Content Grid -->
+              <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <!-- Left: Portrait Phone Video Player (5 Columns) -->
+                <div class="lg:col-span-5 relative group/video">
+                  <div
+                    class="relative rounded-xl overflow-hidden border border-white/20 bg-black shadow-2xl aspect-[4/5] sm:aspect-[3/4] lg:aspect-[4/5] max-h-[460px] w-full flex items-center justify-center mx-auto"
+                  >
+                    <video
+                      controls
+                      preload="metadata"
+                      poster="/img/video-thumbs/cohort-testimony-3.png"
+                      class="w-full h-full object-cover object-top bg-black"
+                    >
+                      <source
+                        src="/img/testimonies/cohort/testimony-3.mp4"
+                        type="video/mp4"
+                      />
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                </div>
+
+                <!-- Right: Accompanying Quote Content (7 Columns) -->
+                <div class="lg:col-span-7 space-y-4 text-left">
+                  <span
+                    class="text-abc-orange font-bold text-xs uppercase tracking-widest block"
+                  >
+                    Confidence & Closing Power
+                  </span>
+                  <h3
+                    class="text-xl sm:text-2xl font-black uppercase text-white leading-tight"
+                  >
+                    From Freezing in Front of Clients to Communicating with
+                    Confidence and Closing More Deals
+                  </h3>
+
+                  <p class="text-xs sm:text-sm text-white/85 leading-relaxed">
+                    That’s the power of consistent sales training and practice.
+                  </p>
+                  <p class="text-xs sm:text-sm text-white/85 leading-relaxed">
+                    At ABC, we work with salespeople to identify their gaps,
+                    build their skills, and turn what they learn into results in
+                    the field. This is what growth looks like! 🔥
+                  </p>
+
+                  <div
+                    class="pt-4 border-t border-white/10 flex items-center justify-between text-xs text-white/60"
+                  >
+                    <span>🎥 Verified Alumni Transformation</span>
+                    <span
+                      class="text-abc-green font-semibold uppercase tracking-wider"
+                      >ABC Sales Training</span
                     >
                   </div>
                 </div>
@@ -1052,7 +1138,7 @@
     </MuiPageContainer>
   </div>
 
-  <MuiPageContainer class="mt-16 md:mt-20 lg:mt-25">
+  <!-- <MuiPageContainer class="mt-16 md:mt-20 lg:mt-25">
     <MuiTextWithImage
       :img="{
         small: '/img/home/sept-cohort8.jpeg',
@@ -1109,7 +1195,7 @@
         organization.
       </p>
     </MuiTextWithImage>
-  </MuiPageContainer>
+  </MuiPageContainer> -->
 
   <MuiPageContainer class="mt-16 md:mt-20 lg:mt-25">
     <h2 class="mui-text--display-2 uppercase mb-10 text-center">
@@ -1182,15 +1268,7 @@
     </div>
     <div
       class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8"
-    >
-      <NuxtLink
-        to="/case-studies#whatsapp-wall"
-        class="inline-flex items-center gap-2 text-xs font-black uppercase tracking-widest text-abc-orange hover:text-white transition-colors self-start md:self-auto group"
-      >
-        <span>View More & All Testimonials</span>
-        <span class="group-hover:translate-x-1 transition-transform">→</span>
-      </NuxtLink>
-    </div>
+    ></div>
   </MuiPageContainer>
 
   <MuiPageContainer class="mt-16 md:mt-20 lg:mt-25">
