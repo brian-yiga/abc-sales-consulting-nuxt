@@ -521,11 +521,11 @@
               <video
                 controls
                 preload="metadata"
-                poster="/img/video-thumbs/md-message4.png"
+                poster="/img/video-thumbs/md-message5.png"
                 class="w-full h-full object-cover object-top bg-black"
               >
                 <source
-                  src="/img/tiktok-videos/md-message4.mp4"
+                  src="/img/tiktok-videos/md-message5.mp4"
                   type="video/mp4"
                 />
                 Your browser does not support the video tag.
@@ -544,23 +544,12 @@
               <h3
                 class="text-xl sm:text-2xl lg:text-3xl font-black uppercase text-white leading-tight"
               >
-                There Is No Perfect Time for Sales Training
+                The Sales Movement is Here: Why Everyone is Talking Sales
               </h3>
             </div>
 
             <p class="text-sm sm:text-base text-white/85 leading-relaxed">
-              When is the right time to train your sales team? January, June or
-              December? The truth is, there is no perfect time. Your sales team
-              needs to perform all year round, so their training should not be
-              limited to the beginning of the year or when sales start dropping.
-              Markets change, customers evolve, and new challenges arise. Your
-              team needs to keep learning, practising and improving to stay
-              effective. Don’t wait for sales to drop before investing in your
-              people. Sales training is not a one-time event. It’s an ongoing
-              investment in your business growth. At ABC Sales Consulting, we
-              believe every season is an opportunity to sharpen your team’s
-              skills and improve performance. The best time to train your sales
-              team is now.
+              Reflecting on the shifting tides across social media and digital channels, it's clear that a massive wave is building. More people, pages, and platforms are stepping up to talk about, teach, and champion sales. This growing momentum ties directly back to our core mission at ABC Sales Consulting: building a powerful movement of driven sales professionals committed to impacting over 10 million lives. If you aren't involved in sales yet, now is the time to dive in, study the pages, and fall in love with the art of selling because the sales movement is changing the world.
             </p>
 
             <div
