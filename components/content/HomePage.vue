@@ -216,7 +216,7 @@
       </Transition>
     </MuiPageContainer>
 
-    <!-- HERO SECTION WITH SUNDAY EVENT FEATURE -->
+    <!-- HERO SECTION: ENTERPRISE ADVISORY & REVENUE ARCHITECTURE -->
     <MuiPageContainer
       class="text-white pt-12 pb-16 lg:pt-16 lg:pb-20 xl:pt-[80px] xl:pb-20 relative bg-cover bg-center"
     >
@@ -227,13 +227,12 @@
         <div
           class="flex flex-wrap items-center justify-center gap-2.5 sm:gap-3 mb-8 text-center"
         >
-          <!-- VIEW CLIENT TESTIMONIES PILL -->
-          <a
-            href="#graduate-testimonies"
+          <NuxtLink
+            to="/case-studies"
             class="inline-flex items-center gap-1.5 border border-abc-green bg-abc-green/20 text-abc-green px-5 py-1.5 rounded-full text-[12px] sm:text-[13px] font-bold uppercase tracking-[0.2em] hover:bg-abc-green/30 transition-colors cursor-pointer"
           >
-            🟢 VIEW CLIENT TESTIMONIES
-          </a>
+            🟢 COHORT AND CLIENT TRAINING TESTIMONIES
+          </NuxtLink>
 
           <NuxtLink
             to="/services#upcoming-events"
@@ -242,7 +241,6 @@
             🔴 November Cohort
           </NuxtLink>
 
-          <!-- JOB OFFERS / CAREERS HIGHLIGHT -->
           <NuxtLink
             to="/careers"
             class="inline-flex items-center gap-1.5 border border-white/30 bg-white/10 hover:bg-white/20 text-white px-5 py-1.5 rounded-full text-[12px] sm:text-[13px] font-bold uppercase tracking-[0.2em] transition-all cursor-pointer group"
@@ -253,67 +251,68 @@
 
         <!-- MAIN TWO-COLUMN GRID -->
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-          <!-- LEFT COLUMN: MAIN HERO TEXT & METRICS (7 Columns) -->
+          <!-- LEFT COLUMN: CORPORATE ADVISORY & REVENUE ARCHITECTURE (7 Columns) -->
           <div class="lg:col-span-7 text-center lg:text-left">
             <h2
               class="mui-text--display-1 uppercase font-black tracking-tighter leading-tight text-2xl sm:text-3xl lg:text-4xl"
             >
-              Transform Your Sales <br />
-              Into a Revenue Engine
+              Enterprise Sales Advisory <br />
+              & Revenue Architecture
             </h2>
 
             <p
               class="mt-5 mb-8 text-white/90 leading-relaxed text-sm sm:text-base tracking-wide max-w-xl mx-auto lg:mx-0"
             >
-              ABC Sales Consulting provides world-class training and strategic
-              interventions to help African businesses scale faster, close
-              bigger deals, and build sustainable, predictable growth.
+              ABC Sales Consulting partners with mid-to-large enterprises,
+              corporate institutions, and high-growth firms to build predictable
+              revenue engines, structure high-performing sales forces, and close
+              complex deals.
             </p>
 
-            <!-- COHORT METRICS GRID -->
+            <!-- CORPORATE VALUE METRICS -->
             <div
               class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8 text-center border-t border-b border-white/10 py-5"
             >
               <div>
                 <div class="text-abc-green font-extrabold text-base md:text-lg">
-                  UGX 900,000
+                  $20K–$30K
                 </div>
                 <div
                   class="text-[9px] uppercase tracking-wider text-white/60 mt-1"
                 >
-                  Investment
+                  Advisory Scale
                 </div>
               </div>
               <div>
                 <div class="text-abc-green font-extrabold text-base md:text-lg">
-                  6 Weeks
+                  Custom ROI
                 </div>
                 <div
                   class="text-[9px] uppercase tracking-wider text-white/60 mt-1"
                 >
-                  Duration
+                  Strategy
                 </div>
               </div>
               <div>
                 <div
                   class="text-abc-orange font-extrabold text-base md:text-lg"
                 >
-                  12 Seats
+                  Enterprise
                 </div>
                 <div
                   class="text-[9px] uppercase tracking-wider text-white/60 mt-1"
                 >
-                  Class Limit
+                  Pipelines
                 </div>
               </div>
               <div>
                 <div class="text-abc-green font-extrabold text-base md:text-lg">
-                  Certificate
+                  Executive
                 </div>
                 <div
                   class="text-[9px] uppercase tracking-wider text-white/60 mt-1"
                 >
-                  Included
+                  Consulting
                 </div>
               </div>
             </div>
@@ -324,15 +323,15 @@
             >
               <MuiButton
                 variant="white-fill"
-                label="REGISTER FOR NOVEMBER COHORT"
+                label="BOOK A DISCOVERY CALL"
                 class="!rounded-none px-8 py-4 font-bold text-[10px] tracking-widest !text-abc-orange !border-abc-orange/60 bg-abc-orange/5 hover:bg-abc-orange hover:!text-white transition-all cursor-pointer"
-                @click="novemberCohortFormRef?.open()"
+                @click="discoveryFormRef?.open()"
               />
               <MuiButton
                 variant="white-stroke"
-                label="BOOK A DISCOVERY CALL"
+                label="EXPLORE TRAINING & COHORTS"
+                to="/pages/services"
                 class="!rounded-none px-8 py-4 font-bold text-[10px] tracking-widest hover:bg-white hover:text-abc-navy transition-all"
-                @click="discoveryFormRef?.open()"
               />
             </div>
           </div>
@@ -409,6 +408,7 @@
             </div>
 
             <!-- CARD 2: UPCOMING LIVE MASTERCLASS WITH DAHLIN SAJJABI -->
+            <!-- CARD 2: UPCOMING LIVE MASTERCLASS WITH DAHLIN SAJJABI -->
             <div
               class="bg-white/5 backdrop-blur-md border border-white/15 rounded-2xl p-4 sm:p-5 shadow-2xl relative overflow-hidden group hover:border-abc-green/50 transition-all duration-300"
             >
@@ -426,9 +426,9 @@
                   </span>
                 </div>
                 <span
-                  class="text-[10px] bg-abc-orange/20 text-abc-orange border border-abc-orange/30 px-2.5 py-0.5 rounded font-black uppercase tracking-wider"
+                  class="text-[10px] bg-abc-green/20 text-abc-green border border-abc-green/30 px-2.5 py-0.5 rounded font-black uppercase tracking-wider"
                 >
-                  CLOED
+                  4TH NOV • 7:30 PM
                 </span>
               </div>
 
@@ -437,8 +437,8 @@
                   class="w-20 h-20 sm:w-24 sm:h-24 rounded-xl overflow-hidden border border-white/10 flex-shrink-0 relative bg-gray-800"
                 >
                   <img
-                    src="/img/flyers/dahlinTraining.jpeg"
-                    alt="Dahlin Sajjabi - Sales Masterclass Speaker"
+                    src="/img/flyers/dahlinTraining2.jpeg"
+                    alt="Dahlin Sajjabi - Masterclass: Ask Your Clients For More Business"
                     class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
@@ -451,13 +451,14 @@
                   <h3
                     class="text-sm sm:text-base font-black uppercase text-white leading-tight"
                   >
-                    How to Handle "I Need To Think About It"
+                    Ask Your Clients For More Business. Stop Waiting For
+                    Referrals.
                   </h3>
                   <p
                     class="text-[11px] text-white/70 line-clamp-2 leading-relaxed"
                   >
-                    Master proven strategies to navigate tough client objections
-                    and close deals with confidence.
+                    Learn how to ask for more business and turn your existing
+                    clients into new opportunities.
                   </p>
                 </div>
               </div>
@@ -474,8 +475,141 @@
                   rel="noopener noreferrer"
                   class="inline-flex items-center justify-center rounded-md px-3.5 py-1.5 text-[10px] font-black tracking-widest bg-abc-green text-abc-navy hover:bg-abc-green/90 transition-all cursor-pointer uppercase shadow-md"
                 >
-                  REGISTRATION CLOSED →
+                  REGISTER NOW →
                 </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </MuiPageContainer>
+
+    <!-- MACROECONOMIC SECTION: WHY UGANDA NEEDS ABC SALES CONSULTING (Musizi Model) -->
+    <MuiPageContainer class="max-w-7xl mx-auto my-8 text-white">
+      <div
+        class="bg-white/5 backdrop-blur-md border border-white/15 rounded-2xl md:rounded-[28px] p-6 md:p-10 lg:p-12 shadow-2xl relative overflow-hidden"
+      >
+        <div
+          class="absolute -top-24 -right-24 w-80 h-80 bg-abc-green/10 rounded-full blur-3xl pointer-events-none"
+        />
+        <div
+          class="absolute -bottom-24 -left-24 w-80 h-80 bg-abc-orange/10 rounded-full blur-3xl pointer-events-none"
+        />
+
+        <div class="relative z-10">
+          <div class="text-center max-w-3xl mx-auto mb-12">
+            <span
+              class="inline-block text-xs tracking-[0.25em] uppercase font-black text-abc-green bg-abc-green/10 border border-abc-green/30 px-4 py-1.5 rounded-full mb-4"
+            >
+              Economic Growth & Revenue Infrastructure
+            </span>
+            <h3
+              class="text-2xl sm:text-3xl md:text-4xl font-black uppercase tracking-tight text-white mb-4"
+            >
+              Why Uganda Needs Professional Sales Architecture
+            </h3>
+            <p class="text-white/80 text-sm sm:text-base leading-relaxed">
+              Uganda is home to a vibrant, entrepreneurial population with
+              thousands of businesses starting up every year. Yet, the vast
+              majority struggle to scale, secure regional contracts, or survive
+              past their first few years because sales is often treated as an
+              afterthought rather than a structured discipline.
+            </p>
+          </div>
+
+          <!-- TWO COLUMN CHALLENGE VS APPROACH -->
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch mb-10"
+          >
+            <!-- THE CHALLENGE -->
+            <div
+              class="bg-black/30 border border-white/10 rounded-2xl p-6 md:p-8 flex flex-col justify-between"
+            >
+              <div>
+                <div
+                  class="flex items-center gap-2 text-abc-orange text-xs font-black uppercase tracking-widest mb-3"
+                >
+                  <span>⚠️</span> The Market Challenge
+                </div>
+                <h4
+                  class="text-lg sm:text-xl font-bold uppercase text-white mb-4"
+                >
+                  Why Local Businesses Hit a Growth Ceiling
+                </h4>
+                <ul
+                  class="space-y-3 text-white/80 text-xs sm:text-sm leading-relaxed"
+                >
+                  <li class="flex items-start gap-2">
+                    <span class="text-abc-orange font-bold">•</span>
+                    <span
+                      ><strong>Reliance on Walk-Ins:</strong> Waiting passively
+                      for customers instead of proactively prospecting and
+                      building robust sales pipelines.</span
+                    >
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="text-abc-orange font-bold">•</span>
+                    <span
+                      ><strong>Selling Features, Not Value:</strong> Founders
+                      and teams focus heavily on product specifications rather
+                      than articulating true ROI.</span
+                    >
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="text-abc-orange font-bold">•</span>
+                    <span
+                      ><strong>Lack of Structured Closing:</strong> High-value
+                      corporate deals stall and slip during negotiation due to
+                      unrefined closing methods.</span
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- OUR APPROACH -->
+            <div
+              class="bg-black/30 border border-white/10 rounded-2xl p-6 md:p-8 flex flex-col justify-between"
+            >
+              <div>
+                <div
+                  class="flex items-center gap-2 text-abc-green text-xs font-black uppercase tracking-widest mb-3"
+                >
+                  <span>🚀</span> The ABC Approach
+                </div>
+                <h4
+                  class="text-lg sm:text-xl font-bold uppercase text-white mb-4"
+                >
+                  Transforming Sales Into a Predictable Science
+                </h4>
+                <ul
+                  class="space-y-3 text-white/80 text-xs sm:text-sm leading-relaxed"
+                >
+                  <li class="flex items-start gap-2">
+                    <span class="text-abc-green font-bold">✓</span>
+                    <span
+                      ><strong>Executive Advisory & Strategy:</strong>
+                      Partnering with corporate organizations to architect
+                      high-ticket revenue models ($20k–$30k+).</span
+                    >
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="text-abc-green font-bold">✓</span>
+                    <span
+                      ><strong>Value-Based Frameworks:</strong> Equipping
+                      leadership and sales forces to communicate undeniable
+                      commercial worth.</span
+                    >
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="text-abc-green font-bold">✓</span>
+                    <span
+                      ><strong>Systematic Revenue Engines:</strong> Replacing
+                      guesswork with rigorous, field-tested closing pipelines
+                      and CRM data.</span
+                    >
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
@@ -549,7 +683,15 @@
             </div>
 
             <p class="text-sm sm:text-base text-white/85 leading-relaxed">
-              Reflecting on the shifting tides across social media and digital channels, it's clear that a massive wave is building. More people, pages, and platforms are stepping up to talk about, teach, and champion sales. This growing momentum ties directly back to our core mission at ABC Sales Consulting: building a powerful movement of driven sales professionals committed to impacting over 10 million lives. If you aren't involved in sales yet, now is the time to dive in, study the pages, and fall in love with the art of selling because the sales movement is changing the world.
+              Reflecting on the shifting tides across social media and digital
+              channels, it's clear that a massive wave is building. More people,
+              pages, and platforms are stepping up to talk about, teach, and
+              champion sales. This growing momentum ties directly back to our
+              core mission at ABC Sales Consulting: building a powerful movement
+              of driven sales professionals committed to impacting over 10
+              million lives. If you aren't involved in sales yet, now is the
+              time to dive in, study the pages, and fall in love with the art of
+              selling because the sales movement is changing the world.
             </p>
 
             <div
@@ -705,369 +847,6 @@
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </MuiPageContainer>
-
-    <!-- COHORT GRADUATION HIGHLIGHT -->
-    <MuiPageContainer class="max-w-7xl mx-auto my-12 md:my-16 lg:my-20">
-      <div
-        class="bg-white/5 backdrop-blur-[12px] rounded-2xl md:rounded-[32px] border border-white/10 p-6 md:p-10 lg:p-12 text-white shadow-2xl relative overflow-hidden"
-      >
-        <!-- Subtle Ambient Glow -->
-        <div
-          class="absolute -top-24 -right-24 w-96 h-96 bg-abc-green/10 rounded-full blur-3xl pointer-events-none"
-        />
-        <div
-          class="absolute -bottom-24 -left-24 w-96 h-96 bg-abc-orange/10 rounded-full blur-3xl pointer-events-none"
-        />
-
-        <div class="relative z-10">
-          <!-- Section Header -->
-          <div class="text-center max-w-3xl mx-auto mb-10 md:mb-12">
-            <div
-              class="inline-flex flex-wrap items-center gap-2 px-4 py-1.5 mb-4 text-xs tracking-[0.2em] uppercase font-black text-abc-orange bg-abc-orange/10 border border-abc-orange/30 rounded-full"
-            >
-              <span>🎓</span> Cohort Milestone • Practical Sales Mastery
-            </div>
-            <h3
-              class="text-2xl sm:text-3xl md:text-4xl font-black uppercase tracking-tight text-white mb-4"
-            >
-              Celebrating Our Cohort Graduates
-            </h3>
-            <p class="text-white/80 text-sm sm:text-base leading-relaxed">
-              We proudly celebrate the ambitious sales professionals and
-              business leaders who have completed our intensive 6-week Sales
-              Strategy & Mastery Program! From conquering high-stakes objection
-              handling to embedding structured pipeline frameworks, these
-              leaders are transforming their sales pipelines into predictable
-              revenue engines.
-            </p>
-          </div>
-
-          <!-- Graduands Photos Grid -->
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-            <div
-              class="group relative rounded-2xl overflow-hidden border border-white/15 bg-black/40 shadow-lg"
-            >
-              <NuxtImg
-                src="/img/cohort-graduands/september-graduands1.jpeg"
-                alt="ABC Sales Consulting Cohort graduation celebration"
-                class="w-full h-[280px] sm:h-[340px] md:h-[380px] object-cover object-center group-hover:scale-105 transition-transform duration-500"
-                sizes="sm:100vw md:50vw lg:600px"
-              />
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent pointer-events-none"
-              />
-              <div class="absolute bottom-4 left-4 right-4 text-left">
-                <span
-                  class="inline-block bg-abc-green text-abc-navy text-[10px] font-extrabold uppercase px-2.5 py-1 rounded tracking-wider mb-1"
-                >
-                  Graduation & Celebration
-                </span>
-                <p class="text-white text-xs sm:text-sm font-semibold">
-                  Cohort Celebration • Milestone Achievement & Practical Growth
-                </p>
-              </div>
-            </div>
-
-            <div
-              class="group relative rounded-2xl overflow-hidden border border-white/15 bg-black/40 shadow-lg"
-            >
-              <NuxtImg
-                src="/img/cohort-graduands/september-graduands2.jpeg"
-                alt="ABC Sales Consulting Cohort team portrait"
-                class="w-full h-[280px] sm:h-[340px] md:h-[380px] object-cover object-center group-hover:scale-105 transition-transform duration-500"
-                sizes="sm:100vw md:50vw lg:600px"
-              />
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent pointer-events-none"
-              />
-              <div class="absolute bottom-4 left-4 right-4 text-left">
-                <span
-                  class="inline-block bg-abc-orange text-white text-[10px] font-extrabold uppercase px-2.5 py-1 rounded tracking-wider mb-1"
-                >
-                  Cohort Class
-                </span>
-                <p class="text-white text-xs sm:text-sm font-semibold">
-                  Classroom Energy • Practical, Face-to-Face Sales Excellence
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Graduate Testimonials Section -->
-          <div
-            id="graduate-testimonies"
-            class="border-t border-white/10 pt-10 scroll-mt-24"
-          >
-            <!-- Section Header & View All Link -->
-            <div
-              class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8"
-            >
-              <div>
-                <span
-                  class="text-[11px] uppercase tracking-[0.25em] font-bold text-abc-green block mb-1"
-                >
-                  Direct Feedback & Impact
-                </span>
-                <h4
-                  class="text-xl sm:text-2xl lg:text-3xl font-black uppercase tracking-tight text-white"
-                >
-                  What Our Graduates and Clients Have to Say About Us
-                </h4>
-              </div>
-
-              <NuxtLink
-                to="/case-studies#whatsapp-wall"
-                class="inline-flex items-center gap-2 text-xs font-black uppercase tracking-widest text-abc-orange hover:text-white transition-colors self-start md:self-auto group"
-              >
-                <span>View More & WhatsApp Testimonials</span>
-                <span class="group-hover:translate-x-1 transition-transform"
-                  >→</span
-                >
-              </NuxtLink>
-            </div>
-
-            <!-- 1. FEATURED PORTRAIT VIDEO SPOTLIGHT (VIDEO 1) -->
-            <div
-              class="bg-white/5 border border-white/15 rounded-2xl p-6 lg:p-8 shadow-2xl mb-8 relative overflow-hidden group hover:border-abc-orange/50 transition-all duration-300"
-            >
-              <!-- Card Header -->
-              <div
-                class="flex items-center justify-between mb-6 border-b border-white/10 pb-4"
-              >
-                <div class="flex items-center gap-2.5">
-                  <span
-                    class="w-3 h-3 rounded-full bg-abc-orange animate-ping"
-                  ></span>
-                  <span
-                    class="text-xs sm:text-sm font-black uppercase tracking-widest text-abc-orange"
-                  >
-                    Featured Video Spotlight
-                  </span>
-                </div>
-                <span
-                  class="text-xs bg-abc-green/20 text-abc-green border border-abc-green/40 px-3 py-1 rounded-full font-bold uppercase tracking-wider"
-                >
-                  Trainee Review
-                </span>
-              </div>
-
-              <!-- Portrait Video + Accompanying Content Grid -->
-              <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-                <!-- Left: Portrait Phone Video Player (5 Columns) -->
-                <div class="lg:col-span-5 relative group/video">
-                  <div
-                    class="relative rounded-xl overflow-hidden border border-white/20 bg-black shadow-2xl aspect-[4/5] sm:aspect-[3/4] lg:aspect-[4/5] max-h-[460px] w-full flex items-center justify-center mx-auto"
-                  >
-                    <video
-                      controls
-                      preload="metadata"
-                      poster="/img/video-thumbs/cohort-testimony-2.png"
-                      class="w-full h-full object-cover object-top bg-black"
-                    >
-                      <source
-                        src="/img/testimonies/cohort/testimony-2.mp4"
-                        type="video/mp4"
-                      />
-                      Your browser does not support the video tag.
-                    </video>
-                  </div>
-                </div>
-
-                <!-- Right: Accompanying Quote Content (7 Columns) -->
-                <div class="lg:col-span-7 space-y-4 text-left">
-                  <span
-                    class="text-abc-green font-bold text-xs uppercase tracking-widest block"
-                  >
-                    Communicating Real Value
-                  </span>
-                  <h3
-                    class="text-xl sm:text-2xl font-black uppercase text-white leading-tight"
-                  >
-                    Beyond Features: Commit to Developing Your Sales Teams'
-                    Value and Skills
-                  </h3>
-
-                  <p class="text-xs sm:text-sm text-white/85 leading-relaxed">
-                    This is what happens when you commit to developing your team
-                    and giving them the right tools to sell.
-                  </p>
-                  <p class="text-xs sm:text-sm text-white/85 leading-relaxed">
-                    We’ve been training the RukaPay team for seven months, and
-                    this is what their CEO has to say about the experience! This
-                    could be you. This could be your business. Imagine what
-                    seven months of the right sales training could do for your
-                    team and your revenue. 🚀
-                  </p>
-
-                  <div
-                    class="pt-4 border-t border-white/10 flex items-center justify-between text-xs text-white/60"
-                  >
-                    <span>🎥 Verified Alumni Review</span>
-                    <span
-                      class="text-abc-orange font-semibold uppercase tracking-wider"
-                      >ABC Sales Training</span
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- 2. FEATURED PORTRAIT VIDEO SPOTLIGHT (VIDEO 2) -->
-            <div
-              class="bg-white/5 border border-white/15 rounded-2xl p-6 lg:p-8 shadow-2xl mb-10 relative overflow-hidden group hover:border-abc-green/50 transition-all duration-300"
-            >
-              <!-- Card Header -->
-              <div
-                class="flex items-center justify-between mb-6 border-b border-white/10 pb-4"
-              >
-                <div class="flex items-center gap-2.5">
-                  <span
-                    class="w-3 h-3 rounded-full bg-abc-green animate-ping"
-                  ></span>
-                  <span
-                    class="text-xs sm:text-sm font-black uppercase tracking-widest text-abc-green"
-                  >
-                    Featured Video Spotlight
-                  </span>
-                </div>
-                <span
-                  class="text-xs bg-abc-orange/20 text-abc-orange border border-abc-orange/40 px-3 py-1 rounded-full font-bold uppercase tracking-wider"
-                >
-                  Transformation Story
-                </span>
-              </div>
-
-              <!-- Portrait Video + Accompanying Content Grid -->
-              <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-                <!-- Left: Portrait Phone Video Player (5 Columns) -->
-                <div class="lg:col-span-5 relative group/video">
-                  <div
-                    class="relative rounded-xl overflow-hidden border border-white/20 bg-black shadow-2xl aspect-[4/5] sm:aspect-[3/4] lg:aspect-[4/5] max-h-[460px] w-full flex items-center justify-center mx-auto"
-                  >
-                    <video
-                      controls
-                      preload="metadata"
-                      poster="/img/video-thumbs/cohort-testimony-3.png"
-                      class="w-full h-full object-cover object-top bg-black"
-                    >
-                      <source
-                        src="/img/testimonies/cohort/testimony-3.mp4"
-                        type="video/mp4"
-                      />
-                      Your browser does not support the video tag.
-                    </video>
-                  </div>
-                </div>
-
-                <!-- Right: Accompanying Quote Content (7 Columns) -->
-                <div class="lg:col-span-7 space-y-4 text-left">
-                  <span
-                    class="text-abc-orange font-bold text-xs uppercase tracking-widest block"
-                  >
-                    Confidence & Closing Power
-                  </span>
-                  <h3
-                    class="text-xl sm:text-2xl font-black uppercase text-white leading-tight"
-                  >
-                    From Freezing in Front of Clients to Communicating with
-                    Confidence and Closing More Deals
-                  </h3>
-
-                  <p class="text-xs sm:text-sm text-white/85 leading-relaxed">
-                    That’s the power of consistent sales training and practice.
-                  </p>
-                  <p class="text-xs sm:text-sm text-white/85 leading-relaxed">
-                    At ABC, we work with salespeople to identify their gaps,
-                    build their skills, and turn what they learn into results in
-                    the field. This is what growth looks like! 🔥
-                  </p>
-
-                  <div
-                    class="pt-4 border-t border-white/10 flex items-center justify-between text-xs text-white/60"
-                  >
-                    <span>🎥 Verified Alumni Transformation</span>
-                    <span
-                      class="text-abc-green font-semibold uppercase tracking-wider"
-                      >ABC Sales Training</span
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- 2. WRITTEN GRADUATE TESTIMONIALS GRID (BELOW VIDEO) -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div
-                v-for="testimony in graduateTestimonies"
-                :key="testimony.name"
-                class="bg-white/5 border border-white/10 rounded-2xl p-6 sm:p-7 flex flex-col justify-between hover:border-abc-orange/40 transition-colors shadow-lg"
-              >
-                <div>
-                  <div class="flex items-center justify-between mb-4">
-                    <div class="flex items-center gap-3">
-                      <div
-                        class="w-12 h-12 rounded-full flex items-center justify-center font-black text-abc-navy text-sm sm:text-base flex-shrink-0 shadow-md bg-gradient-to-tr"
-                        :class="testimony.accentGradient"
-                      >
-                        {{ testimony.initials }}
-                      </div>
-                      <div>
-                        <h5 class="font-extrabold text-white text-base">
-                          {{ testimony.name }}
-                        </h5>
-                        <p class="text-xs text-abc-green font-medium">
-                          {{ testimony.role }}
-                        </p>
-                      </div>
-                    </div>
-                    <div class="flex text-abc-orange text-sm">★★★★★</div>
-                  </div>
-                  <p
-                    class="text-white/85 text-xs sm:text-[13px] leading-relaxed italic mb-4 whitespace-pre-line"
-                  >
-                    {{ testimony.quote }}
-                  </p>
-                </div>
-                <div
-                  class="pt-3 border-t border-white/10 flex items-center justify-between text-xs text-white/50"
-                >
-                  <span>{{ testimony.badge }}</span>
-                  <span class="text-abc-orange font-semibold">{{
-                    testimony.status
-                  }}</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Cohort Sign-Up Callout Banner -->
-          <div
-            class="mt-10 bg-gradient-to-r from-abc-navy/90 via-white/5 to-abc-navy/90 border border-abc-orange/30 rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left"
-          >
-            <div>
-              <span
-                class="inline-block text-[11px] uppercase tracking-widest font-extrabold text-abc-orange mb-1"
-              >
-                Next Cohort Now Enrolling
-              </span>
-              <h4 class="text-lg sm:text-xl font-black uppercase text-white">
-                Ready to achieve similar results? Join the November Cohort!
-              </h4>
-              <p class="text-xs sm:text-sm text-white/70 mt-1">
-                Starts 18th November 2026 • Only 12 Slots Available • Practical
-                In-Person Coaching
-              </p>
-            </div>
-            <MuiButton
-              variant="white-fill"
-              label="ENROLL IN NOVEMBER COHORT"
-              class="!rounded-none px-8 py-4 font-bold text-[11px] tracking-widest !text-abc-orange !border-abc-orange bg-abc-orange/10 hover:bg-abc-orange hover:!text-white transition-all cursor-pointer flex-shrink-0"
-              @click="augustCohortFormRef?.open()"
-            />
           </div>
         </div>
       </div>
@@ -1633,15 +1412,6 @@ const navLinks = [
 
 // EXPANDED SUPPORT TEAM
 const supportTeam = [
-  {
-    name: "Shaka Amos",
-    role: "Sales Executive",
-    roleBadgeClass: "text-abc-green bg-abc-green/10 border border-abc-green/20",
-    bio: "I'm a Sales Executive at ABC Sales Consulting, where I connect Kampala businesses with ABC's sales training and consulting services. My background is in hospitality and insurance sales, and in insurance. I'm also studying Cyber Security and Networking at Victoria University.",
-    image: "/img/support-team/shaka-amos.png",
-    linkedin:
-      "https://www.linkedin.com/search/results/all/?keywords=Shaka%20Amos%20ABC%20Sales%20Consulting",
-  },
   {
     name: "Sharifah Shinarz Nassiwa",
     role: "Sales Coordinator",

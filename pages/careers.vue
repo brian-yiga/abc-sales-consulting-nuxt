@@ -567,6 +567,19 @@ const navLinks = [
 
 const activePlacements = [
   {
+    company: "Easy Power Uganda Limited",
+    title: "Sales Lead",
+    description:
+      "Easy Power Uganda Limited is seeking an experienced Sales Lead to lead our sales initiatives and drive client acquisition across the region.",
+    type: "Salaried + Bonus",
+    salary: "Attractive",
+    image: "/img/jobs/easy-power-sales-lead.jpeg",
+  },
+  
+];
+
+const filledPlacements = [
+  {
     company: "Kingdom Trading Limited",
     title: "Sales Manager",
     description:
@@ -575,10 +588,6 @@ const activePlacements = [
     salary: "Attractive",
     image: "/img/jobs/abc-sales-manager.jpeg",
   },
-  
-];
-
-const filledPlacements = [
   {
     company: "BioHaz Waste Solutions",
     title: "Sales Executive / Waste Management Solutions",
